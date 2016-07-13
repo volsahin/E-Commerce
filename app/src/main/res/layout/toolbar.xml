@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,19 +9,38 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2196F3"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        app:titleTextColor="@color/white">
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:src="@android:drawable/ic_menu_search" />
-        </FrameLayout>
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_search_white_24dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/imageButton2"
+                android:layout_toStartOf="@+id/imageButton2"
+                android:layout_marginRight="29dp"
+                android:layout_marginEnd="29dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="95"
+                android:layout_gravity="center_vertical|right"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_shopping_basket_white_24dp"
+                android:id="@+id/imageButton2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
 
@@ -28,15 +48,21 @@
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/black"
         android:elevation="2dp"
-        android:background="@color/colorPrimaryLight"
+        android:theme="@style/AppTheme"
+        app:theme="@style/AppTheme"
+
+
         />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        android:background="@color/lightGrey"
+        android:theme="@style/AppTheme"
+
         ></android.support.v4.view.ViewPager>
 
 

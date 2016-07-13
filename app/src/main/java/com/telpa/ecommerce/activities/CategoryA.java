@@ -17,9 +17,9 @@ public class CategoryA extends BaseActivity {
     private ViewPagerAdapter vpAdapter;
 
     private Drawer drawer = null;
-    private Toolbar mToolbar;
-    CharSequence titles[]={"Category A","Category B","Category C"};
-    int numboftabs =3;
+
+    CharSequence titles[] = {"Category A", "Category B", "Category C"};
+    int numboftabs = 3;
     //private Drawer drawer = null;
 
     @Override
@@ -27,21 +27,26 @@ public class CategoryA extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_a);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
 
-        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(),titles,numboftabs);
+        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numboftabs);
         viewPager.setAdapter(vpAdapter);
 
-
-        setSupportActionBar(mToolbar);
 
         tabLayout.setDistributeEvenly(true);
         tabLayout.setViewPager(viewPager);
 
-        drawer = drawerBuilder(this,accountHeaderBuilder(this));
+        super.mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("My Store");
+        mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        mToolbar.setBackgroundColor(getResources().getColor(R.color.black));
+        setSupportActionBar(super.mToolbar);
+
+        getSupportActionBar().setTitle("My Store");
+
+        drawer = drawerBuilder(this, accountHeaderBuilder(this));
 
     }
 }

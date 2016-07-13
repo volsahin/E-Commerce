@@ -75,9 +75,9 @@ public class BaseActivity extends AppCompatActivity {
     public AccountHeader accountHeaderBuilder(Activity activity){
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
-                .withHeaderBackground(R.drawable.greybg)
+                .withHeaderBackground(R.color.darkGrey)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Material Mockups").withEmail("username@materialmockups.com").withIcon(getResources().getDrawable(R.drawable.ic_android_black_24dp))
+                        new ProfileDrawerItem().withName("Material Mockups").withEmail("username@materialmockups.com").withIcon(getResources().getDrawable(R.drawable.ic_search_white_24dp))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
