@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities;
+package com.telpa.ecommerce.helper;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,22 +14,19 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.CategoryA;
 
 public class BaseActivity extends AppCompatActivity {
 
-    private Drawer result = null;
+    public Drawer result = null;
     public Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.toolbar);
 
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-
-        drawerBuilder(BaseActivity.this);
+        //drawerBuilder(BaseActivity.this);
         //create the drawer and remember the `Drawer` result object
 
     }

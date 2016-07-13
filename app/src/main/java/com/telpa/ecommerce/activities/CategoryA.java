@@ -5,6 +5,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.helper.BaseActivity;
 
 public class CategoryA extends BaseActivity {
 
@@ -15,9 +16,9 @@ public class CategoryA extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.toolbar);
 
-        drawer = drawerBuilder(this);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
-        super.mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(super.mToolbar);
+        drawer = drawerBuilder(this);
     }
 }
