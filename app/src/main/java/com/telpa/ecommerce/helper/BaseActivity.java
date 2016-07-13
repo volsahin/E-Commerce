@@ -33,13 +33,15 @@ public class BaseActivity extends AppCompatActivity {
 
     public Drawer drawerBuilder(Activity activity) {
 
+
         new DrawerBuilder().withActivity(activity).build();
 
         //if you want to update the items at a later time it is recommended to keep it in a variable
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.app_name);
         SecondaryDrawerItem item2 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name2);
 
-        result = new DrawerBuilder()
+        //create the drawer and remember the `Drawer` result object
+        Drawer result = new DrawerBuilder()
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .addDrawerItems(
@@ -52,14 +54,12 @@ public class BaseActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                        Intent i = new Intent(BaseActivity.this, CategoryA.class);
-                        startActivity(i);
-
                         return true;
                     }
                 })
                 .build();
-        return result;
+
+                return result;
     }
 
 }
