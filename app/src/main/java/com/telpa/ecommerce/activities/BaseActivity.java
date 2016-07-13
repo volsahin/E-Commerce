@@ -1,13 +1,11 @@
-package com.telpa.ecommerce;
+package com.telpa.ecommerce.activities;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -15,31 +13,37 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.Nameable;
+import com.telpa.ecommerce.R;
 
-public class MainActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
 
     private Drawer result = null;
-    private Toolbar mToolbar;
+    public Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.deflay);
+        setContentView(R.layout.toolbar);
 
-        mToolbar = (Toolbar) findViewById(R.id.myToolbar);
 
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
-        new DrawerBuilder().withActivity(this).build();
+        drawerBuilder(BaseActivity.this);
+        //create the drawer and remember the `Drawer` result object
+
+    }
+
+    public Drawer drawerBuilder(Activity activity) {
+
+        new DrawerBuilder().withActivity(activity).build();
 
         //if you want to update the items at a later time it is recommended to keep it in a variable
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.app_name);
         SecondaryDrawerItem item2 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name2);
 
-        //create the drawer and remember the `Drawer` result object
-        Drawer result = new DrawerBuilder()
-                .withActivity(this)
+        result = new DrawerBuilder()
+                .withActivity(activity)
                 .withToolbar(mToolbar)
                 .addDrawerItems(
                         item1,
@@ -51,9 +55,15 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
+                        Intent i = new Intent(BaseActivity.this, CategoryA.class);
+                        startActivity(i);
+
                         return true;
                     }
                 })
                 .build();
-    }}
+        return result;
+    }
+
+}
 
