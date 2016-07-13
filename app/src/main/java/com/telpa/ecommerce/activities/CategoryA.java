@@ -18,8 +18,8 @@ public class CategoryA extends BaseActivity {
 
     private Drawer drawer = null;
     private Toolbar mToolbar;
-    CharSequence titles[]={"Category A","Category B"};
-    int numboftabs =2;
+    CharSequence titles[]={"Category A","Category B","Category C"};
+    int numboftabs =3;
     //private Drawer drawer = null;
 
     @Override
@@ -41,6 +41,7 @@ public class CategoryA extends BaseActivity {
         tabLayout.setDistributeEvenly(true);
         tabLayout.setViewPager(viewPager);
 
-        drawer = drawerBuilder(this);
+        drawer = drawerBuilder(this,accountHeaderBuilder(this));
+
     }
 }
