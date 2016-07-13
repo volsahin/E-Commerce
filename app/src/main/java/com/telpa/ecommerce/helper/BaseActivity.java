@@ -25,10 +25,6 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        //drawerBuilder(BaseActivity.this);
-        //create the drawer and remember the `Drawer` result object
-
     }
 
     public Drawer drawerBuilder(Activity activity) {

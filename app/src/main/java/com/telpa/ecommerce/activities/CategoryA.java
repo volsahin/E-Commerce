@@ -25,7 +25,7 @@ public class CategoryA extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.toolbar);
+        setContentView(R.layout.activity_category_a);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
