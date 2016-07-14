@@ -24,7 +24,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.mytextview,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_a_small,parent,false);
 
         RecyclerAdapter.ViewHolder viewHolder = new RecyclerAdapter.ViewHolder(v);
         new SpaceItemDecoration(300);
@@ -34,7 +34,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.textView.setText("DATA - DATA "+position);
+       // holder.textView.setText("DATA - DATA "+position);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         public ViewHolder(View v) {
             super(v);
-            textView = (TextView)v.findViewById(R.id.textView);
+            textView = (TextView)v.findViewById(R.id.price);
         }
     }
 

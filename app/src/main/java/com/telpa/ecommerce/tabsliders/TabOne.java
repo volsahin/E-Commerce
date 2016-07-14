@@ -23,7 +23,7 @@ public class TabOne extends Fragment {
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
 
-    private String[] myDataset = {"First","Second","Third"};
+    private String[] myDataset = {"First","Second","Third","Forth","Fifth","sixth"};
 
     @Nullable
     @Override
@@ -40,10 +40,10 @@ public class TabOne extends Fragment {
         recyclerView.setLayoutManager(recyclerLayoutManager);
         */
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(50));
+        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
         recyclerAdapter = new RecyclerAdapter(myDataset);
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
