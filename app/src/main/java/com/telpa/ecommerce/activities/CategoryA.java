@@ -40,9 +40,11 @@ public class CategoryA extends BaseActivity {
 
         super.mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("My Store");
-        mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        mToolbar.setTitleTextColor(getResources().getColor(R.color.black));
         mToolbar.setBackgroundColor(getResources().getColor(R.color.black));
         setSupportActionBar(super.mToolbar);
+
+
 
         getSupportActionBar().setTitle("My Store");
 

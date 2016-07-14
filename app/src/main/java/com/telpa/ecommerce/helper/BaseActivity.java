@@ -75,7 +75,7 @@ public class BaseActivity extends AppCompatActivity {
     public AccountHeader accountHeaderBuilder(Activity activity){
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
-                .withHeaderBackground(R.color.darkGrey)
+                .withHeaderBackground(R.color.black)
                 .addProfiles(
                         new ProfileDrawerItem().withName("Material Mockups").withEmail("username@materialmockups.com").withIcon(getResources().getDrawable(R.drawable.ic_search_white_24dp))
                 )
