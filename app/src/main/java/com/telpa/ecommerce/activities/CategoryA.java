@@ -53,7 +53,6 @@ public class CategoryA extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(CategoryA.this, "Search", Toast.LENGTH_SHORT).show();
-                drawer.openDrawer();
             }
         });
 
