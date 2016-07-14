@@ -1,8 +1,12 @@
 package com.telpa.ecommerce.activities;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.telpa.ecommerce.R;
@@ -20,13 +24,29 @@ public class CategoryA extends BaseActivity {
 
     CharSequence titles[] = {"Category A", "Category B", "Category C"};
     int numboftabs = 3;
+    ImageButton basket;
+    ImageButton search;
     //private Drawer drawer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_a);
-
+        basket = (ImageButton) findViewById(R.id.basketButton);
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(CategoryA.this, "Basket", Toast.LENGTH_SHORT).show();
+            }
+        });
+        search=(ImageButton) findViewById(R.id.searchButton);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(CategoryA.this, "Search", Toast.LENGTH_SHORT).show();
+                drawer.openDrawer();
+            }
+        });
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
@@ -48,7 +68,9 @@ public class CategoryA extends BaseActivity {
 
         getSupportActionBar().setTitle("My Store");
 
+
         drawer = drawerBuilder(this, accountHeaderBuilder(this));
+
 
     }
 }
