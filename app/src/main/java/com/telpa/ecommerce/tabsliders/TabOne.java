@@ -43,7 +43,7 @@ public class TabOne extends Fragment {
         recyclerLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
+        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(5));
         recyclerAdapter = new RecyclerAdapter(myDataset);
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
