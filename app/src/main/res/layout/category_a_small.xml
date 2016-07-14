@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/white">
 
-</LinearLayout>
+    <ImageButton
+        android:layout_width="191dp"
+        android:layout_height="191dp"
+        android:id="@+id/image"
+        android:layout_gravity="left|top"
+        android:src="@drawable/ic_photo_black_48dp"
+        android:layout_weight="0.27"
+        android:layout_margin="7dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="$100"
+        android:textColor="@color/red"
+        android:id="@+id/price"
+        android:layout_below="@+id/productName"
+        android:layout_alignLeft="@+id/productName"
+        android:layout_alignStart="@+id/productName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Product"
+        android:id="@+id/productName"
+        android:textStyle="bold"
+        android:layout_gravity=""
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_below="@+id/image"
+        android:layout_alignLeft="@+id/image"
+        android:layout_alignStart="@+id/image" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:id="@+id/actionButton"
+        android:src="@drawable/ic_action_name"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:layout_weight="0.07"
+        android:layout_below="@+id/image"
+        android:layout_alignRight="@+id/image"
+        android:layout_alignEnd="@+id/image"
+        android:layout_column="4" />
+
+</RelativeLayout>
