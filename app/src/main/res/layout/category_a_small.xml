@@ -48,7 +48,7 @@
         android:layout_gravity=""
         android:layout_row="1"
         android:layout_column="0"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:layout_below="@+id/image"
         android:layout_alignLeft="@+id/image"
         android:layout_alignStart="@+id/image"

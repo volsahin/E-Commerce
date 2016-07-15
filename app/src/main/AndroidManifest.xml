@@ -11,6 +11,9 @@
         <activity
             android:name=".activities.CategoryA"
             android:theme="@style/AppTheme">
+
+        </activity>
+        <activity android:name=".activities.CategoryB">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

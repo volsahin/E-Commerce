@@ -30,6 +30,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.CategoryA;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
+import com.telpa.ecommerce.tabsliders.TabHelper;
 import com.telpa.ecommerce.tabsliders.ViewPagerAdapter;
 
 import static com.telpa.ecommerce.R.id.viewPager;
@@ -52,7 +53,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_category_a);
+
 
 
 
@@ -83,12 +84,12 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
-    public void fcreateTabMenu(){
+    public void fcreateTabMenu(TabHelper helper){
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
 
-        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOftabs);
+        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOftabs,helper);
         viewPager.setAdapter(vpAdapter);
 
 
