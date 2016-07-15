@@ -1,7 +1,9 @@
 package com.telpa.ecommerce.activities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.helper.BaseActivity;
@@ -18,6 +20,7 @@ public class CategoryA extends BaseActivity {
         fcreateToolbar(this,true,true);
         fcreateMenu(this);
         fcreateTabMenu(new TabOne());
+
 
     }
 

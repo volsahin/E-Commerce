@@ -14,11 +14,17 @@
 
         </activity>
         <activity android:name=".activities.CategoryB">
+
+        </activity>
+        <activity
+            android:name=".activities.CategoryH"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

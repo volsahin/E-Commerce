@@ -54,9 +54,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-
-
-
     }
 
     public void fcreateTitle(String titleName){

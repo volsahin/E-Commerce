@@ -2,6 +2,9 @@ package com.telpa.ecommerce.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.StandartList;
@@ -13,21 +16,38 @@ import java.util.List;
 
 public class CategoryH extends BaseActivity{
 
-    private List<StandartList> list=new ArrayList<StandartList>();
+    public List<StandartList> getList() {
+        return list;
+    }
+
+    public void setList(List<StandartList> list) {
+        this.list = list;
+    }
+
+    public List<StandartList> list=new ArrayList<StandartList>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_h);
+
         fcreateTitle("My Store");
         fcreateToolbar(this,true,true);
         fcreateMenu(this);
-        fcreateTabMenu();
+
+
         list.add(new StandartList("Category","3 Product"));
         list.add(new StandartList("Category","9 Product"));
         list.add(new StandartList("Category","7 Product"));
         list.add(new StandartList("Category","35 Product"));
         list.add(new StandartList("Category","16 Product"));
 
+
+
+
+
+        ListHAdapter la=new ListHAdapter(this, list);
+        ListView listView=(ListView) findViewById(R.id.listH);
+        listView.setAdapter(la);
 
     }
 }
