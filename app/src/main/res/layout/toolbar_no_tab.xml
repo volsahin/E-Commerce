@@ -1,67 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbarNoTab"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/black">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_toLeftOf="@+id/basketButton"
+            android:layout_toStartOf="@+id/basketButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_search_white_24dp" />
 
-            <ImageButton
-                android:id="@+id/searchButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_toLeftOf="@+id/basketButton"
-                android:layout_toStartOf="@+id/basketButton"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_search_white_24dp" />
+        <ImageButton
+            android:id="@+id/basketButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_column="95"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_shopping_basket_white_24dp" />
 
-            <ImageButton
-                android:id="@+id/basketButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_column="95"
-                android:layout_gravity="center_vertical|right"
-                android:layout_marginEnd="24dp"
-                android:layout_marginRight="24dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_shopping_basket_white_24dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+            />
 
-                />
-
-        </RelativeLayout>
+    </RelativeLayout>
 
 
-    </android.support.v7.widget.Toolbar>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightGrey"
-        android:theme="@style/AppTheme"
-
-        ></android.support.v4.view.ViewPager>
-
-
-</LinearLayout>
+</android.support.v7.widget.Toolbar>

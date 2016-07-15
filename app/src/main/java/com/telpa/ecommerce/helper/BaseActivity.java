@@ -98,6 +98,7 @@ public class BaseActivity extends AppCompatActivity {
 
     public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav){
 
+//TODO düzenlenmesi gerekiyor
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
         if(hasDrawer)
