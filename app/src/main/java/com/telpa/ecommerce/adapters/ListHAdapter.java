@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.StandartList;
-import com.telpa.ecommerce.activities.CategoryH;
 
 import java.util.List;
 
@@ -28,8 +27,6 @@ public class ListHAdapter extends BaseAdapter{
                 Context.LAYOUT_INFLATER_SERVICE);
         standartList = lister;
     }
-
-
 
     @Override
     public int getCount() {
@@ -54,7 +51,8 @@ public class ListHAdapter extends BaseAdapter{
         TextView textView2 = (TextView) satirView.findViewById(R.id.category );
         ImageView imageView = (ImageView) satirView.findViewById(R.id.image);
         StandartList standartList1=standartList.get(i);
-        textView.setText(standartList1.getCategory());
+        textView2.setText(standartList1.getCategory());
+        textView.setText((standartList1.getProductName()));
         imageView.setImageResource(R.drawable.ic_photo_black_48dp);
 
         return satirView;

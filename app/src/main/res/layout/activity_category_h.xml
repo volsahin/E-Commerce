@@ -19,7 +19,8 @@
             android:id="@+id/listH"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/toolbarHnoTab" />
+            android:layout_below="@+id/toolbarHnoTab"
+            android:nestedScrollingEnabled="false" />
 
     </RelativeLayout>
 </ScrollView>

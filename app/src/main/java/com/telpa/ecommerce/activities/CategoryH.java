@@ -31,13 +31,18 @@ public class CategoryH extends BaseActivity{
         setContentView(R.layout.activity_category_h);
 
         fcreateTitle("My Store");
-        fcreateToolbar(this,true,true);
+        fcreateToolbar(this,true,false);
         fcreateMenu(this);
 
 
         list.add(new StandartList("Category","3 Product"));
         list.add(new StandartList("Category","9 Product"));
         list.add(new StandartList("Category","7 Product"));
+        list.add(new StandartList("Category","35 Product"));
+        list.add(new StandartList("Category","16 Product"));
+        list.add(new StandartList("Category","13 Product"));
+        list.add(new StandartList("Category","59 Product"));
+        list.add(new StandartList("Category","27 Product"));
         list.add(new StandartList("Category","35 Product"));
         list.add(new StandartList("Category","16 Product"));
 
