@@ -17,7 +17,7 @@ public class CategoryA extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_a);
         fcreateTitle("My Store");
-        fcreateToolbar(this,true,true);
+        fcreateToolbar(this, true, true);
         fcreateMenu(this);
         fcreateTabMenu(new TabOne());
 

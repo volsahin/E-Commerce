@@ -23,15 +23,15 @@ public class TabOne extends TabHelper {
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
 
-    private String[] myDataset = {"First","Second","Third","Forth","Fifth","sixth"};
+    private String[] myDataset = {"First", "Second", "Third", "Forth", "Fifth", "sixth"};
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.tab1,container,false);
+        View rootView = inflater.inflate(R.layout.tab1, container, false);
 
-        recyclerView = (RecyclerView)rootView.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
         recyclerView.setHasFixedSize(true);
 
@@ -40,7 +40,7 @@ public class TabOne extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
         */
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));

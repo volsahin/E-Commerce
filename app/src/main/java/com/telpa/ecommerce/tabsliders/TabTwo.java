@@ -25,21 +25,21 @@ public class TabTwo extends TabHelper {
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private RecyclerView.LayoutManager recyclerLayoutManager2;
 
-    private String[] myDataset = {"First","Second"};
-    private String[] myDataset2 = {"First","Second","Third","Forth","Fifth","sixth"};
+    private String[] myDataset = {"First", "Second"};
+    private String[] myDataset2 = {"First", "Second", "Third", "Forth", "Fifth", "sixth"};
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.tab2,container,false);
+        View rootView = inflater.inflate(R.layout.tab2, container, false);
 
-        recyclerView2 = (RecyclerView)rootView.findViewById(R.id.recyclerView2);
+        recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
 
         recyclerView2.setHasFixedSize(true);
 
 
-        recyclerView = (RecyclerView)rootView.findViewById(R.id.recyclerView1);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView1);
 
         recyclerView.setHasFixedSize(true);
 
@@ -49,11 +49,11 @@ public class TabTwo extends TabHelper {
         */
 
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
 
-        recyclerLayoutManager2 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager2 = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView2.setLayoutManager(recyclerLayoutManager2);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));

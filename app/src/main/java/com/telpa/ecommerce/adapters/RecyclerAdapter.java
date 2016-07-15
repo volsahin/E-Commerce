@@ -21,12 +21,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public RecyclerAdapter(String[] dataset, int id) {
         this.dataset = dataset;
-        this.id=id;
+        this.id = id;
     }
 
     @Override
     public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(id,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(id, parent, false);
 
         RecyclerAdapter.ViewHolder viewHolder = new RecyclerAdapter.ViewHolder(v);
         new SpaceItemDecoration(300);
@@ -36,7 +36,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-       // holder.textView.setText("DATA - DATA "+position);
+        // holder.textView.setText("DATA - DATA "+position);
     }
 
     @Override
@@ -44,22 +44,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return dataset.length;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView textView;
 
         public ViewHolder(View v) {
             super(v);
-            textView = (TextView)v.findViewById(R.id.price);
+            textView = (TextView) v.findViewById(R.id.price);
         }
     }
 
-    public static class SpaceItemDecoration extends RecyclerView.ItemDecoration{
+    public static class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
         int space;
-        public SpaceItemDecoration(int space){
+
+        public SpaceItemDecoration(int space) {
             this.space = space;
         }
+
         @Override
         public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
             outRect.left = space;

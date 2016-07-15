@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view2"
@@ -97,20 +95,22 @@
             android:id="@+id/likeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_favorite_black_24dp"
             android:layout_alignTop="@+id/bigActionButton"
             android:layout_toLeftOf="@+id/bigActionButton"
-            android:layout_toStartOf="@+id/bigActionButton" />
+            android:layout_toStartOf="@+id/bigActionButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_favorite_black_24dp" />
 
         <ImageButton
             android:id="@+id/bigBasketButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_shopping_basket_black_24dp"
             android:layout_alignTop="@+id/likeButton"
             android:layout_toLeftOf="@+id/likeButton"
-            android:layout_toStartOf="@+id/likeButton" />
+            android:layout_toStartOf="@+id/likeButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_shopping_basket_black_24dp" />
+
     </RelativeLayout>
+
 </android.support.v7.widget.CardView>

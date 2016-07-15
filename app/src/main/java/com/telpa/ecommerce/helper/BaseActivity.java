@@ -41,7 +41,7 @@ public class BaseActivity extends AppCompatActivity {
     public Toolbar mToolbar;
     public TextView title;
     public int badgeCount;
-    ImageButton basket,search;
+    ImageButton basket, search;
     private SlidingTabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter vpAdapter;
@@ -56,14 +56,14 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-    public void fcreateTitle(String titleName){
-        title=(TextView)findViewById(R.id.title);
+    public void fcreateTitle(String titleName) {
+        title = (TextView) findViewById(R.id.title);
         title.setText(titleName);
         title.setTextSize(18);
 
     }
 
-    public void fcreateMenu(final Context context){
+    public void fcreateMenu(final Context context) {
 
         basket = (ImageButton) findViewById(R.id.basketButton);
         basket.setOnClickListener(new View.OnClickListener() {
@@ -81,12 +81,12 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
-    public void fcreateTabMenu(TabHelper helper){
+    public void fcreateTabMenu(TabHelper helper) {
 
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
 
-        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOftabs,helper);
+        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOftabs, helper);
         viewPager.setAdapter(vpAdapter);
 
 
@@ -96,16 +96,16 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-    public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav){
+    public void fcreateToolbar(Context context, boolean hasDrawer, boolean hasHamburgerNav) {
 
 //TODO düzenlenmesi gerekiyor
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        if(hasDrawer)
-        drawer = drawerBuilder(this, accountHeaderBuilder(this));
+        if (hasDrawer)
+            drawer = drawerBuilder(this, accountHeaderBuilder(this));
 
 
-        if(hasHamburgerNav){
+        if (hasHamburgerNav) {
             mToolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -114,13 +114,14 @@ public class BaseActivity extends AppCompatActivity {
                     drawer.openDrawer();
                 }
             });
-        }else{
+        } else {
             //TODO : make an back arrow logo
         }
 
 
     }
-    public Drawer drawerBuilder(Activity activity,AccountHeader headerResult) {
+
+    public Drawer drawerBuilder(Activity activity, AccountHeader headerResult) {
 
 
         new DrawerBuilder().withActivity(activity).build();
@@ -138,7 +139,7 @@ public class BaseActivity extends AppCompatActivity {
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
-                .addDrawerItems(item1, item2, item3, item4,item5,item6)
+                .addDrawerItems(item1, item2, item3, item4, item5, item6)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
@@ -149,10 +150,10 @@ public class BaseActivity extends AppCompatActivity {
                 })
                 .build();
 
-                return result;
+        return result;
     }
 
-    public AccountHeader accountHeaderBuilder(Activity activity){
+    public AccountHeader accountHeaderBuilder(Activity activity) {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.color.darkGrey)
@@ -168,7 +169,6 @@ public class BaseActivity extends AppCompatActivity {
                 .build();
         return headerResult;
     }
-
 
 
 }
