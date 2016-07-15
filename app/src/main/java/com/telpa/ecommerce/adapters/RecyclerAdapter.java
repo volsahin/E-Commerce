@@ -17,14 +17,16 @@ import com.telpa.ecommerce.R;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     private String[] dataset;
+    private int id;
 
-    public RecyclerAdapter(String[] dataset) {
+    public RecyclerAdapter(String[] dataset, int id) {
         this.dataset = dataset;
+        this.id=id;
     }
 
     @Override
     public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_a_small,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(id,parent,false);
 
         RecyclerAdapter.ViewHolder viewHolder = new RecyclerAdapter.ViewHolder(v);
         new SpaceItemDecoration(300);
