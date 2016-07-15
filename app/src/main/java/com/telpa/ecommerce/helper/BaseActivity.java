@@ -1,16 +1,20 @@
 package com.telpa.ecommerce.helper;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -25,20 +29,98 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.CategoryA;
+import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
+import com.telpa.ecommerce.tabsliders.ViewPagerAdapter;
+
+import static com.telpa.ecommerce.R.id.viewPager;
 
 public class BaseActivity extends AppCompatActivity {
 
-    public Drawer result = null;
+    public Drawer drawer = null;
     public Toolbar mToolbar;
     public TextView title;
     public int badgeCount;
+    ImageButton basket,search;
+    private SlidingTabLayout tabLayout;
+    private ViewPager viewPager;
+    private ViewPagerAdapter vpAdapter;
+
+    CharSequence titles[] = {"Category A", "Category B", "Category C"};
+    int numbOftabs = 3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_category_a);
+
+
 
     }
 
+    public void fcreateTitle(String titleName){
+        title=(TextView)findViewById(R.id.title);
+        title.setText(titleName);
+        title.setTextSize(18);
+
+    }
+
+    public void fcreateMenu(final Context context){
+
+        basket = (ImageButton) findViewById(R.id.basketButton);
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Basket", Toast.LENGTH_SHORT).show();
+            }
+        });
+        search = (ImageButton) findViewById(R.id.searchButton);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void fcreateTabMenu(){
+
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
+
+        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOftabs);
+        viewPager.setAdapter(vpAdapter);
+
+
+        tabLayout.setDistributeEvenly(true);
+        tabLayout.setViewPager(viewPager);
+
+
+    }
+
+    public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav){
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        if(hasDrawer)
+        drawer = drawerBuilder(this, accountHeaderBuilder(this));
+
+
+        if(hasHamburgerNav){
+            mToolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
+
+            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    drawer.openDrawer();
+                }
+            });
+        }else{
+            //TODO : make an back arrow logo
+        }
+
+
+    }
     public Drawer drawerBuilder(Activity activity,AccountHeader headerResult) {
 
 
@@ -57,16 +139,7 @@ public class BaseActivity extends AppCompatActivity {
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
-                .addDrawerItems(
-                        item1,
-                        //new DividerDrawerItem(),
-                        item2,
-                        //new SecondaryDrawerItem(),
-                        item3,
-                        //new SecondaryDrawerItem(),
-                        item4,item5,item6
-                        //new SecondaryDrawerItem()
-                )
+                .addDrawerItems(item1, item2, item3, item4,item5,item6)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
