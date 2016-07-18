@@ -20,7 +20,7 @@ public class CategoryB extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_b);
         fcreateTitle("My Store");
-        fcreateToolbar(this, true, true);
+        fcreateToolbar(this, true, true,R.id.toolbar);
         fcreateMenu(this);
         List<TabHelper> tabHelperList = new ArrayList<>();
         tabHelperList.add(new TabTwo().getTabTwo("Category A"));

@@ -98,9 +98,9 @@ public class BaseActivity extends AppCompatActivity {
         tabLayout.setViewPager(viewPager);
     }
 
-    public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav){
+    public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav,int id){
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(id);
 
         if(hasDrawer)
         drawer = drawerBuilder(this, accountHeaderBuilder(this));

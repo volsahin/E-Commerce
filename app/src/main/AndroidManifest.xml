@@ -17,11 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activities.CategoryB">
-
-        </activity>
-        <activity android:name=".activities.CategoryH"/>
+        <activity android:name=".activities.CategoryB"></activity>
+        <activity android:name=".activities.CategoryH" />
+        <activity android:name=".activities.CategoryC"></activity>
     </application>
 
 </manifest>

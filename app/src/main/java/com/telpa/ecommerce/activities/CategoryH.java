@@ -32,7 +32,7 @@ public class CategoryH extends BaseActivity {
         setContentView(R.layout.activity_category_h);
 
         fcreateTitle("My Store");
-        fcreateToolbar(this, true, false);
+        fcreateToolbar(this, true, true,R.id.toolbarHnoTab);
         fcreateMenu(this);
 
 
