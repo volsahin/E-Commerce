@@ -10,20 +10,20 @@ import android.widget.TextView;
 import android.widget.ImageView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.StandartList;
+import com.telpa.ecommerce.models.StandartList;
 
 import java.util.List;
 
 /**
  * Created by Gizem İlgar on 15.7.2016.
  */
-public class ListHAdapter extends BaseAdapter {
+public class CategoryHAdapter extends BaseAdapter {
 
     private LayoutInflater myInflater;
     private List<StandartList> standartList;
 
 
-    public ListHAdapter(Activity activity, List<StandartList> lister) {
+    public CategoryHAdapter(Activity activity, List<StandartList> lister) {
         myInflater = (LayoutInflater) activity.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
         standartList = lister;

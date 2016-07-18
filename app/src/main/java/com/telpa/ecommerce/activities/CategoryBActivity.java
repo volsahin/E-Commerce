@@ -3,16 +3,15 @@ package com.telpa.ecommerce.activities;
 import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.helper.BaseActivity;
+import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.tabsliders.TabHelper;
-import com.telpa.ecommerce.tabsliders.TabOne;
 import com.telpa.ecommerce.tabsliders.TabTwo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class CategoryB extends BaseActivity {
+public class CategoryBActivity extends BaseActivity {
 
 
     @Override

@@ -1,4 +1,4 @@
-package com.telpa.ecommerce;
+package com.telpa.ecommerce.models;
 
 /**
  * Created by Gizem İlgar on 15.7.2016.

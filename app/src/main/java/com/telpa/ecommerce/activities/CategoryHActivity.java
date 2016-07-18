@@ -1,20 +1,17 @@
 package com.telpa.ecommerce.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.StandartList;
-import com.telpa.ecommerce.adapters.ListHAdapter;
-import com.telpa.ecommerce.helper.BaseActivity;
+import com.telpa.ecommerce.models.StandartList;
+import com.telpa.ecommerce.adapters.CategoryHAdapter;
+import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryH extends BaseActivity {
+public class CategoryHActivity extends BaseActivity {
 
     public List<StandartList> getList() {
         return list;
@@ -49,7 +46,7 @@ public class CategoryH extends BaseActivity {
         list.add(new StandartList("Category", "16 Product"));
 
 
-        ListHAdapter la = new ListHAdapter(this, list);
+        CategoryHAdapter la = new CategoryHAdapter(this, list);
         ListView listView = (ListView) findViewById(R.id.listH);
         listView.setAdapter(la);
 

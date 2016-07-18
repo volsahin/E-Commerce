@@ -8,7 +8,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.telpa.ecommerce.activities.CategoryH">
+        tools:context=".activities.CategoryHActivity">
 
         <include
             android:id="@+id/toolbarHnoTab"

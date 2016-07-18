@@ -1,8 +1,10 @@
-package com.telpa.ecommerce.tabsliders;
+package com.telpa.ecommerce.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.telpa.ecommerce.tabsliders.TabHelper;
 
 import java.util.List;
 

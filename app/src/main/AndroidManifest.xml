@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.CategoryA"
+            android:name=".activities.CategoryAActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CategoryB"></activity>
-        <activity android:name=".activities.CategoryH" />
-        <activity android:name=".activities.CategoryC"></activity>
+        <activity android:name=".activities.CategoryBActivity" />
+        <activity android:name=".activities.CategoryHActivity" />
+        <activity android:name=".activities.CategoryCActivity" />
     </application>
 
 </manifest>
