@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view"
+    android:id="@+id/card_view2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
@@ -17,52 +17,43 @@
 
         <ImageButton
             android:id="@+id/image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
             android:layout_weight="0.27"
             android:src="@drawable/ic_photo_black_48dp" />
-
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/productName"
-            android:layout_alignStart="@+id/productName"
-            android:layout_below="@+id/productName"
-            android:layout_marginRight="5dp"
-            android:text="$100"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/red"
-            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/productName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/image"
-            android:layout_alignStart="@+id/image"
-            android:layout_below="@+id/image"
-            android:layout_column="0"
-            android:layout_gravity=""
-            android:layout_marginRight="5dp"
-            android:layout_row="1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="10dp"
             android:text="Product"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/actionButton"
+        <TextView
+            android:id="@+id/category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/image"
-            android:layout_alignRight="@+id/image"
-            android:layout_below="@+id/image"
-            android:layout_column="4"
-            android:layout_weight="0.07"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_more_vert_black_24dp" />
+            android:layout_centerVertical="true"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_toEndOf="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:text="Category"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="28dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
