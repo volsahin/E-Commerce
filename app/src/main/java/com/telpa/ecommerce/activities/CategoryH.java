@@ -36,6 +36,7 @@ public class CategoryH extends BaseActivity {
         fcreateMenu(this);
 
 
+
         list.add(new StandartList("Category", "3 Product"));
         list.add(new StandartList("Category", "9 Product"));
         list.add(new StandartList("Category", "7 Product"));

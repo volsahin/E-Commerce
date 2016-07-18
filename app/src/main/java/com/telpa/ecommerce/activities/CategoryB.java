@@ -27,6 +27,7 @@ public class CategoryB extends BaseActivity {
         tabHelperList.add(new TabTwo().getTabTwo("Category B"));
         tabHelperList.add(new TabTwo().getTabTwo("Category C"));
 
+
         fcreateTabMenu(tabHelperList);
     }
 }
