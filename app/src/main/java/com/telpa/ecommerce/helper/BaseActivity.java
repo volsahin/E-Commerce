@@ -29,6 +29,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.CategoryA;
 import com.telpa.ecommerce.activities.CategoryB;
+import com.telpa.ecommerce.activities.CategoryH;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
 import com.telpa.ecommerce.tabsliders.TabHelper;
 import com.telpa.ecommerce.tabsliders.TabOne;
@@ -142,15 +143,26 @@ public class BaseActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
-                       if(position == 1){
-                           Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
+                        switch (position){
+                            case 1:
+                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                           Intent intent = new Intent(activity,CategoryB.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                           activity.startActivity(intent);
+                                Intent intent = new Intent(activity,CategoryA.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent);
+                                break;
 
+                            case 2:
+                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
+                                Intent intent2 = new Intent(activity,CategoryB.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent2);
+                                break;
+                            case 3:
+                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                       }
+                                Intent intent3 = new Intent(activity,CategoryH.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent3);
+                        }
 
                         // do something with the clicked item :D
                         return true;
