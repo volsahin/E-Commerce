@@ -82,6 +82,7 @@ public class BaseActivity extends AppCompatActivity {
                 Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     public void fcreateTabMenu(List<TabHelper> helper){
