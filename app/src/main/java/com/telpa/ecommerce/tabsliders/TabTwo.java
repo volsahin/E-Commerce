@@ -28,6 +28,14 @@ public class TabTwo extends TabHelper {
     private String[] myDataset = {"First","Second"};
     private String[] myDataset2 = {"First","Second","Third","Forth","Fifth","sixth"};
 
+    public TabTwo getTabTwo(String title){
+        TabTwo tabTwo = new TabTwo();
+        tabTwo.setTitle(title);
+        return tabTwo;
+    }
+
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

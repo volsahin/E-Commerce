@@ -12,11 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -29,10 +28,13 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.CategoryA;
+import com.telpa.ecommerce.activities.CategoryB;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
 import com.telpa.ecommerce.tabsliders.TabHelper;
+import com.telpa.ecommerce.tabsliders.TabOne;
 import com.telpa.ecommerce.tabsliders.ViewPagerAdapter;
-
+import java.util.ArrayList;
+import java.util.List;
 import static com.telpa.ecommerce.R.id.viewPager;
 
 public class BaseActivity extends AppCompatActivity {
@@ -53,10 +55,6 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-
-
     }
 
     public void fcreateTitle(String titleName){
@@ -73,6 +71,8 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Basket", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(BaseActivity.this,CategoryB.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+
             }
         });
         search = (ImageButton) findViewById(R.id.searchButton);
@@ -84,19 +84,16 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
-    public void fcreateTabMenu(TabHelper helper){
+    public void fcreateTabMenu(List<TabHelper> helper){
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
 
-        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOftabs,helper);
+        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), helper.size(),helper);
         viewPager.setAdapter(vpAdapter);
-
 
         tabLayout.setDistributeEvenly(true);
         tabLayout.setViewPager(viewPager);
-
-
     }
 
     public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav){
@@ -119,10 +116,9 @@ public class BaseActivity extends AppCompatActivity {
         }else{
             //TODO : make an back arrow logo
         }
-
-
     }
-    public Drawer drawerBuilder(Activity activity,AccountHeader headerResult) {
+
+    public Drawer drawerBuilder(final Activity activity, AccountHeader headerResult) {
 
 
         new DrawerBuilder().withActivity(activity).build();
@@ -144,6 +140,17 @@ public class BaseActivity extends AppCompatActivity {
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+
+                       if(position == 1){
+                           Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
+
+                           Intent intent = new Intent(activity,CategoryB.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                           activity.startActivity(intent);
+
+
+
+                       }
+
                         // do something with the clicked item :D
                         return true;
                     }

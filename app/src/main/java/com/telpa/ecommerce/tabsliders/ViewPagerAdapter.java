@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import java.util.List;
+
 /**
  * Created by volkan on 13.07.2016.
  */
@@ -11,14 +13,12 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
 
-    CharSequence titles[];
     int numbOfTabs;
-    TabHelper helper;
+    List<TabHelper> helper;
 
-    public ViewPagerAdapter(FragmentManager fm, CharSequence mTitles[], int mNumbOfTabsumb,TabHelper helper) {
+    public ViewPagerAdapter(FragmentManager fm,int mNumbOfTabsumb,List<TabHelper> helper) {
         super(fm);
 
-        this.titles = mTitles;
         this.numbOfTabs = mNumbOfTabsumb;
         this.helper = helper;
 
@@ -26,12 +26,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
 @Override
     public Fragment getItem(int position) {
-        return new TabOne();
+        return helper.get(position);
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return titles[position];
+        return helper.get(position).getTitle();
     }
 
     @Override

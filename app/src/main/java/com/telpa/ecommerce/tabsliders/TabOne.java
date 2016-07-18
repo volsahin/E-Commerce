@@ -25,6 +25,20 @@ public class TabOne extends TabHelper {
 
     private String[] myDataset = {"First","Second","Third","Forth","Fifth","sixth"};
 
+    public static TabOne getTabOne(String title){
+        TabOne tabOne = new TabOne();
+        tabOne.setTitle(title);
+        return tabOne;
+    }
+
+    /*
+    public static TabTwo getTabOnex(String title){
+        TabTwo tabtwo = new TabTwo();
+        tabtwo.setTitle(title);
+        return tabtwo;
+    }
+    */
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,5 +61,7 @@ public class TabOne extends TabHelper {
         recyclerAdapter = new RecyclerAdapter(myDataset, R.layout.category_a_small);
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
+
     }
+
 }
