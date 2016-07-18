@@ -1,9 +1,7 @@
 package com.telpa.ecommerce.tabsliders;
 
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -14,10 +12,11 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 /**
- * Created by volkan on 13.07.2016.
+ * Created by volkan on 18.07.2016.
  */
 
-public class TabOne extends TabHelper {
+public class ScreenCTabOne extends TabHelper {
+
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
@@ -25,28 +24,18 @@ public class TabOne extends TabHelper {
 
     private String[] myDataset = {"First", "Second", "Third", "Forth", "Fifth", "sixth"};
 
-    public static TabOne getTabOne(String title){
-        TabOne tabOne = new TabOne();
-        tabOne.setTitle(title);
-        return tabOne;
+    public static ScreenCTabOne getTabThree(String title){
+        ScreenCTabOne screenCTabOne = new ScreenCTabOne();
+        screenCTabOne.setTitle(title);
+        return screenCTabOne;
     }
-
-    /*
-    public static TabTwo getTabOnex(String title){
-        TabTwo tabtwo = new TabTwo();
-        tabtwo.setTitle(title);
-        return tabtwo;
-    }
-    */
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.screen_c_tab1,container);
 
-        View rootView = inflater.inflate(R.layout.tab1, container, false);
-
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView3);
 
         recyclerView.setHasFixedSize(true);
 
@@ -59,10 +48,10 @@ public class TabOne extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(myDataset, R.layout.category_a_small);
+        recyclerAdapter = new RecyclerAdapter(myDataset, R.layout.screen_a_small_row);
         recyclerView.setAdapter(recyclerAdapter);
+
         return rootView;
 
     }
-
 }

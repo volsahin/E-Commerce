@@ -21,10 +21,10 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.CategoryAActivity;
-import com.telpa.ecommerce.activities.CategoryBActivity;
-import com.telpa.ecommerce.activities.CategoryCActivity;
-import com.telpa.ecommerce.activities.CategoryHActivity;
+import com.telpa.ecommerce.activities.ScreenAActivity;
+import com.telpa.ecommerce.activities.ScreenBActivity;
+import com.telpa.ecommerce.activities.ScreenCActivity;
+import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
 import com.telpa.ecommerce.tabsliders.TabHelper;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
@@ -65,7 +65,7 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Basket", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(BaseActivity.this,CategoryBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                startActivity(new Intent(BaseActivity.this,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
             }
         });
@@ -140,26 +140,26 @@ public class BaseActivity extends AppCompatActivity {
                             case 1:
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(activity,CategoryAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent = new Intent(activity,ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent);
                                 break;
 
                             case 2:
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                                Intent intent2 = new Intent(activity,CategoryBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent2 = new Intent(activity,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent2);
                                 break;
                             case 3:
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                                Intent intent3 = new Intent(activity,CategoryHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent3 = new Intent(activity,ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent3);
                                 break;
                             case 5:
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                                Intent intent4 = new Intent(activity,CategoryCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent4 = new Intent(activity,ScreenCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent4);
                                 break;
                         }

@@ -17,13 +17,13 @@ import java.util.List;
 /**
  * Created by Gizem İlgar on 15.7.2016.
  */
-public class CategoryHAdapter extends BaseAdapter {
+public class ScreenHListAdapter extends BaseAdapter {
 
     private LayoutInflater myInflater;
     private List<StandartList> standartList;
 
 
-    public CategoryHAdapter(Activity activity, List<StandartList> lister) {
+    public ScreenHListAdapter(Activity activity, List<StandartList> lister) {
         myInflater = (LayoutInflater) activity.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
         standartList = lister;
@@ -47,7 +47,7 @@ public class CategoryHAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View satirView;
-        satirView = myInflater.inflate(R.layout.category_h, null);
+        satirView = myInflater.inflate(R.layout.screen_h_row, null);
         TextView textView = (TextView) satirView.findViewById(R.id.productName);
         TextView textView2 = (TextView) satirView.findViewById(R.id.category);
         ImageView imageView = (ImageView) satirView.findViewById(R.id.image);

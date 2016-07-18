@@ -3,7 +3,6 @@ package com.telpa.ecommerce.tabsliders;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -17,7 +16,7 @@ import com.telpa.ecommerce.adapters.RecyclerAdapter;
  * Created by volkan on 13.07.2016.
  */
 
-public class TabTwo extends TabHelper {
+public class ScreenBTabOne extends TabHelper {
     private RecyclerView recyclerView;
     private RecyclerView recyclerView2;
     private RecyclerView.Adapter recyclerAdapter;
@@ -28,8 +27,8 @@ public class TabTwo extends TabHelper {
     private String[] myDataset = {"First", "Second"};
     private String[] myDataset2 = {"First", "Second", "Third", "Forth", "Fifth", "sixth"};
 
-    public TabTwo getTabTwo(String title){
-        TabTwo tabTwo = new TabTwo();
+    public ScreenBTabOne getTabTwo(String title){
+        ScreenBTabOne tabTwo = new ScreenBTabOne();
         tabTwo.setTitle(title);
         return tabTwo;
     }
@@ -39,7 +38,7 @@ public class TabTwo extends TabHelper {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.tab2, container, false);
+        View rootView = inflater.inflate(R.layout.screen_b_tab1, container, false);
 
         recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
 
@@ -67,8 +66,8 @@ public class TabTwo extends TabHelper {
         recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
 
 
-        recyclerAdapter = new RecyclerAdapter(myDataset, R.layout.category_b_big);
-        recyclerAdapter2 = new RecyclerAdapter(myDataset2, R.layout.category_a_small);
+        recyclerAdapter = new RecyclerAdapter(myDataset, R.layout.screen_b_big_row);
+        recyclerAdapter2 = new RecyclerAdapter(myDataset2, R.layout.screen_a_small_row);
 
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView2.setAdapter(recyclerAdapter2);
