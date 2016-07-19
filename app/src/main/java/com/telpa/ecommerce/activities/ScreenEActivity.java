@@ -15,7 +15,7 @@ public class ScreenEActivity extends BaseActivity {
 
         fcreateTitle("My Store");
         fcreateToolbar(this, true, true, R.id.toolbar);
-        fcreateMenu(this);
+        fcreateMenu(this,true);
 
     }
 }
