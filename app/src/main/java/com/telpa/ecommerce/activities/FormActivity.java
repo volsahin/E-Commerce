@@ -22,6 +22,7 @@ public class FormActivity extends BaseActivity {
 
 
 
+
         arraySpinner= new String[]{"option", "option2"};
 
         Spinner spinner=(Spinner) findViewById(R.id.spinner);
