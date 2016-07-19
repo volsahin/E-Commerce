@@ -22,6 +22,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.BasketActivity;
 import com.telpa.ecommerce.activities.ScreenJActivity;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
@@ -265,12 +266,19 @@ public class BaseActivity extends AppCompatActivity {
 
                                 break;
                             case 12:
+
+                                Intent intent12 = new Intent(activity,BasketActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent12);
+
+                                break;
+                            case 13:
                                 /*
-                                Intent intent12 = new Intent(activity,ScreenKActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent13 = new Intent(activity,ScreenLActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent12);
                                 */
                                 break;
-                            case 13:
+
+                            case 14:
                                 /*
                                 Intent intent13 = new Intent(activity,ScreenLActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent12);
