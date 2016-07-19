@@ -28,7 +28,7 @@ public class ScreenHActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_h);
 
-        fcreateTitle("My Store");
+        fcreateTitle("Category");
         fcreateToolbar(this, true, true,R.id.toolbarHnoTab);
         fcreateMenu(this, true);
 
