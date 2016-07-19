@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -21,6 +22,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.FormActivity;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
@@ -37,7 +39,7 @@ public class BaseActivity extends AppCompatActivity {
     public Toolbar mToolbar;
     public TextView title;
     public int badgeCount;
-    ImageButton basket,search;
+    ImageButton basket, search;
     private SlidingTabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter vpAdapter;
@@ -51,55 +53,60 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-    public void fcreateTitle(String titleName){
-        title=(TextView)findViewById(R.id.title);
+    public void fcreateTitle(String titleName) {
+        title = (TextView) findViewById(R.id.title);
         title.setText(titleName);
         title.setTextSize(18);
 
     }
 
-    public void fcreateMenu(final Context context){
-
+    public void fcreateMenu(final Context context, boolean visible) {
         basket = (ImageButton) findViewById(R.id.basketButton);
-        basket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "Basket", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(BaseActivity.this,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
-            }
-        });
         search = (ImageButton) findViewById(R.id.searchButton);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (visible) {
 
+            basket.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, "Basket", Toast.LENGTH_SHORT).show();
+
+
+                }
+            });
+
+            search.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            basket.setVisibility(View.INVISIBLE);
+            search.setVisibility(View.INVISIBLE);
+        }
     }
 
-    public void fcreateTabMenu(List<TabHelper> helper){
+    public void fcreateTabMenu(List<TabHelper> helper) {
 
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (SlidingTabLayout) findViewById(R.id.tablayout);
 
-        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), helper.size(),helper);
+        vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(), helper.size(), helper);
         viewPager.setAdapter(vpAdapter);
 
         tabLayout.setDistributeEvenly(true);
         tabLayout.setViewPager(viewPager);
     }
 
-    public void fcreateToolbar(Context context,boolean hasDrawer,boolean hasHamburgerNav,int id){
+    public void fcreateToolbar(Context context, boolean hasDrawer, boolean hasHamburgerNav, int id) {
 
         mToolbar = (Toolbar) findViewById(id);
 
-        if(hasDrawer)
-        drawer = drawerBuilder(this, accountHeaderBuilder(this));
+        if (hasDrawer)
+            drawer = drawerBuilder(this, accountHeaderBuilder(this));
 
 
-        if(hasHamburgerNav){
+        if (hasHamburgerNav) {
             mToolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -109,7 +116,7 @@ public class BaseActivity extends AppCompatActivity {
                 }
             });
 
-        }else{
+        } else {
 
             mToolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_white_24dp);
 
@@ -198,22 +205,22 @@ public class BaseActivity extends AppCompatActivity {
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
-                .addDrawerItems(item1, item2, item3, item4,item5,item6,item7,item8,item9,item10,item11,item12,item13)
+                .addDrawerItems(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
-                        switch (position){
+                        switch (position) {
                             case 1:
-                                Intent intent = new Intent(activity,ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent = new Intent(activity, ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent);
                                 break;
                             case 2:
-                                Intent intent2 = new Intent(activity,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent2 = new Intent(activity, ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent2);
                                 break;
                             case 3:
-                                Intent intent3 = new Intent(activity,ScreenCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent3 = new Intent(activity, ScreenCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent3);
                                 break;
                             case 5:
@@ -241,7 +248,7 @@ public class BaseActivity extends AppCompatActivity {
                                 */
                                 break;
                             case 9:
-                                Intent intent9 = new Intent(activity,ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent9 = new Intent(activity, ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent9);
                                 break;
                             case 10:
@@ -251,10 +258,10 @@ public class BaseActivity extends AppCompatActivity {
                                 */
                                 break;
                             case 11:
-                                /*
-                                Intent intent11 = new Intent(activity,ScreenJActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                                Intent intent11 = new Intent(activity, FormActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent11);
-                                */
+
                                 break;
                             case 12:
                                 /*
@@ -276,10 +283,10 @@ public class BaseActivity extends AppCompatActivity {
                 })
                 .build();
 
-                return result;
+        return result;
     }
 
-    public AccountHeader accountHeaderBuilder(Activity activity){
+    public AccountHeader accountHeaderBuilder(Activity activity) {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.color.darkGrey)
@@ -295,7 +302,6 @@ public class BaseActivity extends AppCompatActivity {
                 .build();
         return headerResult;
     }
-
 
 
 }

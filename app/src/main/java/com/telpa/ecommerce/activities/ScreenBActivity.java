@@ -22,7 +22,7 @@ public class ScreenBActivity extends BaseActivity {
 
         fcreateTitle("My Store");
         fcreateToolbar(this, true, true,R.id.toolbar);
-        fcreateMenu(this);
+        fcreateMenu(this, true);
 
         List<TabHelper> tabHelperList = new ArrayList<>();
         tabHelperList.add(ScreenBTab.createTab("Category A"));
