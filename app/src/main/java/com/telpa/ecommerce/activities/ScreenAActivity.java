@@ -23,7 +23,7 @@ public class ScreenAActivity extends BaseActivity {
 
         fcreateTitle("My Store");
         fcreateToolbar(this, true, true, R.id.toolbar);
-        fcreateMenu(this);
+        fcreateMenu(this, true);
 
         // This list holds current tabs in ScreenA
         List<TabHelper> tabHelperList = new ArrayList<>();

@@ -33,7 +33,7 @@ String string;
 
         fcreateTitle("Category");
         fcreateToolbar(this, true, false,R.id.toolbar);
-        fcreateMenu(this);
+        fcreateMenu(this, true);
 
         string=getString(R.string.lorem);
 

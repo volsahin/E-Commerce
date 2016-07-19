@@ -30,7 +30,7 @@ public class ScreenHActivity extends BaseActivity {
 
         fcreateTitle("Category");
         fcreateToolbar(this, true, true,R.id.toolbarHnoTab);
-        fcreateMenu(this);
+        fcreateMenu(this, true);
 
 
 
