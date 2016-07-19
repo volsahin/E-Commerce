@@ -137,21 +137,29 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:checked="true"
-                    android:text="option" />
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:checked="true"
+                        android:text="option" />
 
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="option" />
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="option" />
+
+                </RadioGroup>
+
             </LinearLayout>
 
 
@@ -168,25 +176,25 @@
             android:id="@+id/button"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
             android:background="@color/darkGrey"
             android:text="Button"
-            android:textColor="@color/white"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginBottom="20dp"
-            android:layout_alignParentBottom="true"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="25dp"
             android:background="@color/red"
             android:text="Button"
-            android:textColor="@color/white"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="20dp"
-            android:layout_alignParentBottom="true"/>
+            android:textColor="@color/white" />
     </RelativeLayout>
 </LinearLayout>
