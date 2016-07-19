@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.ImageView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.models.StandartList;
+import com.telpa.ecommerce.models.HList;
 
 import java.util.List;
 
@@ -20,23 +20,23 @@ import java.util.List;
 public class ScreenHListAdapter extends BaseAdapter {
 
     private LayoutInflater myInflater;
-    private List<StandartList> standartList;
+    private List<HList> hList;
 
 
-    public ScreenHListAdapter(Activity activity, List<StandartList> lister) {
+    public ScreenHListAdapter(Activity activity, List<HList> lister) {
         myInflater = (LayoutInflater) activity.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
-        standartList = lister;
+        hList = lister;
     }
 
     @Override
     public int getCount() {
-        return standartList.size();
+        return hList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return standartList.get(i);
+        return hList.get(i);
     }
 
     @Override
@@ -51,9 +51,9 @@ public class ScreenHListAdapter extends BaseAdapter {
         TextView textView = (TextView) satirView.findViewById(R.id.productName);
         TextView textView2 = (TextView) satirView.findViewById(R.id.category);
         ImageView imageView = (ImageView) satirView.findViewById(R.id.image);
-        StandartList standartList1 = standartList.get(i);
-        textView2.setText(standartList1.getCategory());
-        textView.setText((standartList1.getProductName()));
+        HList hList1 = hList.get(i);
+        textView2.setText(hList1.getCategory());
+        textView.setText((hList1.getProductName()));
         imageView.setImageResource(R.drawable.ic_photo_black_48dp);
 
         return satirView;

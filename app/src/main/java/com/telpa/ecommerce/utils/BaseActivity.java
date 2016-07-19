@@ -25,6 +25,7 @@ import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
+import com.telpa.ecommerce.activities.ScreenIActivity;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
 import com.telpa.ecommerce.tabsliders.TabHelper;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
@@ -138,17 +139,23 @@ public class BaseActivity extends AppCompatActivity {
 
                         switch (position){
                             case 1:
+                              Intent  intent = new Intent(BaseActivity.this, ScreenHActivity.class);
+                                BaseActivity.this.startActivity(intent);
+                                /*
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(activity,ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent);
+                                activity.startActivity(intent);*/
                                 break;
 
                             case 2:
+                                Intent  intent1 = new Intent(BaseActivity.this, ScreenIActivity.class);
+                                BaseActivity.this.startActivity(intent1);
+                                /*
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
                                 Intent intent2 = new Intent(activity,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent2);
+                                activity.startActivity(intent2);*/
                                 break;
                             case 3:
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
