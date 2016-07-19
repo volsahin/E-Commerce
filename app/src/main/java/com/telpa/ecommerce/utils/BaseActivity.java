@@ -110,7 +110,16 @@ public class BaseActivity extends AppCompatActivity {
             });
 
         }else{
-            //TODO : make an back arrow logo
+
+            mToolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_white_24dp);
+
+
+            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    drawer.openDrawer();
+                }
+            });
         }
     }
 
@@ -119,7 +128,6 @@ public class BaseActivity extends AppCompatActivity {
 
         new DrawerBuilder().withActivity(activity).build();
 
-        //if you want to update the items at a later time it is recommended to keep it in a variable
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().
                 withIdentifier(1).
                 withName("ScreenA").

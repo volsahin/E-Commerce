@@ -57,7 +57,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public static class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
-        int space;
+        int space = 0;
 
         public SpaceItemDecoration(int space) {
             this.space = space;
