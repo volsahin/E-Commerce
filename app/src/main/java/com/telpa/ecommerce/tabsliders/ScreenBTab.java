@@ -16,7 +16,7 @@ import com.telpa.ecommerce.adapters.RecyclerAdapter;
  * Created by volkan on 13.07.2016.
  */
 
-public class ScreenBTabOne extends TabHelper {
+public class ScreenBTab extends TabHelper {
     private RecyclerView recyclerView;
     private RecyclerView recyclerView2;
     private RecyclerView.Adapter recyclerAdapter;
@@ -24,11 +24,10 @@ public class ScreenBTabOne extends TabHelper {
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private RecyclerView.LayoutManager recyclerLayoutManager2;
 
-    private String[] myDataset = {"First", "Second"};
-    private String[] myDataset2 = {"First", "Second", "Third", "Forth", "Fifth", "sixth"};
 
-    public ScreenBTabOne getTabTwo(String title){
-        ScreenBTabOne tabTwo = new ScreenBTabOne();
+
+    public static ScreenBTab createTab(String title){
+        ScreenBTab tabTwo = new ScreenBTab();
         tabTwo.setTitle(title);
         return tabTwo;
     }
@@ -66,8 +65,8 @@ public class ScreenBTabOne extends TabHelper {
         recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
 
 
-        recyclerAdapter = new RecyclerAdapter(myDataset, R.layout.screen_b_big_row);
-        recyclerAdapter2 = new RecyclerAdapter(myDataset2, R.layout.screen_a_small_row);
+        recyclerAdapter = new RecyclerAdapter(2, R.layout.screen_b_big_row);
+        recyclerAdapter2 = new RecyclerAdapter(6, R.layout.screen_a_small_row);
 
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView2.setAdapter(recyclerAdapter2);
