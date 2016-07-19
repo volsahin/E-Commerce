@@ -26,7 +26,9 @@ import com.telpa.ecommerce.activities.FormActivity;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
+import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
+import com.telpa.ecommerce.activities.ScreenIActivity;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
 import com.telpa.ecommerce.tabsliders.TabHelper;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
@@ -230,10 +232,10 @@ public class BaseActivity extends AppCompatActivity {
                                 */
                                 break;
                             case 6:
-                                /*
+
                                 Intent intent6 = new Intent(activity,ScreenEActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent6);
-                                */
+
                                 break;
                             case 7:
                                 /*
@@ -252,10 +254,10 @@ public class BaseActivity extends AppCompatActivity {
                                 activity.startActivity(intent9);
                                 break;
                             case 10:
-                                /*
+
                                 Intent intent10 = new Intent(activity,ScreenIActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent10);
-                                */
+
                                 break;
                             case 11:
 

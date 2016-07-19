@@ -6,10 +6,20 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.telpa.ecommerce.activities.ScreenEActivity">
+    tools:context="com.telpa.ecommerce.activities.ScreenEActivity"
+    android:background="@color/lightGrey">
 
     <include layout="@layout/toolbar"/>
-    <include layout="@layout/screen_e_row"/>
 
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/subcategory"
+        android:scrollbars="vertical"/>
 
 </LinearLayout>
