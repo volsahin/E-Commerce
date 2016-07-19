@@ -36,6 +36,7 @@ public class ScreenIActivity extends BaseActivity {
         fcreateMenu(this);
 
 
+
         I_list.add(new IList("Product","100$","\"@string/lorem\""));
         I_list.add(new IList("Product","100$","\"@string/lorem\""));
         I_list.add(new IList("Product","100$","\"@string/lorem\""));

@@ -120,8 +120,8 @@ public class BaseActivity extends AppCompatActivity {
         new DrawerBuilder().withActivity(activity).build();
 
         //if you want to update the items at a later time it is recommended to keep it in a variable
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Screen H").withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Screen I").withIcon(R.drawable.material_drawer_circle_mask);
         PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
         SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name2);
         PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
@@ -141,21 +141,13 @@ public class BaseActivity extends AppCompatActivity {
                             case 1:
                               Intent  intent = new Intent(BaseActivity.this, ScreenHActivity.class);
                                 BaseActivity.this.startActivity(intent);
-                                /*
-                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(activity,ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent);*/
                                 break;
 
                             case 2:
                                 Intent  intent1 = new Intent(BaseActivity.this, ScreenIActivity.class);
                                 BaseActivity.this.startActivity(intent1);
-                                /*
-                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
 
-                                Intent intent2 = new Intent(activity,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent2);*/
                                 break;
                             case 3:
                                 Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
