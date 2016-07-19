@@ -1,6 +1,5 @@
 package com.telpa.ecommerce.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -8,12 +7,12 @@ import android.widget.Spinner;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.utils.BaseActivity;
 
-public class FormActivity extends BaseActivity {
+public class ScreenJActivity extends BaseActivity {
     private String[] arraySpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form);
+        setContentView(R.layout.activity_screen_j);
 
         fcreateTitle("Form");
         fcreateToolbar(this, true, false, R.id.toolbar);

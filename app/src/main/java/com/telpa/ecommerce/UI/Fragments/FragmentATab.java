@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.tabsliders;
+package com.telpa.ecommerce.UI.Fragments;
 
 
 import android.os.Bundle;
@@ -10,21 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.UI.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 /**
  * Created by volkan on 13.07.2016.
  */
 
-public class ScreenATab extends TabHelper {
+public class FragmentATab extends TabHelper {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
 
 
-    public static ScreenATab createTab(String title){
-        ScreenATab tabOne = new ScreenATab();
+    public static FragmentATab createTab(String title){
+        FragmentATab tabOne = new FragmentATab();
         tabOne.setTitle(title);
         return tabOne;
     }
@@ -35,7 +36,7 @@ public class ScreenATab extends TabHelper {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.screen_a_tab1, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_a_tab1, container, false);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 

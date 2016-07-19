@@ -21,7 +21,7 @@
         <activity android:name=".activities.ScreenHActivity" />
         <activity android:name=".activities.ScreenCActivity" />
         <activity android:name=".activities.ScreenIActivity" />
-        <activity android:name=".activities.FormActivity"></activity>
+        <activity android:name=".activities.ScreenJActivity"></activity>
 
         <activity android:name=".activities.ScreenEActivity"></activity>
     </application>

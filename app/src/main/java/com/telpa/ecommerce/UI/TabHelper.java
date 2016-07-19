@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.tabsliders;
+package com.telpa.ecommerce.UI;
 
 import android.support.v4.app.Fragment;
 

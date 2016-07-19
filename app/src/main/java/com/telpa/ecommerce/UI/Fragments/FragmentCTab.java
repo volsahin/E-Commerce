@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.tabsliders;
+package com.telpa.ecommerce.UI.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,13 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.UI.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 /**
  * Created by volkan on 18.07.2016.
  */
 
-public class ScreenCTab extends TabHelper {
+public class FragmentCTab extends TabHelper {
 
 
     private RecyclerView recyclerView;
@@ -23,8 +24,8 @@ public class ScreenCTab extends TabHelper {
     private RecyclerView.LayoutManager recyclerLayoutManager;
 
 
-    public static ScreenCTab createTab(String title){
-        ScreenCTab screenCTabOne = new ScreenCTab();
+    public static FragmentCTab createTab(String title){
+        FragmentCTab screenCTabOne = new FragmentCTab();
         screenCTabOne.setTitle(title);
         return screenCTabOne;
     }
@@ -32,9 +33,9 @@ public class ScreenCTab extends TabHelper {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.screen_c_tab1,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_c_tab1,container,false);
 
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView3);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerViewC);
 
         recyclerView.setHasFixedSize(true);
 
@@ -43,11 +44,11 @@ public class ScreenCTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
         */
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.screen_a_small_row);
+        recyclerAdapter = new RecyclerAdapter(5, R.layout.screen_c_row);
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;

@@ -22,15 +22,15 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.FormActivity;
+import com.telpa.ecommerce.activities.ScreenJActivity;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
 import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
-import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
-import com.telpa.ecommerce.tabsliders.TabHelper;
+import com.telpa.ecommerce.UI.SlidingTabLayout;
+import com.telpa.ecommerce.UI.TabHelper;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
 import java.util.List;
@@ -262,7 +262,7 @@ public class BaseActivity extends AppCompatActivity {
                                 break;
                             case 11:
 
-                                Intent intent11 = new Intent(activity, FormActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent11 = new Intent(activity, ScreenJActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent11);
 
                                 break;
