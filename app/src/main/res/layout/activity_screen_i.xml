@@ -11,14 +11,14 @@
         tools:context="com.telpa.ecommerce.activities.CategoryI">
 
         <include
-            android:id="@+id/toolbarHnoTab"
+            android:id="@+id/toolbar"
             layout="@layout/toolbar" />
 
         <ListView
             android:id="@+id/listI"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/toolbarHnoTab"
+            android:layout_below="@+id/toolbar"
             android:nestedScrollingEnabled="false" />
 
     </RelativeLayout>
