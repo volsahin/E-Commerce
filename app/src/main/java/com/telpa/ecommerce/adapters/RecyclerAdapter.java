@@ -16,7 +16,6 @@ import com.telpa.ecommerce.R;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-   // private String[] dataset;
     private int amountOfData;
     private int id;
 
