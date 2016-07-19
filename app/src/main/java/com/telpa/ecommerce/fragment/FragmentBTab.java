@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.UI.Fragments;
+package com.telpa.ecommerce.fragment;
 
 
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.UI.TabHelper;
+import com.telpa.ecommerce.ui.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 /**

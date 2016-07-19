@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.UI;
+package com.telpa.ecommerce.ui;
 
 import android.support.v4.app.Fragment;
 

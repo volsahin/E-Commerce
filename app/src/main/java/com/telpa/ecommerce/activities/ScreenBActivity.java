@@ -4,8 +4,8 @@ import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.utils.BaseActivity;
-import com.telpa.ecommerce.UI.TabHelper;
-import com.telpa.ecommerce.UI.Fragments.FragmentBTab;
+import com.telpa.ecommerce.ui.TabHelper;
+import com.telpa.ecommerce.fragment.FragmentBTab;
 
 import java.util.ArrayList;
 import java.util.List;
