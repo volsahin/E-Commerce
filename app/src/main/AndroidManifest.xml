@@ -20,7 +20,8 @@
         <activity android:name=".activities.ScreenBActivity" />
         <activity android:name=".activities.ScreenHActivity" />
         <activity android:name=".activities.ScreenCActivity" />
-        <activity android:name=".activities.ScreenIActivity"></activity>
+        <activity android:name=".activities.ScreenIActivity" />
+        <activity android:name=".activities.ScreenDActivity"></activity>
     </application>
 
 </manifest>
