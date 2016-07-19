@@ -108,6 +108,7 @@ public class BaseActivity extends AppCompatActivity {
                     drawer.openDrawer();
                 }
             });
+
         }else{
             //TODO : make an back arrow logo
         }
