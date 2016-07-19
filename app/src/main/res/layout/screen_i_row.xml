@@ -37,7 +37,8 @@
             android:layout_below="@+id/bigActionButton"
             android:layout_toRightOf="@+id/image"
             android:layout_toEndOf="@+id/image"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:focusable="false"/>
 
         <ImageButton
             android:id="@+id/bigActionButton"
