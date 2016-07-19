@@ -32,7 +32,7 @@ public class ScreenCTab extends TabHelper {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.screen_c_tab1,container);
+        View rootView = inflater.inflate(R.layout.screen_c_tab1,container,false);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView3);
 
