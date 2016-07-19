@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.ui.TabHelper;
+import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 /**
