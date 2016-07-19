@@ -12,7 +12,6 @@
     <include layout="@layout/toolbar"/>
 
 
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewE"
         android:layout_width="match_parent"

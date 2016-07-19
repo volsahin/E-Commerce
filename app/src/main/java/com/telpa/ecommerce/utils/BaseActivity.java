@@ -258,6 +258,7 @@ public class BaseActivity extends AppCompatActivity {
                                 Intent intent10 = new Intent(activity,ScreenIActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent10);
 
+
                                 break;
                             case 11:
 
