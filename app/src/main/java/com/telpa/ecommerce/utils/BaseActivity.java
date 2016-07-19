@@ -29,7 +29,6 @@ import com.telpa.ecommerce.activities.ScreenCActivity;
 import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
-import com.telpa.ecommerce.ui.SlidingTabLayout;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
 import java.util.List;

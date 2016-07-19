@@ -8,7 +8,7 @@
     <include layout="@layout/toolbar"/>
 
 
-    <com.telpa.ecommerce.ui.SlidingTabLayout
+    <com.telpa.ecommerce.utils.SlidingTabLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

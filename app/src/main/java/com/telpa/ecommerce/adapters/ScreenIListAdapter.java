@@ -46,7 +46,7 @@ public class ScreenIListAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View satirView;
-        satirView = mInflater.inflate(R.layout.screen_i_row, null);
+        satirView = mInflater.inflate(R.layout.item_i_row, null);
         TextView textView = (TextView) satirView.findViewById(R.id.productName);
         TextView textView2=(TextView) satirView.findViewById(R.id.bigPrice);
         TextView textView3=(TextView) satirView.findViewById(R.id.description);
