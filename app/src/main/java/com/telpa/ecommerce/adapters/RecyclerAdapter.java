@@ -16,11 +16,12 @@ import com.telpa.ecommerce.R;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    private String[] dataset;
+   // private String[] dataset;
+    private int amountOfData;
     private int id;
 
-    public RecyclerAdapter(String[] dataset, int id) {
-        this.dataset = dataset;
+    public RecyclerAdapter(int amountOfData, int id) {
+        this.amountOfData = amountOfData;
         this.id = id;
     }
 
@@ -41,7 +42,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return dataset.length;
+        return amountOfData;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

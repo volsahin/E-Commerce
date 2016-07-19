@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.tabsliders.TabHelper;
-import com.telpa.ecommerce.tabsliders.ScreenBTabOne;
+import com.telpa.ecommerce.tabsliders.ScreenBTab;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +25,9 @@ public class ScreenBActivity extends BaseActivity {
         fcreateMenu(this);
 
         List<TabHelper> tabHelperList = new ArrayList<>();
-        tabHelperList.add(new ScreenBTabOne().getTabTwo("Category A"));
-        tabHelperList.add(new ScreenBTabOne().getTabTwo("Category B"));
-        tabHelperList.add(new ScreenBTabOne().getTabTwo("Category C"));
+        tabHelperList.add(ScreenBTab.createTab("Category A"));
+        tabHelperList.add(ScreenBTab.createTab("Category B"));
+        tabHelperList.add(ScreenBTab.createTab("Category C"));
 
 
         fcreateTabMenu(tabHelperList);
