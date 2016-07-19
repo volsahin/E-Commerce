@@ -51,7 +51,7 @@ public class ScreenIListAdapter extends BaseAdapter {
         TextView textView2=(TextView) satirView.findViewById(R.id.bigPrice);
         TextView textView3=(TextView) satirView.findViewById(R.id.description);
         ImageView imageView = (ImageView) satirView.findViewById(R.id.image);
-        ImageView imageView1=(ImageView) satirView.findViewById(R.id.bigImage);
+        ImageView imageView1=(ImageView) satirView.findViewById(R.id.bigActionButton);
         RatingBar ratingBar=(RatingBar) satirView.findViewById(R.id.ratingBar);
         IList i_construction1 = i_construction.get(i);
         textView.setText((i_construction1.getProductName()));

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScreenIActivity extends BaseActivity {
-
+String string;
 
     public List<IList> getList() {
         return I_list;
@@ -35,19 +35,18 @@ public class ScreenIActivity extends BaseActivity {
         fcreateToolbar(this, true, false,R.id.toolbar);
         fcreateMenu(this);
 
+        string=getString(R.string.lorem);
 
-
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-        I_list.add(new IList("Product","100$","\"@string/lorem\""));
-
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
+        I_list.add(new IList("Product","100$",string));
 
         ScreenIListAdapter la = new ScreenIListAdapter(this, I_list);
         ListView listView = (ListView) findViewById(R.id.listI);
