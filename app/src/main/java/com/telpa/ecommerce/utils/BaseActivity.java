@@ -25,7 +25,6 @@ import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
-import com.telpa.ecommerce.activities.ScreenIActivity;
 import com.telpa.ecommerce.tabsliders.SlidingTabLayout;
 import com.telpa.ecommerce.tabsliders.TabHelper;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
@@ -109,6 +108,7 @@ public class BaseActivity extends AppCompatActivity {
                     drawer.openDrawer();
                 }
             });
+
         }else{
             //TODO : make an back arrow logo
         }
@@ -120,50 +120,149 @@ public class BaseActivity extends AppCompatActivity {
         new DrawerBuilder().withActivity(activity).build();
 
         //if you want to update the items at a later time it is recommended to keep it in a variable
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Screen H").withIcon(R.drawable.material_drawer_circle_mask);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Screen I").withIcon(R.drawable.material_drawer_circle_mask);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
-        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name2);
-        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
-        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().
+                withIdentifier(1).
+                withName("ScreenA").
+                withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenB")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenC")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem()
+                .withIdentifier(2)
+                .withName(R.string.app_name2);
+
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenD")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenE")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item7 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenF")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item8 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenG")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item9 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenH")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item10 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenI")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item11 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenJ")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item12 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenK")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
+        PrimaryDrawerItem item13 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenL")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
 
         //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
-                .addDrawerItems(item1, item2, item3, item4,item5,item6)
+                .addDrawerItems(item1, item2, item3, item4,item5,item6,item7,item8,item9,item10,item11,item12,item13)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
                         switch (position){
                             case 1:
-                              Intent  intent = new Intent(BaseActivity.this, ScreenHActivity.class);
-                                BaseActivity.this.startActivity(intent);
-
+                                Intent intent = new Intent(activity,ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent);
                                 break;
-
                             case 2:
-                                Intent  intent1 = new Intent(BaseActivity.this, ScreenIActivity.class);
-                                BaseActivity.this.startActivity(intent1);
-
+                                Intent intent2 = new Intent(activity,ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent2);
                                 break;
                             case 3:
-                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
-
-                                Intent intent3 = new Intent(activity,ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent3 = new Intent(activity,ScreenCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent3);
                                 break;
                             case 5:
-                                Toast.makeText(activity, "sad :(", Toast.LENGTH_SHORT).show();
-
-                                Intent intent4 = new Intent(activity,ScreenCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent4);
+                                /*
+                                Intent intent5 = new Intent(activity,ScreenDActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent5);
+                                */
                                 break;
+                            case 6:
+                                /*
+                                Intent intent6 = new Intent(activity,ScreenEActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent6);
+                                */
+                                break;
+                            case 7:
+                                /*
+                                Intent intent7 = new Intent(activity,ScreenFActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent7);
+                                */
+                                break;
+                            case 8:
+                                /*
+                                Intent intent8 = new Intent(activity,ScreenGActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent8);
+                                */
+                                break;
+                            case 9:
+                                Intent intent9 = new Intent(activity,ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent9);
+                                break;
+                            case 10:
+                                /*
+                                Intent intent10 = new Intent(activity,ScreenIActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent10);
+                                */
+                                break;
+                            case 11:
+                                /*
+                                Intent intent11 = new Intent(activity,ScreenJActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent11);
+                                */
+                                break;
+                            case 12:
+                                /*
+                                Intent intent12 = new Intent(activity,ScreenKActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent12);
+                                */
+                                break;
+                            case 13:
+                                /*
+                                Intent intent13 = new Intent(activity,ScreenLActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent12);
+                                */
+                                break;
+
                         }
 
-                        // do something with the clicked item :D
                         return true;
                     }
                 })
