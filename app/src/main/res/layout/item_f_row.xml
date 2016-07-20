@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/ic_photo_black_48dp"
+        android:id="@+id/imageView"
+        android:background="@color/grey"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/relative"
+        android:layout_gravity="bottom"
+        android:background="@color/darkGrey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/textViewLayout"
+            android:background="@color/darkGrey"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:text="Product"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/textView6" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="$100"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewLayout"
+            android:paddingLeft="12dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/textView5" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shopping_basket_white_24dp"
+            android:background="@null"
+            android:layout_toLeftOf="@+id/heartButton"
+            android:layout_toStartOf="@+id/heartButton"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="0dp"
+            android:padding="0dp"/>
+
+        <ImageButton
+            android:id="@+id/heartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ic_favorite_white_24dp"
+            android:layout_toLeftOf="@+id/menuDugmesi"
+            android:layout_toStartOf="@+id/menuDugmesi"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="0dp"
+            android:padding="0dp"/>
+
+        <ImageButton
+            android:id="@+id/menuDugmesi"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="0dp"
+            android:padding="0dp"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>
+    </LinearLayout>
