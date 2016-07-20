@@ -14,11 +14,12 @@
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
 
-        <ListView
-            android:id="@+id/listI"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbar"
+            android:divider="#E6E6E6"
             android:nestedScrollingEnabled="false" />
 
     </RelativeLayout>

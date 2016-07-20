@@ -6,11 +6,13 @@ package com.telpa.ecommerce.models;
 public class HList {
     private String Category;
     private String ProductName;
+    private int image_id;
 
-    public HList(String Category, String ProductName) {
+    public HList(String Category, String ProductName,int image_id) {
         super();
         this.Category = Category;
         this.ProductName = ProductName;
+        this.image_id=image_id;
     }
 
     @Override
@@ -27,6 +29,10 @@ public class HList {
         this.Category = category;
     }
 
+    public int getImage_id()
+    {
+        return this.image_id;
+    }
 
     public String getProductName() {
         return ProductName;
