@@ -23,6 +23,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.BasketActivity;
+import com.telpa.ecommerce.activities.ScreenFActivity;
 import com.telpa.ecommerce.activities.ScreenJActivity;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
@@ -202,7 +203,7 @@ public class BaseActivity extends AppCompatActivity {
 
 
         //create the drawer and remember the `Drawer` result object
-        Drawer result = new DrawerBuilder()
+        final Drawer result = new DrawerBuilder()
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
@@ -215,6 +216,7 @@ public class BaseActivity extends AppCompatActivity {
                             case 1:
                                 Intent intent = new Intent(activity, ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent);
+
                                 break;
                             case 2:
                                 Intent intent2 = new Intent(activity, ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -237,10 +239,9 @@ public class BaseActivity extends AppCompatActivity {
 
                                 break;
                             case 7:
-                                /*
                                 Intent intent7 = new Intent(activity,ScreenFActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent7);
-                                */
+
                                 break;
                             case 8:
                                 /*
