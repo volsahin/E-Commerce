@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view2"
+<android.support.v7.widget.CardView android:id="@+id/card_view2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    card_view:cardBackgroundColor="@color/cardview_shadow_start_color"
-    card_view:cardCornerRadius="8dp">
+    android:layout_margin = "0.1dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,15 +15,15 @@
 
         <ImageButton
             android:id="@+id/image"
-            android:layout_width="75dp"
+            android:layout_width="70dp"
             android:layout_height="75dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="left|top"
-            android:layout_marginLeft="10dp"
             android:layout_weight="0.27"
-            android:src="@drawable/ic_photo_black_48dp" />
+            android:src="@drawable/ic_photo_black_48dp"
+            android:layout_margin="10dp" />
 
         <TextView
             android:id="@+id/productName"
@@ -40,7 +37,7 @@
             android:text="Product"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="12dp"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/category"
