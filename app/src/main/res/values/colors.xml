@@ -3,10 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="red">#FE4F51</color>
-    <color name="lightGrey">#D6D7D9</color>
-    <color name="grey">#B5C1BF</color>
-    <color name="darkGrey">#888C98</color>
-    <color name="white">#EFF0F5</color>
-    <color name="black">#000000</color>
+    <color name="red">#FF5252</color>
+    <color name="lightGrey">#D3D6DB</color>
+    <color name="grey">#BBBFC4</color>
+    <color name="darkGrey">#7E848C</color>
+    <color name="white">#EDEFF2</color>
+    <color name="black">#474A4F</color>
 </resources>
