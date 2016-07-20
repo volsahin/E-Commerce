@@ -17,7 +17,7 @@ public class BasketActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_basket);
+        setContentView(R.layout.activity_screen_basket);
 
         fcreateTitle("Your Basket");
         fcreateToolbar(this, true, false, R.id.include);
@@ -30,7 +30,7 @@ public class BasketActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.basket_row);
+        recyclerAdapter = new RecyclerAdapter(4, R.layout.item_basket_row);
         recyclerView.setAdapter(recyclerAdapter);
     }
 }
