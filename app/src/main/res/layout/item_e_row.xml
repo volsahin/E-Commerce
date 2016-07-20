@@ -15,7 +15,7 @@
     android:padding="8dp">
 
     <ImageView
-        android:src="@drawable/ic_photo_black_48dp"
+        android:src="@drawable/photo"
         android:scaleType="fitCenter"
         android:layout_height="350px"
         android:layout_width="match_parent"

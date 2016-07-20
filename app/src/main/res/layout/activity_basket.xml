@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="com.telpa.ecommerce.activities.BasketActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/include" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/basketList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/basketList"
+        android:text="Total"
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/total"
+        android:layout_toRightOf="@+id/total"
+        android:layout_below="@+id/basketList"
+        android:text="$400"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/tottalItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/basketList"
+        android:text="4 items"
+        android:textColor="@color/grey" />
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/red"
+        android:layout_alignParentBottom="true"
+        android:text="PROCEED TO CHECKOUT"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>
