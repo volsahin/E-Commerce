@@ -15,11 +15,12 @@
             layout="@layout/toolbar" />
 
 
-        <ListView
-            android:id="@+id/listH"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbarHnoTab"
+            android:divider="#E6E6E6"
             android:nestedScrollingEnabled="false" />
 
     </RelativeLayout>
