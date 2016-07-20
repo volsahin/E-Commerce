@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.telpa.ecommerce.activities.ScreenFActivity"
-    android:background="@color/white">
+    android:background="@android:color/white">
 
     <include layout="@layout/toolbar"/>
 
