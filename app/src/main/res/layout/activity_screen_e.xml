@@ -17,9 +17,6 @@
         android:id="@+id/recyclerViewE"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/subcategory"
         android:scrollbars="vertical"/>
 
 </LinearLayout>
