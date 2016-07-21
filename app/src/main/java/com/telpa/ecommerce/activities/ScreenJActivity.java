@@ -22,7 +22,7 @@ public class ScreenJActivity extends BaseActivity {
 
 
 
-        arraySpinner= new String[]{"option", "option2"};
+        arraySpinner= new String[]{"option", "option2", "option3"};
 
         Spinner spinner=(Spinner) findViewById(R.id.spinner);
         Spinner spinner2=(Spinner) findViewById(R.id.spinner2);
