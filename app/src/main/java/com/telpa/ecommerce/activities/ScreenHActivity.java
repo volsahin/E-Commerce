@@ -38,7 +38,7 @@ public class ScreenHActivity extends BaseActivity {
         recycler_view.setLayoutManager(layoutManager);
 
          List<HList> list = new ArrayList<HList>();
-        fcreateTitle("Category");
+        fcreateTitle("Categories");
         fcreateToolbar(this,false,  true, true,R.id.toolbarHnoTab);
         fcreateMenu(this, true);
 

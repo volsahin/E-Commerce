@@ -3,7 +3,6 @@ package com.telpa.ecommerce.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +25,7 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.BasketActivity;
 import com.telpa.ecommerce.activities.ScreenDActivity;
 import com.telpa.ecommerce.activities.ScreenFActivity;
+import com.telpa.ecommerce.activities.ScreenGActivity;
 import com.telpa.ecommerce.activities.ScreenJActivity;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
@@ -235,7 +235,7 @@ public class BaseActivity extends AppCompatActivity {
                                 break;
                             case 5:
 
-                                Intent intent5 = new Intent(activity,ScreenDActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent5 = new Intent(activity, ScreenDActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent5);
 
                                 break;
@@ -251,10 +251,10 @@ public class BaseActivity extends AppCompatActivity {
 
                                 break;
                             case 8:
-                                /*
+
                                 Intent intent8 = new Intent(activity,ScreenGActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent8);
-                                */
+
                                 break;
                             case 9:
                                 Intent intent9 = new Intent(activity, ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
