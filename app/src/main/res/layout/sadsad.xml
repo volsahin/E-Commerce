@@ -59,7 +59,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_favorite_black_24dp"
+            app:srcCompat="@drawable/ic_favorite_darkGrey_24dp"
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/menuBtn"
             android:layout_toStartOf="@+id/menuBtn"

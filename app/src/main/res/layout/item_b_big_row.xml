@@ -86,7 +86,7 @@
             android:layout_toLeftOf="@+id/bigActionButton"
             android:layout_toStartOf="@+id/bigActionButton"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_favorite_black_24dp" />
+            android:src="@drawable/ic_favorite_darkGrey_24dp" />
 
         <ImageButton
             android:id="@+id/bigBasketButton"
@@ -96,7 +96,7 @@
             android:layout_toLeftOf="@+id/likeButton"
             android:layout_toStartOf="@+id/likeButton"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_shopping_basket_black_24dp" />
+            android:src="@drawable/ic_shopping_basket_darkGrey_24dp" />
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>
