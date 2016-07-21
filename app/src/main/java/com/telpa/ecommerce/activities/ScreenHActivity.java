@@ -42,19 +42,16 @@ public class ScreenHActivity extends BaseActivity {
         fcreateToolbar(this, true, true,R.id.toolbarHnoTab);
         fcreateMenu(this, true);
 
-
-
-
-        list.add(new HList("Category", "3 Product",R.drawable.photo));
-        list.add(new HList("Category", "9 Product",R.drawable.photo));
-        list.add(new HList("Category", "7 Product",R.drawable.photo));
-        list.add(new HList("Category", "35 Product",R.drawable.photo));
-        list.add(new HList("Category", "16 Product",R.drawable.photo));
-        list.add(new HList("Category", "13 Product",R.drawable.photo));
-        list.add(new HList("Category", "59 Product",R.drawable.photo));
-        list.add(new HList("Category", "27 Product",R.drawable.photo));
-        list.add(new HList("Category", "35 Product",R.drawable.photo));
-        list.add(new HList("Category", "16 Product",R.drawable.photo));
+        list.add(new HList("Category", "3 Product",R.drawable.photo1));
+        list.add(new HList("Category", "9 Product",R.drawable.photo1));
+        list.add(new HList("Category", "7 Product",R.drawable.photo1));
+        list.add(new HList("Category", "35 Product",R.drawable.photo1));
+        list.add(new HList("Category", "16 Product",R.drawable.photo1));
+        list.add(new HList("Category", "13 Product",R.drawable.photo1));
+        list.add(new HList("Category", "59 Product",R.drawable.photo1));
+        list.add(new HList("Category", "27 Product",R.drawable.photo1));
+        list.add(new HList("Category", "35 Product",R.drawable.photo1));
+        list.add(new HList("Category", "16 Product",R.drawable.photo1));
 
         ScreenHListAdapter adapter_items = new ScreenHListAdapter(list);
 

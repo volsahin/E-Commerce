@@ -48,15 +48,15 @@ public class ScreenIActivity extends BaseActivity {
         String string=getString(R.string.lorem);
 
 
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
 
 
 
