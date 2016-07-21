@@ -18,7 +18,7 @@ public class ScreenCActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_c);
 
-        fcreateTitle("My Store");
+        fcreateTitle("My Store" + " C");
         fcreateToolbar(this,false,  true, true,R.id.toolbar);
         fcreateMenu(this, true);
 

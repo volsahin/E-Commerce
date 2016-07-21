@@ -208,13 +208,18 @@ public class BaseActivity extends AppCompatActivity {
                 .withName("ScreenL")
                 .withIcon(R.drawable.material_drawer_circle_mask);
 
+        PrimaryDrawerItem item14 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("ScreenM")
+                .withIcon(R.drawable.material_drawer_circle_mask);
+
 
         //create the drawer and remember the `Drawer` result object
         final Drawer result = new DrawerBuilder()
                 .withActivity(activity)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
-                .addDrawerItems(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13)
+                .addDrawerItems(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13,item14)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {

@@ -14,7 +14,7 @@ public class ScreenJActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_j);
 
-        fcreateTitle("Form");
+        fcreateTitle("Form" + "J");
         fcreateToolbar(this,false,  true, false, R.id.toolbar);
         fcreateMenu(this, false);
 
