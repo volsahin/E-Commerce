@@ -24,6 +24,8 @@
             android:layout_alignParentTop="true"
             android:layout_margin="5dp"
             android:src="@drawable/ic_photo_black_48dp"
+            android:background="@color/grey"
+
             />
 
         <TextView
