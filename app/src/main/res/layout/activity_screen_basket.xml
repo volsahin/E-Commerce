@@ -18,7 +18,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/include"
-        android:paddingTop="5dp" />
+        android:background="@color/white"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/basketList"
         android:orientation="horizontal"
-        android:padding="15dp"
+        android:padding="12dp"
         android:id="@+id/linearLayout">
 
         <TextView
@@ -36,8 +36,9 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical|center_horizontal"
             android:text="Total"
+            android:textStyle="bold"
             android:textColor="@color/grey"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/totalPrice"
@@ -45,10 +46,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
+            android:textStyle="bold"
             android:gravity="center_vertical|center_horizontal"
             android:text="$400"
             android:textColor="@color/red"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
 
     </LinearLayout>
@@ -60,7 +62,8 @@
         android:gravity="center_vertical|center_horizontal|right"
         android:text="4 items"
         android:textColor="@color/grey"
-        android:textSize="15sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:padding="15dp"
         android:layout_alignBottom="@+id/linearLayout"
         android:layout_alignRight="@+id/checkoutButton"
@@ -75,7 +78,8 @@
         android:layout_margin="15dp"
         android:background="@color/red"
         android:text="PROCEED TO CHECKOUT"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="16dp"/>
 
 
 </RelativeLayout>
