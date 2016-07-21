@@ -40,7 +40,7 @@ public class ScreenIActivity extends BaseActivity {
         recycler_view.setLayoutManager(layoutManager);
 
         List<IList> list = new ArrayList<IList>();
-        fcreateTitle("Category");
+        fcreateTitle("Category" + "I");
         fcreateToolbar(this,false,  true, false,R.id.toolbar);
         fcreateMenu(this, true);
 
