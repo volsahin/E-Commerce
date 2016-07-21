@@ -28,7 +28,8 @@
         <activity android:name=".activities.ScreenDActivity" />
         <activity android:name=".activities.BasketActivity" />
         <activity android:name=".activities.ScreenKActivity" />
-        <activity android:name=".activities.ScreenGActivity"></activity>
+        <activity android:name=".activities.ScreenGActivity" />
+        <activity android:name=".activities.ScreenLActivity"></activity>
     </application>
 
 </manifest>

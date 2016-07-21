@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_screen_l"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
+
+    <TextView
+        android:text="     YAPIM ASAMASINDA!!!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:background="@android:color/black"
+        />
+</LinearLayout>
