@@ -248,6 +248,7 @@ public class BaseActivity extends AppCompatActivity {
                     }
                 })
                 .build();
+
         return headerResult;
     }
 
