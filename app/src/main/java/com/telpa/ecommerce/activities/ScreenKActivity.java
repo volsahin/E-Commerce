@@ -13,7 +13,7 @@ public class ScreenKActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
 
-        fcreateTitle("");
+        fcreateTitle(" ");
         fcreateToolbar(this,true, true, true, R.id.toolbar);
         fcreateMenu(this, true);
     }
