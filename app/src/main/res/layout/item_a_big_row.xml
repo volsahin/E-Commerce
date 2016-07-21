@@ -8,7 +8,7 @@
     card_view:cardBackgroundColor="@color/white"
     card_view:cardCornerRadius="4dp">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -16,7 +16,7 @@
         <ImageButton
             android:id="@+id/bigImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
@@ -34,7 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/bigImage"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
             android:text="$100"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/red"
@@ -49,12 +52,14 @@
             android:layout_below="@+id/bigPrice"
             android:layout_column="0"
             android:layout_gravity=""
-            android:layout_margin="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_row="1"
             android:text="@string/lorem"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textSize="14dp"/>
 
         <RatingBar
             android:id="@+id/ratingBar"
@@ -64,7 +69,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/description"
-            android:layout_margin="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
             android:stepSize="0.1"
             android:focusable="true"/>
 
@@ -75,7 +83,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/ratingBar"
-            android:layout_margin="5dp"
+            android:paddingBottom="30dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_more_vert_black_24dp"
             android:focusable="true"/>
@@ -89,6 +97,7 @@
             android:layout_toStartOf="@+id/bigActionButton"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_favorite_darkgrey_24dp"
+            android:paddingLeft="5dp"
             android:focusable="true"/>
 
         <ImageButton

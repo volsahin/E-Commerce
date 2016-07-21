@@ -46,7 +46,7 @@
             <TextView
                 android:text="Product"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -96,7 +96,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="0dp"
-            android:padding="0dp"/>
+            android:paddingLeft="5dp"/>
 
         <ImageButton
             android:id="@+id/menuDugmesi"
