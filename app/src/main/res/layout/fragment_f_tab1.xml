@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white">
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
 
     <include layout="@layout/item_f_header_row"/>
 
 
     <android.support.v7.widget.RecyclerView
+        android:layout_marginRight="3dp"
         android:id="@+id/recyclerViewF"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
