@@ -88,7 +88,7 @@
             android:layout_toLeftOf="@+id/bigActionButton"
             android:layout_toStartOf="@+id/bigActionButton"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_favorite_black_24dp"
+            android:src="@drawable/ic_favorite_darkgrey_24dp"
             android:focusable="true"/>
 
         <ImageButton
@@ -99,7 +99,7 @@
             android:layout_toLeftOf="@+id/likeButton"
             android:layout_toStartOf="@+id/likeButton"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_shopping_basket_black_24dp"
+            android:src="@drawable/ic_shopping_basket_darkgrey_24dp"
             android:focusable="false"/>
 
         <TextView
