@@ -20,8 +20,8 @@ public class ScreenEActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_e);
 
-        fcreateTitle("My Store");
-        fcreateToolbar(this,false,  true, true, R.id.toolbar);
+        fcreateTitle("My Store" + " E");
+        fcreateToolbar(this,false, true, true, R.id.toolbar);
         fcreateMenu(this,true);
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerViewE);

@@ -21,7 +21,7 @@ public class ScreenAActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_a);
 
-        fcreateTitle("My Store");
+        fcreateTitle("My Store" +" A");
         fcreateToolbar(this,false, true, true, R.id.toolbar);
         fcreateMenu(this, true);
 
