@@ -33,6 +33,7 @@
             android:layout_alignParentRight="true"
             android:layout_margin="8dp">
 
+
             <TextView
                 android:id="@+id/productName"
                 android:layout_width="wrap_content"
