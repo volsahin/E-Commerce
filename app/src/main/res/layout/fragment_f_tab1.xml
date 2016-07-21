@@ -9,7 +9,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    >
+    android:focusableInTouchMode="true">
 
     <include layout="@layout/item_f_header_row"/>
 
