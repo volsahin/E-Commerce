@@ -142,74 +142,35 @@ public class BaseActivity extends AppCompatActivity {
     public Drawer drawerBuilder(final Activity activity, AccountHeader headerResult) {
 
 
-        new DrawerBuilder().withActivity(activity).build();
+        PrimaryDrawerItem item1 =  itemPlacer(1,"ScreenA",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().
-                withIdentifier(1).
-                withName("ScreenA").
-                withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item2 =  itemPlacer(1,"ScreenB",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenB")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item3 =  itemPlacer(1,"ScreenC",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenC")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name2);
 
-        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem()
-                .withIdentifier(2)
-                .withName(R.string.app_name2);
+        PrimaryDrawerItem item5 =  itemPlacer(1,"ScreenD",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item5 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenD")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item6 =  itemPlacer(1,"ScreenE",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item6 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenE")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item7 =  itemPlacer(1,"ScreenF",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item7 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenF")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item8 =  itemPlacer(1,"ScreenG",R.drawable.material_drawer_circle_mask);;
 
-        PrimaryDrawerItem item8 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenG")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item9 =  itemPlacer(1,"ScreenH",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item9 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenH")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item10 = itemPlacer(1,"ScreenI",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item10 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenI")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item11 = itemPlacer(1,"ScreenJ",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item11 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenJ")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item12 = itemPlacer(1,"ScreenK",R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item12 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenK")
-                .withIcon(R.drawable.material_drawer_circle_mask);
-
-        PrimaryDrawerItem item13 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("ScreenL")
-                .withIcon(R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item13 = itemPlacer(1,"ScreenL",R.drawable.material_drawer_circle_mask);
 
 
         //create the drawer and remember the `Drawer` result object
+
         final Drawer result = new DrawerBuilder()
                 .withActivity(activity)
                 .withToolbar(mToolbar)
@@ -221,74 +182,45 @@ public class BaseActivity extends AppCompatActivity {
 
                         switch (position) {
                             case 1:
-                                Intent intent = new Intent(activity, ScreenAActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent);
-
+                                intentToActivity(activity,ScreenAActivity.class);
                                 break;
                             case 2:
-                                Intent intent2 = new Intent(activity, ScreenBActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent2);
+                                intentToActivity(activity,ScreenBActivity.class);
                                 break;
                             case 3:
-                                Intent intent3 = new Intent(activity, ScreenCActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent3);
+                                intentToActivity(activity,ScreenCActivity.class);
                                 break;
                             case 5:
-
-                                Intent intent5 = new Intent(activity,ScreenDActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent5);
-
+                                intentToActivity(activity,ScreenDActivity.class);
                                 break;
                             case 6:
-
-                                Intent intent6 = new Intent(activity,ScreenEActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent6);
-
+                                intentToActivity(activity,ScreenEActivity.class);
                                 break;
                             case 7:
-                                Intent intent7 = new Intent(activity,ScreenFActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent7);
-
+                                intentToActivity(activity,ScreenFActivity.class);
                                 break;
                             case 8:
-                                /*
-                                Intent intent8 = new Intent(activity,ScreenGActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent8);
-                                */
+                                //intentToActivity(activity,ScreenGActivity.class);
                                 break;
                             case 9:
-                                Intent intent9 = new Intent(activity, ScreenHActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent9);
+                                intentToActivity(activity,ScreenHActivity.class);
                                 break;
                             case 10:
-
-                                Intent intent10 = new Intent(activity,ScreenIActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent10);
-
-
+                                intentToActivity(activity,ScreenIActivity.class);
                                 break;
                             case 11:
-
-                                Intent intent11 = new Intent(activity, ScreenJActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent11);
-
+                                intentToActivity(activity,ScreenJActivity.class);
                                 break;
                             case 12:
-                                Intent intent12 = new Intent(activity,ScreenKActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent12);
-
+                                intentToActivity(activity,ScreenKActivity.class);
                                 break;
                             case 13:
-                                /*
-                                Intent intent13 = new Intent(activity,ScreenLActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent12);
-                                */
+                                //intentToActivity(activity,ScreenlActivity.class);
                                 break;
 
                             case 14:
+                                intentToActivity(activity,BasketActivity.class);
                                 // Activity M
-                                Intent intent14 = new Intent(activity,BasketActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent14);
                                 break;
 
                         }
@@ -300,6 +232,7 @@ public class BaseActivity extends AppCompatActivity {
 
         return result;
     }
+
 
     public AccountHeader accountHeaderBuilder(Activity activity) {
         AccountHeader headerResult = new AccountHeaderBuilder()
@@ -316,6 +249,23 @@ public class BaseActivity extends AppCompatActivity {
                 })
                 .build();
         return headerResult;
+    }
+
+
+    public PrimaryDrawerItem itemPlacer(int identifier,String name , int drawable){
+
+        PrimaryDrawerItem item = new PrimaryDrawerItem()
+                .withIdentifier(identifier)
+                .withName(name)
+                .withIcon(drawable);
+
+        return item;
+    }
+
+    public void intentToActivity(Activity activity,Class cls){
+
+        Intent intent = new Intent(activity, cls);
+        activity.startActivity(intent);
     }
 
 
