@@ -21,7 +21,7 @@ public class ScreenFActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_f);
 
         fcreateTitle("My Store");
-        fcreateToolbar(this, true, true, R.id.toolbar);
+        fcreateToolbar(this,false,  true, true, R.id.toolbar);
         fcreateMenu(this, true);
 
 

@@ -39,7 +39,7 @@ public class ScreenHActivity extends BaseActivity {
 
          List<HList> list = new ArrayList<HList>();
         fcreateTitle("Category");
-        fcreateToolbar(this, true, true,R.id.toolbarHnoTab);
+        fcreateToolbar(this,false,  true, true,R.id.toolbarHnoTab);
         fcreateMenu(this, true);
 
 

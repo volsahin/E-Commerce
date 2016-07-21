@@ -3,6 +3,7 @@ package com.telpa.ecommerce.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ import com.telpa.ecommerce.activities.ScreenCActivity;
 import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
+import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
 import java.util.List;
@@ -100,9 +102,13 @@ public class BaseActivity extends AppCompatActivity {
         tabLayout.setViewPager(viewPager);
     }
 
-    public void fcreateToolbar(Context context, boolean hasDrawer, boolean hasHamburgerNav, int id) {
+    public void fcreateToolbar(Context context, boolean isTransparent,boolean hasDrawer, boolean hasHamburgerNav, int id) {
 
         mToolbar = (Toolbar) findViewById(id);
+
+        if(isTransparent)
+            mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarTransparent));
+
 
         if (hasDrawer)
             drawer = drawerBuilder(this, accountHeaderBuilder(this));
@@ -267,8 +273,7 @@ public class BaseActivity extends AppCompatActivity {
 
                                 break;
                             case 12:
-
-                                Intent intent12 = new Intent(activity,BasketActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                Intent intent12 = new Intent(activity,ScreenKActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 activity.startActivity(intent12);
 
                                 break;
@@ -280,10 +285,9 @@ public class BaseActivity extends AppCompatActivity {
                                 break;
 
                             case 14:
-                                /*
-                                Intent intent13 = new Intent(activity,ScreenLActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                activity.startActivity(intent12);
-                                */
+                                // Activity M
+                                Intent intent14 = new Intent(activity,BasketActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                activity.startActivity(intent14);
                                 break;
 
                         }

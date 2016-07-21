@@ -21,7 +21,7 @@ public class ScreenBActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_b);
 
         fcreateTitle("My Store");
-        fcreateToolbar(this, true, true,R.id.toolbar);
+        fcreateToolbar(this,false, true, true,R.id.toolbar);
         fcreateMenu(this, true);
 
         List<TabHelper> tabHelperList = new ArrayList<>();

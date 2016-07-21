@@ -41,7 +41,7 @@ public class ScreenIActivity extends BaseActivity {
 
         List<IList> list = new ArrayList<IList>();
         fcreateTitle("Category");
-        fcreateToolbar(this, true, false,R.id.toolbar);
+        fcreateToolbar(this,false,  true, false,R.id.toolbar);
         fcreateMenu(this, true);
 
 
