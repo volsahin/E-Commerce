@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:layout_marginTop="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:layout_alignParentTop="true"
             android:text="Subcategory"
             android:textColor="@color/darkGrey"
-            android:textSize="15dp"
+            android:textSize="14dp"
             android:textStyle="bold" />
 
         <TextView
@@ -37,7 +38,8 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
         <include layout="@layout/item_i_row" />
     </android.support.v7.widget.CardView>
 
