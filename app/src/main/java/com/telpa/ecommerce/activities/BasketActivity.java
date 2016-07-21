@@ -29,7 +29,7 @@ public class BasketActivity extends BaseActivity {
         recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
+        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
         recyclerAdapter = new RecyclerAdapter(4, R.layout.item_basket_row);
         recyclerView.setAdapter(recyclerAdapter);
     }
