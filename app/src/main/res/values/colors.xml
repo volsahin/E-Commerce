@@ -9,4 +9,5 @@
     <color name="darkGrey">#7E848C</color>
     <color name="white">#EDEFF2</color>
     <color name="black">#000000</color>
+    <color name="toolbarTransparent">#00FFFFFF</color>
 </resources>

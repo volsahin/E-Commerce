@@ -20,7 +20,7 @@ public class BasketActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_basket);
 
         fcreateTitle("Your Basket");
-        fcreateToolbar(this, true, false, R.id.include);
+        fcreateToolbar(this,false, true, false, R.id.include);
         fcreateMenu(this, false);
 
         recyclerView = (RecyclerView) findViewById(R.id.basketList);

@@ -41,22 +41,22 @@ public class ScreenIActivity extends BaseActivity {
 
         List<IList> list = new ArrayList<IList>();
         fcreateTitle("Category");
-        fcreateToolbar(this, true, false,R.id.toolbar);
+        fcreateToolbar(this,false,  true, false,R.id.toolbar);
         fcreateMenu(this, true);
 
 
         String string=getString(R.string.lorem);
 
 
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
-        list.add(new IList("Product", "100$",string,R.drawable.photo,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
+        list.add(new IList("Product", "$100",string,R.drawable.photo1,R.drawable.ic_more_vert_black_24dp));
 
 
 

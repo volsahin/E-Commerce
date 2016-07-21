@@ -24,7 +24,10 @@
         <activity android:name=".activities.ScreenJActivity" />
         <activity android:name=".activities.ScreenEActivity" />
         <activity android:name=".activities.ScreenFActivity" />
-        <activity android:name=".activities.BasketActivity"></activity>
+        <activity android:name=".activities.BasketActivity" />
+        <activity android:name=".activities.ScreenDActivity" />
+        <activity android:name=".activities.BasketActivity" />
+        <activity android:name=".activities.ScreenKActivity"></activity>
     </application>
 
 </manifest>

@@ -22,7 +22,7 @@ public class ScreenAActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_a);
 
         fcreateTitle("My Store");
-        fcreateToolbar(this, true, true, R.id.toolbar);
+        fcreateToolbar(this,false, true, true, R.id.toolbar);
         fcreateMenu(this, true);
 
         // This list holds current tabs in ScreenA
