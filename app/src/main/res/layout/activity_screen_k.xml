@@ -13,11 +13,13 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
+
+        <LinearLayout
             android:layout_gravity="top|left"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:src="@color/accent"/>
+            android:layout_height="wrap_content">
+            <include layout="@layout/item_k_header_row" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_gravity="top|center"
@@ -26,7 +28,10 @@
             <include layout="@layout/toolbar" />
         </LinearLayout>
 
+
     </FrameLayout>
+
+
 
 
 </LinearLayout>
