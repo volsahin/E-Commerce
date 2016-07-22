@@ -3,5 +3,6 @@
     <string name="app_name2">Subheader</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc sed tellus orci.</string>
     <string name="lorem_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="lorem_medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras eget nunc condimentum, volutpat diam in,molestie nisl.</string>
     <string name="lorem_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras eget nunc condimentum, volutpat diam in,molestie nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris aliquet eroos nec diam sodales mollis.</string>
 </resources>

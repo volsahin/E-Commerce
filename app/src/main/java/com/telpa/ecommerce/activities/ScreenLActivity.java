@@ -1,7 +1,10 @@
 package com.telpa.ecommerce.activities;
 
-import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.view.View;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +12,16 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.utils.BaseActivity;
 
+
+
 public class ScreenLActivity extends BaseActivity {
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter recyclerAdapter;
+    private RecyclerView.LayoutManager recyclerLayoutManager;
+
     RadioButton Ia,Ib,Ic,Id,Ie,check1,check2,check3,check4;
     TextView a,b,c,d,e;
     @Override
@@ -20,8 +30,8 @@ public class ScreenLActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_l);
 
 
-        fcreateTitle("Product" );
-        fcreateToolbar(this,false,false,false,R.id.toolbar);
+        fcreateTitle("Product");
+        fcreateToolbar(this,false,true,false,R.id.toolbar);
         fcreateMenu(this, true);
 
         a=(TextView) findViewById(R.id.a);
@@ -103,6 +113,22 @@ public class ScreenLActivity extends BaseActivity {
 
 
 
+
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_l);
+        recyclerView.setHasFixedSize(true);
+
+/*
+        recyclerLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerView.setLayoutManager(recyclerLayoutManager);
+
+*/
+
+        recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(recyclerLayoutManager);
+
+        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
+        recyclerAdapter = new RecyclerAdapter(10, R.layout.item_l_comment_row);
+        recyclerView.setAdapter(recyclerAdapter);
 
 
     }
