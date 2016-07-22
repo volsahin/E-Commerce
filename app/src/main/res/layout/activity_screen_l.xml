@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_screen_l"
@@ -7,14 +7,146 @@
     android:layout_height="match_parent"
     tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
 
-    <TextView
-        android:text="     YAPIM ASAMASINDA!!!"
+    <include layout="@layout/toolbar"/>
+
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/ProductBigImage"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/ic_photo_black_48dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ProductBigImage"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/linearLayout3"
+
+
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/ic_photo_black_48dp"
+            android:background="@color/grey"
+            android:id="@+id/imageButton1"
+            android:layout_below="@+id/ProductBigImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:background="@color/grey"
+            android:src="@drawable/ic_photo_black_48dp"
+            android:id="@+id/imageButton2"
+            android:layout_below="@+id/ProductBigImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:background="@color/grey"
+            android:src="@drawable/ic_photo_black_48dp"
+            android:id="@+id/imageButton3"
+            android:layout_below="@+id/ProductBigImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:background="@color/grey"
+            android:src="@drawable/ic_photo_black_48dp"
+            android:id="@+id/imageButton4"
+            android:layout_below="@+id/ProductBigImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:background="@color/grey"
+            android:src="@drawable/ic_photo_black_48dp"
+            android:id="@+id/imageButton5"
+            android:layout_below="@+id/ProductBigImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout3"
+        android:focusable="false"
+        android:stepSize="0.1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="46 Reviews"
         android:id="@+id/textView8"
-        android:layout_weight="1"
-        android:textSize="30sp"
-        android:textColor="@android:color/holo_red_dark"
-        android:background="@android:color/black"
-        />
-</LinearLayout>
+        android:layout_below="@+id/linearLayout3"
+        android:layout_toRightOf="@+id/ratingBar"
+        android:layout_toEndOf="@+id/ratingBar" />
+
+    <TextView
+        android:id="@+id/bigPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="$100"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/description"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ratingBar"
+        android:layout_column="0"
+        android:layout_gravity=""
+        android:layout_margin="10dp"
+        android:layout_row="1"
+        android:text="@string/lorem_long"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+</RelativeLayout>
