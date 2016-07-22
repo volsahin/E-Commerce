@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.utils.BaseActivity;
@@ -128,6 +129,9 @@ public class ScreenLActivity extends BaseActivity {
         recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment_row);
         recyclerView.setAdapter(recyclerAdapter);
 
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.attachToRecyclerView(recyclerView);
 
     }
 }
