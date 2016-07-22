@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/productRadio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:button="@drawable/radio_button_selector_light_grey"
+        android:checked="false"
+        android:scaleX="2.5"
+        android:scaleY="2.5" />
+
+    <RadioButton
+        android:id="@+id/productRadio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:button="@drawable/radio_button_selector_grey"
+        android:checked="true"
+        android:scaleX="2.5"
+        android:scaleY="2.5" />
+
+    <RadioButton
+        android:id="@+id/productRadio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:button="@drawable/radio_button_selector_dark_grey"
+        android:checked="false"
+        android:scaleX="2.5"
+        android:scaleY="2.5" />
+
+    <RadioButton
+        android:id="@+id/productRadio4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:button="@drawable/radio_button_selector_black"
+        android:checked="false"
+        android:scaleX="2.5"
+        android:scaleY="2.5" />
+</RadioGroup>
+
+
+
+

@@ -5,8 +5,8 @@
     android:id="@+id/activity_screen_l"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
-
+    tools:context="com.telpa.ecommerce.activities.ScreenLActivity"
+    android:background="@android:color/white">
     <include layout="@layout/toolbar"/>
 
     <ImageView
@@ -149,4 +149,19 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="13dp"
         android:textStyle="bold" />
+
+    <include layout="@layout/radio_group_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radioAbc"/>
+    <include layout="@layout/radio_group_letters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioAbc"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radioCheck"
+        />
+
 </RelativeLayout>

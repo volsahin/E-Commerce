@@ -15,7 +15,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
         <LinearLayout
             style="@style/AppTheme"
@@ -36,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="placeholder text"
+                android:paddingLeft="0dp"
                 android:textColor="@color/black" />
 
             <TextView
@@ -50,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="some text"
+                android:paddingLeft="0dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
 
@@ -63,7 +66,8 @@
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,7 +80,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
 
                     <TextView
                         android:id="@+id/labelFour"
@@ -88,7 +93,8 @@
                     <Spinner
                         android:id="@+id/spinner2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"/>
                 </LinearLayout>
 
 
@@ -97,7 +103,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
 
                     <TextView
                         android:id="@+id/labelFive"
@@ -108,7 +115,8 @@
                     <Spinner
                         android:id="@+id/spinner3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"/>
                 </LinearLayout>
 
             </LinearLayout>
