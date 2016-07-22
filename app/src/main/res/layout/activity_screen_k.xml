@@ -12,7 +12,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="0dp">
 
 
@@ -33,8 +33,19 @@
 
 
     </FrameLayout>
+<!--
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPagerK">
 
+    </android.support.v4.view.ViewPager>
 
+    <com.viewpagerindicator.TitlePageIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPagerIndicatorK"/>
 
+-->
 
 </LinearLayout>
