@@ -112,8 +112,6 @@ public class ScreenLActivity extends BaseActivity {
 
 
 
-
-
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_l);
         recyclerView.setHasFixedSize(true);
 
