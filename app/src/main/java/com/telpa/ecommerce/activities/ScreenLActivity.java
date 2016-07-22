@@ -125,7 +125,7 @@ public class ScreenLActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(10, R.layout.item_l_comment_row);
+        recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment_row);
         recyclerView.setAdapter(recyclerAdapter);
 
 

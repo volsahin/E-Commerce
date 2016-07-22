@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/lorem_medium"
+        android:textColor="@color/grey"
         android:id="@+id/textView11"
         android:layout_below="@+id/ratingBar"
         android:layout_alignParentLeft="true"
