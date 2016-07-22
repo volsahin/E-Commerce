@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_screen_l"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
-
     <include layout="@layout/toolbar"/>
+
+
 
     <ImageView
         android:layout_marginTop="4dp"
@@ -15,12 +23,14 @@
         android:layout_marginLeft="2dp"
         android:id="@+id/ProductBigImage"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:src="@drawable/ic_photo_black_48dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/ic_photo_black_48dp"
         android:background="@color/grey"
         android:layout_below="@+id/toolbar"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,5 +158,14 @@
         android:text="@string/lorem_long"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="13dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_l"
+        android:layout_below="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
 </RelativeLayout>
+    </ScrollView>
