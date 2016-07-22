@@ -27,10 +27,9 @@ public class ScreenLActivity extends BaseActivity {
         fcreateToolbar(this,false,true,false,R.id.toolbar);
         fcreateMenu(this, true);
 
-        View rootView = getLayoutInflater().inflate(R.layout.activity_screen_l,null);
 
 
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_l);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_l);
         recyclerView.setHasFixedSize(true);
 
 /*
