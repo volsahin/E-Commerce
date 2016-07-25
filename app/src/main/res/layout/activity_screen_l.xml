@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
            android:layout_marginRight="16dp"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_action_content_new"
+            android:src="@drawable/ic_pop_up"
             fab:fab_colorNormal="@color/red"
             fab:fab_colorPressed="@color/white"
             android:layout_marginBottom="21dp"
