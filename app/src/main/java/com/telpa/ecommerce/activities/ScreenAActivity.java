@@ -2,7 +2,6 @@ package com.telpa.ecommerce.activities;
 
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -38,7 +37,7 @@ public class ScreenAActivity extends BaseActivity {
 
         fcreateTabMenu(tabHelperList);
 
-        View view = getLayoutInflater().inflate(R.layout.item_a_big_row,null);
+        View view = getLayoutInflater().inflate(R.layout.item_a_big,null);
 
         imgBtn = (ImageButton) view.findViewById(R.id.bigBasketButton);
         imgBtn.setOnClickListener(new View.OnClickListener() {

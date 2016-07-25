@@ -48,7 +48,7 @@ public class FragmentCTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(5, R.layout.item_c_row);
+        recyclerAdapter = new RecyclerAdapter(5, R.layout.item_c);
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;

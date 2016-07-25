@@ -41,7 +41,7 @@ public class FragmentKPhotoSlider extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter(1, R.layout.item_k_photo_row);
+        recyclerAdapter = new RecyclerAdapter(1, R.layout.item_k_photo);
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
 

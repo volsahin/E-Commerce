@@ -53,7 +53,7 @@ public class ScreenIListAdapter extends RecyclerView.Adapter<ScreenIListAdapter.
     @Override
     public ScreenIListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_i_row, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_i, parent, false);
 
         ViewHolder view_holder = new ViewHolder(v);
         return view_holder;

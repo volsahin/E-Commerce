@@ -1,24 +1,18 @@
 package com.telpa.ecommerce.activities;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.IntegerRes;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.utils.BaseActivity;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class BasketActivity extends BaseActivity {
 
@@ -45,7 +39,7 @@ public class BasketActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-        recyclerAdapter = new RecyclerAdapter(4, R.layout.item_basket_row);
+        recyclerAdapter = new RecyclerAdapter(4, R.layout.item_basket);
         recyclerView.setAdapter(recyclerAdapter);
 
         Button checkOut=(Button) findViewById(R.id.checkoutButton);

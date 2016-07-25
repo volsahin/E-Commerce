@@ -50,7 +50,7 @@ public class FragmentFTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_f_row);
+        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_f);
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
 

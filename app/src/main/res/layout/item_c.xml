@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp">
-        <include layout="@layout/item_i_row" />
+        <include layout="@layout/item_i" />
     </android.support.v7.widget.CardView>
 
 
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
-        <include layout="@layout/item_i_row" />
+        <include layout="@layout/item_i" />
     </android.support.v7.widget.CardView>
 
 

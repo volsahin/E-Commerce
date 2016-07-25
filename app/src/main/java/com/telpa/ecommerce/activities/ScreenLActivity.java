@@ -1,12 +1,8 @@
 package com.telpa.ecommerce.activities;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.View;
-import android.provider.MediaStore;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -126,7 +122,7 @@ public class ScreenLActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment_row);
+        recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment);
         recyclerView.setAdapter(recyclerAdapter);
 
 

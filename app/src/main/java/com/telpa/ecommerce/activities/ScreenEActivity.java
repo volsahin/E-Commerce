@@ -37,7 +37,7 @@ public class ScreenEActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(30));
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_e_row);
+        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_e);
         recyclerView.setAdapter(recyclerAdapter);
 
     }

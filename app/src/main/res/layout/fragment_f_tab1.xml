@@ -11,7 +11,7 @@
     android:background="@android:color/white"
     android:focusableInTouchMode="true">
 
-    <include layout="@layout/item_f_header_row"/>
+    <include layout="@layout/item_f_header"/>
 
 
     <android.support.v7.widget.RecyclerView
