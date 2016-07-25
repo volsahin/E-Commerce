@@ -5,51 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardBackgroundColor="@color/white"
-    card_view:cardCornerRadius="8dp">
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="0dp">
 
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:padding="8dp">
+        android:layout_margin="8dp"
+        android:background="@android:color/white">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/grey"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_photo_black_48dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/grey"
+                android:scaleType="fitCenter" />
+
+            <include
+                layout="@layout/product_photo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp">
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/ustText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|left"
-
+                android:layout_marginBottom="2dp"
                 android:text="Category"
                 android:textColor="@android:color/white"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/ustText"
-                android:text="9 Product"
-
+                android:text="9 products"
                 android:textColor="@android:color/white"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 

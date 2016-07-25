@@ -7,7 +7,7 @@
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:srcCompat="@drawable/ic_photo_black_48dp"
+        app:srcCompat="@drawable/ic_product_photo"
         android:id="@+id/imageButton3"
         android:background="@color/grey"
         />

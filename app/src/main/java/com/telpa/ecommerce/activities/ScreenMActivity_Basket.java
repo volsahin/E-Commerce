@@ -14,7 +14,7 @@ import com.telpa.ecommerce.utils.BaseActivity;
 
 import butterknife.ButterKnife;
 
-public class BasketActivity extends BaseActivity {
+public class ScreenMActivity_Basket extends BaseActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
@@ -25,8 +25,8 @@ public class BasketActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen_basket);
-        ButterKnife.bind(BasketActivity.this);
+        setContentView(R.layout.activity_screen_m_basket);
+        ButterKnife.bind(ScreenMActivity_Basket.this);
 
         fcreateTitle("Your Basket");
         fcreateToolbar(this, false, true, false, R.id.include);
@@ -39,7 +39,7 @@ public class BasketActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-        recyclerAdapter = new RecyclerAdapter(4, R.layout.item_basket);
+        recyclerAdapter = new RecyclerAdapter(4, R.layout.item_m_basket);
         recyclerView.setAdapter(recyclerAdapter);
 
         Button checkOut=(Button) findViewById(R.id.checkoutButton);
@@ -47,7 +47,7 @@ public class BasketActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(BasketActivity.this, "Buy them!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScreenMActivity_Basket.this, "Buy them!", Toast.LENGTH_SHORT).show();
             }
         });
     }

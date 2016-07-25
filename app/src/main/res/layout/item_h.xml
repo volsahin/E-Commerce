@@ -16,7 +16,7 @@
             android:layout_alignParentTop="true"
             android:layout_gravity="left|top"
             android:layout_weight="0.27"
-            android:src="@drawable/ic_photo_black_48dp"
+            android:src="@drawable/ic_product_photo"
             android:layout_marginLeft="16dp"
             android:layout_margin="16dp" />
 

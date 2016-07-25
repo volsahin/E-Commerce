@@ -33,7 +33,7 @@
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
             android:background="@color/grey"
-            app:srcCompat="@drawable/ic_photo_black_48dp" />
+            app:srcCompat="@drawable/ic_product_photo" />
 
 
         <LinearLayout
@@ -60,7 +60,7 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="0.2"
                 android:background="@color/grey"
-                android:src="@drawable/ic_photo_black_48dp" />
+                android:src="@drawable/ic_product_photo" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -73,7 +73,7 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="0.2"
                 android:background="@color/grey"
-                android:src="@drawable/ic_photo_black_48dp" />
+                android:src="@drawable/ic_product_photo" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
@@ -86,7 +86,7 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="0.2"
                 android:background="@color/grey"
-                android:src="@drawable/ic_photo_black_48dp" />
+                android:src="@drawable/ic_product_photo" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -99,7 +99,7 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="0.2"
                 android:background="@color/grey"
-                android:src="@drawable/ic_photo_black_48dp" />
+                android:src="@drawable/ic_product_photo" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -112,7 +112,7 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="0.2"
                 android:background="@color/grey"
-                android:src="@drawable/ic_photo_black_48dp" />
+                android:src="@drawable/ic_product_photo" />
 
         </LinearLayout>
 
@@ -231,7 +231,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_action_content_new"
+            android:src="@drawable/ic_pop_up"
             fab:fab_colorNormal="@color/red"
             fab:fab_colorPressed="@color/white"
             android:layout_marginBottom="35dp"
