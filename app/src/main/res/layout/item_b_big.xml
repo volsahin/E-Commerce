@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     card_view:cardBackgroundColor="@android:color/white"
-    card_view:cardCornerRadius="8dp">
+    card_view:cardCornerRadius="1dp"
+    android:layout_margin="4dp">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/left"
@@ -52,7 +53,7 @@
             android:layout_below="@+id/bigProductName"
             android:layout_marginLeft="8dp"
             android:text="@string/lorem"
-            android:textColor="@color/darkGrey"
+            android:textColor="@color/grey"
             android:textSize="14sp"
             android:textStyle="bold" />
 
