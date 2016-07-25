@@ -2,22 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@android:color/white"
-    android:paddingRight="12dp"
-    android:paddingLeft="12dp"
-    android:paddingBottom="10dp">
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
-    <ImageButton
+    <RelativeLayout
         android:id="@+id/basketImage"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/linearLayout2"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_product_photo"
-        android:background="@color/grey"
-        android:layout_alignTop="@+id/linearLayout2" />
+        android:background="@color/grey">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@color/grey"
+            />
+
+        <include layout="@layout/product_photo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -26,26 +39,25 @@
         android:layout_toRightOf="@+id/basketImage"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="10dp"
-        android:id="@+id/linearLayout2">
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/basketProductName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Product"
-            android:textStyle="bold"
             android:textColor="@color/darkGrey"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/basketPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$100"
-            android:textStyle="bold"
             android:textColor="@color/red"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -61,8 +73,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_keyboard_arrow_down_grey_24dp"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_keyboard_arrow_down_grey_24dp" />
 
         <TextView
             android:id="@+id/basketNumber"
@@ -70,19 +82,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_vertical|center_horizontal"
+            android:padding="16dp"
             android:text="1"
             android:textColor="@color/darkGrey"
-            android:textStyle="bold"
             android:textSize="22sp"
-            android:padding="10dp"/>
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/basketArrowUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_keyboard_arrow_up_darkgrey_24dp"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_keyboard_arrow_up_darkgrey_24dp" />
 
 
     </LinearLayout>
