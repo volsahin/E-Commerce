@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/card_view2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="0.1dp">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -13,7 +8,7 @@
         android:weightSum="1">
 
         <RelativeLayout
-            android:id="@+id/image"
+            android:id="@+id/image1"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_alignBottom="@+id/linear"
@@ -27,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/grey"
-
+                android:id="@+id/image"
                 />
 
             <include
@@ -45,7 +40,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_margin="8dp"
-            android:layout_toRightOf="@+id/image"
+            android:layout_toRightOf="@+id/image1"
             android:orientation="horizontal">
 
             <TextView
@@ -104,6 +99,9 @@
                 android:src="@drawable/ic_more_vert_black_24dp" />
         </RelativeLayout>
 
-
+        android:textColor="#000000" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#bfbfbf"/>
     </RelativeLayout>
-</android.support.v7.widget.CardView>
