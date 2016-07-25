@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.adapters.MasonryAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.models.SpacesItemDecoration;
 import com.telpa.ecommerce.utils.TabHelper;
 
 /**
@@ -40,12 +42,12 @@ public class FragmentDTab extends TabHelper {
 
         recyclerView.setHasFixedSize(true);
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(recyclerLayoutManager);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter(9, R.layout.item_d);
-        recyclerView.setAdapter(recyclerAdapter);
+        MasonryAdapter adapter = new MasonryAdapter(this);
+        recyclerView.setAdapter(adapter);
+        SpacesItemDecoration decoration = new SpacesItemDecoration(16);
+        recyclerView.addItemDecoration(decoration);
         return rootView;
 
     }
