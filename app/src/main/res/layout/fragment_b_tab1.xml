@@ -13,31 +13,35 @@
             android:id="@+id/subcategories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
             android:text="Subcategory"
             android:textColor="@color/darkGrey"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            android:textSize="15sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/viewallTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:text="VIEW ALL"
             android:textColor="@color/darkGrey"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp"
+            android:layout_alignTop="@+id/subcategories"
+            android:layout_alignRight="@+id/recyclerView1"
+            android:layout_alignEnd="@+id/recyclerView1" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/subcategories"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            android:layout_margin="4dp"/>
 
         <TextView
             android:id="@+id/subcategory"
@@ -57,11 +61,11 @@
 
         <TextView
             android:id="@+id/viewall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/recyclerView1"
             android:layout_alignRight="@+id/recyclerView1"
             android:layout_alignTop="@+id/subcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_marginEnd="8dp"
             android:text="VIEW ALL"
@@ -73,7 +77,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/subcategory"
