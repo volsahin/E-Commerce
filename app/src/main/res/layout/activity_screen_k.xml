@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_screen_k"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context="com.telpa.ecommerce.activities.ScreenKActivity"
     android:padding="0dp"
     >
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -17,6 +22,7 @@
 
 
         <LinearLayout
+            android:id="@+id/headerLayout"
             android:layout_gravity="top|left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,9 +36,83 @@
             android:layout_height="wrap_content">
             <include layout="@layout/toolbar" />
         </LinearLayout>
-
-
     </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/lightGrey"/>
+
+            <TextView
+                android:id="@+id/variants1"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line1"
+                android:gravity="center"
+                android:text="Variants"
+                android:textStyle="bold" />
+            <include
+                android:id="@+id/radioCheck"
+                layout="@layout/radio_group_letters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/variants1"
+                android:layout_centerHorizontal="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@+id/radioCheck"
+                android:layout_height="2dp"
+                android:background="@color/lightGrey"/>
+
+
+            <TextView
+                android:id="@+id/variants2"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/radioCheck"
+                android:gravity="center"
+                android:text="Variants"
+                android:textStyle="bold" />
+
+            <include
+                android:id="@+id/radioAbc"
+                layout="@layout/radio_group_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/variants2"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@+id/radioAbc"
+                android:background="@color/lightGrey"
+                android:id="@+id/linearLayout4"
+                android:orientation="vertical"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/linearLayout4" />
+        </RelativeLayout>
+
+
+
 <!--
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
@@ -49,3 +129,4 @@
 -->
 
 </LinearLayout>
+</ScrollView>
