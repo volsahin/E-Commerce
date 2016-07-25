@@ -15,14 +15,19 @@
     android:layout_marginRight="0dp"
     android:layout_marginBottom="0dp">
 
-    <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:layout_weight="0.5"
+        android:background="@color/grey">
 
-        app:srcCompat="@drawable/ic_photo_black_48dp"
-        android:id="@+id/imageView"
-        android:background="@color/grey"/>
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_photo_black_48dp"
+            android:id="@+id/imageView" />
+</FrameLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
