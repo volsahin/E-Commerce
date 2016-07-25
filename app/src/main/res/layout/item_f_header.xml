@@ -71,6 +71,7 @@
 
             <!-- style="?android:attr/ratingBarStyleSmall" -->
 
+
             <RatingBar
                 android:id="@+id/ratingBar2"
                 style="@style/CustomRatingBar"
