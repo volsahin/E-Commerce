@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     card_view:cardBackgroundColor="@color/white"
@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:src="@drawable/photo2"
-            android:layout_margin="5dp" />
+            android:layout_margin="8dp"
+            android:background="@color/white" />
 
         <TextView
             android:id="@+id/price"
