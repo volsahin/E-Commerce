@@ -1,26 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<include layout="@layout/toolbar" />
+
+<FrameLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+   >
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_pop_up"
+        fab:fab_colorNormal="@color/red"
+        fab:fab_colorPressed="@color/white"
+        android:layout_marginBottom="21dp"/>
+
+
+
+
+
+
+<ScrollView
+
     android:id="@+id/scrollViewProduct"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:fillViewport="true">
 
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:id="@+id/activity_screen_l"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
-        /*android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.telpa.ecommerce.activities.ScreenLActivity"
-        android:background="@android:color/white">
-*/
-        <include layout="@layout/toolbar" />
+
 
     <ImageView
 
@@ -246,21 +270,11 @@
             android:layout_alignParentStart="true"
             android:scrollbars="vertical"
             android:layout_below="@+id/linearLayout4" />
-        android:scrollbars="vertical" />
 
 
-        <com.melnykov.fab.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           android:layout_marginRight="16dp"
-            android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_pop_up"
-            fab:fab_colorNormal="@color/red"
-            fab:fab_colorPressed="@color/white"
-            android:layout_marginBottom="21dp"
-            android:layout_alignBottom="@+id/recycler_view_l"
-            android:layout_alignRight="@+id/description"
-            android:layout_alignEnd="@+id/description" />
+
+
     </RelativeLayout>
 </ScrollView>
+</FrameLayout>
+</LinearLayout>
