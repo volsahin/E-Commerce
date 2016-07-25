@@ -254,10 +254,10 @@
             android:layout_height="wrap_content"
            android:layout_marginRight="16dp"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_pop_up"
+            android:src="@drawable/ic_action_content_new"
             fab:fab_colorNormal="@color/red"
             fab:fab_colorPressed="@color/white"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="21dp"
             android:layout_alignBottom="@+id/recycler_view_l"
             android:layout_alignRight="@+id/description"
             android:layout_alignEnd="@+id/description" />
