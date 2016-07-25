@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardBackgroundColor="@color/white"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="1dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -22,9 +22,9 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_margin="5dp"
-            android:src="@drawable/ic_product_photo"
+            android:layout_margin="8dp"
             android:background="@color/grey"
+            android:src="@drawable/ic_product_photo"
 
             />
 
@@ -32,16 +32,15 @@
             android:id="@+id/bigPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/bigImage"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="10dp"
+            android:layout_margin="12dp"
             android:text="$100"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/red"
-            android:textSize="15dp" />
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/description"
@@ -50,81 +49,90 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/bigPrice"
-            android:layout_column="0"
-            android:layout_gravity=""
-            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_row="1"
             android:text="@string/lorem"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp"/>
+            android:textSize="14sp" />
 
-        <RatingBar
-            android:id="@+id/ratingBar"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
             android:layout_below="@+id/description"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="10dp"
-            android:stepSize="0.1"
-            android:focusable="true"/>
+            android:layout_margin="8dp">
 
-        <ImageButton
-            android:id="@+id/bigActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/ratingBar"
-            android:paddingBottom="30dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_more_vert_black_24dp"
-            android:focusable="true"/>
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:stepSize="0.1" />
 
-        <ImageButton
-            android:id="@+id/likeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/bigActionButton"
-            android:layout_toLeftOf="@+id/bigActionButton"
-            android:layout_toStartOf="@+id/bigActionButton"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_favorite_darkgrey_24dp"
-            android:paddingLeft="5dp"
-            android:focusable="true"/>
+            <ImageButton
+                android:id="@+id/bigActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/ratingBar"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/ratingBar"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/ic_more_vert_black_24dp" />
 
-        <ImageButton
-            android:id="@+id/bigBasketButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/likeButton"
-            android:layout_toLeftOf="@+id/likeButton"
-            android:layout_toStartOf="@+id/likeButton"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_shopping_basket_darkgrey_24dp"
-            android:focusable="false"/>
+            <ImageButton
+                android:id="@+id/likeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/bigActionButton"
+                android:layout_alignTop="@+id/bigActionButton"
+                android:layout_toLeftOf="@+id/bigActionButton"
+                android:layout_toStartOf="@+id/bigActionButton"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:paddingLeft="2dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/ic_favorite_darkgrey_24dp" />
+
+            <ImageButton
+                android:id="@+id/bigBasketButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/likeButton"
+                android:layout_alignTop="@+id/likeButton"
+                android:layout_toLeftOf="@+id/likeButton"
+                android:layout_toStartOf="@+id/likeButton"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:padding="2dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/ic_shopping_basket_darkgrey_24dp" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/bigProductName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
+            android:layout_alignLeft="@+id/description"
+            android:layout_alignStart="@+id/description"
+            android:layout_alignTop="@+id/bigPrice"
             android:layout_gravity=""
-            android:layout_row="1"
             android:text="Product"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_alignTop="@+id/bigPrice"
-            android:layout_alignLeft="@+id/description"
-            android:layout_alignStart="@+id/description" />
+            android:textColor="@color/lightBlack"/>
 
     </RelativeLayout>
 

@@ -62,8 +62,8 @@ public class FragmentBTab extends TabHelper {
         recyclerLayoutManager2 = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView2.setLayoutManager(recyclerLayoutManager2);
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
+        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
+        recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
 
 
         recyclerAdapter = new RecyclerAdapter(2, R.layout.item_b_big);

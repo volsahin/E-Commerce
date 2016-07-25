@@ -10,4 +10,5 @@
     <color name="white">#EDEFF2</color>
     <color name="black">#000000</color>
     <color name="toolbarTransparent">#00FFFFFF</color>
+    <color name="lightBlack">#474A4F</color>
 </resources>

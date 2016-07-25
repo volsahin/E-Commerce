@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardBackgroundColor="@color/white"
+    card_view:cardBackgroundColor="@android:color/white"
     card_view:cardCornerRadius="8dp">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,89 +14,109 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageButton
+        <RelativeLayout
             android:id="@+id/bigImage"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_alignEnd="@+id/description"
-            android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/description"
-            android:src="@drawable/ic_product_photo" />
+            android:layout_alignRight="@+id/description">
 
-        <TextView
-            android:id="@+id/bigPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/bigBasketButton"
-            android:layout_alignEnd="@+id/bigProductName"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/bigProductName"
-            android:layout_alignTop="@+id/bigBasketButton"
-            android:text="$100"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/red"
-            android:textSize="13dp" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                android:background="@color/grey" />
+
+            <include
+                layout="@layout/product_photo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/bigProductName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/bigImage"
-            android:layout_column="0"
-            android:layout_gravity=""
-            android:layout_row="1"
+            android:layout_margin="8dp"
             android:text="Product"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="16dp"
+            android:textColor="@color/lightBlack"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/bigProductName"
-            android:layout_column="0"
-            android:layout_gravity=""
-            android:layout_row="1"
+            android:layout_marginLeft="8dp"
             android:text="@string/lorem"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp"
+            android:textColor="@color/darkGrey"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/bigActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/description"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_more_vert_black_24dp" />
 
-        <ImageButton
-            android:id="@+id/likeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
             android:layout_below="@+id/description"
-            android:layout_toLeftOf="@+id/bigActionButton"
-            android:layout_toStartOf="@+id/bigActionButton"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_favorite_darkgrey_24dp" />
+            android:layout_margin="8dp">
 
-        <ImageButton
-            android:id="@+id/bigBasketButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/description"
-            android:layout_toLeftOf="@+id/likeButton"
-            android:layout_toStartOf="@+id/likeButton"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_shopping_basket_darkgrey_24dp" />
+            <TextView
+                android:id="@+id/bigPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bigBasketButton"
+                android:layout_alignTop="@+id/bigBasketButton"
+                android:text="$100"
+                android:textColor="@color/red"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/bigActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/ic_more_vert_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/likeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/bigActionButton"
+                android:layout_alignTop="@+id/bigActionButton"
+                android:layout_toLeftOf="@+id/bigActionButton"
+                android:layout_toStartOf="@+id/bigActionButton"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:paddingLeft="2dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/ic_favorite_darkgrey_24dp" />
+
+            <ImageButton
+                android:id="@+id/bigBasketButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/likeButton"
+                android:layout_alignTop="@+id/likeButton"
+                android:layout_toLeftOf="@+id/likeButton"
+                android:layout_toStartOf="@+id/likeButton"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:padding="2dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/ic_shopping_basket_darkgrey_24dp" />
+        </RelativeLayout>
+
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>
