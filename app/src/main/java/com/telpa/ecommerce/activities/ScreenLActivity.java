@@ -1,12 +1,14 @@
 package com.telpa.ecommerce.activities;
 
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
 import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
@@ -16,9 +18,14 @@ import com.telpa.ecommerce.utils.BaseActivity;
 
 public class ScreenLActivity extends BaseActivity {
     private RecyclerView recyclerView;
+    private RecyclerView recyclerViewPopUp;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
+    private RecyclerView.LayoutManager recyclerLayoutManagerPopUp;
 
+
+
+    LinearLayout layout;
     RadioButton Ia,Ib,Ic,Id,Ie,check1,check2,check3,check4;
     TextView a,b,c,d,e;
     @Override
@@ -125,9 +132,40 @@ public class ScreenLActivity extends BaseActivity {
         recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment);
         recyclerView.setAdapter(recyclerAdapter);
 
+//Dialog Kısmı
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.attachToRecyclerView(recyclerView);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View v = getLayoutInflater().inflate(R.layout.activity_screen_l_popup,null);
+                recyclerViewPopUp = (RecyclerView)v.findViewById(R.id.popupList);
+
+                recyclerViewPopUp.setHasFixedSize(true);
+                recyclerLayoutManagerPopUp = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+                recyclerViewPopUp.setLayoutManager(recyclerLayoutManagerPopUp);
+
+                recyclerViewPopUp.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
+                recyclerAdapter = new RecyclerAdapter(4, R.layout.item_l_popup);
+                recyclerViewPopUp.setAdapter(recyclerAdapter);
+              /*  popUp.showAtLocation(v , Gravity.BOTTOM, 10, 10);
+                popUp.update(50, 50, 300, 80);
+                click = false;
+              */
+                AlertDialog.Builder dialog = new AlertDialog.Builder(ScreenLActivity.this);
+                dialog.setView(v);
+                dialog.show();
+
+
+            }
+
+        });
+
+
+
 
     }
+
 }
