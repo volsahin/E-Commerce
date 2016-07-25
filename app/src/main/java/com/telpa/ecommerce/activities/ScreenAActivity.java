@@ -34,7 +34,6 @@ public class ScreenAActivity extends BaseActivity {
         tabHelperList.add(FragmentBTab.createTab("Category B"));
         tabHelperList.add(FragmentATab.createTab("Category C"));
 
-
         fcreateTabMenu(tabHelperList);
 
         View view = getLayoutInflater().inflate(R.layout.item_a_big,null);
