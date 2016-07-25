@@ -21,12 +21,12 @@
         <activity android:name=".activities.ScreenHActivity" />
         <activity android:name=".activities.ScreenCActivity" />
         <activity android:name=".activities.ScreenIActivity" />
-        <activity android:name=".activities.ScreenJActivity" />
+        <activity android:name=".activities.ScreenJActivity_Form" />
         <activity android:name=".activities.ScreenEActivity" />
         <activity android:name=".activities.ScreenFActivity" />
-        <activity android:name=".activities.BasketActivity" />
+        <activity android:name=".activities.ScreenMActivity_Basket" />
         <activity android:name=".activities.ScreenDActivity" />
-        <activity android:name=".activities.BasketActivity" />
+        <activity android:name=".activities.ScreenMActivity_Basket" />
         <activity android:name=".activities.ScreenKActivity" />
         <activity android:name=".activities.ScreenGActivity" />
         <activity android:name=".activities.ScreenLActivity"></activity>
