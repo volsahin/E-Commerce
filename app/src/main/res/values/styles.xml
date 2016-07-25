@@ -9,11 +9,13 @@
         <item name="windowActionBar">true</item>
         <item name="android:colorBackground">@color/lightGrey</item>
         <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondaryInverse">
-            @color/abc_background_cache_hint_selector_material_light
-        </item>
+        <item name="android:textColorSecondaryInverse">@color/abc_background_cache_hint_selector_material_light</item>
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@android:color/white</item>
     </style>
 
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar.Small">
 
+    </style>
 
 </resources>

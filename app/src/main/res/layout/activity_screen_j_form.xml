@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context="com.telpa.ecommerce.activities.ScreenJActivity">
+    tools:context=".activities.ScreenJActivity_Form">
 
     <include
         layout="@layout/toolbar"
@@ -15,14 +16,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             style="@style/AppTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -67,7 +67,7 @@
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="0dp"/>
+                android:paddingLeft="0dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,9 +79,9 @@
                     android:id="@+id/firstLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1.0"
-                    android:orientation="vertical"
-                    android:layout_marginRight="5dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/labelFour"
@@ -94,7 +94,7 @@
                         android:id="@+id/spinner2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="0dp"/>
+                        android:paddingLeft="0dp" />
                 </LinearLayout>
 
 
@@ -102,9 +102,9 @@
                     android:id="@+id/thirdLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1.0"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="5dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/labelFive"
@@ -116,7 +116,7 @@
                         android:id="@+id/spinner3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="0dp"/>
+                        android:paddingLeft="0dp" />
                 </LinearLayout>
 
             </LinearLayout>

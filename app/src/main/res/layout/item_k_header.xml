@@ -20,7 +20,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/ic_photo_black_48dp" />
+            android:src="@drawable/ic_product_photo" />
 -->
     <LinearLayout
         android:id="@+id/bigImage"
@@ -46,6 +46,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/viewPagerIndicatorK"/>
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:padding="10dip"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+
+            />
 
     </LinearLayout>
 

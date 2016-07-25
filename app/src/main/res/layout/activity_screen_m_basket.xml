@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.telpa.ecommerce.activities.BasketActivity">
+    tools:context=".activities.ScreenMActivity_Basket">
 
     <include
         android:id="@+id/include"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="12dp"
+        android:padding="16dp"
         android:id="@+id/linearLayout"
         android:layout_below="@+id/basketList"
         android:layout_alignParentLeft="true"
@@ -37,15 +37,15 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="Total"
             android:textStyle="bold"
-            android:textColor="@color/grey"
+            android:textColor="@color/darkGrey"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/totalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:textStyle="bold"
             android:gravity="center_vertical|center_horizontal"
             android:text="$400"
@@ -62,11 +62,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="12dp"
+        android:layout_margin="16dp"
         android:background="@color/red"
         android:text="PROCEED TO CHECKOUT"
         android:textColor="@color/white"
-        android:textSize="16dp"/>
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/tottalItems"
@@ -74,8 +74,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal|right"
         android:text="4 items"
-        android:padding="12dp"
-        android:textColor="@color/grey"
+        android:padding="16dp"
+        android:textColor="@color/darkGrey"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_alignTop="@+id/linearLayout"

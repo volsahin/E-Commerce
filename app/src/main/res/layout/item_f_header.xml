@@ -1,123 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:background="@android:color/white">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="0.65">
+        android:layout_weight="0.65"
+        android:orientation="horizontal">
 
-        <ImageView
-
-            android:layout_weight="0.5"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_photo_black_48dp"
-            android:id="@+id/imageView"
-            android:background="@color/grey"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="3dp"
             android:layout_marginBottom="3dp"
-            android:layout_marginRight="0dp"/>
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.5"
+            android:background="@color/grey">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_photo_black_48dp" />
+
+        </FrameLayout>
+
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.5"
-            android:background="@color/darkGrey"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginBottom="3dp"
-            android:layout_marginRight="3dp">
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.5"
+            android:background="@color/darkGrey"
+            android:paddingLeft="6dp">
 
             <TextView
-                android:text="Product"
-                android:textColor="@android:color/white"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="5dp"
-                android:textSize="16sp"
-                android:id="@+id/textView3" />
+                android:text="Product"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:padding="5dp"
                 android:text="@string/lorem_short"
                 android:textColor="@color/lightGrey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/textView4"
-                android:padding="5dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
+
+            <!-- style="?android:attr/ratingBarStyleSmall" -->
+
 
             <RatingBar
+                android:id="@+id/ratingBar2"
+                style="@style/CustomRatingBar"
+                android:rating="4"
+                android:numStars="5"
                 android:layout_width="wrap_content"
-
-                style="?android:attr/ratingBarStyleSmall"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView4"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:id="@+id/ratingBar2"
+                android:layout_below="@+id/textView4"
                 android:layout_marginTop="2dp"
-                android:paddingLeft="5dp"/>
+                android:paddingLeft="5dp" />
 
             <RelativeLayout
+                android:id="@+id/relative"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ratingBar2"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="30dp"
-                android:id="@+id/relative">
+                android:layout_below="@+id/ratingBar2"
+                android:layout_marginTop="30dp">
 
                 <TextView
-                    android:text="$100"
-                    android:textColor="@color/white"
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:paddingLeft="5dp"
-                    android:id="@+id/textView5" />
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:text="$100"
+                    android:textColor="@color/white" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_shopping_basket_white_24dp"
-                    android:background="@null"
+                    android:layout_marginBottom="5dp"
                     android:layout_toLeftOf="@+id/heartButton"
                     android:layout_toStartOf="@+id/heartButton"
-                    android:layout_marginBottom="5dp"
-                    android:padding="0dp"/>
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:src="@drawable/ic_shopping_basket_white_24dp" />
 
                 <ImageButton
                     android:id="@+id/heartButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:src="@drawable/ic_favorite_white_24dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_toLeftOf="@+id/menuDugmesi"
                     android:layout_toStartOf="@+id/menuDugmesi"
-                    android:layout_marginBottom="5dp"
-                    android:paddingLeft="5dp"/>
+                    android:background="@null"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/ic_favorite_white_24dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"/>
 
                 <ImageButton
                     android:id="@+id/menuDugmesi"
-                    android:background="@null"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_more_vert_white_24dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginBottom="5dp"
+                    android:background="@null"
                     android:padding="0dp"
-                    />
+                    android:src="@drawable/ic_more_vert_white_24dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"    />
 
             </RelativeLayout>
 

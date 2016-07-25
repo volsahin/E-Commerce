@@ -21,7 +21,7 @@
             android:layout_alignEnd="@+id/description"
             android:layout_alignParentTop="true"
             android:layout_alignRight="@+id/description"
-            android:src="@drawable/ic_photo_black_48dp" />
+            android:src="@drawable/ic_product_photo" />
 
         <TextView
             android:id="@+id/bigPrice"
