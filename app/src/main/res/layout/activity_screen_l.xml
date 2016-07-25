@@ -22,8 +22,10 @@
 
         <include layout="@layout/toolbar" />
 
-        <ImageView
+    <ImageView
+
             android:id="@+id/ProductBigImage"
+                   android:foregroundGravity="center"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_alignParentLeft="true"
@@ -34,6 +36,7 @@
             android:layout_marginTop="4dp"
             android:background="@color/grey"
             app:srcCompat="@drawable/ic_photo_black_48dp" />
+
 
 
         <LinearLayout
@@ -118,62 +121,100 @@
 
         <RatingBar
             android:id="@+id/ratingBar"
+            android:paddingBottom="8dp"
+            android:paddingTop="4dp"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentStart="false"
             android:layout_below="@+id/linearLayout3"
             android:layout_margin="10dp"
             android:focusable="false"
-            android:stepSize="0.1" />
+            android:stepSize="0.1"
+           />/ android:layout_alignParentEnd="false" />
 
         <TextView
+            android:textSize="13sp"
+            android:paddingBottom="8dp"
             android:id="@+id/textView8"
+            android:textColor="@color/grey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout3"
-            android:layout_margin="10dp"
-            android:layout_toEndOf="@+id/ratingBar"
-            android:layout_toRightOf="@+id/ratingBar"
             android:text="46 Reviews"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_alignBottom="@+id/ratingBar"
+            android:layout_toRightOf="@+id/ratingBar"
+            android:layout_toEndOf="@+id/ratingBar" />
 
         <TextView
             android:id="@+id/bigPrice"
+            android:paddingBottom="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/textView8"
-            android:layout_margin="10dp"
+            android:paddingRight="12dp"
             android:text="$100"
             android:textColor="@color/red"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/textView8"
+            android:layout_alignRight="@+id/description"
+            android:layout_alignEnd="@+id/description"
+            android:textIsSelectable="false" />
 
         <TextView
             android:id="@+id/description"
-
+            android:padding="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/ratingBar"
             android:layout_column="0"
             android:layout_gravity=""
-            android:layout_margin="10dp"
             android:layout_row="1"
             android:text="@string/lorem_long"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="13dp"
-            android:textStyle="bold" />
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView8"
+            android:layout_alignLeft="@+id/ratingBar"
+            android:layout_alignStart="@+id/ratingBar" />
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/description"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/lightGrey"/>
 
         <TextView
             android:id="@+id/variants1"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/description"
+            android:layout_below="@+id/line1"
+            android:gravity="center"
+            android:text="Variants"
+            android:textStyle="bold" />
+        <include
+            android:id="@+id/radioCheck"
+            layout="@layout/radio_group_letters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/variants1"
+            android:layout_centerHorizontal="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@+id/radioCheck"
+            android:layout_height="2dp"
+            android:background="@color/lightGrey"/>
+
+
+        <TextView
+            android:id="@+id/variants2"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/radioCheck"
             android:gravity="center"
             android:text="Variants"
             android:textStyle="bold" />
@@ -183,36 +224,17 @@
             layout="@layout/radio_group_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/variants1"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/variants2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/radioAbc"
-            android:gravity="center"
-            android:text="Variants"
-            android:textStyle="bold" />
-
-        <include
-            android:id="@+id/radioCheck"
-            layout="@layout/radio_group_letters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/variants2"
             android:layout_centerHorizontal="true" />
 
-        android:textStyle="bold"
-        />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_below="@+id/radioCheck"
-            android:background="@android:color/darker_gray">
+            android:layout_height="8dp"
+            android:layout_below="@+id/radioAbc"
+            android:background="@color/lightGrey"
+            android:id="@+id/linearLayout4"/>
 
-        </LinearLayout>
+
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_l"
@@ -221,8 +243,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/radioCheck"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            android:layout_below="@+id/linearLayout4" />
         android:scrollbars="vertical" />
 
 
@@ -230,11 +252,12 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+           android:layout_marginRight="16dp"
             android:layout_gravity="bottom|right"
             android:src="@drawable/ic_action_content_new"
             fab:fab_colorNormal="@color/red"
             fab:fab_colorPressed="@color/white"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="20dp"
             android:layout_alignBottom="@+id/recycler_view_l"
             android:layout_alignRight="@+id/description"
             android:layout_alignEnd="@+id/description" />
