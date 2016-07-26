@@ -7,7 +7,6 @@ import android.widget.Spinner;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.fragment.FragmentDTab;
-import com.telpa.ecommerce.fragment.FragmentFTab;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 
