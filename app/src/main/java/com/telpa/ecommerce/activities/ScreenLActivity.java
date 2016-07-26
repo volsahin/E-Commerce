@@ -162,8 +162,8 @@ public class ScreenLActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View v = getLayoutInflater().inflate(R.layout.activity_screen_l_popup,null);
-                recyclerViewPopUp = (RecyclerView)v.findViewById(R.id.popupList);
+                View v = getLayoutInflater().inflate(R.layout.activity_screen_l_popup, null);
+                recyclerViewPopUp = (RecyclerView) v.findViewById(R.id.popupList);
 
                 recyclerViewPopUp.setHasFixedSize(true);
                 recyclerLayoutManagerPopUp = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
@@ -178,8 +178,8 @@ public class ScreenLActivity extends BaseActivity {
               */
                 AlertDialog.Builder dialog = new AlertDialog.Builder(ScreenLActivity.this);
                 dialog.setView(v);
+                dialog.setTitle("Your Basket");
                 dialog.show();
-
 
             }
 
