@@ -8,29 +8,36 @@
 
     <RatingBar
         android:id="@+id/ratingBar"
-        style="?android:attr/ratingBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:focusable="false"
         android:stepSize="0.1"
         android:layout_marginTop="22dp"
         android:layout_alignParentTop="true"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_marginBottom="-35dp"
         android:layout_alignLeft="@+id/textView11"
         android:layout_alignStart="@+id/textView11" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
+        android:paddingLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="by username"
         android:id="@+id/textView9"
         android:layout_gravity="center_horizontal"
         android:textSize="12dp"
+        android:textColor="@color/button_material_dark"
+        android:layout_marginRight="65dp"
+        android:layout_marginEnd="65dp"
+        android:paddingBottom="5dp"
         android:layout_above="@+id/textView11"
-        android:layout_toRightOf="@+id/ratingBar"
-        android:layout_toEndOf="@+id/ratingBar"
-        android:textColor="@color/button_material_dark" />
+        android:layout_alignRight="@+id/ratingBar"
+        android:layout_alignEnd="@+id/ratingBar" />
 
     <TextView
         android:layout_width="wrap_content"

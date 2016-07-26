@@ -60,7 +60,6 @@
 
         <RatingBar
             android:id="@+id/ratingBar"
-            style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -69,7 +68,11 @@
             android:layout_marginLeft="12dp"
             android:layout_marginTop="12dp"
             android:stepSize="0.1"
-            android:focusable="true"/>
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:layout_marginBottom="-35dp" />
 
         <TextView
             android:id="@+id/description"
@@ -124,11 +127,14 @@
             android:text="46 reviews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/ratingBar"
-            android:layout_toRightOf="@+id/ratingBar"
-            android:layout_toEndOf="@+id/ratingBar"
             android:id="@+id/textView7"
-            android:layout_above="@+id/description" />
+            android:layout_marginLeft="39dp"
+            android:layout_marginStart="39dp"
+            android:layout_alignTop="@+id/ratingBar"
+            android:layout_toRightOf="@+id/bigProductName"
+            android:layout_toEndOf="@+id/bigProductName"
+            android:paddingLeft="1dp"
+            android:paddingTop="5dp" />
 
 
     </RelativeLayout>

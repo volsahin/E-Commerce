@@ -74,16 +74,17 @@
 
             <RatingBar
                 android:id="@+id/ratingBar2"
-                style="@style/CustomRatingBar"
-                android:rating="4"
+                android:rating="0.0"
                 android:numStars="5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_below="@+id/textView4"
-                android:layout_marginTop="2dp"
-                android:paddingLeft="5dp" />
+                android:stepSize="0.1"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                android:layout_marginBottom="-35dp"/>
 
             <RelativeLayout
                 android:id="@+id/relative"
