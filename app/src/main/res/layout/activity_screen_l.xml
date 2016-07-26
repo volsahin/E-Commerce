@@ -94,30 +94,35 @@
 
                 <RatingBar
                     android:id="@+id/ratingBar"
-                    style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="false"
                     android:layout_below="@+id/linearLayout3"
-                    android:layout_margin="10dp"
-                    android:focusable="false"
                     android:paddingBottom="8dp"
                     android:paddingTop="4dp"
-                    android:stepSize="0.1" />
+                    android:stepSize="0.1"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4"
+                    android:transformPivotX="-1dp"
+                    android:transformPivotY="-1dp"
+                    />
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/ratingBar"
-                    android:layout_toEndOf="@+id/ratingBar"
-                    android:layout_toRightOf="@+id/ratingBar"
                     android:paddingBottom="8dp"
                     android:text="46 Reviews"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/grey"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignRight="@+id/ratingBar"
+                    android:layout_alignEnd="@+id/ratingBar"
+                    android:layout_marginRight="76dp"
+                    android:layout_marginEnd="76dp"
+                    android:paddingTop="4dp" />
 
                 <TextView
                     android:id="@+id/bigPrice"
@@ -132,21 +137,25 @@
                     android:textColor="@color/red"
                     android:textIsSelectable="false"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/ratingBar"
-                    android:layout_alignStart="@+id/ratingBar"
-                    android:layout_below="@+id/textView8"
-                    android:padding="4dp"
                     android:text="@string/lorem_long"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/darkGrey"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_below="@+id/bigPrice"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="-5dp" />
 
                 <View
                     android:id="@+id/line1"
