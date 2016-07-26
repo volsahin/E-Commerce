@@ -1,11 +1,14 @@
 package com.telpa.ecommerce.activities;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
@@ -19,8 +22,8 @@ public class ScreenMActivity_Basket extends BaseActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
-
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +53,7 @@ public class ScreenMActivity_Basket extends BaseActivity {
                 Toast.makeText(ScreenMActivity_Basket.this, "Buy them!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 }

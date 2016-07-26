@@ -12,121 +12,135 @@
         android:background="@android:color/white"
         android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/Radio1"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:button="@drawable/radio_button_selector_letter"
-            android:checked="false"
-            android:scaleX="2.5"
-            android:scaleY="2.5"
+            android:layout_margin="20dp">
 
-            />
+            <RadioButton
+                android:id="@+id/Radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/radio_button_selector_letter"
+                android:checked="false"
+                android:scaleX="2.5"
+                android:scaleY="2.5" />
 
-        <RadioButton
-            android:id="@+id/Radio2"
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="A"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/darkGrey" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:button="@drawable/radio_button_selector_letter"
-            android:checked="true"
-            android:scaleX="2.5"
-            android:scaleY="2.5" />
+            android:layout_margin="20dp">
 
-        <RadioButton
-            android:id="@+id/Radio3"
+            <RadioButton
+                android:id="@+id/Radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/radio_button_selector_letter"
+                android:checked="true"
+                android:scaleX="2.5"
+                android:scaleY="2.5" />
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="B"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/darkGrey" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:button="@drawable/radio_button_selector_letter"
-            android:checked="false"
-            android:scaleX="2.5"
-            android:scaleY="2.5" />
+            android:layout_margin="20dp">
 
-        <RadioButton
-            android:id="@+id/Radio4"
+            <RadioButton
+                android:id="@+id/Radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/radio_button_selector_letter"
+                android:checked="false"
+                android:scaleX="2.5"
+                android:scaleY="2.5" />
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="C"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/darkGrey" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:button="@drawable/radio_button_selector_letter"
-            android:checked="false"
-            android:scaleX="2.5"
-            android:scaleY="2.5" />
+            android:layout_margin="20dp">
 
-        <RadioButton
-            android:id="@+id/Radio5"
+            <RadioButton
+                android:id="@+id/Radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/radio_button_selector_letter"
+                android:checked="false"
+                android:scaleX="2.5"
+                android:scaleY="2.5" />
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="D"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/darkGrey" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:button="@drawable/radio_button_selector_letter"
-            android:checked="false"
-            android:scaleX="2.5"
-            android:scaleY="2.5" />
+            android:layout_margin="20dp">
 
+            <RadioButton
+                android:id="@+id/Radio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/radio_button_selector_letter"
+                android:checked="false"
+                android:scaleX="2.5"
+                android:scaleY="2.5" />
+
+            <TextView
+                android:id="@+id/e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="E"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/darkGrey" />
+        </RelativeLayout>
     </RadioGroup>
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="22dp"
-            android:text="A"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/darkGrey" />
-
-        <TextView
-            android:id="@+id/b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="22dp"
-            android:text="B"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/darkGrey" />
-
-        <TextView
-            android:id="@+id/c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="32dp"
-            android:text="C"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/darkGrey" />
-
-        <TextView
-            android:id="@+id/d"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:text="D"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/darkGrey" />
-
-        <TextView
-            android:id="@+id/e"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="55dp"
-            android:text="E"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/darkGrey" />
-    </LinearLayout>
-
 </RelativeLayout>
-
-
-
-
-
-

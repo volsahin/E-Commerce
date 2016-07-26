@@ -38,6 +38,9 @@ public class ScreenLActivity extends BaseActivity {
         fcreateToolbar(this,false,true,false,R.id.toolbar);
         fcreateMenu(this, true);
 
+
+        //TODO radiobutton class'ı yap, bunları oraya at.
+
         a=(TextView) findViewById(R.id.a);
         b=(TextView) findViewById(R.id.b);
         c=(TextView) findViewById(R.id.c);
@@ -65,6 +68,10 @@ public class ScreenLActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
+                Ib.setChecked(false);
+                Ic.setChecked(false);
+                Id.setChecked(false);
+                Ie.setChecked(false);
             }
         });
 
@@ -76,7 +83,11 @@ public class ScreenLActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
-
+                e.setTextColor(getResources().getColor(R.color.darkGrey));
+                Ia.setChecked(false);
+                Ic.setChecked(false);
+                Id.setChecked(false);
+                Ie.setChecked(false);
             }
         });
 
@@ -88,7 +99,11 @@ public class ScreenLActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.white));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
-
+                e.setTextColor(getResources().getColor(R.color.darkGrey));
+                Ia.setChecked(false);
+                Ib.setChecked(false);
+                Id.setChecked(false);
+                Ie.setChecked(false);
             }
         });
         Id.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +114,10 @@ public class ScreenLActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.white));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
-
+                Ia.setChecked(false);
+                Ib.setChecked(false);
+                Ic.setChecked(false);
+                Ie.setChecked(false);
             }
         });
 
@@ -111,6 +129,10 @@ public class ScreenLActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.white));
+                Ia.setChecked(false);
+                Ib.setChecked(false);
+                Ic.setChecked(false);
+                Id.setChecked(false);
             }
         });
 
