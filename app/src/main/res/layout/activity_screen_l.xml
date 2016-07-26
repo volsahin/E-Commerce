@@ -12,9 +12,7 @@
 
     <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        >
+        android:layout_height="wrap_content">
 
         <com.melnykov.fab.FloatingActionButton
             android:id="@+id/fab"
@@ -101,28 +99,27 @@
                     android:layout_below="@+id/linearLayout3"
                     android:paddingBottom="8dp"
                     android:paddingTop="4dp"
-                    android:stepSize="0.1"
                     android:scaleX="0.4"
                     android:scaleY="0.4"
+                    android:stepSize="0.1"
                     android:transformPivotX="-1dp"
-                    android:transformPivotY="-1dp"
-                    />
+                    android:transformPivotY="-1dp" />
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/ratingBar"
+                    android:layout_alignRight="@+id/ratingBar"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_marginEnd="76dp"
+                    android:layout_marginRight="76dp"
                     android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
                     android:text="46 Reviews"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/grey"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/linearLayout3"
-                    android:layout_alignRight="@+id/ratingBar"
-                    android:layout_alignEnd="@+id/ratingBar"
-                    android:layout_marginRight="76dp"
-                    android:layout_marginEnd="76dp"
-                    android:paddingTop="4dp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/bigPrice"
@@ -131,31 +128,31 @@
                     android:layout_alignEnd="@+id/description"
                     android:layout_alignRight="@+id/description"
                     android:layout_alignTop="@+id/textView8"
+                    android:layout_marginTop="3dp"
                     android:paddingBottom="16dp"
                     android:paddingRight="12dp"
                     android:text="$100"
                     android:textColor="@color/red"
                     android:textIsSelectable="false"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="3dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/bigPrice"
+                    android:layout_marginTop="-5dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
                     android:text="@string/lorem_long"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/darkGrey"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_below="@+id/bigPrice"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="-5dp" />
+                    android:textStyle="bold" />
 
                 <View
                     android:id="@+id/line1"
