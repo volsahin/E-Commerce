@@ -1,14 +1,20 @@
 package com.telpa.ecommerce.activities;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 public class ScreenJActivity_Form extends BaseActivity {
     private String[] arraySpinner;
+
+    EditText text;
+    EditText text2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +39,11 @@ public class ScreenJActivity_Form extends BaseActivity {
         spinner.setAdapter(adapter);
         spinner2.setAdapter(adapter);
         spinner3.setAdapter(adapter);
+
+        text=(EditText) findViewById(R.id.placeholderText);
+        text2=(EditText) findViewById(R.id.someText);
+        text.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_IN);
+        text2.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_IN);
     }
 }
 
