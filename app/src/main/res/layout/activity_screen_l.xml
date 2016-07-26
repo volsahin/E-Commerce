@@ -45,21 +45,29 @@
         android:background="@android:color/white"
         tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
 
-
+<FrameLayout
+    android:id="@+id/layout_frame"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    >
     <ImageView
 
-            android:id="@+id/ProductBigImage"
-                   android:foregroundGravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/toolbar"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="4dp"
-            android:background="@color/grey"
-            app:srcCompat="@drawable/ic_product_photo" />
+        android:layout_gravity="center"
+        android:id="@+id/ProductBigImage"
+        android:foregroundGravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        app:srcCompat="@drawable/ic_product_photo" />
+
+</FrameLayout>
+
 
 
 
@@ -67,7 +75,7 @@
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ProductBigImage"
+            android:layout_below="@+id/layout_frame"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
@@ -75,19 +83,25 @@
 
 
             >
+            <FrameLayout
+                android:id="@+id/layout_frame2"
+                android:background="@color/grey"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+
+                >
 
             <ImageButton
                 android:id="@+id/imageButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ProductBigImage"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="0.2"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
                 android:background="@color/grey"
+                android:layout_below="@+id/layout_frame2"
                 android:src="@drawable/ic_product_photo" />
+
+            </FrameLayout>
+
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -156,7 +170,7 @@
             android:layout_margin="10dp"
             android:focusable="false"
             android:stepSize="0.1"
-           />/ android:layout_alignParentEnd="false" />
+           />
 
         <TextView
             android:textSize="13sp"
