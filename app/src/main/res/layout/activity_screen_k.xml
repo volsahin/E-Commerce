@@ -51,6 +51,7 @@
 
             <TextView
                 android:id="@+id/variants1"
+                android:textSize="16sp"
                 android:paddingTop="16dp"
                 android:paddingBottom="4dp"
                 android:layout_width="match_parent"
@@ -58,6 +59,7 @@
                 android:layout_below="@+id/line1"
                 android:gravity="center"
                 android:text="Variants"
+                android:textColor="@color/lightBlack"
                 android:textStyle="bold" />
             <include
                 android:id="@+id/radioCheck"
@@ -76,12 +78,14 @@
 
             <TextView
                 android:id="@+id/variants2"
+                android:textSize="16sp"
                 android:paddingTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/radioCheck"
                 android:gravity="center"
                 android:text="Variants"
+                android:textColor="@color/lightBlack"
                 android:textStyle="bold" />
 
             <include
