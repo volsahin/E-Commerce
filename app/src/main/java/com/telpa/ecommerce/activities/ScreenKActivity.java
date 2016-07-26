@@ -75,6 +75,10 @@ public class ScreenKActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
+                Ib.setChecked(false);
+                Ic.setChecked(false);
+                Id.setChecked(false);
+                Ie.setChecked(false);
             }
         });
 
@@ -86,7 +90,11 @@ public class ScreenKActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
-
+                e.setTextColor(getResources().getColor(R.color.darkGrey));
+                Ia.setChecked(false);
+                Ic.setChecked(false);
+                Id.setChecked(false);
+                Ie.setChecked(false);
             }
         });
 
@@ -98,7 +106,11 @@ public class ScreenKActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.white));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
-
+                e.setTextColor(getResources().getColor(R.color.darkGrey));
+                Ia.setChecked(false);
+                Ib.setChecked(false);
+                Id.setChecked(false);
+                Ie.setChecked(false);
             }
         });
         Id.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +121,10 @@ public class ScreenKActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.white));
                 e.setTextColor(getResources().getColor(R.color.darkGrey));
-
+                Ia.setChecked(false);
+                Ib.setChecked(false);
+                Ic.setChecked(false);
+                Ie.setChecked(false);
             }
         });
 
@@ -121,8 +136,13 @@ public class ScreenKActivity extends BaseActivity {
                 c.setTextColor(getResources().getColor(R.color.darkGrey));
                 d.setTextColor(getResources().getColor(R.color.darkGrey));
                 e.setTextColor(getResources().getColor(R.color.white));
+                Ia.setChecked(false);
+                Ib.setChecked(false);
+                Ic.setChecked(false);
+                Id.setChecked(false);
             }
         });
+
 
 
 

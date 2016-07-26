@@ -1,294 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<include layout="@layout/toolbar" />
-
-<FrameLayout android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-
-   >
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_gravity="bottom|right"
-        android:src="@drawable/ic_pop_up"
-        fab:fab_colorNormal="@color/red"
-        fab:fab_colorPressed="@color/white"
-        android:layout_marginBottom="21dp"/>
-
-
-
-
-
-
-<ScrollView
-
-    android:id="@+id/scrollViewProduct"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:fillViewport="true">
-
-
-    <RelativeLayout
-        android:id="@+id/activity_screen_l"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
-
-<FrameLayout
-    android:id="@+id/layout_frame"
-    android:background="@color/grey"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    >
-    <ImageView
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-        android:layout_gravity="center"
-        android:id="@+id/ProductBigImage"
-        android:foregroundGravity="center"
-        android:layout_height="wrap_content"
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginTop="4dp"
-        app:srcCompat="@drawable/ic_product_photo" />
+        android:layout_height="wrap_content"
 
-</FrameLayout>
+        >
 
-
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/layout_frame"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="21dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_pop_up"
+            app:fab_colorNormal="@android:color/white"
+            fab:fab_colorPressed="@color/black" />
 
 
-            >
-            <FrameLayout
-                android:id="@+id/layout_frame2"
-                android:background="@color/grey"
+        <ScrollView
+
+            android:id="@+id/scrollViewProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+
+            <RelativeLayout
+                android:id="@+id/activity_screen_l"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                tools:context="com.telpa.ecommerce.activities.ScreenLActivity">
 
-                >
+                <RelativeLayout
+                    android:id="@+id/layout_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/grey">
 
-            <ImageButton
-                android:id="@+id/imageButton1"
-                android:layout_gravity="center"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:background="@color/grey"
-                android:layout_below="@+id/layout_frame2"
-                android:src="@drawable/ic_product_photo" />
+                    <ImageButton
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey" />
 
-            </FrameLayout>
-
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ProductBigImage"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="0.2"
-                android:background="@color/grey"
-                android:src="@drawable/ic_product_photo" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ProductBigImage"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="0.2"
-                android:background="@color/grey"
-                android:src="@drawable/ic_product_photo" />
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ProductBigImage"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="0.2"
-                android:background="@color/grey"
-                android:src="@drawable/ic_product_photo" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ProductBigImage"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="0.2"
-                android:background="@color/grey"
-                android:src="@drawable/ic_product_photo" />
-
-        </LinearLayout>
-
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:paddingBottom="8dp"
-            android:paddingTop="4dp"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="false"
-            android:layout_below="@+id/linearLayout3"
-            android:layout_margin="10dp"
-            android:focusable="false"
-            android:stepSize="0.1"
-           />
-
-        <TextView
-            android:textSize="13sp"
-            android:paddingBottom="8dp"
-            android:id="@+id/textView8"
-            android:textColor="@color/grey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="46 Reviews"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_alignBottom="@+id/ratingBar"
-            android:layout_toRightOf="@+id/ratingBar"
-            android:layout_toEndOf="@+id/ratingBar" />
-
-        <TextView
-            android:id="@+id/bigPrice"
-            android:paddingBottom="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="12dp"
-            android:text="$100"
-            android:textColor="@color/red"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_alignTop="@+id/textView8"
-            android:layout_alignRight="@+id/description"
-            android:layout_alignEnd="@+id/description"
-            android:textIsSelectable="false" />
-
-        <TextView
-            android:id="@+id/description"
-            android:padding="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_gravity=""
-            android:layout_row="1"
-            android:text="@string/lorem_long"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            android:layout_below="@+id/textView8"
-            android:layout_alignLeft="@+id/ratingBar"
-            android:layout_alignStart="@+id/ratingBar" />
-        <View
-            android:id="@+id/line1"
-            android:layout_width="match_parent"
-            android:layout_below="@+id/description"
-            android:layout_height="2dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/lightGrey"/>
-
-        <TextView
-            android:id="@+id/variants1"
-            android:paddingTop="16dp"
-            android:paddingBottom="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/line1"
-            android:gravity="center"
-            android:text="Variants"
-            android:textStyle="bold" />
-        <include
-            android:id="@+id/radioCheck"
-            layout="@layout/radio_group_letters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/variants1"
-            android:layout_centerHorizontal="true" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_below="@+id/radioCheck"
-            android:layout_height="2dp"
-            android:background="@color/lightGrey"/>
+                    <include
+                        layout="@layout/product_photo"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
 
 
-        <TextView
-            android:id="@+id/variants2"
-            android:paddingTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/radioCheck"
-            android:gravity="center"
-            android:text="Variants"
-            android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_frame"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="horizontal">
 
-        <include
-            android:id="@+id/radioAbc"
-            layout="@layout/radio_group_check"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/variants2"
-            android:layout_centerHorizontal="true" />
+                    <include layout="@layout/product_photo_small" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="8dp"
-            android:layout_below="@+id/radioAbc"
-            android:background="@color/lightGrey"
-            android:id="@+id/linearLayout4"/>
+                    <include layout="@layout/product_photo_small" />
+
+                    <include layout="@layout/product_photo_small" />
+
+                    <include layout="@layout/product_photo_small" />
+
+                    <include layout="@layout/product_photo_small" />
 
 
+                </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_l"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:scrollbars="vertical"
-            android:layout_below="@+id/linearLayout4" />
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_margin="10dp"
+                    android:focusable="false"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:stepSize="0.1" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ratingBar"
+                    android:layout_toEndOf="@+id/ratingBar"
+                    android:layout_toRightOf="@+id/ratingBar"
+                    android:paddingBottom="8dp"
+                    android:text="46 Reviews"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/bigPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/description"
+                    android:layout_alignRight="@+id/description"
+                    android:layout_alignTop="@+id/textView8"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="12dp"
+                    android:text="$100"
+                    android:textColor="@color/red"
+                    android:textIsSelectable="false"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ratingBar"
+                    android:layout_alignStart="@+id/ratingBar"
+                    android:layout_below="@+id/textView8"
+                    android:padding="4dp"
+                    android:text="@string/lorem_long"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/description"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/variants1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line1"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="16dp"
+                    android:text="Variants"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <include
+                    android:id="@+id/radioCheck"
+                    layout="@layout/radio_group_letters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/variants1"
+                    android:layout_centerHorizontal="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/radioCheck"
+                    android:background="@color/white" />
 
 
+                <TextView
+                    android:id="@+id/variants2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/radioCheck"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="Variants"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <include
+                    android:id="@+id/radioAbc"
+                    layout="@layout/radio_group_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/variants2"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/radioAbc"
+                    android:background="@color/white"
+                    android:orientation="horizontal" />
 
 
-    </RelativeLayout>
-</ScrollView>
-</FrameLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearLayout4"
+                    android:scrollbars="vertical" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
 </LinearLayout>

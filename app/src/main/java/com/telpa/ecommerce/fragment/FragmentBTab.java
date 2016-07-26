@@ -67,7 +67,7 @@ public class FragmentBTab extends TabHelper {
 
 
         recyclerAdapter = new RecyclerAdapter(2, R.layout.item_b_big);
-        recyclerAdapter2 = new RecyclerAdapter(6, R.layout.item_a_small);
+        recyclerAdapter2 = new RecyclerAdapter(6, R.layout.item_a_and_b_small);
 
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView2.setAdapter(recyclerAdapter2);
