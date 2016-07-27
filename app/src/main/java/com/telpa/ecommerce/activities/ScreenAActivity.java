@@ -29,6 +29,7 @@ public class ScreenAActivity extends BaseActivity {
         fcreateMenu(this, true);
 
 
+
         // This list holds current tabs in ScreenA
         List<TabHelper> tabHelperList = new ArrayList<>();
         tabHelperList.add(FragmentATab.createTab("Category A"));
