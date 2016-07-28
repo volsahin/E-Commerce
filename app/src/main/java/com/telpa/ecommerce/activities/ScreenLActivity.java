@@ -6,14 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.utils.BaseActivity;
-
 
 
 public class ScreenLActivity extends BaseActivity {
@@ -32,6 +30,7 @@ public class ScreenLActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
+
 
 
         fcreateTitle("Product");

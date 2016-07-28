@@ -1,23 +1,20 @@
 package com.telpa.ecommerce.activities;
 
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
-import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
-import com.viewpagerindicator.IconPageIndicator;
-import com.viewpagerindicator.TitlePageIndicator;
+
+import timber.log.Timber;
 
 public class ScreenKActivity extends BaseActivity {
 
@@ -34,6 +31,7 @@ public class ScreenKActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
+
 
         fcreateTitle("");
         fcreateToolbar(this,true, true, false, R.id.toolbar);
