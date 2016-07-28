@@ -17,7 +17,7 @@
             android:id="@+id/imageView"
             android:background="@color/grey" />
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="0.5"
             android:background="@color/darkGrey"
             android:layout_below="@+id/imageView"

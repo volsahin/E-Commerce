@@ -7,7 +7,7 @@ android:
       # Tools
       - tools
       - platform-tools
-      - build-tools-23
+      - build-tools-23.0.2
       - android-23
 
       # Extras
