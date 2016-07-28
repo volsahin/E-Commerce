@@ -1,12 +1,14 @@
 package com.telpa.ecommerce.di.component;
 
 import com.telpa.ecommerce.activities.ScreenAActivity;
+import com.telpa.ecommerce.activities.ScreenLActivity;
 import com.telpa.ecommerce.di.module.ApplicationModule;
 import com.telpa.ecommerce.di.module.NetModule;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
+import retrofit2.Retrofit;
 
 /**
  * Created by Mert on 28.07.2016.
@@ -14,7 +16,8 @@ import dagger.Component;
 @Singleton
 @Component(modules={NetModule.class})
 public interface INetComponent {
-  //  void inject(ScreenAActivity activity);
+  void inject(ScreenLActivity activity);
+    Retrofit retrofit();
 
 
 

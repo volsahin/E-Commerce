@@ -28,7 +28,7 @@ public class ScreenLActivity extends BaseActivity {
 
     @Inject
     Application application;
-    private ImageButton imageBtn;
+
 
     private RecyclerView recyclerView;
     private RecyclerView recyclerViewPopUp;
@@ -49,7 +49,9 @@ public class ScreenLActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
 
-        ((ECommerceApp) getApplication()).getComponent().inject(this);
+            ((ECommerceApp) getApplication()).getComponent().inject(this);
+
+
 
 
         fcreateTitle("Product");
@@ -182,7 +184,7 @@ public class ScreenLActivity extends BaseActivity {
             public void onClick(View view) {
 
 
-               // Toast.makeText(ScreenLActivity.this, "Mert", Toast.LENGTH_SHORT).show();
+        /*       // Toast.makeText(ScreenLActivity.this, "Mert", Toast.LENGTH_SHORT).show();
                  View v = getLayoutInflater().inflate(R.layout.activity_screen_l_popup, null);
                 recyclerViewPopUp = (RecyclerView) v.findViewById(R.id.popupList);
 
@@ -212,5 +214,6 @@ public class ScreenLActivity extends BaseActivity {
 
 
     }
+
 
 }
