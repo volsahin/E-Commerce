@@ -14,7 +14,7 @@ import dagger.Component;
 @Singleton
 @Component(modules={NetModule.class})
 public interface INetComponent {
-    void inject(ScreenAActivity activity);
+  //  void inject(ScreenAActivity activity);
 
 
 

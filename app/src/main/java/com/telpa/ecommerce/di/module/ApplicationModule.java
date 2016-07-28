@@ -19,22 +19,22 @@ import dagger.Provides;
 public class ApplicationModule {
 
 
-    private final ECommerceApp mapplication;
+    private final ECommerceApp application;
 
     public ApplicationModule(ECommerceApp application) {
-        this.mapplication = application;
+        this.application = application;
 
     }
 
     @Provides
     @Singleton
     Application providesApplication() {
-        return mapplication;
+        return application;
     }
 
     @Provides
     @Singleton
     Context provideApplicationContext() {
-        return mapplication;
+        return application;
     }
 }

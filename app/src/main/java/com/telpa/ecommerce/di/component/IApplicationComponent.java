@@ -1,5 +1,7 @@
 package com.telpa.ecommerce.di.component;
 
+import android.view.View;
+
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
@@ -28,8 +30,8 @@ import dagger.Component;
 
 public interface IApplicationComponent {
 
-    void inject (ScreenAActivity activityA);
-   /* void inject (ScreenBActivity activityB);
+  /*  void inject (ScreenAActivity activityA);
+    void inject (ScreenBActivity activityB);
     void inject (ScreenCActivity activityC);
     void inject (ScreenDActivity activityD);
     void inject (ScreenEActivity activityE);
@@ -38,9 +40,9 @@ public interface IApplicationComponent {
     void inject (ScreenHActivity activityH);
     void inject (ScreenIActivity activityI);
     void inject (ScreenJActivity_Form activityJ);
-    void inject (ScreenKActivity activityK);
+    void inject (ScreenKActivity activityK);*/
     void inject (ScreenLActivity activityL);
-    void inject (ScreenMActivity_Basket activityM);*/
+ //   void inject (ScreenMActivity_Basket activityM);
 
 
 }

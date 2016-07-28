@@ -1,20 +1,35 @@
 package com.telpa.ecommerce.activities;
 
+import android.app.Application;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.melnykov.fab.FloatingActionButton;
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.utils.BaseActivity;
 
+import javax.inject.Inject;
+
+
+
 
 public class ScreenLActivity extends BaseActivity {
+
+
+    @Inject
+    Application application;
+    private ImageButton imageBtn;
+
     private RecyclerView recyclerView;
     private RecyclerView recyclerViewPopUp;
     private RecyclerView.Adapter recyclerAdapter;
@@ -26,11 +41,15 @@ public class ScreenLActivity extends BaseActivity {
     LinearLayout layout;
     RadioButton Ia,Ib,Ic,Id,Ie,check1,check2,check3,check4;
     TextView a,b,c,d,e;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
 
+        ((ECommerceApp) getApplication()).getComponent().inject(this);
 
 
         fcreateTitle("Product");
@@ -161,7 +180,10 @@ public class ScreenLActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View v = getLayoutInflater().inflate(R.layout.activity_screen_l_popup, null);
+
+
+               // Toast.makeText(ScreenLActivity.this, "Mert", Toast.LENGTH_SHORT).show();
+                 View v = getLayoutInflater().inflate(R.layout.activity_screen_l_popup, null);
                 recyclerViewPopUp = (RecyclerView) v.findViewById(R.id.popupList);
 
                 recyclerViewPopUp.setHasFixedSize(true);
@@ -171,14 +193,16 @@ public class ScreenLActivity extends BaseActivity {
                 recyclerViewPopUp.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
                 recyclerAdapter = new RecyclerAdapter(4, R.layout.item_l_popup);
                 recyclerViewPopUp.setAdapter(recyclerAdapter);
-              /*  popUp.showAtLocation(v , Gravity.BOTTOM, 10, 10);
-                popUp.update(50, 50, 300, 80);
-                click = false;
-              */
+
                 AlertDialog.Builder dialog = new AlertDialog.Builder(ScreenLActivity.this);
                 dialog.setView(v);
                 dialog.setTitle("Your Basket");
                 dialog.show();
+              /*  popUp.showAtLocation(v , Gravity.BOTTOM, 10, 10);
+                popUp.update(50, 50, 300, 80);
+                click = false;
+              */
+
 
             }
 
