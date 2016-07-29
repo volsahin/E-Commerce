@@ -11,7 +11,10 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import okhttp3.Cache;
+import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Mert on 28.07.2016.
@@ -20,14 +23,31 @@ import retrofit2.Retrofit;
 @Module
 public class NetModule {
 
+    @Provides
+    @Singleton
+    Gson provideGson() {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
+        return gsonBuilder.create();
+    }
 
     @Provides
     @Singleton
-    APIService provideRetrofit() {
-        Retrofit retrofit = new Retrofit
-                .Builder()
+    OkHttpClient provideOkHttpClient(Cache cache) {
+        OkHttpClient client = new OkHttpClient();
+        // client.setCache(cache);
+        return client;
+    }
+
+    @Provides
+    @Singleton
+    APIService provideRetrofit(Gson gson, OkHttpClient okHttpClient) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .baseUrl(BuildConfig.SERVER_URL)
+                .client(okHttpClient)
                 .build();
+
         APIService service = retrofit.create(APIService.class);
         return service;
     }

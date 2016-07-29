@@ -63,7 +63,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="B"
-                android:textColor="@color/darkGrey"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </RelativeLayout>

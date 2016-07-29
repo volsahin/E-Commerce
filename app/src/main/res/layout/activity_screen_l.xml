@@ -55,7 +55,7 @@
                     android:background="@color/grey">
 
                     <ImageButton
-                        android:id="@+id/image"
+                        android:id="@+id/bigImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/grey" />
@@ -77,15 +77,26 @@
                     android:layout_marginRight="2dp"
                     android:orientation="horizontal">
 
-                    <include layout="@layout/product_photo_small" />
+                    <include
+                        android:id="@+id/image1"
+                        layout="@layout/product_photo_small" />
 
-                    <include layout="@layout/product_photo_small" />
+                    <include
+                        android:id="@+id/image2"
+                        layout="@layout/product_photo_small" />
 
-                    <include layout="@layout/product_photo_small" />
+                    <include
+                        android:id="@+id/image3"
+                        layout="@layout/product_photo_small" />
 
-                    <include layout="@layout/product_photo_small" />
+                    <include
+                        android:id="@+id/image4"
+                        layout="@layout/product_photo_small" />
 
-                    <include layout="@layout/product_photo_small" />
+                    <include
+
+                        android:id="@+id/image5"
+                        layout="@layout/product_photo_small" />
 
 
                 </LinearLayout>
@@ -106,7 +117,7 @@
                     android:transformPivotY="-1dp" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/ratingBar"
@@ -127,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/description"
                     android:layout_alignRight="@+id/description"
-                    android:layout_alignTop="@+id/textView8"
+                    android:layout_alignTop="@+id/reviews"
                     android:layout_marginTop="3dp"
                     android:paddingBottom="16dp"
                     android:paddingRight="12dp"
