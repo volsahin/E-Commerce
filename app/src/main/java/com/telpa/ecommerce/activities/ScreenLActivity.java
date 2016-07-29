@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.melnykov.fab.FloatingActionButton;
+import com.telpa.ecommerce.CategoryModule;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
@@ -33,6 +34,7 @@ public class ScreenLActivity extends BaseActivity {
     Application application;
     @Inject
     APIService service;
+
 
     @BindView(R.id.searchButton)
     ImageButton searchButton;
@@ -109,6 +111,7 @@ public class ScreenLActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         ((ECommerceApp) getApplication()).getComponent().inject(this);
+
 
         fcreateTitle("Product");
         fcreateToolbar(this, false, true, false, R.id.toolbar);

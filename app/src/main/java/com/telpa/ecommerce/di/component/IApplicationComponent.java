@@ -44,7 +44,7 @@ public interface IApplicationComponent {
     void inject (ScreenJActivity_Form activityJ);
     void inject (ScreenKActivity activityK);*/
     void inject (ScreenLActivity activityL);
- //   void inject (ScreenMActivity_Basket activityM)    ;
+    void inject (ScreenMActivity_Basket activityM)    ;
 
 
 
