@@ -29,22 +29,9 @@ import dagger.Component;
 
 @Singleton
 @Component(modules = {ApplicationModule.class, NetModule.class})
-
 public interface IApplicationComponent {
-
-    /*void inject (ScreenAActivity activityA);
-    void inject (ScreenBActivity activityB);
-    void inject (ScreenCActivity activityC);
-    void inject (ScreenDActivity activityD);
-    void inject (ScreenEActivity activityE);
-    void inject (ScreenFActivity activityF);
-    void inject (ScreenGActivity activityG);
-    void inject (ScreenHActivity activityH);
-    void inject (ScreenIActivity activityI);
-    void inject (ScreenJActivity_Form activityJ);
-    void inject (ScreenKActivity activityK);*/
     void inject (ScreenLActivity activityL);
- //   void inject (ScreenMActivity_Basket activityM)    ;
+
 
 
 

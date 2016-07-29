@@ -29,8 +29,7 @@ import butterknife.OnClick;
 
 
 public class ScreenLActivity extends BaseActivity {
-    @Inject
-    Application application;
+
     @Inject
     APIService service;
 
@@ -44,7 +43,7 @@ public class ScreenLActivity extends BaseActivity {
     Toolbar toolbar;
     @BindView(R.id.fab)
     FloatingActionButton fab;
-    @BindView(R.id.bigImage)
+ /*   @BindView(R.id.bigImage)
     ImageButton bigImage;
     @BindView(R.id.image1)
     ImageButton image1;
@@ -55,7 +54,7 @@ public class ScreenLActivity extends BaseActivity {
     @BindView(R.id.image4)
     ImageButton image4;
     @BindView(R.id.image5)
-    ImageButton image5;
+    ImageButton image5;*/
     @BindView(R.id.ratingBar)
     RatingBar ratingBar;
     @BindView(R.id.reviews)

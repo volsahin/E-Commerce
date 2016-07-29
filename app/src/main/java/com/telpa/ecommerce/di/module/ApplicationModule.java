@@ -29,7 +29,7 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    Application providesApplication() {
+    ECommerceApp providesApplication() {
         return application;
     }
 
