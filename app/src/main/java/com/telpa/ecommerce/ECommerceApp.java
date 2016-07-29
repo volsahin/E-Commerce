@@ -10,7 +10,6 @@ import com.telpa.ecommerce.di.module.NetModule;
 
 public class ECommerceApp extends Application {
 
-
     private IApplicationComponent component;
 
 
@@ -22,10 +21,8 @@ public class ECommerceApp extends Application {
                 .builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
-
-
-
     }
+
     public IApplicationComponent getComponent() {
         return component;
     }
