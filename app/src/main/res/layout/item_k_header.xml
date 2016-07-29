@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@android:color/white"
-        android:paddingLeft="0dp">
-<!--
-        <ImageButton
-            android:id="@+id/bigImage"
-            android:padding="0dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/ic_product_photo" />
--->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="0dp">
+    <!--
+            <ImageButton
+                android:id="@+id/bigImage"
+                android:padding="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_product_photo" />
+    -->
     <LinearLayout
         android:id="@+id/bigImage"
         android:layout_width="match_parent"
-        android:padding="0dp"
         android:layout_height="200dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
@@ -33,108 +31,109 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="0dp">
 
         <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerK"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewPagerK">
+            android:layout_height="wrap_content">
 
         </android.support.v4.view.ViewPager>
 
         <com.viewpagerindicator.TitlePageIndicator
+            android:id="@+id/viewPagerIndicatorK"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewPagerIndicatorK"/>
+            android:layout_height="wrap_content" />
 
         <com.viewpagerindicator.CirclePageIndicator
             android:id="@+id/indicator"
-            android:padding="10dip"
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
 
             />
 
     </LinearLayout>
 
 
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/bigPrice"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:stepSize="0.1"
-            android:scaleX="0.4"
-            android:scaleY="0.4"
-            android:transformPivotX="0dp"
-            android:transformPivotY="0dp"
-            android:layout_marginBottom="-35dp" />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bigPrice"
+        android:layout_marginBottom="-35dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        android:stepSize="0.1"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp" />
 
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/ratingBar"
-            android:layout_column="0"
-            android:layout_gravity=""
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_row="1"
-            android:text="@string/lorem_long"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="13dp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ratingBar"
+        android:layout_column="0"
+        android:layout_gravity=""
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_row="1"
+        android:text="@string/lorem_long"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="13dp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/bigPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$100"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/red"
-            android:textSize="15dp"
-            android:layout_below="@+id/bigImage"
-            android:layout_alignRight="@+id/bigImage"
-            android:layout_alignEnd="@+id/bigImage"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="12dp"/>
+    <TextView
+        android:id="@+id/bigPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/bigImage"
+        android:layout_alignRight="@+id/bigImage"
+        android:layout_below="@+id/bigImage"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:text="$100"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/red"
+        android:textSize="15dp" />
 
-        <TextView
-            android:id="@+id/bigProductName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Product"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="12dp"
-            android:layout_marginBottom="12dp"
-            android:layout_below="@+id/bigImage"
+    <TextView
+        android:id="@+id/bigProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bigImage"
+        android:layout_alignStart="@+id/bigImage"
+        android:layout_below="@+id/bigImage"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="Product"
+        android:textAppearance="?android:attr/textAppearanceMedium"
 
-            android:layout_alignLeft="@+id/bigImage"
-            android:layout_alignStart="@+id/bigImage" />
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:textSize="10sp"
-            android:text="46 reviews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView7"
-            android:layout_marginLeft="39dp"
-            android:layout_marginStart="39dp"
-            android:layout_alignTop="@+id/ratingBar"
-            android:layout_toRightOf="@+id/bigProductName"
-            android:layout_toEndOf="@+id/bigProductName"
-            android:paddingLeft="1dp"
-            android:paddingTop="5dp" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_toEndOf="@+id/bigProductName"
+        android:layout_toRightOf="@+id/bigProductName"
+        android:paddingLeft="1dp"
+        android:paddingTop="5dp"
+        android:text="46 reviews"
+        android:textSize="10sp" />
 
 
-    </RelativeLayout>
+</RelativeLayout>

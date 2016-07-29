@@ -17,6 +17,7 @@ import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.di.module.NetModule;
+import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import javax.inject.Inject;
@@ -30,6 +31,8 @@ public class ScreenLActivity extends BaseActivity {
     @Inject
     Application application;
 
+    @Inject
+    APIService service;
 
 
     private RecyclerView recyclerView;
@@ -39,11 +42,9 @@ public class ScreenLActivity extends BaseActivity {
     private RecyclerView.LayoutManager recyclerLayoutManagerPopUp;
 
 
-
     LinearLayout layout;
-    RadioButton Ia,Ib,Ic,Id,Ie,check1,check2,check3,check4;
-    TextView a,b,c,d,e;
-
+    RadioButton Ia, Ib, Ic, Id, Ie, check1, check2, check3, check4;
+    TextView a, b, c, d, e;
 
 
     @Override
@@ -51,39 +52,32 @@ public class ScreenLActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
 
-            ((ECommerceApp) getApplication()).getComponent().inject(this);
-            ((ECommerceApp) getApplication()).getmNetComponent().inject(this);
-
-
-
-
-
-
+        ((ECommerceApp) getApplication()).getComponent().inject(this);
 
 
         fcreateTitle("Product");
-        fcreateToolbar(this,false,true,false,R.id.toolbar);
+        fcreateToolbar(this, false, true, false, R.id.toolbar);
         fcreateMenu(this, true);
 
 
         //TODO radiobutton class'ı yap, bunları oraya at.
 
-        a=(TextView) findViewById(R.id.a);
-        b=(TextView) findViewById(R.id.b);
-        c=(TextView) findViewById(R.id.c);
-        d=(TextView) findViewById(R.id.d);
-        e=(TextView) findViewById(R.id.e);
+        a = (TextView) findViewById(R.id.a);
+        b = (TextView) findViewById(R.id.b);
+        c = (TextView) findViewById(R.id.c);
+        d = (TextView) findViewById(R.id.d);
+        e = (TextView) findViewById(R.id.e);
 
-        Ia=(RadioButton) findViewById(R.id.Radio1);
-        Ib=(RadioButton) findViewById(R.id.Radio2);
-        Ic=(RadioButton) findViewById(R.id.Radio3);
-        Id=(RadioButton) findViewById(R.id.Radio4);
-        Ie=(RadioButton) findViewById(R.id.Radio5);
+        Ia = (RadioButton) findViewById(R.id.Radio1);
+        Ib = (RadioButton) findViewById(R.id.Radio2);
+        Ic = (RadioButton) findViewById(R.id.Radio3);
+        Id = (RadioButton) findViewById(R.id.Radio4);
+        Ie = (RadioButton) findViewById(R.id.Radio5);
 
-        check1=(RadioButton) findViewById(R.id.productRadio1);
-        check2=(RadioButton) findViewById(R.id.productRadio2);
-        check3=(RadioButton) findViewById(R.id.productRadio3);
-        check4=(RadioButton) findViewById(R.id.productRadio4);
+        check1 = (RadioButton) findViewById(R.id.productRadio1);
+        check2 = (RadioButton) findViewById(R.id.productRadio2);
+        check3 = (RadioButton) findViewById(R.id.productRadio3);
+        check4 = (RadioButton) findViewById(R.id.productRadio4);
 
         b.setTextColor(getResources().getColor(R.color.white));
 
@@ -164,7 +158,6 @@ public class ScreenLActivity extends BaseActivity {
         });
 
 
-
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_l);
         recyclerView.setHasFixedSize(true);
 
@@ -216,8 +209,6 @@ public class ScreenLActivity extends BaseActivity {
             }
 
         });
-
-
 
 
     }

@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.telpa.ecommerce.BuildConfig;
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.network.APIService;
 
 import javax.inject.Singleton;
 
@@ -20,18 +21,14 @@ import retrofit2.Retrofit;
 public class NetModule {
 
 
-
-    public NetModule( ) {
-
-    }
-
     @Provides
     @Singleton
-    Retrofit provideRetrofit() {
+    APIService provideRetrofit() {
         Retrofit retrofit = new Retrofit
                 .Builder()
                 .baseUrl(BuildConfig.SERVER_URL)
                 .build();
-        return retrofit;
+        APIService service = retrofit.create(APIService.class);
+        return service;
     }
 }
