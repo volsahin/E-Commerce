@@ -8,6 +8,7 @@ import com.telpa.ecommerce.di.module.NetModule;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import dagger.Provides;
 import retrofit2.Retrofit;
 
 /**
@@ -16,10 +17,9 @@ import retrofit2.Retrofit;
 @Singleton
 @Component(modules={NetModule.class})
 public interface INetComponent {
-  void inject(ScreenLActivity activity);
+
     Retrofit retrofit();
-
-
+    void inject (ScreenLActivity activityL);
 
 
 }

@@ -4,6 +4,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.telpa.ecommerce.BuildConfig;
+import com.telpa.ecommerce.ECommerceApp;
 
 import javax.inject.Singleton;
 
@@ -20,6 +21,9 @@ public class NetModule {
 
 
 
+    public NetModule( ) {
+
+    }
 
     @Provides
     @Singleton

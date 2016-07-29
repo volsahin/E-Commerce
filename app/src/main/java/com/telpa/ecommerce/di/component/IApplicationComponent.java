@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.di.component;
 
+import android.app.Application;
 import android.view.View;
 
 import com.telpa.ecommerce.activities.ScreenAActivity;
@@ -42,7 +43,8 @@ public interface IApplicationComponent {
     void inject (ScreenJActivity_Form activityJ);
     void inject (ScreenKActivity activityK);*/
     void inject (ScreenLActivity activityL);
- //   void inject (ScreenMActivity_Basket activityM);
+ //   void inject (ScreenMActivity_Basket activityM)    ;
+
 
 
 }

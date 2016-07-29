@@ -16,11 +16,12 @@ import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.di.module.NetModule;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import javax.inject.Inject;
 
-
+import retrofit2.Retrofit;
 
 
 public class ScreenLActivity extends BaseActivity {
@@ -28,6 +29,7 @@ public class ScreenLActivity extends BaseActivity {
 
     @Inject
     Application application;
+
 
 
     private RecyclerView recyclerView;
@@ -50,6 +52,11 @@ public class ScreenLActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_l);
 
             ((ECommerceApp) getApplication()).getComponent().inject(this);
+            ((ECommerceApp) getApplication()).getmNetComponent().inject(this);
+
+
+
+
 
 
 

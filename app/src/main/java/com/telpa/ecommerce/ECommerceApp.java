@@ -17,6 +17,7 @@ import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenLActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
 import com.telpa.ecommerce.di.component.DaggerIApplicationComponent;
+import com.telpa.ecommerce.di.component.DaggerINetComponent;
 import com.telpa.ecommerce.di.component.IApplicationComponent;
 import com.telpa.ecommerce.di.component.INetComponent;
 import com.telpa.ecommerce.di.module.ApplicationModule;
@@ -30,6 +31,7 @@ public class ECommerceApp extends Application {
 
 
     private IApplicationComponent component;
+    private INetComponent mNetComponent;
 
 
     @Override
@@ -40,11 +42,17 @@ public class ECommerceApp extends Application {
                 .builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
+        mNetComponent = DaggerINetComponent.
+                builder()
+                .netModule(new NetModule())
+                .build();
 
 
     }
     public IApplicationComponent getComponent() {
         return component;
     }
+
+    public INetComponent getmNetComponent(){return mNetComponent;}
 
 }

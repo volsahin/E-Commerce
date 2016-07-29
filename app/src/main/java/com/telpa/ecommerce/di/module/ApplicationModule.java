@@ -2,6 +2,7 @@ package com.telpa.ecommerce.di.module;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.telpa.ecommerce.ECommerceApp;
 
@@ -28,13 +29,7 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    Application providesApplication() {
-        return application;
-    }
+    Application providesApplication() {return application;}
 
-    @Provides
-    @Singleton
-    Context provideApplicationContext() {
-        return application;
-    }
+
 }
