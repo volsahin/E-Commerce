@@ -5,7 +5,6 @@ import android.app.Application;
 import com.telpa.ecommerce.di.component.DaggerIApplicationComponent;
 import com.telpa.ecommerce.di.component.IApplicationComponent;
 import com.telpa.ecommerce.di.module.ApplicationModule;
-import com.telpa.ecommerce.di.module.NetModule;
 
 
 public class ECommerceApp extends Application {
@@ -14,8 +13,7 @@ public class ECommerceApp extends Application {
 
 
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
         component = DaggerIApplicationComponent
                 .builder()

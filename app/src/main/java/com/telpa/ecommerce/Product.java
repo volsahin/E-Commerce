@@ -16,5 +16,4 @@ public class Product {
     int reviews;
 
 
-
 }
