@@ -1,4 +1,4 @@
-package com.telpa.ecommerce;
+package com.telpa.ecommerce.network;
 
 /**
  * Created by SAMSUNGNB on 1.08.2016.

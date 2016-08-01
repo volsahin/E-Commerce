@@ -1,6 +1,5 @@
 package com.telpa.ecommerce.activities;
 
-import android.app.Application;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
@@ -10,14 +9,12 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
-import com.telpa.ecommerce.CategoryModule;
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.People;
+import com.telpa.ecommerce.network.People;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.helper.RadioButtonHelper;

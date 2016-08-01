@@ -1,8 +1,5 @@
 package com.telpa.ecommerce.network;
 
-import com.telpa.ecommerce.People;
-import com.telpa.ecommerce.Musterus;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 
