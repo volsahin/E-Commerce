@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.network.People;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
@@ -37,7 +38,6 @@ public class ScreenLActivity extends BaseActivity {
 
     @Inject
     APIService service;
-
 
     @BindView(R.id.searchButton)
     ImageButton searchButton;
@@ -124,7 +124,6 @@ public class ScreenLActivity extends BaseActivity {
 
         ((ECommerceApp) getApplication()).getComponent().inject(this);
 
-
         fcreateTitle("Product");
         fcreateToolbar(this, false, true, false, R.id.toolbar);
         fcreateMenu(this, true);
@@ -149,7 +148,7 @@ public class ScreenLActivity extends BaseActivity {
 
             @Override
             public void onFailure(Call<People> call, Throwable t) {
-
+                Toast.makeText(ScreenLActivity.this, "Connection failed!", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -1,7 +1,5 @@
 package com.telpa.ecommerce.interfaces;
 
-import com.telpa.ecommerce.Comment;
-
 import java.util.ArrayList;
 
 /**
