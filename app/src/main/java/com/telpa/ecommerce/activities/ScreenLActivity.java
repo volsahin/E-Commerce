@@ -12,10 +12,12 @@ import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.CategoryModule;
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.People;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.helper.RadioButtonHelper;
@@ -27,6 +29,9 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class ScreenLActivity extends BaseActivity {
@@ -45,18 +50,18 @@ public class ScreenLActivity extends BaseActivity {
     Toolbar toolbar;
     @BindView(R.id.fab)
     FloatingActionButton fab;
- /*   @BindView(R.id.bigImage)
-    ImageButton bigImage;
-    @BindView(R.id.image1)
-    ImageButton image1;
-    @BindView(R.id.image2)
-    ImageButton image2;
-    @BindView(R.id.image3)
-    ImageButton image3;
-    @BindView(R.id.image4)
-    ImageButton image4;
-    @BindView(R.id.image5)
-    ImageButton image5;*/
+    /*   @BindView(R.id.bigImage)
+       ImageButton bigImage;
+       @BindView(R.id.image1)
+       ImageButton image1;
+       @BindView(R.id.image2)
+       ImageButton image2;
+       @BindView(R.id.image3)
+       ImageButton image3;
+       @BindView(R.id.image4)
+       ImageButton image4;
+       @BindView(R.id.image5)
+       ImageButton image5;*/
     @BindView(R.id.ratingBar)
     RatingBar ratingBar;
     @BindView(R.id.reviews)
@@ -89,10 +94,6 @@ public class ScreenLActivity extends BaseActivity {
     RadioButton check3;
     @BindView(R.id.productRadio4)
     RadioButton check4;
-    @BindView(R.id.recycler_view_l)
-    RecyclerView recyclerViewL;
-    @BindView(R.id.activity_screen_l)
-    RelativeLayout activityScreenL;
 
     private RecyclerView recyclerView;
     private RecyclerView recyclerViewPopUp;
@@ -100,14 +101,27 @@ public class ScreenLActivity extends BaseActivity {
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private RecyclerView.LayoutManager recyclerLayoutManagerPopUp;
     private RadioButtonHelper radioButtonHelper;
-    private TextView[] textViews = {a, b, c, d, e};
-    private RadioButton[] radioButtons = {Ia, Ib, Ic, Id, Ie};
+    private TextView[] textViews;
+    private RadioButton[] radioButtons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
         ButterKnife.bind(this);
+        textViews = new TextView[5];
+        textViews[0] = a;
+        textViews[1] = b;
+        textViews[2] = c;
+        textViews[3] = d;
+        textViews[4] = e;
+        radioButtons = new RadioButton[5];
+        radioButtons[0] = Ia;
+        radioButtons[1] = Ib;
+        radioButtons[2] = Ic;
+        radioButtons[3] = Id;
+        radioButtons[4] = Ie;
+        radioButtonHelper = new RadioButtonHelper();
 
         ((ECommerceApp) getApplication()).getComponent().inject(this);
 
@@ -115,10 +129,6 @@ public class ScreenLActivity extends BaseActivity {
         fcreateTitle("Product");
         fcreateToolbar(this, false, true, false, R.id.toolbar);
         fcreateMenu(this, true);
-
-
-        //TODO radiobutton class'ı yap, bunları oraya at.
-        radioButtonHelper = new RadioButtonHelper();
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_l);
         recyclerView.setHasFixedSize(true);
@@ -131,6 +141,18 @@ public class ScreenLActivity extends BaseActivity {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.attachToRecyclerView(recyclerView);
 
+        service.getPeople().enqueue(new Callback<People>() {
+            @Override
+            public void onResponse(Call<People> call, Response<People> response) {
+                Toast.makeText(ScreenLActivity.this, response.body().getMusteri().get(0).getName(), Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onFailure(Call<People> call, Throwable t) {
+
+            }
+        });
     }
 
 
@@ -173,19 +195,19 @@ public class ScreenLActivity extends BaseActivity {
             case R.id.ratingBar:
                 break;
             case R.id.Radio1:
-                radioButtonHelper.click("a", textViews, radioButtons);
+                radioButtonHelper.click("a", textViews, radioButtons, ScreenLActivity.this);
                 break;
             case R.id.Radio2:
-                radioButtonHelper.click("b", textViews, radioButtons);
+                radioButtonHelper.click("b", textViews, radioButtons, ScreenLActivity.this);
                 break;
             case R.id.Radio3:
-                radioButtonHelper.click("c", textViews, radioButtons);
+                radioButtonHelper.click("c", textViews, radioButtons, ScreenLActivity.this);
                 break;
             case R.id.Radio4:
-                radioButtonHelper.click("d", textViews, radioButtons);
+                radioButtonHelper.click("d", textViews, radioButtons, ScreenLActivity.this);
                 break;
             case R.id.Radio5:
-                radioButtonHelper.click("e", textViews, radioButtons);
+                radioButtonHelper.click("e", textViews, radioButtons, ScreenLActivity.this);
                 break;
             case R.id.productRadio1:
                 break;
