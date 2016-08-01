@@ -12,7 +12,7 @@ public class Product {
     String name;
     String descripton;
     ArrayList<Integer> imageIDs;
-    int CategoryID;
+    int categoryID;
     int reviews;
 
 

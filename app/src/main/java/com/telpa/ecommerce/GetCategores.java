@@ -15,7 +15,7 @@ import dagger.Component;
 public interface GetCategores {
 
 
-    ArrayList <Category> getCategories();
+    ArrayList <Integer> getCategories();
 
 
 
