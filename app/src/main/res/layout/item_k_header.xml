@@ -64,14 +64,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bigPrice"
-        android:layout_marginBottom="-35dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
-        android:scaleX="0.4"
-        android:scaleY="0.4"
-        android:stepSize="0.1"
-        android:transformPivotX="0dp"
-        android:transformPivotY="0dp" />
+        android:stepSize="1.0"
+        style="?android:attr/ratingBarStyleSmall"
+        android:isIndicator="false"
+        android:progressBackgroundTint="@color/lightGrey"
+        android:progressTint="@color/darkGrey"/>
 
     <TextView
         android:id="@+id/description"
@@ -125,15 +124,14 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ratingBar"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp"
-        android:layout_toEndOf="@+id/bigProductName"
-        android:layout_toRightOf="@+id/bigProductName"
         android:paddingLeft="1dp"
         android:paddingTop="5dp"
         android:text="46 reviews"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        android:layout_below="@+id/bigProductName"
+        android:layout_toRightOf="@+id/ratingBar"
+        android:layout_toEndOf="@+id/ratingBar"
+        android:layout_marginLeft="5dp" />
 
 
 </RelativeLayout>

@@ -6,21 +6,23 @@
     android:layout_height="wrap_content"
     android:background="@android:color/white">
 
+    <!--
+        style="?android:attr/ratingBarStyleSmall"
+    -->
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:focusable="false"
-        android:stepSize="0.1"
-        android:layout_marginTop="22dp"
+        android:progressBackgroundTint="@color/lightGrey"
+        android:progressTint="@color/darkGrey"
+        android:stepSize="1.0"
+        style="?android:attr/ratingBarStyleSmall"
+        android:isIndicator="false"
         android:layout_alignParentTop="true"
-        android:scaleX="0.4"
-        android:scaleY="0.4"
-        android:transformPivotX="0dp"
-        android:transformPivotY="0dp"
-        android:layout_marginBottom="-35dp"
         android:layout_alignLeft="@+id/textView11"
-        android:layout_alignStart="@+id/textView11" />
+        android:layout_alignStart="@+id/textView11"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,12 +34,10 @@
         android:layout_gravity="center_horizontal"
         android:textSize="12dp"
         android:textColor="@color/button_material_dark"
-        android:layout_marginRight="65dp"
-        android:layout_marginEnd="65dp"
         android:paddingBottom="5dp"
-        android:layout_above="@+id/textView11"
-        android:layout_alignRight="@+id/ratingBar"
-        android:layout_alignEnd="@+id/ratingBar" />
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_toRightOf="@+id/ratingBar"
+        android:layout_toEndOf="@+id/ratingBar" />
 
     <TextView
         android:layout_width="wrap_content"
