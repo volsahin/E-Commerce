@@ -23,7 +23,7 @@ public class BasketModule implements IBasket{
     }
 
     @Override
-    public void checkOut(HashMap<Integer, Integer> productIDs_numbers) {
+    public void checkOut(int customerID,HashMap<Integer, Integer> productIDs_numbers) {
 
     }
 }

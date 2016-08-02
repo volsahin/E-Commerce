@@ -23,7 +23,7 @@ public class ProductModule implements IProduct{
     }
 
     @Override
-    public void setRating(int productID, double newRating) {
+    public void setRating(int customerID,int productID, double newRating) {
 
     }
 }

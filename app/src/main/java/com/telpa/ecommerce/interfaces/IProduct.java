@@ -13,7 +13,7 @@ public interface IProduct {
 
     void addFavorites(int customerID, int productID);
 
-    void setRating(int productID, double newRating);
+    void setRating(int customerID,int productID, double newRating);
 
 
 }
