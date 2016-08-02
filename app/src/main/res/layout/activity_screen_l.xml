@@ -110,27 +110,26 @@
                     android:layout_below="@+id/linearLayout3"
                     android:paddingBottom="8dp"
                     android:paddingTop="4dp"
-                    android:scaleX="0.4"
-                    android:scaleY="0.4"
-                    android:stepSize="0.1"
-                    android:transformPivotX="-1dp"
-                    android:transformPivotY="-1dp" />
+                    android:stepSize="1.0"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:isIndicator="false"
+                    android:progressBackgroundTint="@color/lightGrey"
+                    android:progressTint="@color/darkGrey" />
 
                 <TextView
                     android:id="@+id/reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/ratingBar"
-                    android:layout_alignRight="@+id/ratingBar"
-                    android:layout_below="@+id/linearLayout3"
-                    android:layout_marginEnd="76dp"
-                    android:layout_marginRight="76dp"
                     android:paddingBottom="8dp"
                     android:paddingTop="4dp"
                     android:text="46 Reviews"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/grey"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_alignBottom="@+id/ratingBar"
+                    android:layout_toRightOf="@+id/ratingBar"
+                    android:layout_toEndOf="@+id/ratingBar"
+                    android:layout_marginLeft="5dp" />
 
                 <TextView
                     android:id="@+id/bigPrice"

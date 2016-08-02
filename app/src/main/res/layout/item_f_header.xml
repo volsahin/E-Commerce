@@ -69,7 +69,6 @@
                 android:textColor="@color/lightGrey"
                 android:textSize="15sp" />
 
-            <!-- style="?android:attr/ratingBarStyleSmall" -->
 
 
             <RatingBar
@@ -79,12 +78,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView4"
-                android:stepSize="0.1"
-                android:scaleX="0.4"
-                android:scaleY="0.4"
-                android:transformPivotX="0dp"
-                android:transformPivotY="0dp"
-                android:layout_marginBottom="-35dp"/>
+                android:stepSize="1.0"
+                style="?android:attr/ratingBarStyleSmall"
+                android:isIndicator="false"
+                android:secondaryProgressTint="@color/lightGrey"
+                android:progressTint="@color/white1"/>
 
             <RelativeLayout
                 android:id="@+id/relative"

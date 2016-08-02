@@ -61,15 +61,14 @@
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:stepSize="0.1"
-            android:scaleX="0.4"
-            android:scaleY="0.4"
-            android:transformPivotX="0dp"
-            android:transformPivotY="0dp"
+            android:stepSize="1.0"
             android:layout_below="@+id/description"
             android:layout_alignLeft="@+id/description"
             android:layout_alignStart="@+id/description"
-            android:layout_marginBottom="-30dp" />
+            style="?android:attr/ratingBarStyleSmall"
+            android:isIndicator="false"
+            android:progressBackgroundTint="@color/lightGrey"
+            android:progressTint="@color/darkGrey"/>
 
         <RelativeLayout
             android:layout_width="100dp"
