@@ -1,7 +1,5 @@
 package com.telpa.ecommerce.di.module;
 
-import android.app.Application;
-
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -45,7 +43,6 @@ public class NetModule {
     OkHttpClient provideOkHttpClient(Cache cache) {
         OkHttpClient client = new OkHttpClient();
         client.newBuilder().cache(cache).build();
-        // client.setCache(cache);
         return client;
     }
 

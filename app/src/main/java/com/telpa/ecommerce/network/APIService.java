@@ -27,22 +27,22 @@ public interface APIService {
     Call<Category> getCategories();
 
     @GET("")
-    Call<Category> getSubCategories(int CategoryID);
+    Call<Category> getSubCategories(int categoryID);
 
     @GET("")
-    Call<Product> getProducts();
+    Call<Product> getProducts(int categoryID);
 
     @GET("")
-    Call<Comment> getComments();
+    Call<Comment> getComments(int productID);
 
     @GET("")
-    Call<Integer> getFavorites(int CustomerID);
+    Call<Integer> getFavorites(int customerID);
 
     @GET("")
-    Call<HashMap<Integer, Integer>> getBasket(int CustomerID);
+    Call<ArrayList<Integer>> getBasket(int customerID);
 
     @POST("")
-    Call<Boolean> submitForm(@Field("CustomerID") int CustomerID,
+    Call<Boolean> submitForm(@Field("CustomerID") int customerID,
                              @Field("info1") String info1,
                              @Field("info2") String info2,
                              @Field("option1") String option1,
@@ -54,33 +54,33 @@ public interface APIService {
     );
 
     @POST
-    Call<Boolean> addBasket(@Field("CustomerID") int CustomerID,
-                            @Field("ProductID") int ProductID,
-                            @Field("Number") int Number,
+    Call<Boolean> addBasket(@Field("CustomerID") int customerID,
+                            @Field("ProductID") int productID,
+                            @Field("Number") int number,
                             @Field("variant1") int variant1,
                             @Field("variant2") int variant2
     );
 
     @POST
-    Call<Boolean> checkout(@Field("CustomerID") int CustomerID,
-                           @Field("BasketProduct") ArrayList<Integer> BasketProduct // ProductID ,Number,Variant1,Variant2 istiyor.
+    Call<Boolean> checkout(@Field("CustomerID") int customerID,
+                           @Field("BasketProduct") ArrayList<Integer> basketProduct // ProductID ,Number,Variant1,Variant2 istiyor.
     );
 
     @POST
-    Call<Boolean> addFavorites(@Field("CustomerID") int CustomerID,
-                               @Field("ProductID") int ProductID
+    Call<Boolean> addFavorites(@Field("CustomerID") int customerID,
+                               @Field("ProductID") int productID
 
     );
 
     @POST
-    Call<Boolean> setRating(@Field("CustomerID") int CustomerID,
-                            @Field("ProductID") int ProductID,
-                            @Field("UserRating") Float UserRating
+    Call<Boolean> setRating(@Field("CustomerID") int customerID,
+                            @Field("ProductID") int productID,
+                            @Field("UserRating") Float userRating
     );
 
     @POST
-    Call<Boolean> setOverallRating(@Field("ProductID") int ProductID,
-                                   @Field("UserRating") Float UserRating
+    Call<Boolean> setOverallRating(@Field("ProductID") int productID,
+                                   @Field("UserRating") Float userRating
     );
 
 }

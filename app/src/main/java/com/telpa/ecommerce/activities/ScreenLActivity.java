@@ -49,7 +49,7 @@ public class ScreenLActivity extends BaseActivity {
     Toolbar toolbar;
     @BindView(R.id.fab)
     FloatingActionButton fab;
-    /*   @BindView(R.id.bigImage)
+    /* @BindView(R.id.bigImage)
        ImageButton bigImage;
        @BindView(R.id.image1)
        ImageButton image1;

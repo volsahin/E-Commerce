@@ -1,9 +1,10 @@
 package com.telpa.ecommerce.interfaces;
 
+import dagger.Component;
+
 /**
  * Created by Gizem İlgar on 1.8.2016.
  */
-
 public interface IForm {
     void submitForm(int customerID,
                     String info1,

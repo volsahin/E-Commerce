@@ -1,9 +1,5 @@
 package com.telpa.ecommerce.di.module;
 
-import android.app.Application;
-import android.content.Context;
-import android.content.SharedPreferences;
-
 import com.telpa.ecommerce.ECommerceApp;
 
 import javax.inject.Singleton;

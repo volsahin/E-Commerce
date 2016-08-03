@@ -1,6 +1,5 @@
 package com.telpa.ecommerce.helper;
 
-import android.app.Activity;
 import android.content.Context;
 import android.widget.RadioButton;
 import android.widget.TextView;

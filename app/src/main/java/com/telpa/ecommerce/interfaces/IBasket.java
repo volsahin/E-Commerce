@@ -11,5 +11,5 @@ public interface IBasket {
 
     void addBasket(int customerID, int productID, int number, int variant1, int variant2);
 
-    void checkOut(int customerID,HashMap<Integer, Integer> productIDs_numbers);
+    void checkOut(int customerID, HashMap<Integer, Integer> productIDs_numbers);
 }
