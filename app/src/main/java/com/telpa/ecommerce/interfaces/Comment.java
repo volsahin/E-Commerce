@@ -9,6 +9,13 @@ public class Comment {
     String userName;
     String comment;
 
+    public Comment(int rating, int time, String userName, String comment) {
+        this.rating = rating;
+        this.time = time;
+        this.userName = userName;
+        this.comment = comment;
+    }
+
     public int getTime() {
         return time;
     }
