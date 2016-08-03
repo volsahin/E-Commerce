@@ -17,13 +17,20 @@ public class ScreenEActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
-    private ArrayList<Category> category;
+    private ArrayList<Category> categories;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_e);
+
+
+        ArrayList<Integer> list=new ArrayList<Integer>();
+        list.add(2);
+        categories=new ArrayList<Category>();
+        Category a=new Category(1,"",1,1,2);
+        categories.add(a);
 
         fcreateTitle("My Store" + " E");
         fcreateToolbar(this,false, true, true, R.id.toolbar);
@@ -42,7 +49,7 @@ public class ScreenEActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter_E(6, R.layout.item_e,category);
+        recyclerAdapter = new RecyclerAdapter_E(6, R.layout.item_e,categories);
         recyclerView.setAdapter(recyclerAdapter);
 
     }
