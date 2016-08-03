@@ -5,9 +5,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.interfaces.Product;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 
 /**
@@ -18,11 +24,15 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
     private int amountOfData;
     private int id;
+    private ArrayList<Product> products;
 
-    public RecyclerAdapter_BBig(int amountOfData, int id) {
+    public RecyclerAdapter_BBig(int amountOfData, int id,ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
+        this.products=products;
     }
+
+
 
     @Override
     public RecyclerAdapter_BBig.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,7 +45,8 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
+        holder.bigImageButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+        holder.bigProductName.setText("Name "+position);
         // holder.textView.setText("DATA - DATA "+position);
     }
 
@@ -45,12 +56,22 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
-        public TextView textView;
+        public ImageButton bigImageButton;
+        public TextView bigProductName;
+        public TextView description;
+        public TextView bigPrice;
+        public ImageButton bigBasketButton;
+        public ImageButton likeButton;
 
         public ViewHolder(View v) {
             super(v);
-            textView = (TextView) v.findViewById(R.id.price);
+            bigImageButton = (ImageButton) v.findViewById(R.id.bigImageButton);
+            bigProductName = (TextView) v.findViewById(R.id.bigProductName);
+            description = (TextView) v.findViewById(R.id.description);
+            bigPrice = (TextView) v.findViewById(R.id.bigPrice);
+            bigBasketButton = (ImageButton) v.findViewById(R.id.bigBasketButton);
+            likeButton = (ImageButton) v.findViewById(R.id.likeButton);
+
         }
     }
 
