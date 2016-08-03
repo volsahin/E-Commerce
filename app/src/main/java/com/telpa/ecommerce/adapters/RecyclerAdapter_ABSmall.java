@@ -43,6 +43,7 @@ public class RecyclerAdapter_ABSmall extends RecyclerView.Adapter<RecyclerAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        //TODO
 //      holder.productName.setText(products.get(position).getName());
         holder.productName.setText("Name " + position);
         holder.price.setText("$50");
