@@ -15,10 +15,14 @@ import android.widget.TextView;
 import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
 import com.telpa.ecommerce.helper.RadioButtonHelper;
+import com.telpa.ecommerce.interfaces.Comment;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -72,6 +76,7 @@ public class ScreenKActivity extends BaseActivity {
     private RadioButtonHelper radioButtonHelper;
     private TextView[] textViews;
     private RadioButton[] radioButtons;
+    private ArrayList<Comment> comments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +88,11 @@ public class ScreenKActivity extends BaseActivity {
         radioButtons = new RadioButton[5];
         radioButtons[0] = Ia;   radioButtons[1] = Ib;   radioButtons[2] = Ic;   radioButtons[3] = Id;   radioButtons[4] = Ie;
         radioButtonHelper = new RadioButtonHelper();
+
+        //TODO
+        comments=new ArrayList<>();
+        Comment comment=new Comment(2,1,"","");
+        comments.add(comment);
 
         fcreateTitle("");
         fcreateToolbar(this,true, true, false, R.id.toolbar);
@@ -104,7 +114,7 @@ public class ScreenKActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment);
+        recyclerAdapter = new RecyclerAdapter_KLComment(3, R.layout.item_l_comment, comments);
         recyclerView.setAdapter(recyclerAdapter);
 
 

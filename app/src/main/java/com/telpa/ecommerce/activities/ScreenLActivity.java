@@ -14,7 +14,11 @@ import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
+import com.telpa.ecommerce.interfaces.Comment;
 import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.Product;
 import com.telpa.ecommerce.network.People;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
@@ -102,6 +106,8 @@ public class ScreenLActivity extends BaseActivity {
     private RadioButtonHelper radioButtonHelper;
     private TextView[] textViews;
     private RadioButton[] radioButtons;
+    private ArrayList<Product> products;
+    private ArrayList<Comment> comments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,7 +128,20 @@ public class ScreenLActivity extends BaseActivity {
         radioButtons[4] = Ie;
         radioButtonHelper = new RadioButtonHelper();
 
+//TODO
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(2);
+        products = new ArrayList<Product>();
+        Product a = new Product(1, 1, 1.0, "", "", list, 1, 2);
+        products.add(a);
+
         ((ECommerceApp) getApplication()).getComponent().inject(this);
+
+
+        //TODO
+        comments=new ArrayList<>();
+        Comment comment=new Comment(2,1,"","");
+        comments.add(comment);
 
         fcreateTitle("Product");
         fcreateToolbar(this, false, true, false, R.id.toolbar);
@@ -133,7 +152,7 @@ public class ScreenLActivity extends BaseActivity {
         recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter(3, R.layout.item_l_comment);
+        recyclerAdapter = new RecyclerAdapter_KLComment(3, R.layout.item_l_comment, comments);
         recyclerView.setAdapter(recyclerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -171,7 +190,7 @@ public class ScreenLActivity extends BaseActivity {
                 recyclerViewPopUp.setLayoutManager(recyclerLayoutManagerPopUp);
 
                 recyclerViewPopUp.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-                recyclerAdapter = new RecyclerAdapter(4, R.layout.item_l_popup);
+                recyclerAdapter = new RecyclerAdapter_MBasket(4, R.layout.item_l_popup,products);
                 recyclerViewPopUp.setAdapter(recyclerAdapter);
 
                 AlertDialog.Builder dialog = new AlertDialog.Builder(ScreenLActivity.this);
