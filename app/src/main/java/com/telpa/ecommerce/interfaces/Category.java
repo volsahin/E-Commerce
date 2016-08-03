@@ -11,6 +11,14 @@ public class Category {
     private int imageID;
     private int numOfProduct;
 
+    public Category(int ID, String name, int parentID, int imageID, int numOfProduct) {
+        this.ID = ID;
+        this.name = name;
+        this.parentID = parentID;
+        this.imageID = imageID;
+        this.numOfProduct = numOfProduct;
+    }
+
 
     public String getName() {
         return name;

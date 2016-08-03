@@ -25,6 +25,7 @@
             android:layout_margin="8dp"
             android:background="@color/grey"
             android:src="@drawable/ic_product_photo"
+            android:isIndicator="false"
 
             />
 
@@ -117,7 +118,8 @@
                 android:scaleX="0.7"
                 android:scaleY="0.7"
                 android:src="@drawable/ic_shopping_basket_darkgrey_24dp"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true"
+                android:isIndicator="false"/>
         </RelativeLayout>
 
         <TextView

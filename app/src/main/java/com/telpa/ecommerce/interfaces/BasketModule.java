@@ -12,10 +12,6 @@ public class BasketModule implements IBasket{
         return null;
     }
 
-    @Override
-    public void addBasket(int customerID, int productID, int number) {
-
-    }
 
     @Override
     public void addBasket(int customerID, int productID, int number, int variant1, int variant2) {

@@ -1,6 +1,7 @@
 package com.telpa.ecommerce.fragment;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -10,8 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABSmall;
+import com.telpa.ecommerce.interfaces.Category;
+import com.telpa.ecommerce.interfaces.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+
+import java.util.ArrayList;
 
 /**
  * Created by volkan on 13.07.2016.
@@ -22,14 +28,18 @@ public class FragmentATab extends TabHelper {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
+    private ArrayList<Product> products;
 
-
-    public static FragmentATab createTab(String title){
+    public FragmentATab createTab(String title) {
         FragmentATab tabOne = new FragmentATab();
         tabOne.setTitle(title);
+        ArrayList<Integer> list=new ArrayList<Integer>();
+        list.add(2);
+        products=new ArrayList<Product>();
+        Product a=new Product(1,1,1.0,"","",list,1,2);
+        products.add(a);
         return tabOne;
     }
-
 
 
     @Nullable
@@ -51,7 +61,7 @@ public class FragmentATab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_a_and_b_small);
+        recyclerAdapter = new RecyclerAdapter_ABSmall(6, R.layout.item_a_and_b_small,products );
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
 

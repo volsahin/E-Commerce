@@ -15,6 +15,17 @@ public class Product {
     int categoryID;
     int reviews;
 
+    public Product(int ID, int price, double rating, String name, String descripton, ArrayList<Integer> imageIDs, int categoryID, int reviews) {
+        this.ID = ID;
+        this.price = price;
+        this.rating = rating;
+        this.name = name;
+        this.descripton = descripton;
+        this.imageIDs = imageIDs;
+        this.categoryID = categoryID;
+        this.reviews = reviews;
+    }
+
 
     public int getID() {
         return ID;
