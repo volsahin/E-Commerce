@@ -15,6 +15,7 @@ public class Product {
     int categoryID;
     int reviews;
 
+
     public int getID() {
         return ID;
     }

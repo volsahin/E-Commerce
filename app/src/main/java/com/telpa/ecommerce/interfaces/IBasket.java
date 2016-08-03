@@ -9,8 +9,6 @@ import java.util.HashMap;
 public interface IBasket {
     HashMap<Integer, Integer> getBasket(int customerID);
 
-    void addBasket(int customerID, int productID, int number);
-
     void addBasket(int customerID, int productID, int number, int variant1, int variant2);
 
     void checkOut(int customerID,HashMap<Integer, Integer> productIDs_numbers);
