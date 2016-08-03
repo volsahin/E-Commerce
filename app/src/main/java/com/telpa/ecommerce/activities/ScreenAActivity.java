@@ -45,7 +45,8 @@ public class ScreenAActivity extends BaseActivity {
             public void onClick(View view) {
                 Toast.makeText(ScreenAActivity.this, "IMGBTN!é", Toast.LENGTH_SHORT).show();
             }
-        });
+    });
+
 
     }
 

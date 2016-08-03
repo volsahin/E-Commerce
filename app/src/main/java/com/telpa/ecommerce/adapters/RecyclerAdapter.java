@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
 
+import butterknife.OnItemClick;
+
 
 /**
  * Created by volkan on 14.07.2016.

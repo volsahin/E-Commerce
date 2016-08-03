@@ -142,7 +142,7 @@ public class ScreenLActivity extends BaseActivity {
         service.getPeople().enqueue(new Callback<People>() {
             @Override
             public void onResponse(Call<People> call, Response<People> response) {
-                Toast.makeText(ScreenLActivity.this, response.body().getMusteri().get(0).getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScreenLActivity.this, response.body().getMusteri().get(4).getName(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -151,6 +151,7 @@ public class ScreenLActivity extends BaseActivity {
                 Toast.makeText(ScreenLActivity.this, "Connection failed!", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
 
