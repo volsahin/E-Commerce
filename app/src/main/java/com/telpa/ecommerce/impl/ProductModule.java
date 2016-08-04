@@ -1,4 +1,7 @@
-package com.telpa.ecommerce.interfaces;
+package com.telpa.ecommerce.impl;
+
+import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.interfaces.IProduct;
 
 import java.util.ArrayList;
 
@@ -6,7 +9,7 @@ import java.util.ArrayList;
  * Created by SAMSUNGNB on 1.08.2016.
  */
 
-public class ProductModule implements IProduct{
+public class ProductModule implements IProduct {
     @Override
     public ArrayList<Integer> getProducts(int categoryID) {
         return null;

@@ -1,4 +1,6 @@
-package com.telpa.ecommerce.interfaces;
+package com.telpa.ecommerce.impl;
+
+import com.telpa.ecommerce.interfaces.IBasket;
 
 import java.util.HashMap;
 
@@ -6,7 +8,7 @@ import java.util.HashMap;
  * Created by SAMSUNGNB on 1.08.2016.
  */
 
-public class BasketModule implements IBasket{
+public class BasketModule implements IBasket {
     @Override
     public HashMap<Integer, Integer> getBasket(int customerID) {
         return null;

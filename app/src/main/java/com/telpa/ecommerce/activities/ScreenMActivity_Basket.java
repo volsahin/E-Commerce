@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;

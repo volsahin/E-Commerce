@@ -2,23 +2,20 @@ package com.telpa.ecommerce.activities;
 
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
 import com.telpa.ecommerce.helper.RadioButtonHelper;
-import com.telpa.ecommerce.interfaces.Comment;
+import com.telpa.ecommerce.models.Comment;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -27,7 +24,6 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import timber.log.Timber;
 
 public class ScreenKActivity extends BaseActivity {
     @BindView(R.id.searchButton)

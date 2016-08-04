@@ -1,4 +1,6 @@
-package com.telpa.ecommerce.interfaces;
+package com.telpa.ecommerce.impl;
+
+import com.telpa.ecommerce.interfaces.ICategory;
 
 import java.util.ArrayList;
 

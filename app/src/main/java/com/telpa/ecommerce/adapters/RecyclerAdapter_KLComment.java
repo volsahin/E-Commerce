@@ -5,12 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.interfaces.Comment;
+import com.telpa.ecommerce.models.Comment;
 
 import java.util.ArrayList;
 

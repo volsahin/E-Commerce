@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.interfaces;
+package com.telpa.ecommerce.models;
 
 import java.util.ArrayList;
 

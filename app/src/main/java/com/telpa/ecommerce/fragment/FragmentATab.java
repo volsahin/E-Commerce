@@ -1,7 +1,6 @@
 package com.telpa.ecommerce.fragment;
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -12,8 +11,7 @@ import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABSmall;
-import com.telpa.ecommerce.interfaces.Category;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 

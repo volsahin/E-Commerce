@@ -1,12 +1,10 @@
 package com.telpa.ecommerce.network;
 
-import com.telpa.ecommerce.interfaces.Category;
-import com.telpa.ecommerce.interfaces.Comment;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Category;
+import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.http.Field;

@@ -7,8 +7,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.fragment.FragmentBTab;
-import com.telpa.ecommerce.interfaces.Category;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.fragment.FragmentATab;
