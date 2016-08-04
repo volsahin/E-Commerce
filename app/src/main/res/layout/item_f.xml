@@ -29,7 +29,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ratingBar2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/relative"
@@ -55,7 +54,7 @@
                 android:paddingLeft="12dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="0dp"
-                android:id="@+id/textView6" />
+                android:id="@+id/productName" />
 
         </LinearLayout>
 
@@ -72,15 +71,16 @@
             android:layout_below="@+id/textViewLayout"
             android:paddingLeft="12dp"
             android:paddingBottom="8dp"
-            android:id="@+id/textView5" />
+            android:id="@+id/price" />
 
         <ImageButton
+            android:id="@+id/basketButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_shopping_basket_white_24dp"
             android:background="@null"
-            android:layout_toLeftOf="@+id/heartButton"
-            android:layout_toStartOf="@+id/heartButton"
+            android:layout_toLeftOf="@+id/likeButton"
+            android:layout_toStartOf="@+id/likeButton"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="30dp"
@@ -90,13 +90,13 @@
             android:scaleY="0.8"/>
 
         <ImageButton
-            android:id="@+id/heartButton"
+            android:id="@+id/likeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:src="@drawable/ic_favorite_white_24dp"
-            android:layout_toLeftOf="@+id/menuDugmesi"
-            android:layout_toStartOf="@+id/menuDugmesi"
+            android:layout_toLeftOf="@+id/actionButton"
+            android:layout_toStartOf="@+id/actionButton"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="30dp"
@@ -106,7 +106,7 @@
             android:scaleY="0.8"/>
 
         <ImageButton
-            android:id="@+id/menuDugmesi"
+            android:id="@+id/actionButton"
             android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -8,75 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/subcategories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:text="Subcategory"
-            android:textColor="@color/darkGrey"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp" />
-
-        <TextView
-            android:id="@+id/viewallTop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VIEW ALL"
-            android:textColor="@color/darkGrey"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_alignTop="@+id/subcategories"
-            android:layout_alignLeft="@+id/viewall"
-            android:layout_alignStart="@+id/viewall"
-            android:layout_marginRight="10dp" />
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/subcategories"
             android:scrollbars="vertical"
             android:layout_marginTop="10dp" />
-
-        <TextView
-            android:id="@+id/subcategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Subcategory"
-            android:textColor="@color/darkGrey"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_below="@+id/recyclerView1"
-            android:layout_alignLeft="@+id/subcategories"
-            android:layout_alignStart="@+id/subcategories"
-            android:layout_margin="5dp" />
-
-        <TextView
-            android:id="@+id/viewall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/recyclerViewG"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:text="VIEW ALL"
-            android:textColor="@color/darkGrey"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_marginRight="10dp" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewG"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/subcategory"
-            android:scrollbars="vertical" />
 
     </RelativeLayout>
 

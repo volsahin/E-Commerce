@@ -5,9 +5,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.models.Product;
+
+import java.util.ArrayList;
 
 
 /**
@@ -18,10 +23,12 @@ public class RecyclerAdapter_CSmall extends RecyclerView.Adapter<RecyclerAdapter
 
     private int amountOfData;
     private int id;
+    private ArrayList<Product> products;
 
-    public RecyclerAdapter_CSmall(int amountOfData, int id) {
+    public RecyclerAdapter_CSmall(int amountOfData, int id, ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
+        this.products=products;
     }
 
     @Override
@@ -35,8 +42,12 @@ public class RecyclerAdapter_CSmall extends RecyclerView.Adapter<RecyclerAdapter
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.productName.setText("Name " + position);
+        holder.price.setText("$50");
+        holder.image.setImageResource(R.drawable.ic_circle_white);
+        holder.ratingBar.setRating(3);
+        holder.description.setText("description");
 
-        // holder.textView.setText("DATA - DATA "+position);
     }
 
     @Override
@@ -46,11 +57,21 @@ public class RecyclerAdapter_CSmall extends RecyclerView.Adapter<RecyclerAdapter
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView;
+        public TextView productName;
+        public TextView price;
+        public TextView description;
+        public ImageButton image;
+        public RatingBar ratingBar;
+
 
         public ViewHolder(View v) {
             super(v);
-            textView = (TextView) v.findViewById(R.id.price);
+
+            productName = (TextView) v.findViewById(R.id.productName);
+            price = (TextView) v.findViewById(R.id.bigPrice);
+            description=(TextView) v.findViewById(R.id.description);
+            image = (ImageButton) v.findViewById(R.id.image1);
+            ratingBar=(RatingBar) v.findViewById(R.id.ratingBar);
         }
     }
 

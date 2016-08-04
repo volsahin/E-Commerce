@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.adapters.RecyclerAdapter_ABSmall;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_BBig;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -78,7 +78,7 @@ public class FragmentBTab extends TabHelper {
         recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
 
         recyclerAdapter = new RecyclerAdapter_BBig(2, R.layout.item_b_big,products);
-        recyclerAdapter2 = new RecyclerAdapter_ABSmall(6, R.layout.item_a_and_b_small,products);
+        recyclerAdapter2 = new RecyclerAdapter_ABGSmall(6, R.layout.item_a_and_b_small,products);
 
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView2.setAdapter(recyclerAdapter2);

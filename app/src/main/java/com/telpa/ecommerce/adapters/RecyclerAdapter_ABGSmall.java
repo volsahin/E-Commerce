@@ -18,23 +18,23 @@ import java.util.ArrayList;
  * Created by volkan on 14.07.2016.
  */
 
-public class RecyclerAdapter_ABSmall extends RecyclerView.Adapter<RecyclerAdapter_ABSmall.ViewHolder> {
+public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapter_ABGSmall.ViewHolder> {
 
     private int amountOfData;
     private int id;
     private ArrayList<Product> products;
 
-    public RecyclerAdapter_ABSmall(int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_ABGSmall(int amountOfData, int id, ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products = products;
     }
 
     @Override
-    public RecyclerAdapter_ABSmall.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerAdapter_ABGSmall.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(id, parent, false);
 
-        RecyclerAdapter_ABSmall.ViewHolder viewHolder = new RecyclerAdapter_ABSmall.ViewHolder(v);
+        RecyclerAdapter_ABGSmall.ViewHolder viewHolder = new RecyclerAdapter_ABGSmall.ViewHolder(v);
         new SpaceItemDecoration(300);
         return viewHolder;
     }

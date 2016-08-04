@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.models.Category;
+import com.telpa.ecommerce.models.Product;
+
+import java.util.ArrayList;
 
 
 /**
@@ -18,10 +22,13 @@ public class RecyclerAdapter_C extends RecyclerView.Adapter<RecyclerAdapter_C.Vi
 
     private int amountOfData;
     private int id;
+    private ArrayList<Category> categories;
 
-    public RecyclerAdapter_C(int amountOfData, int id) {
+    public RecyclerAdapter_C(int amountOfData, int id, ArrayList<Category> categories) {
         this.amountOfData = amountOfData;
         this.id = id;
+        this.categories=categories;
+
     }
 
     @Override
@@ -35,8 +42,8 @@ public class RecyclerAdapter_C extends RecyclerView.Adapter<RecyclerAdapter_C.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+            holder.subcategory.setText("Alt kategori "+position);
 
-        // holder.textView.setText("DATA - DATA "+position);
     }
 
     @Override
@@ -46,11 +53,11 @@ public class RecyclerAdapter_C extends RecyclerView.Adapter<RecyclerAdapter_C.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView;
+        public TextView subcategory;
 
         public ViewHolder(View v) {
             super(v);
-            textView = (TextView) v.findViewById(R.id.price);
+            subcategory = (TextView) v.findViewById(R.id.subcategories);
         }
     }
 

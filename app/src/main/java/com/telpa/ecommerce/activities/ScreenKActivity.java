@@ -7,7 +7,9 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
@@ -30,7 +32,7 @@ public class ScreenKActivity extends BaseActivity {
     @BindView(R.id.searchButton)
     ImageButton searchButton;
     @BindView(R.id.basketButton)
-    ImageButton basketButton;
+    ImageButton basketButtonMenu;
     @BindView(R.id.title)
     TextView title;
     @BindView(R.id.toolbar)
@@ -66,6 +68,14 @@ public class ScreenKActivity extends BaseActivity {
 
     ViewPager pager;
 
+    //TODO
+    public TextView productName;
+    public TextView price;
+    public TextView description;
+    public RatingBar ratingBar;
+    public TextView reviewsCount;
+
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
@@ -74,6 +84,7 @@ public class ScreenKActivity extends BaseActivity {
     private TextView[] textViews;
     private RadioButton[] radioButtons;
     private ArrayList<Comment> comments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,14 +92,22 @@ public class ScreenKActivity extends BaseActivity {
 
         ButterKnife.bind(this);
         textViews = new TextView[5];
-        textViews[0] = a;   textViews[1] = b;   textViews[2] = c;   textViews[3] = d;   textViews[4] = e;
+        textViews[0] = a;
+        textViews[1] = b;
+        textViews[2] = c;
+        textViews[3] = d;
+        textViews[4] = e;
         radioButtons = new RadioButton[5];
-        radioButtons[0] = Ia;   radioButtons[1] = Ib;   radioButtons[2] = Ic;   radioButtons[3] = Id;   radioButtons[4] = Ie;
+        radioButtons[0] = Ia;
+        radioButtons[1] = Ib;
+        radioButtons[2] = Ic;
+        radioButtons[3] = Id;
+        radioButtons[4] = Ie;
         radioButtonHelper = new RadioButtonHelper();
 
         //TODO
-        comments=new ArrayList<>();
-        Comment comment=new Comment();
+        comments = new ArrayList<>();
+        Comment comment = new Comment();
         comment.setComment("");
         comment.setRating(2);
         comment.setTime(new Date());
@@ -96,16 +115,16 @@ public class ScreenKActivity extends BaseActivity {
         comments.add(comment);
 
         fcreateTitle("");
-        fcreateToolbar(this,true, true, false, R.id.toolbar);
+        fcreateToolbar(this, true, true, false, R.id.toolbar);
         fcreateMenu(this, true);
 
-        pager = (ViewPager)findViewById(R.id.viewPagerK);
-        pager.setAdapter(new ViewPagerAdapterK(getSupportFragmentManager(),4));
+        pager = (ViewPager) findViewById(R.id.viewPagerK);
+        pager.setAdapter(new ViewPagerAdapterK(getSupportFragmentManager(), 4));
 /*
         TitlePageIndicator titlePageIndicator = (TitlePageIndicator)findViewById(R.id.viewPagerIndicatorK);
         titlePageIndicator.setViewPager(pager);
   */
-        CirclePageIndicator mIndicator = (CirclePageIndicator)findViewById(R.id.indicator);
+        CirclePageIndicator mIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
         mIndicator.setViewPager(pager);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_k);
@@ -119,8 +138,21 @@ public class ScreenKActivity extends BaseActivity {
         recyclerView.setAdapter(recyclerAdapter);
 
 
-    }
+        //TODO
+        productName = (TextView) findViewById(R.id.bigProductName);
+        price = (TextView) findViewById(R.id.bigPrice);
+        description = (TextView) findViewById(R.id.description);
+        reviewsCount=(TextView) findViewById(R.id.reviews);
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
+        productName.setText("Name ");
+        price.setText("$50");
+        description.setText("Açıklama");
+        reviewsCount.setText("50 reviews");
+        ratingBar.setRating(5);
+
+
+    }
 
 
     @OnClick({R.id.searchButton, R.id.basketButton, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4})

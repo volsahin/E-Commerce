@@ -43,7 +43,7 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         holder.category.setText("Category"+position);
-        holder.productName.setText("Name " + position);
+        holder.productNumber.setText("Name " + position);
         holder.image.setImageResource(R.drawable.ic_circle_white);
 
     }
@@ -56,13 +56,13 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView category;
-        public TextView productName;
+        public TextView productNumber;
         public ImageButton image;
 
         public ViewHolder(View v) {
             super(v);
             category = (TextView) v.findViewById(R.id.ustText);
-            productName = (TextView) v.findViewById(R.id.productName);
+            productNumber = (TextView) v.findViewById(R.id.productNumber);
             image = (ImageButton) v.findViewById(R.id.image);
         }
     }

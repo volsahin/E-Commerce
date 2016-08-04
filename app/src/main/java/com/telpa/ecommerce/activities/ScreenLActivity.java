@@ -109,6 +109,15 @@ public class ScreenLActivity extends BaseActivity {
     private ArrayList<Product> products;
     private ArrayList<Comment> comments;
 
+
+    //TODO
+    public TextView price;
+    public TextView description;
+    public TextView variants1,variant2;
+    //public RatingBar ratingBar;
+    public TextView reviewsCount;
+    public ImageButton bigImage, image1,image2, image3,image4,image5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -184,6 +193,31 @@ public class ScreenLActivity extends BaseActivity {
                 Toast.makeText(ScreenLActivity.this, "Connection failed!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        //TODO
+
+        price = (TextView) findViewById(R.id.bigPrice);
+        description = (TextView) findViewById(R.id.description);
+        reviewsCount=(TextView) findViewById(R.id.reviews);
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        bigImage=(ImageButton) findViewById(R.id.bigImage);
+        //image1=(ImageButton) findViewById(R.id.image1);
+        //image2=(ImageButton) findViewById(R.id.image2);
+        //image3=(ImageButton) findViewById(R.id.image3);
+        //image4=(ImageButton) findViewById(R.id.image4);
+        //image5=(ImageButton) findViewById(R.id.image5);
+
+        setTitle("Product15");
+        price.setText("$50");
+        description.setText("Açıklama");
+        reviewsCount.setText("50 reviews");
+        variants1.setText("Renk");
+        variant2.setText("Beden");
+        ratingBar.setRating(5);
+        //image1.setImageResource(R.drawable.ic_circle_white);
+        //image4.setImageResource(R.drawable.ic_circle_white);
+
 
     }
 

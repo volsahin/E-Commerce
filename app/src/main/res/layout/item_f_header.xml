@@ -23,7 +23,7 @@
             android:background="@color/grey">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageViewHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -44,7 +44,7 @@
             android:paddingLeft="6dp">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/productNameHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -58,12 +58,12 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/descriptionHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView3"
+                android:layout_below="@+id/productNameHeader"
                 android:padding="5dp"
                 android:text="@string/lorem_short"
                 android:textColor="@color/lightGrey"
@@ -72,12 +72,12 @@
 
 
             <RatingBar
-                android:id="@+id/ratingBar2"
+                android:id="@+id/ratingBarHeader"
                 android:rating="0.0"
                 android:numStars="5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView4"
+                android:layout_below="@+id/descriptionHeader"
                 android:stepSize="1.0"
                 style="?android:attr/ratingBarStyleSmall"
                 android:isIndicator="false"
@@ -90,27 +90,28 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/ratingBar2"
+                android:layout_below="@+id/ratingBarHeader"
                 android:layout_marginTop="30dp">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/priceHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:paddingLeft="5dp"
-                    android:textSize="14dp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
                     android:text="$100"
                     android:textColor="@color/white" />
 
                 <ImageButton
+                    android:id="@+id/basketHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
-                    android:layout_toLeftOf="@+id/heartButton"
-                    android:layout_toStartOf="@+id/heartButton"
+                    android:layout_toLeftOf="@+id/likeHeader"
+                    android:layout_toStartOf="@+id/likeHeader"
                     android:background="@null"
                     android:padding="0dp"
                     android:scaleX="0.8"
@@ -118,12 +119,12 @@
                     android:src="@drawable/ic_shopping_basket_white_24dp" />
 
                 <ImageButton
-                    android:id="@+id/heartButton"
+                    android:id="@+id/likeHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
-                    android:layout_toLeftOf="@+id/menuDugmesi"
-                    android:layout_toStartOf="@+id/menuDugmesi"
+                    android:layout_toLeftOf="@+id/actionHeader"
+                    android:layout_toStartOf="@+id/actionHeader"
                     android:background="@null"
                     android:paddingLeft="5dp"
                     android:src="@drawable/ic_favorite_white_24dp"
@@ -131,7 +132,7 @@
                     android:scaleY="0.8"/>
 
                 <ImageButton
-                    android:id="@+id/menuDugmesi"
+                    android:id="@+id/actionHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"

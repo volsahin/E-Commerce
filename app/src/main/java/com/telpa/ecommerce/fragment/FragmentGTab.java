@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
+
+import java.util.ArrayList;
 
 /**
  * Created by Gizem İlgar on 21.7.2016.
@@ -19,14 +23,30 @@ public class FragmentGTab extends TabHelper {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
-    private RecyclerView recyclerView2;
-    private RecyclerView.Adapter recyclerAdapter2;
-    private RecyclerView.LayoutManager recyclerLayoutManager,recyclerLayoutManager2;
+    private RecyclerView.LayoutManager recyclerLayoutManager;
+    private ArrayList<Product> products;
 
 
-    public static FragmentGTab createTab(String title){
+    public FragmentGTab createTab(String title) {
         FragmentGTab tabOne = new FragmentGTab();
         tabOne.setTitle(title);
+
+        //TODO
+        ArrayList<String> url=new ArrayList<String>();
+        url.add("url1");
+        url.add("urls2");
+        products=new ArrayList<Product>();
+        Product a=new Product();
+        a.setName("");
+        a.setID(1);
+        a.setCategoryID(1);
+        a.setDescripton("");
+        a.setHighResImageUrls(url);
+        a.setLowResImageUrls(url);
+        a.setPrice(30);
+        a.setRating(2);
+        a.setRating(3);
+        products.add(a);
         return tabOne;
     }
 
@@ -36,10 +56,6 @@ public class FragmentGTab extends TabHelper {
 
         View rootView = inflater.inflate(R.layout.fragment_g_tab1, container, false);
 
-        recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recyclerViewG);
-
-        recyclerView2.setHasFixedSize(true);
-
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView1);
 
@@ -48,19 +64,10 @@ public class FragmentGTab extends TabHelper {
         recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
-
-        recyclerLayoutManager2 = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView2.setLayoutManager(recyclerLayoutManager2);
-
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-
-
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_g);
-        recyclerAdapter2 = new RecyclerAdapter(3, R.layout.item_g);
-
+        recyclerAdapter = new RecyclerAdapter_ABGSmall(6, R.layout.item_g,products);
         recyclerView.setAdapter(recyclerAdapter);
-        recyclerView2.setAdapter(recyclerAdapter2);
+
         return rootView;
     }
 }
