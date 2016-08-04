@@ -122,7 +122,7 @@ public class ScreenLActivity extends BaseActivity {
     //TODO
     public TextView price;
     public TextView description;
-    public TextView variants1,variant2;
+    public TextView variants1,variants2;
     //public RatingBar ratingBar;
     public TextView reviewsCount;
     public ImageButton bigImage, image1,image2, image3,image4,image5;
@@ -211,6 +211,8 @@ public class ScreenLActivity extends BaseActivity {
         reviewsCount=(TextView) findViewById(R.id.reviews);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         bigImage=(ImageButton) findViewById(R.id.bigImage);
+        variants1=(TextView) findViewById(R.id.variants1);
+        variants2=(TextView) findViewById(R.id.variants2);
         //image1=(ImageButton) findViewById(R.id.image1);
         //image2=(ImageButton) findViewById(R.id.image2);
         //image3=(ImageButton) findViewById(R.id.image3);
@@ -222,7 +224,7 @@ public class ScreenLActivity extends BaseActivity {
         description.setText("Açıklama");
         reviewsCount.setText("50 reviews");
         variants1.setText("Renk");
-        variant2.setText("Beden");
+        variants2.setText("Beden");
         ratingBar.setRating(5);
         //image1.setImageResource(R.drawable.ic_circle_white);
         //image4.setImageResource(R.drawable.ic_circle_white);
