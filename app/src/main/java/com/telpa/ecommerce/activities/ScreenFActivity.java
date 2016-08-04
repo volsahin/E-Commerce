@@ -7,6 +7,7 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.fragment.FragmentATab;
 import com.telpa.ecommerce.fragment.FragmentBTab;
 import com.telpa.ecommerce.fragment.FragmentFTab;
+import com.telpa.ecommerce.interfaces.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 
@@ -25,11 +26,22 @@ public class ScreenFActivity extends BaseActivity {
         fcreateMenu(this, true);
 
 
+        // This list holds current tabs in ScreenA
         List<TabHelper> tabHelperList = new ArrayList<>();
-        tabHelperList.add(FragmentFTab.createTab("Category A"));
-        tabHelperList.add(FragmentFTab.createTab("Category B"));
-        tabHelperList.add(FragmentFTab.createTab("Category C"));
+        List<Category> categories = new ArrayList<>();
+        Category a=new Category(1,"A",1,1,1);
+        categories.add(a);
+        Category b=new Category(1,"B",1,1,1);
+        categories.add(b);
+        Category c=new Category(1,"C",1,1,1);
+        categories.add(c);
 
+        for(Category i:categories){
+
+            FragmentFTab tab=new FragmentFTab();
+            tab.createTab(i.getName());
+            tabHelperList.add(tab);
+        }
 
         fcreateTabMenu(tabHelperList);
 
