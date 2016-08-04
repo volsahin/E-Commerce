@@ -1,5 +1,7 @@
 package com.telpa.ecommerce.interfaces;
 
+import com.telpa.ecommerce.models.Category;
+
 import java.util.ArrayList;
 
 /**
@@ -7,8 +9,7 @@ import java.util.ArrayList;
  */
 
 public interface ICategory {
-    ArrayList<Integer> getCategories();
+    ArrayList<Category> getCategories(int parentCategoryID);
 
-    ArrayList<Integer> getSubCategory(int categoryID);
 
 }

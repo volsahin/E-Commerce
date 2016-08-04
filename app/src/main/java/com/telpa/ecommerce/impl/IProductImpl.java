@@ -2,6 +2,7 @@ package com.telpa.ecommerce.impl;
 
 import com.telpa.ecommerce.models.Comment;
 import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -9,9 +10,10 @@ import java.util.ArrayList;
  * Created by SAMSUNGNB on 1.08.2016.
  */
 
-public class ProductModule implements IProduct {
+public class IProductImpl implements IProduct {
+
     @Override
-    public ArrayList<Integer> getProducts(int categoryID) {
+    public ArrayList<Product> getProducts(int categoryID) {
         return null;
     }
 
@@ -21,12 +23,12 @@ public class ProductModule implements IProduct {
     }
 
     @Override
-    public void addFavorites(int customerID, int productID) {
-
+    public boolean addFavorites(int customerID, Product product) {
+        return false;
     }
 
     @Override
-    public void setRating(int customerID,int productID, double newRating) {
-
+    public boolean setRating(int customerID, Product product, double newRating) {
+        return false;
     }
 }

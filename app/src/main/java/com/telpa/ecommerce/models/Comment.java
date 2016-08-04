@@ -1,27 +1,22 @@
 package com.telpa.ecommerce.models;
 
+import java.util.Date;
+
 /**
  * Created by Gizem İlgar on 1.8.2016.
  */
 public class Comment {
-    int rating;
-    int time;
-    String userName;
-    String comment;
+    private int rating;
+    private Date date;
+    private String userName;
+    private String comment;
 
-    public Comment(int rating, int time, String userName, String comment) {
-        this.rating = rating;
-        this.time = time;
-        this.userName = userName;
-        this.comment = comment;
+    public Date getTime() {
+        return date;
     }
 
-    public int getTime() {
-        return time;
-    }
-
-    public void setTime(int time) {
-        this.time = time;
+    public void setTime(Date date) {
+        this.date = date;
     }
 
     public int getRating() {

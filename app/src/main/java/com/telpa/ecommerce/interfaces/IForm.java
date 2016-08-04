@@ -1,18 +1,12 @@
 package com.telpa.ecommerce.interfaces;
 
+import com.telpa.ecommerce.models.Form;
+
 import dagger.Component;
 
 /**
  * Created by Gizem İlgar on 1.8.2016.
  */
 public interface IForm {
-    void submitForm(int customerID,
-                    String info1,
-                    String info2,
-                    String option1,
-                    String option2,
-                    String option3,
-                    boolean option4,
-                    boolean option5,
-                    boolean option6);
+    boolean submitForm(Form form);
 }

@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.RatingBar;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 

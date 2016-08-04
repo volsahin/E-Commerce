@@ -20,6 +20,7 @@ import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -87,7 +88,11 @@ public class ScreenKActivity extends BaseActivity {
 
         //TODO
         comments=new ArrayList<>();
-        Comment comment=new Comment(2,1,"","");
+        Comment comment=new Comment();
+        comment.setComment("");
+        comment.setRating(2);
+        comment.setTime(new Date());
+        comment.setUserName("");
         comments.add(comment);
 
         fcreateTitle("");

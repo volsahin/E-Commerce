@@ -26,6 +26,7 @@ import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.inject.Inject;
 
@@ -128,10 +129,20 @@ public class ScreenLActivity extends BaseActivity {
         radioButtonHelper = new RadioButtonHelper();
 
 //TODO
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(2);
-        products = new ArrayList<Product>();
-        Product a = new Product(1, 1, 1.0, "", "", list, 1, 2);
+        ArrayList<String> url=new ArrayList<String>();
+        url.add("url1");
+        url.add("urls2");
+        products=new ArrayList<Product>();
+        Product a=new Product();
+        a.setName("");
+        a.setID(1);
+        a.setCategoryID(1);
+        a.setDescripton("");
+        a.setHighResImageUrls(url);
+        a.setLowResImageUrls(url);
+        a.setPrice(30);
+        a.setRating(2);
+        a.setRating(3);
         products.add(a);
 
         ((ECommerceApp) getApplication()).getComponent().inject(this);
@@ -139,7 +150,11 @@ public class ScreenLActivity extends BaseActivity {
 
         //TODO
         comments=new ArrayList<>();
-        Comment comment=new Comment(2,1,"","");
+        Comment comment=new Comment();
+        comment.setComment("");
+        comment.setRating(2);
+        comment.setTime(new Date());
+        comment.setUserName("");
         comments.add(comment);
 
         fcreateTitle("Product");

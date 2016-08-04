@@ -34,12 +34,21 @@ public class ScreenMActivity_Basket extends BaseActivity {
         ButterKnife.bind(ScreenMActivity_Basket.this);
 
         //// TODO
-        ArrayList<Integer> list=new ArrayList<Integer>();
-        list.add(2);
+        ArrayList<String> url=new ArrayList<String>();
+        url.add("url1");
+        url.add("urls2");
         products=new ArrayList<Product>();
-        Product a=new Product(1,1,1.0,"","",list,1,2);
+        Product a=new Product();
+        a.setName("");
+        a.setID(1);
+        a.setCategoryID(1);
+        a.setDescripton("");
+        a.setHighResImageUrls(url);
+        a.setLowResImageUrls(url);
+        a.setPrice(30);
+        a.setRating(2);
+        a.setRating(3);
         products.add(a);
-
 
         fcreateTitle("Your Basket");
         fcreateToolbar(this, false, true, false, R.id.include);

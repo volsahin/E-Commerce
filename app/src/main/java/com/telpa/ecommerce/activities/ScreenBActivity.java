@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.fragment.FragmentATab;
-import com.telpa.ecommerce.interfaces.Category;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.fragment.FragmentBTab;
@@ -33,13 +33,16 @@ public class ScreenBActivity extends BaseActivity {
 
         List<TabHelper> tabHelperList = new ArrayList<>();
         List<Category> categories = new ArrayList<>();
-        Category a=new Category(1,"A",1,1,1);
+        Category a=new Category();
+        a.setName("Category");
+        a.setHighResImageUrl("");
+        a.setLowResImageUrl("");
+        a.setID(1);
+        a.setNumOfProduct(2);
+        a.setParentID(0);
         categories.add(a);
-        Category b=new Category(1,"B",1,1,1);
-        categories.add(b);
-        Category c=new Category(1,"C",1,1,1);
-
-        categories.add(c);
+        categories.add(a);
+        categories.add(a);
 
         for(Category i:categories){
 

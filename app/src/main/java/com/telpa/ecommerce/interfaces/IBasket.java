@@ -1,5 +1,8 @@
 package com.telpa.ecommerce.interfaces;
 
+import com.telpa.ecommerce.models.BasketItem;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -7,9 +10,9 @@ import java.util.HashMap;
  */
 
 public interface IBasket {
-    HashMap<Integer, Integer> getBasket(int customerID);
+    ArrayList<BasketItem> getBasket(int customerID);
 
-    void addBasket(int customerID, int productID, int number, int variant1, int variant2);
+    boolean addBasket(int customerID, BasketItem basketItem);
 
-    void checkOut(int customerID, HashMap<Integer, Integer> productIDs_numbers);
+    boolean checkOut(int customerID,   ArrayList<BasketItem> basketItems);
 }

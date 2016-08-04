@@ -1,6 +1,7 @@
 package com.telpa.ecommerce.interfaces;
 
 import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -9,13 +10,13 @@ import java.util.ArrayList;
  */
 
 public interface IProduct {
-    ArrayList<Integer> getProducts(int categoryID);
+    ArrayList<Product> getProducts(int categoryID);
 
     ArrayList<Comment> getComments(int productID);
 
-    void addFavorites(int customerID, int productID);
+    boolean addFavorites(int customerID, Product product);
 
-    void setRating(int customerID,int productID, double newRating);
+    boolean setRating(int customerID,Product product, double newRating);
 
 
 }

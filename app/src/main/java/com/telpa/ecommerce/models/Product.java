@@ -6,26 +6,15 @@ import java.util.ArrayList;
  * Created by Mert on 29.07.2016.
  */
 public class Product {
-    int ID;
-    int price;
-    double rating;
-    String name;
-    String descripton;
-    ArrayList<Integer> imageIDs;
-    int categoryID;
-    int reviews;
-
-    public Product(int ID, int price, double rating, String name, String descripton, ArrayList<Integer> imageIDs, int categoryID, int reviews) {
-        this.ID = ID;
-        this.price = price;
-        this.rating = rating;
-        this.name = name;
-        this.descripton = descripton;
-        this.imageIDs = imageIDs;
-        this.categoryID = categoryID;
-        this.reviews = reviews;
-    }
-
+    private int ID;
+    private int price;
+    private double rating;
+    private String name;
+    private String descripton;
+    private ArrayList<String> highResImageUrls;
+    private ArrayList<String> lowResImageUrls;
+    private int categoryID;
+    private int reviewCounter;
 
     public int getID() {
         return ID;
@@ -67,12 +56,20 @@ public class Product {
         this.descripton = descripton;
     }
 
-    public ArrayList<Integer> getImageIDs() {
-        return imageIDs;
+    public ArrayList<String> getHighResImageUrls() {
+        return highResImageUrls;
     }
 
-    public void setImageIDs(ArrayList<Integer> imageIDs) {
-        this.imageIDs = imageIDs;
+    public void setHighResImageUrls(ArrayList<String> highResImageUrls) {
+        this.highResImageUrls = highResImageUrls;
+    }
+
+    public ArrayList<String> getLowResImageUrls() {
+        return lowResImageUrls;
+    }
+
+    public void setLowResImageUrls(ArrayList<String> lowResImageUrls) {
+        this.lowResImageUrls = lowResImageUrls;
     }
 
     public int getCategoryID() {
@@ -84,10 +81,10 @@ public class Product {
     }
 
     public int getReviews() {
-        return reviews;
+        return reviewCounter;
     }
 
-    public void setReviews(int reviews) {
-        this.reviews = reviews;
+    public void setReviews(int reviewCounter) {
+        this.reviewCounter = reviewCounter;
     }
 }

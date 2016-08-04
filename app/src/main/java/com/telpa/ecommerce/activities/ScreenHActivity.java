@@ -7,8 +7,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_H;
-import com.telpa.ecommerce.interfaces.Category;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Category;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
@@ -28,7 +28,15 @@ public class ScreenHActivity extends BaseActivity {
         ArrayList<Integer> list=new ArrayList<Integer>();
         list.add(2);
         categories=new ArrayList<Category>();
-        Category a=new Category(1,"",1,1,2);
+        Category a=new Category();
+        a.setName("Category");
+        a.setHighResImageUrl("");
+        a.setLowResImageUrl("");
+        a.setID(1);
+        a.setNumOfProduct(2);
+        a.setParentID(0);
+        categories.add(a);
+        categories.add(a);
         categories.add(a);
 
         fcreateTitle("My Store" + " H");

@@ -1,6 +1,8 @@
 package com.telpa.ecommerce.di.module;
 
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.impl.IBasketImpl;
+import com.telpa.ecommerce.interfaces.IBasket;
 
 import javax.inject.Singleton;
 
@@ -29,5 +31,10 @@ public class ApplicationModule {
         return application;
     }
 
+    @Provides
+    IBasket providesIBasket() {
+        IBasketImpl basket=new IBasketImpl();
+        return basket;
+    }
 
 }

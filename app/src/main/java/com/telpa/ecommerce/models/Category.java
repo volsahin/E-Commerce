@@ -8,25 +8,9 @@ public class Category {
     private int ID;
     private String name;
     private int parentID;
-    private int imageID;
+    private String highResImageUrl;
+    private String lowResImageUrl;
     private int numOfProduct;
-
-    public Category(int ID, String name, int parentID, int imageID, int numOfProduct) {
-        this.ID = ID;
-        this.name = name;
-        this.parentID = parentID;
-        this.imageID = imageID;
-        this.numOfProduct = numOfProduct;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getID() {
         return ID;
@@ -34,6 +18,14 @@ public class Category {
 
     public void setID(int ID) {
         this.ID = ID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getParentID() {
@@ -44,12 +36,20 @@ public class Category {
         this.parentID = parentID;
     }
 
-    public int getImageID() {
-        return imageID;
+    public String getHighResImageUrl() {
+        return highResImageUrl;
     }
 
-    public void setImageID(int imageID) {
-        this.imageID = imageID;
+    public void setHighResImageUrl(String highResImageUrl) {
+        this.highResImageUrl = highResImageUrl;
+    }
+
+    public String getLowResImageUrl() {
+        return lowResImageUrl;
+    }
+
+    public void setLowResImageUrl(String lowResImageUrl) {
+        this.lowResImageUrl = lowResImageUrl;
     }
 
     public int getNumOfProduct() {
