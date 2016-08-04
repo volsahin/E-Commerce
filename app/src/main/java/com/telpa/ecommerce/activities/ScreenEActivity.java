@@ -26,8 +26,6 @@ public class ScreenEActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_e);
 
 
-        ArrayList<Integer> list=new ArrayList<Integer>();
-        list.add(2);
         Category a=new Category();
         a.setName("Category");
         a.setHighResImageUrl("");

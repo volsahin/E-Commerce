@@ -30,12 +30,16 @@ public class ScreenDActivity extends BaseActivity {
         // This list holds current tabs in ScreenA
         List<TabHelper> tabHelperList = new ArrayList<>();
         List<Category> categories = new ArrayList<>();
-        Category a=new Category(1,"A",1,1,1);
+        Category a=new Category();
+        a.setName("Category");
+        a.setHighResImageUrl("");
+        a.setLowResImageUrl("");
+        a.setID(1);
+        a.setNumOfProduct(2);
+        a.setParentID(0);
         categories.add(a);
-        Category b=new Category(1,"B",1,1,1);
-        categories.add(b);
-        Category c=new Category(1,"C",1,1,1);
-        categories.add(c);
+        categories.add(a);
+        categories.add(a);
 
         for(Category i:categories){
 
