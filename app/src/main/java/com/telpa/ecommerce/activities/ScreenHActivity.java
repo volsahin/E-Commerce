@@ -9,6 +9,7 @@ import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_H;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;

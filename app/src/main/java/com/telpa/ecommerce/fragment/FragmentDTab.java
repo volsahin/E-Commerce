@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_D;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
+
+import java.util.ArrayList;
 
 /**
  * Created by Gizem İlgar on 21.7.2016.
@@ -20,11 +24,17 @@ public class FragmentDTab extends TabHelper {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
+    private ArrayList<Product> products;
 
 
-    public static FragmentDTab createTab(String title){
+    public FragmentDTab createTab(String title){
         FragmentDTab tabOne = new FragmentDTab();
         tabOne.setTitle(title);
+        ArrayList<Integer> list=new ArrayList<Integer>();
+        list.add(2);
+        products=new ArrayList<Product>();
+        Product a=new Product(1,1,1.0,"","",list,1,2);
+        products.add(a);
         return tabOne;
     }
 
@@ -50,7 +60,7 @@ public class FragmentDTab extends TabHelper {
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
 
 
-        recyclerAdapter = new RecyclerAdapter(10, R.layout.item_d);
+        recyclerAdapter = new RecyclerAdapter_D(10, R.layout.item_d,products);
 
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
