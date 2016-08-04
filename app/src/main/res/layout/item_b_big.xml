@@ -18,9 +18,7 @@
         <RelativeLayout
             android:id="@+id/bigImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_alignEnd="@+id/description"
-            android:layout_alignRight="@+id/description">
+            android:layout_height="200dp">
 
             <ImageButton
                 android:layout_width="match_parent"

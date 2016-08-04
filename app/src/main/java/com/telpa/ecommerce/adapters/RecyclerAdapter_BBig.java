@@ -45,8 +45,13 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.bigImageButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+        //holder.bigImageButton.setImageResource();
         holder.bigProductName.setText("Name "+position);
+        holder.description.setText("Açıklama");
+        holder.bigPrice.setText("$30");
+       // holder.bigBasketButton.setImageResource();
+        holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+
         // holder.textView.setText("DATA - DATA "+position);
     }
 

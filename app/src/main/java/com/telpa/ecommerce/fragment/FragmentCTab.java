@@ -23,6 +23,10 @@ public class FragmentCTab extends TabHelper {
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
 
+    private RecyclerView recyclerView2;
+    private RecyclerView.Adapter recyclerAdapter2;
+    private RecyclerView.LayoutManager recyclerLayoutManager2;
+
 
     public static FragmentCTab createTab(String title){
         FragmentCTab screenCTabOne = new FragmentCTab();
@@ -39,10 +43,6 @@ public class FragmentCTab extends TabHelper {
 
         recyclerView.setHasFixedSize(true);
 
-        /*
-        recyclerLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView.setLayoutManager(recyclerLayoutManager);
-        */
 
         recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
@@ -50,6 +50,18 @@ public class FragmentCTab extends TabHelper {
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
         recyclerAdapter = new RecyclerAdapter(5, R.layout.item_c);
         recyclerView.setAdapter(recyclerAdapter);
+
+//**********************************************************
+        recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recyclerViewCitem);
+
+        recyclerView2.setHasFixedSize(true);
+
+        recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView2.setLayoutManager(recyclerLayoutManager2);
+
+        recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
+        recyclerAdapter2 = new RecyclerAdapter(5, R.layout.item_i_and_c);
+        recyclerView2.setAdapter(recyclerAdapter2);
 
         return rootView;
 
