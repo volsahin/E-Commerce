@@ -19,55 +19,55 @@ import retrofit2.http.Query;
  * Created by SAMSUNGNB on 29.07.2016.
  */
 public interface APIService {
-    @GET("/list.php")
+    @GET("list.php")
     Call<People> getPeople();
 
-    @GET("/list.php")
+    @GET("list.php")
     Call<Musterus> getMusteri();
 
-    @GET("/categories/get")
+    @GET("categories/get")
     Call<Category> getCategories(int parentCategoryID);
 
-    @GET("/products/get")
+    @GET("products/get")
     Call<Product> getProducts(int categoryID);
 
-    @GET("/products/updateRating")
+    @GET("products/updateRating")
     Call<Boolean> setOverallRating(@Query("ProductID") int productID,
                                    @Query("UserRating") Float userRating
     );
 
-    @GET("/comments/get")
+    @GET("comments/get")
     Call<Comment> getComments(int productID);
 
-    @GET("/favorites/get")
+    @GET("favorites/get")
     Call<Integer> getFavorites(int customerID);
 
-    @GET("/favorites/add")
+    @GET("favorites/add")
     Call<Boolean> addFavorites(@Query("CustomerID") int customerID,
                                @Query("ProductID") int productID
 
     );
 
-    @GET("/basket/get")
+    @GET("basket/get")
     Call<BasketItem> getBasket(int customerID);
 
-    @GET("/basket/add")
+    @GET("basket/add")
     Call<Boolean> addBasket(@Query("CustomerID") int customerID,
                             @Query("BasketItem") BasketItem basketItem
 
     );
 
-    @POST("/forms")
+    @POST("forms")
     Call<Boolean> submitForm(@Body Form form);
 
 
-    @GET("/checkout")
+    @GET("checkout")
     Call<Boolean> checkout(@Query("CustomerID") int customerID,
                            @Query("BasketProduct") ArrayList<BasketItem> basketItems
     );
 
 
-    @GET("/userRatings")
+    @GET("userRatings")
     Call<Boolean> setRating(@Query("CustomerID") int customerID,
                             @Query("ProductID") int productID,
                             @Query("UserRating") Float userRating

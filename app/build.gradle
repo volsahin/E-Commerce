@@ -20,7 +20,7 @@ android {
             buildConfigField "String", "SERVER_URL", '"http://www.volcaniccoder.com/telpa"'
         }
         debug{
-            buildConfigField "String", "SERVER_URL", '"http://www.volcaniccoder.com/telpa"'
+            buildConfigField "String", "SERVER_URL", '"http://www.volcaniccoder.com/telpa/"'
         }
     }
 
