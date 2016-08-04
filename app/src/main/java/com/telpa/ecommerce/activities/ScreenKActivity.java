@@ -17,18 +17,31 @@ import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
 import com.telpa.ecommerce.helper.RadioButtonHelper;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ScreenKActivity extends BaseActivity {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
+
     @BindView(R.id.searchButton)
     ImageButton searchButton;
     @BindView(R.id.basketButton)

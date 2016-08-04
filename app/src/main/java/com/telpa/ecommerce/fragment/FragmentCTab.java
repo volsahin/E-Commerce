@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_C;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_CSmall;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -19,12 +22,19 @@ import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 /**
  * Created by volkan on 18.07.2016.
  */
 
 public class FragmentCTab extends TabHelper {
-
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;

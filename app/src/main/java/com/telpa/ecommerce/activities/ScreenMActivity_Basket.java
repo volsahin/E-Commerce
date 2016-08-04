@@ -11,14 +11,26 @@ import android.widget.Toast;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
+import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 
 public class ScreenMActivity_Basket extends BaseActivity {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;

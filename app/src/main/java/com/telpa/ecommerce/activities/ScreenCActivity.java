@@ -4,6 +4,9 @@ import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.fragment.FragmentBTab;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -12,7 +15,15 @@ import com.telpa.ecommerce.fragment.FragmentCTab;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScreenCActivity extends BaseActivity{
+import javax.inject.Inject;
+
+public class ScreenCActivity extends BaseActivity {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +32,13 @@ public class ScreenCActivity extends BaseActivity{
         setContentView(R.layout.activity_screen_c);
 
         fcreateTitle("My Store" + " C");
-        fcreateToolbar(this,false,  true, true,R.id.toolbar);
+        fcreateToolbar(this, false, true, true, R.id.toolbar);
         fcreateMenu(this, true);
 
 //TODO
         List<TabHelper> tabHelperList = new ArrayList<>();
         List<Category> categories = new ArrayList<>();
-        Category a=new Category();
+        Category a = new Category();
         a.setName("Category");
         a.setHighResImageUrl("");
         a.setLowResImageUrl("");
@@ -37,9 +48,9 @@ public class ScreenCActivity extends BaseActivity{
         categories.add(a);
         categories.add(a);
         categories.add(a);
-        for(Category i:categories){
+        for (Category i : categories) {
 
-            FragmentCTab tab=new FragmentCTab();
+            FragmentCTab tab = new FragmentCTab();
             tab.createTab(i.getName());
             tabHelperList.add(tab);
         }

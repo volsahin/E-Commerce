@@ -14,6 +14,9 @@ import com.telpa.ecommerce.utils.BaseActivity;
 import javax.inject.Inject;
 
 public class ScreenJActivity_Form extends BaseActivity {
+    @Inject
+    IForm form;
+
     private String[] arraySpinner;
 
     EditText text;

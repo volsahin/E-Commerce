@@ -1,12 +1,12 @@
 package com.telpa.ecommerce.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.fragment.FragmentATab;
-import com.telpa.ecommerce.fragment.FragmentBTab;
 import com.telpa.ecommerce.fragment.FragmentFTab;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -14,7 +14,15 @@ import com.telpa.ecommerce.utils.TabHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class ScreenFActivity extends BaseActivity {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

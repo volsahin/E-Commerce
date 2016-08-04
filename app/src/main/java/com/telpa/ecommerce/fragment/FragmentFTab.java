@@ -15,16 +15,27 @@ import android.widget.TextView;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_F;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 /**
  * Created by volkan on 20.07.2016.
  */
 
 public class FragmentFTab extends TabHelper {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;

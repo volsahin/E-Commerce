@@ -16,6 +16,9 @@ import com.melnykov.fab.FloatingActionButton;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Comment;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.People;
@@ -39,9 +42,15 @@ import retrofit2.Response;
 
 
 public class ScreenLActivity extends BaseActivity {
-
     @Inject
     APIService service;
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
+
 
     @BindView(R.id.searchButton)
     ImageButton searchButton;

@@ -7,14 +7,23 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_H;
-import com.telpa.ecommerce.models.Category;
-import com.telpa.ecommerce.models.Product;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
 public class ScreenHActivity extends BaseActivity {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;

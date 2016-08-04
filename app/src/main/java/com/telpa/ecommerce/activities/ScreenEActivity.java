@@ -7,12 +7,23 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_E;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
 public class ScreenEActivity extends BaseActivity {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
@@ -26,10 +37,10 @@ public class ScreenEActivity extends BaseActivity {
         setContentView(R.layout.activity_screen_e);
 
 
-        ArrayList<Integer> list=new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         list.add(2);
-        categories=new ArrayList<Category>();
-        Category a=new Category();
+        categories = new ArrayList<Category>();
+        Category a = new Category();
         a.setName("Category");
         a.setHighResImageUrl("");
         a.setLowResImageUrl("");
@@ -41,10 +52,10 @@ public class ScreenEActivity extends BaseActivity {
         categories.add(a);
 
         fcreateTitle("My Store" + " E");
-        fcreateToolbar(this,false, true, true, R.id.toolbar);
-        fcreateMenu(this,true);
+        fcreateToolbar(this, false, true, true, R.id.toolbar);
+        fcreateMenu(this, true);
 
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerViewE);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerViewE);
 
         recyclerView.setHasFixedSize(true);
 
@@ -56,8 +67,8 @@ public class ScreenEActivity extends BaseActivity {
         recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter_E(6, R.layout.item_e,categories);
+        recyclerView.addItemDecoration(new RecyclerAdapter_E.SpaceItemDecoration(0));
+        recyclerAdapter = new RecyclerAdapter_E(6, R.layout.item_e, categories);
         recyclerView.setAdapter(recyclerAdapter);
 
     }

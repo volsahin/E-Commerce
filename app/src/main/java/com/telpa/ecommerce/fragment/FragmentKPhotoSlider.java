@@ -10,13 +10,24 @@ import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.utils.TabHelper;
+
+import javax.inject.Inject;
 
 /**
  * Created by volkan on 22.07.2016.
  */
 
 public class FragmentKPhotoSlider extends TabHelper {
+    @Inject
+    IBasket basket;
+    @Inject
+    IProduct product;
+    @Inject
+    ICategory category;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
