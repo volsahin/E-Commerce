@@ -7,8 +7,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_H;
-import com.telpa.ecommerce.interfaces.Category;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;

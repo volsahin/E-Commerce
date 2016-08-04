@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.interfaces.Category;
+import com.telpa.ecommerce.models.Category;
 
 import java.security.PublicKey;
 import java.util.ArrayList;

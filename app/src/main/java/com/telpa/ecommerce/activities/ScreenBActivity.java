@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.fragment.FragmentATab;
-import com.telpa.ecommerce.interfaces.Category;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.fragment.FragmentBTab;

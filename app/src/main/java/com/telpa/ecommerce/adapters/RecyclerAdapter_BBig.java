@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.interfaces.Product;
+import com.telpa.ecommerce.models.Product;
 
 import org.w3c.dom.Text;
 
