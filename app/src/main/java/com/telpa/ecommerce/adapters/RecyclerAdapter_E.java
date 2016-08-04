@@ -5,9 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.interfaces.Category;
+
+import java.util.ArrayList;
 
 
 /**
@@ -18,10 +22,12 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
 
     private int amountOfData;
     private int id;
+    private ArrayList<Category> categories;
 
-    public RecyclerAdapter_E(int amountOfData, int id) {
+    public RecyclerAdapter_E(int amountOfData, int id, ArrayList<Category> categories) {
         this.amountOfData = amountOfData;
         this.id = id;
+        this.categories=categories;
     }
 
     @Override
@@ -36,7 +42,10 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        // holder.textView.setText("DATA - DATA "+position);
+        holder.category.setText("Category"+position);
+        holder.productName.setText("Name " + position);
+        holder.image.setImageResource(R.drawable.ic_circle_white);
+
     }
 
     @Override
@@ -46,11 +55,15 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView;
+        public TextView category;
+        public TextView productName;
+        public ImageButton image;
 
         public ViewHolder(View v) {
             super(v);
-            textView = (TextView) v.findViewById(R.id.price);
+            category = (TextView) v.findViewById(R.id.ustText);
+            productName = (TextView) v.findViewById(R.id.productName);
+            image = (ImageButton) v.findViewById(R.id.image);
         }
     }
 

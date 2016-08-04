@@ -6,19 +6,31 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_E;
+import com.telpa.ecommerce.interfaces.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
+
+import java.util.ArrayList;
 
 public class ScreenEActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
+    private ArrayList<Category> categories;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_e);
+
+
+        ArrayList<Integer> list=new ArrayList<Integer>();
+        list.add(2);
+        categories=new ArrayList<Category>();
+        Category a=new Category(1,"",1,1,2);
+        categories.add(a);
 
         fcreateTitle("My Store" + " E");
         fcreateToolbar(this,false, true, true, R.id.toolbar);
@@ -37,7 +49,7 @@ public class ScreenEActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter(6, R.layout.item_e);
+        recyclerAdapter = new RecyclerAdapter_E(6, R.layout.item_e,categories);
         recyclerView.setAdapter(recyclerAdapter);
 
     }
