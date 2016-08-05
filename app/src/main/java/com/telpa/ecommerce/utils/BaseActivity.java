@@ -3,6 +3,7 @@ package com.telpa.ecommerce.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,8 @@ import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenLActivity;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 
 public class BaseActivity extends AppCompatActivity {
@@ -58,6 +61,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
     }
+
 
     public void fcreateTitle(String titleName) {
         title = (TextView) findViewById(R.id.title);

@@ -10,13 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.ScreenAActivity;
+import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
-import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 import java.util.ArrayList;
 
@@ -43,10 +44,16 @@ public class FragmentATab extends TabHelper {
         FragmentATab tabOne = new FragmentATab();
         tabOne.setTitle(title);
 
+        return tabOne;
+    }
+
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         products=new ArrayList<Product>();
         ArrayList<String> url=new ArrayList<String>();
-        url.add("url1");
-        url.add("urls2");
+        url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
         products=new ArrayList<Product>();
         Product a=new Product();
         a.setName("");
@@ -59,13 +66,6 @@ public class FragmentATab extends TabHelper {
         a.setRating(2);
         a.setRating(3);
         products.add(a);
-        return tabOne;
-    }
-
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_a_tab1, container, false);
 
@@ -73,16 +73,11 @@ public class FragmentATab extends TabHelper {
 
         recyclerView.setHasFixedSize(true);
 
-        /*
-        recyclerLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView.setLayoutManager(recyclerLayoutManager);
-        */
-
         recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        recyclerAdapter = new RecyclerAdapter_ABGSmall(6, R.layout.item_a_and_b_small,products );
+        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),6, R.layout.item_a_and_b_small,products );
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
 

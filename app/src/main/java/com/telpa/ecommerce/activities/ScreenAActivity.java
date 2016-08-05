@@ -58,8 +58,7 @@ public class ScreenAActivity extends BaseActivity {
         for (Category i : categories) {
 
             FragmentATab tab = new FragmentATab();
-            tab.createTab(i.getName());
-            tabHelperList.add(tab);
+            tabHelperList.add(tab.createTab(i.getName()));
         }
 /*
         tabHelperList.add(FragmentATab.createTab("Category A"));
@@ -77,7 +76,6 @@ public class ScreenAActivity extends BaseActivity {
                 Toast.makeText(ScreenAActivity.this, "IMGBTN!é", Toast.LENGTH_SHORT).show();
             }
         });
-
 
     }
 
