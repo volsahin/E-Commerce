@@ -50,8 +50,7 @@ public class FragmentBTab extends TabHelper {
         FragmentBTab tabTwo = new FragmentBTab();
         tabTwo.setTitle(title);
         ArrayList<String> url=new ArrayList<String>();
-        url.add("url1");
-        url.add("urls2");
+        url.add("http://images.hepsiburada.net/assets/Bilgisayar/200/Bilgisayar_4076599.jpg");
         products=new ArrayList<Product>();
         Product a=new Product();
         a.setName("");

@@ -44,8 +44,7 @@ public class FragmentGTab extends TabHelper {
 
         //TODO
         ArrayList<String> url=new ArrayList<String>();
-        url.add("url1");
-        url.add("urls2");
+        url.add("http://www.telefonkilavuzu.com/wp-content/uploads/2016/01/telefon-numaras%C4%B1.jpg");
         products=new ArrayList<Product>();
         Product a=new Product();
         a.setName("");
