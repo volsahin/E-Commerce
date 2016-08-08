@@ -27,11 +27,11 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
     private ArrayList<Product> products;
     private Activity activity;
 
-    public RecyclerAdapter_I( Activity activity,int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_I(Activity activity, int amountOfData, int id, ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
-        this.products=products;
-        this.activity=activity;
+        this.products = products;
+        this.activity = activity;
     }
 
     @Override
@@ -74,9 +74,9 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
 
             productName = (TextView) v.findViewById(R.id.productName);
             price = (TextView) v.findViewById(R.id.price);
-            description=(TextView) v.findViewById(R.id.description);
+            description = (TextView) v.findViewById(R.id.description);
             image = (ImageButton) v.findViewById(R.id.image);
-            ratingBar=(RatingBar) v.findViewById(R.id.ratingBar);
+            ratingBar = (RatingBar) v.findViewById(R.id.ratingBar);
         }
     }
 
