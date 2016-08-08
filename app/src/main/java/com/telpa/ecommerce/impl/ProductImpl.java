@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by SAMSUNGNB on 1.08.2016.
  */
 
-public class IProductImpl implements IProduct {
+public class ProductImpl implements IProduct {
 
     @Override
     public ArrayList<Product> getProducts(int categoryID) {

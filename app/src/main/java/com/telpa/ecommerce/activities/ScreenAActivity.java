@@ -81,11 +81,7 @@ public class ScreenAActivity extends BaseActivity {
             tab=tab.createTab(i.getName());
             tabHelperList.add(tab);
         }
-/*
-        tabHelperList.add(FragmentATab.createTab("Category A"));
-        tabHelperList.add(FragmentBTab.createTab("Category B"));
-        tabHelperList.add(FragmentATab.createTab("Category C"));
-*/
+
         fcreateTabMenu(tabHelperList);
 
     }

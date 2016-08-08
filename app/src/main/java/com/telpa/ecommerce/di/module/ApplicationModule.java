@@ -1,10 +1,10 @@
 package com.telpa.ecommerce.di.module;
 
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.impl.IBasketImpl;
-import com.telpa.ecommerce.impl.ICategoryImpl;
-import com.telpa.ecommerce.impl.IFormImpl;
-import com.telpa.ecommerce.impl.IProductImpl;
+import com.telpa.ecommerce.impl.BasketImpl;
+import com.telpa.ecommerce.impl.CategoryImpl;
+import com.telpa.ecommerce.impl.FormImpl;
+import com.telpa.ecommerce.impl.ProductImpl;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IForm;
@@ -40,28 +40,28 @@ public class ApplicationModule {
     @Provides
     @Singleton //??????
     IBasket providesBasket() {
-        IBasketImpl basket = new IBasketImpl();
+        BasketImpl basket = new BasketImpl();
         return basket;
     }
 
     @Provides
     @Singleton //??????
     ICategory providesCategories() {
-        ICategory category = new ICategoryImpl();
+        ICategory category = new CategoryImpl();
         return category;
     }
 
     @Provides
     @Singleton //??????
     IForm providesForm() {
-        IForm form = new IFormImpl();
+        IForm form = new FormImpl();
         return form;
     }
 
     @Provides
     @Singleton //??????
     IProduct providesProduct() {
-        IProduct product = new IProductImpl();
+        IProduct product = new ProductImpl();
         return product;
     }
 
