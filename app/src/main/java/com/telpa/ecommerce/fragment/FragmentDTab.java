@@ -81,7 +81,7 @@ public class FragmentDTab extends TabHelper {
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
 
 
-        recyclerAdapter = new RecyclerAdapter_D(getActivity(),10, R.layout.item_d,products);
+        recyclerAdapter = new RecyclerAdapter_D(getActivity(),products.size(), R.layout.item_d,products);
 
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;

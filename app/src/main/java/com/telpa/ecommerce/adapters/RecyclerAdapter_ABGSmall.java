@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,12 +31,14 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
     private int id;
     private ArrayList<Product> products;
     Activity activity;
+    String type;
 
-    public RecyclerAdapter_ABGSmall(Activity activity,int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_ABGSmall(Activity activity, int amountOfData, int id, ArrayList<Product> products, String type) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products = products;
         this.activity=activity;
+        this.type=type;
 
     }
 
@@ -56,6 +59,11 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         holder.price.setText("$50");
         products.get(0);
         Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
+        if(type.equals("c")){
+            holder.description.setText("Yorum");
+            holder.ratingBar.setRating(5);
+
+        }
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,18 +78,29 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         return amountOfData;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView productName;
         public TextView price;
+        public TextView description;
+        public RatingBar ratingBar;
         public ImageButton image;
+
 
         public ViewHolder(View v) {
             super(v);
+            final RecyclerAdapter_ABGSmall adapter=RecyclerAdapter_ABGSmall.this;
+            String type=adapter.type;
 
             productName = (TextView) v.findViewById(R.id.productName);
             price = (TextView) v.findViewById(R.id.price);
             image = (ImageButton) v.findViewById(R.id.image);
+
+            if(type.equals("c")){
+                description = (TextView) v.findViewById(R.id.description);
+                ratingBar=(RatingBar) v.findViewById(R.id.ratingBar);
+
+            }
         }
     }
 

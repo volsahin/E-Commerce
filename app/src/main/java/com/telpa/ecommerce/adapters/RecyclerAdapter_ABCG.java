@@ -73,6 +73,7 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
             final RecyclerAdapter_ABCG adapter=RecyclerAdapter_ABCG.this;
             Activity context=adapter.activity;
             String type=adapter.type;
+
             subcategory = (TextView) v.findViewById(R.id.subcategories);
 
 
@@ -102,15 +103,17 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
             recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(12));
 
            if(type.equals("a") || type.equals("b")){
-               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_a_and_b_small, products);
+               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_a_and_b_small, products,"a");
            }
 
             else if(type.equals("c")){
-               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_i_and_c, products);
+               recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+               recyclerView2.setLayoutManager(recyclerLayoutManager2);
+               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_i_and_c, products,"c");
            }
 
             else if(type.equals("g")){
-               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_g, products);
+               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_g, products,"g");
            }
 
             recyclerView2.setAdapter(recyclerAdapter2);

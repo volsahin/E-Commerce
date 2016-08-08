@@ -73,9 +73,9 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
             super(v);
 
             productName = (TextView) v.findViewById(R.id.productName);
-            price = (TextView) v.findViewById(R.id.bigPrice);
+            price = (TextView) v.findViewById(R.id.price);
             description=(TextView) v.findViewById(R.id.description);
-            image = (ImageButton) v.findViewById(R.id.image1);
+            image = (ImageButton) v.findViewById(R.id.image);
             ratingBar=(RatingBar) v.findViewById(R.id.ratingBar);
         }
     }

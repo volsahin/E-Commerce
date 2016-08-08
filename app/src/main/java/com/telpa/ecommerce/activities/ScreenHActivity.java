@@ -36,12 +36,6 @@ public class ScreenHActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_h);
 
-
-        for (int i=0;i<categories.size();i++) {
-            category.getCategories(i);
-        }
-
-
         ArrayList<Integer> list=new ArrayList<Integer>();
         ArrayList<String> url=new ArrayList<String>();
         url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");

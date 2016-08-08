@@ -21,6 +21,7 @@ import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -82,6 +83,18 @@ public class FragmentATab extends TabHelper {
         b.setRating(3);
         products.add(b);
 
+        categories = new ArrayList<>();
+        Category a = new Category();
+        a.setName("Category");
+        a.setHighResImageUrl("");
+        a.setLowResImageUrl("");
+        a.setID(1);
+        a.setNumOfProduct(2);
+        a.setParentID(0);
+        categories.add(a);
+        categories.add(a);
+        categories.add(a);
+
 
         View rootView = inflater.inflate(R.layout.fragment_a_tab1,container,false);
 
@@ -94,7 +107,7 @@ public class FragmentATab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(), 5 , R.layout.item_abcg, categories,"a");
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(), categories.size() , R.layout.item_abcg, categories,"a");
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;

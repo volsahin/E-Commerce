@@ -44,11 +44,17 @@ public class FragmentGTab extends TabHelper {
         FragmentGTab tabOne = new FragmentGTab();
         tabOne.setTitle(title);
 
+
+        return tabOne;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         //TODO
-        ArrayList<String> url=new ArrayList<String>();
-        url.add("http://www.telefonkilavuzu.com/wp-content/uploads/2016/01/telefon-numaras%C4%B1.jpg");
-        categories=new ArrayList<Category>();
-        Category a = new Category();
+        categories = new ArrayList<>();
+        Category a=new Category();
         a.setName("Category");
         a.setHighResImageUrl("");
         a.setLowResImageUrl("");
@@ -58,12 +64,20 @@ public class FragmentGTab extends TabHelper {
         categories.add(a);
         categories.add(a);
         categories.add(a);
-        return tabOne;
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //TODO
+        ArrayList<String> url=new ArrayList<String>();
+        url.add("http://www.telefonkilavuzu.com/wp-content/uploads/2016/01/telefon-numaras%C4%B1.jpg");
+        categories=new ArrayList<Category>();
+        Category b = new Category();
+        b.setName("Category");
+        b.setHighResImageUrl("");
+        b.setLowResImageUrl("");
+        b.setID(1);
+        b.setNumOfProduct(2);
+        b.setParentID(0);
+        categories.add(b);
+        categories.add(b);
+        categories.add(b);
 
         View rootView = inflater.inflate(R.layout.fragment_g_tab1, container, false);
 
@@ -72,11 +86,11 @@ public class FragmentGTab extends TabHelper {
 
         recyclerView.setHasFixedSize(true);
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(),categories.size(), R.layout.item_g,categories,"g");
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(),categories.size(), R.layout.item_abcg,categories,"g");
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;

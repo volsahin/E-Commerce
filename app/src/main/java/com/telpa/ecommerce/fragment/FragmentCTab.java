@@ -51,8 +51,15 @@ public class FragmentCTab extends TabHelper {
         FragmentCTab screenCTabOne = new FragmentCTab();
         screenCTabOne.setTitle(title);
 
+
+        return screenCTabOne;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         //TODO
-        List<TabHelper> tabHelperList = new ArrayList<>();
         categories = new ArrayList<>();
         Category a=new Category();
         a.setName("Category");
@@ -82,12 +89,6 @@ public class FragmentCTab extends TabHelper {
         b.setRating(3);
         products.add(b);
 
-        return screenCTabOne;
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_c_tab1,container,false);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerViewC);
@@ -99,7 +100,7 @@ public class FragmentCTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(), 5 , R.layout.item_abcg, categories,"c");
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(), categories.size() , R.layout.item_abcg, categories,"c");
         recyclerView.setAdapter(recyclerAdapter);
 
 
