@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenAActivity;
-import com.telpa.ecommerce.fragment.FragmentFTab;
-import com.telpa.ecommerce.fragment.FragmentGTab;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 
@@ -23,28 +20,26 @@ import java.util.ArrayList;
  * Created by volkan on 14.07.2016.
  */
 
-public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_ABCG.ViewHolder> {
+public class RecyclerAdapter_G extends RecyclerView.Adapter<RecyclerAdapter_G.ViewHolder> {
 
     private int amountOfData;
     private int id;
     private ArrayList<Category> categories;
-    Activity activity;
-    String type;
+    Activity context;
 
 
-    public RecyclerAdapter_ABCG(Activity activity, int amountOfData, int id, ArrayList<Category> categories, String type) {
+    public RecyclerAdapter_G(Activity context, int amountOfData, int id, ArrayList<Category> categories) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.categories=categories;
-        this.activity=activity;
-        this.type=type;
+        this.context=context;
     }
 
     @Override
-    public RecyclerAdapter_ABCG.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerAdapter_G.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(id, parent, false);
 
-        RecyclerAdapter_ABCG.ViewHolder viewHolder = new RecyclerAdapter_ABCG.ViewHolder(v);
+        RecyclerAdapter_G.ViewHolder viewHolder = new RecyclerAdapter_G.ViewHolder(v);
         new SpaceItemDecoration(300);
         return viewHolder;
     }
@@ -67,12 +62,12 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
         public RecyclerView.Adapter recyclerAdapter2;
         public RecyclerView.LayoutManager recyclerLayoutManager2;
         public ArrayList<Product> products;
+        public RecyclerAdapter_G adapter_a;
 
         public ViewHolder(View v) {
             super(v);
-            final RecyclerAdapter_ABCG adapter=RecyclerAdapter_ABCG.this;
-            Activity context=adapter.activity;
-            String type=adapter.type;
+            final RecyclerAdapter_G adapter_a=RecyclerAdapter_G.this;
+            Activity context=adapter_a.context;
             subcategory = (TextView) v.findViewById(R.id.subcategories);
 
 
@@ -100,19 +95,7 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
             recyclerView2.setLayoutManager(recyclerLayoutManager2);
 
             recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(12));
-
-           if(type.equals("a") || type.equals("b")){
-               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_a_and_b_small, products);
-           }
-
-            else if(type.equals("c")){
-               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_i_and_c, products);
-           }
-
-            else if(type.equals("g")){
-               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_g, products);
-           }
-
+            recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,6, R.layout.item_g, products);
             recyclerView2.setAdapter(recyclerAdapter2);
 
         }
