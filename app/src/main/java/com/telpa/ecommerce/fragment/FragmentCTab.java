@@ -99,14 +99,14 @@ public class FragmentCTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-        recyclerAdapter = new RecyclerAdapter_C(getActivity(), 5 , R.layout.item_c, categories);
+        recyclerAdapter = new RecyclerAdapter_C(getActivity(), 5 , R.layout.item_abcg, categories);
         recyclerView.setAdapter(recyclerAdapter);
 
 //**********************************************************
 //TODO
-        View rootView2 = inflater.inflate(R.layout.item_c,container,false);
+        View rootView2 = inflater.inflate(R.layout.item_abcg,container,false);
 
-        recyclerView2 = (RecyclerView) rootView2.findViewById(R.id.recyclerViewCitem);
+        recyclerView2 = (RecyclerView) rootView2.findViewById(R.id.recyclerViewABCGitem);
 
         recyclerView2.setHasFixedSize(true);
 

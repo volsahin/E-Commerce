@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.adapters;
 
+import android.app.Activity;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.models.Category;
 
@@ -24,11 +26,14 @@ public class RecyclerAdapter_H extends RecyclerView.Adapter<RecyclerAdapter_H.Vi
     private int amountOfData;
     private int id;
     private ArrayList<Category> categories;
+    Activity context;
 
-    public RecyclerAdapter_H(int amountOfData, int id,ArrayList<Category> categories) {
+    public RecyclerAdapter_H(Activity context,int amountOfData, int id,ArrayList<Category> categories) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.categories=categories;
+        this.context=context;
+
     }
 
     @Override
@@ -44,8 +49,15 @@ public class RecyclerAdapter_H extends RecyclerView.Adapter<RecyclerAdapter_H.Vi
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         holder.productName.setText("Name " + position);
-        holder.image.setImageResource(R.drawable.ic_circle_white);
         holder.category.setText("Category"+position);
+        categories.get(0);
+        Picasso.with(context).load(categories.get(0).getHighResImageUrl()).into(holder.image);
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(000000);
+            }
+        });
     }
 
     @Override

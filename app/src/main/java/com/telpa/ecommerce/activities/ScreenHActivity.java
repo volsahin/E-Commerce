@@ -29,18 +29,27 @@ public class ScreenHActivity extends BaseActivity {
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private ArrayList<Category> categories;
+    private ArrayList<Integer> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_h);
 
+
+        for (int i=0;i<categories.size();i++) {
+            category.getCategories(i);
+        }
+
+
         ArrayList<Integer> list=new ArrayList<Integer>();
+        ArrayList<String> url=new ArrayList<String>();
+        url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
         list.add(2);
         categories=new ArrayList<Category>();
         Category a=new Category();
         a.setName("Category");
-        a.setHighResImageUrl("");
+        a.setHighResImageUrl("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
         a.setLowResImageUrl("");
         a.setID(1);
         a.setNumOfProduct(2);
@@ -62,7 +71,7 @@ public class ScreenHActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter_H(10, R.layout.item_h,categories);
+        recyclerAdapter = new RecyclerAdapter_H(this,10, R.layout.item_h,categories);
         recyclerView.setAdapter(recyclerAdapter);
 
     }

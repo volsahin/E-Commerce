@@ -87,7 +87,7 @@ public class RecyclerAdapter_C extends RecyclerView.Adapter<RecyclerAdapter_C.Vi
             b.setRating(3);
             products.add(b);
 
-            recyclerView2 = (RecyclerView) v.findViewById(R.id.recyclerViewCitem);
+            recyclerView2 = (RecyclerView) v.findViewById(R.id.recyclerViewABCGitem);
 
             recyclerView2.setHasFixedSize(true);
 

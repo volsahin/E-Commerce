@@ -42,7 +42,7 @@ public class FragmentDTab extends TabHelper {
         FragmentDTab tabOne = new FragmentDTab();
         tabOne.setTitle(title);
         ArrayList<String> url=new ArrayList<String>();
-        url.add("url1");
+        url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
         url.add("urls2");
         products=new ArrayList<Product>();
         Product a=new Product();
@@ -81,7 +81,7 @@ public class FragmentDTab extends TabHelper {
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
 
 
-        recyclerAdapter = new RecyclerAdapter_D(10, R.layout.item_d,products);
+        recyclerAdapter = new RecyclerAdapter_D(getActivity(),10, R.layout.item_d,products);
 
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;

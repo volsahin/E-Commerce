@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.adapters;
 
+import android.app.Activity;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.models.Product;
 
@@ -22,11 +24,13 @@ public class RecyclerAdapter_D extends RecyclerView.Adapter<RecyclerAdapter_D.Vi
 
     private int amountOfData;
     private int id;
+    Activity context;
     private ArrayList<Product> products;
-    public RecyclerAdapter_D(int amountOfData, int id,ArrayList<Product> products) {
+    public RecyclerAdapter_D(Activity context,int amountOfData, int id,ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products=products;
+        this.context=context;
 
     }
 
@@ -46,7 +50,14 @@ public class RecyclerAdapter_D extends RecyclerView.Adapter<RecyclerAdapter_D.Vi
 //      holder.productName.setText(products.get(position).getName());
         holder.productName.setText("Name " + position);
         holder.price.setText("$50");
-        holder.image.setImageResource(R.drawable.ic_circle_white);
+        products.get(0);
+        Picasso.with(context).load(products.get(0).getHighResImageUrls().get(0)).into(holder.image);
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(000000);
+            }
+        });
 
     }
 

@@ -9,15 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
-import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 
@@ -40,7 +39,13 @@ public class FragmentATab extends TabHelper {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
+
+
+    private RecyclerView recyclerView2;
+    private RecyclerView.Adapter recyclerAdapter2;
+    private RecyclerView.LayoutManager recyclerLayoutManager2;
     private ArrayList<Product> products;
+    private ArrayList<Category> categories;
 
     private ImageButton imgBtn;
 
@@ -78,27 +83,20 @@ public class FragmentATab extends TabHelper {
         products.add(b);
 
 
-        View rootView = inflater.inflate(R.layout.fragment_a_tab1, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_a_tab1,container,false);
 
-
-        imgBtn = (ImageButton) rootView.findViewById(R.id.bigBasketButton);
-        imgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Basket Buttton", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerViewA);
 
         recyclerView.setHasFixedSize(true);
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+
+        recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),products.size(), R.layout.item_a_and_b_small, products);
+        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(), 5 , R.layout.item_abcg, categories);
         recyclerView.setAdapter(recyclerAdapter);
+
         return rootView;
 
     }

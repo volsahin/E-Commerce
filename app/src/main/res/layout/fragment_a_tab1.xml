@@ -30,46 +30,16 @@
             android:layout_below="@+id/featured"
             android:layout_margin="8dp" />
 
-        <TextView
-            android:id="@+id/subcategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/categoryA"
-            android:layout_alignStart="@+id/categoryA"
-            android:layout_below="@+id/categoryA"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:text="Subcategory"
-            android:textColor="@color/darkGrey"
-            android:textSize="15sp"
-            android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/viewall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/categoryA"
-            android:layout_alignRight="@+id/categoryA"
-            android:layout_alignTop="@+id/subcategory"
-            android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="VIEW ALL"
-            android:textColor="@color/darkGrey"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/categoryA"
+                android:layout_alignLeft="@+id/featured"
+                android:layout_alignStart="@+id/featured" />
 
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/subcategory"
-            android:scrollbars="vertical"
-            android:layout_margin="8dp"/>
     </RelativeLayout>
 
 </ScrollView>

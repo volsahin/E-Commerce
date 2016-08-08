@@ -10,10 +10,12 @@ import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 
@@ -35,7 +37,7 @@ public class FragmentGTab extends TabHelper {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
-    private ArrayList<Product> products;
+    private ArrayList<Category> categories;
 
 
     public FragmentGTab createTab(String title) {
@@ -45,18 +47,17 @@ public class FragmentGTab extends TabHelper {
         //TODO
         ArrayList<String> url=new ArrayList<String>();
         url.add("http://www.telefonkilavuzu.com/wp-content/uploads/2016/01/telefon-numaras%C4%B1.jpg");
-        products=new ArrayList<Product>();
-        Product a=new Product();
-        a.setName("");
+        categories=new ArrayList<Category>();
+        Category a = new Category();
+        a.setName("Category");
+        a.setHighResImageUrl("");
+        a.setLowResImageUrl("");
         a.setID(1);
-        a.setCategoryID(1);
-        a.setDescripton("");
-        a.setHighResImageUrls(url);
-        a.setLowResImageUrls(url);
-        a.setPrice(30);
-        a.setRating(2);
-        a.setRating(3);
-        products.add(a);
+        a.setNumOfProduct(2);
+        a.setParentID(0);
+        categories.add(a);
+        categories.add(a);
+        categories.add(a);
         return tabOne;
     }
 
@@ -75,7 +76,7 @@ public class FragmentGTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),products.size(), R.layout.item_g,products);
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(),categories.size(), R.layout.item_g,categories);
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;
