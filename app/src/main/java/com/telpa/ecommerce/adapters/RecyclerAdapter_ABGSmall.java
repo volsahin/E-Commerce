@@ -55,7 +55,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         holder.productName.setText("Name " + position);
         holder.price.setText("$50");
         products.get(0);
-        Picasso.with(context).load(products.get(0).getHighResImageUrls().get(0)).into(holder.image);
+        Picasso.with(context).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

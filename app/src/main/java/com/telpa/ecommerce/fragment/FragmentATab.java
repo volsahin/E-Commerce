@@ -8,6 +8,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.ScreenAActivity;
@@ -40,6 +42,8 @@ public class FragmentATab extends TabHelper {
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private ArrayList<Product> products;
 
+    private ImageButton imgBtn;
+
     public FragmentATab createTab(String title) {
         FragmentATab tabOne = new FragmentATab();
         tabOne.setTitle(title);
@@ -69,6 +73,16 @@ public class FragmentATab extends TabHelper {
 
         View rootView = inflater.inflate(R.layout.fragment_a_tab1, container, false);
 
+
+
+        imgBtn = (ImageButton) rootView.findViewById(R.id.bigBasketButton);
+        imgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Basket Buttton", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
         recyclerView.setHasFixedSize(true);
@@ -77,7 +91,7 @@ public class FragmentATab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),6, R.layout.item_a_and_b_small,products );
+        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),products.size(), R.layout.item_a_and_b_small,products );
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
 

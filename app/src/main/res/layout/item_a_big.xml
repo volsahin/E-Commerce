@@ -27,7 +27,7 @@
             android:src="@drawable/ic_product_photo"
             android:isIndicator="false"
 
-            />
+            android:clickable="true" />
 
         <TextView
             android:id="@+id/bigPrice"
@@ -119,7 +119,8 @@
                 android:scaleY="0.7"
                 android:src="@drawable/ic_shopping_basket_darkgrey_24dp"
                 android:layout_alignParentTop="true"
-                android:isIndicator="false"/>
+                android:isIndicator="false"
+                android:clickable="true" />
         </RelativeLayout>
 
         <TextView

@@ -1,7 +1,9 @@
 package com.telpa.ecommerce.activities;
 
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -27,8 +29,6 @@ public class ScreenAActivity extends BaseActivity {
     IProduct product;
     @Inject
     ICategory category;
-
-    private ImageButton imgBtn;
 
 
     @Override
@@ -58,7 +58,8 @@ public class ScreenAActivity extends BaseActivity {
         for (Category i : categories) {
 
             FragmentATab tab = new FragmentATab();
-            tabHelperList.add(tab.createTab(i.getName()));
+            tab=tab.createTab(i.getName());
+            tabHelperList.add(tab);
         }
 /*
         tabHelperList.add(FragmentATab.createTab("Category A"));
@@ -66,16 +67,6 @@ public class ScreenAActivity extends BaseActivity {
         tabHelperList.add(FragmentATab.createTab("Category C"));
 */
         fcreateTabMenu(tabHelperList);
-
-        View view = getLayoutInflater().inflate(R.layout.item_a_big, null);
-
-        imgBtn = (ImageButton) view.findViewById(R.id.bigBasketButton);
-        imgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(ScreenAActivity.this, "IMGBTN!é", Toast.LENGTH_SHORT).show();
-            }
-        });
 
     }
 
