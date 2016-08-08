@@ -13,6 +13,7 @@ import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.fragment.FragmentATab;
@@ -29,6 +30,8 @@ public class ScreenAActivity extends BaseActivity {
     IProduct product;
     @Inject
     ICategory category;
+
+    private ArrayList<Product> products;
 
 
     @Override
@@ -54,6 +57,23 @@ public class ScreenAActivity extends BaseActivity {
         categories.add(a);
         categories.add(a);
         categories.add(a);
+
+//TODO
+        products = new ArrayList<Product>();
+        ArrayList<String> url = new ArrayList<String>();
+        url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
+
+        Product b = new Product();
+        b.setName("");
+        b.setID(1);
+        b.setCategoryID(1);
+        b.setDescripton("");
+        b.setHighResImageUrls(url);
+        b.setLowResImageUrls(url);
+        b.setPrice(30);
+        b.setRating(2);
+        b.setRating(3);
+        products.add(b);
 
         for (Category i : categories) {
 

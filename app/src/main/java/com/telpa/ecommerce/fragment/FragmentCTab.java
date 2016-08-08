@@ -43,6 +43,7 @@ public class FragmentCTab extends TabHelper {
     private RecyclerView recyclerView2;
     private RecyclerView.Adapter recyclerAdapter2;
     private RecyclerView.LayoutManager recyclerLayoutManager2;
+
     private ArrayList<Category> categories;
     private ArrayList<Product> products;
 
@@ -98,7 +99,7 @@ public class FragmentCTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-        recyclerAdapter = new RecyclerAdapter_C(5, R.layout.item_c, categories);
+        recyclerAdapter = new RecyclerAdapter_C(getActivity(), 5 , R.layout.item_c, categories);
         recyclerView.setAdapter(recyclerAdapter);
 
 //**********************************************************

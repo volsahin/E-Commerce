@@ -1,11 +1,14 @@
 package com.telpa.ecommerce.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
 /**
  * Created by Mert on 29.07.2016.
  */
-public class Product {
+public class Product{
     private int ID;
     private int price;
     private double rating;

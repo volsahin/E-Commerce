@@ -47,32 +47,38 @@ public class FragmentATab extends TabHelper {
     public FragmentATab createTab(String title) {
         FragmentATab tabOne = new FragmentATab();
         tabOne.setTitle(title);
-
         return tabOne;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        products=new ArrayList<Product>();
-        ArrayList<String> url=new ArrayList<String>();
+
+
+        //TODO
+        products = new ArrayList<Product>();
+        ArrayList<String> url = new ArrayList<String>();
         url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
-        products=new ArrayList<Product>();
-        Product a=new Product();
-        a.setName("");
-        a.setID(1);
-        a.setCategoryID(1);
-        a.setDescripton("");
-        a.setHighResImageUrls(url);
-        a.setLowResImageUrls(url);
-        a.setPrice(30);
-        a.setRating(2);
-        a.setRating(3);
-        products.add(a);
+
+        Product b = new Product();
+        b.setName("");
+        b.setID(1);
+        b.setCategoryID(1);
+        b.setDescripton("");
+        b.setHighResImageUrls(url);
+        b.setLowResImageUrls(url);
+        b.setPrice(30);
+        b.setRating(2);
+        b.setRating(3);
+        products.add(b);
+
 
         View rootView = inflater.inflate(R.layout.fragment_a_tab1, container, false);
-
 
 
         imgBtn = (ImageButton) rootView.findViewById(R.id.bigBasketButton);
@@ -91,7 +97,7 @@ public class FragmentATab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),products.size(), R.layout.item_a_and_b_small,products );
+        recyclerAdapter = new RecyclerAdapter_ABGSmall(getActivity(),products.size(), R.layout.item_a_and_b_small, products);
         recyclerView.setAdapter(recyclerAdapter);
         return rootView;
 
