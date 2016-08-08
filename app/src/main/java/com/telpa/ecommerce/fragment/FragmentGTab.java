@@ -12,6 +12,7 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_G;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
@@ -72,11 +73,11 @@ public class FragmentGTab extends TabHelper {
 
         recyclerView.setHasFixedSize(true);
 
-        recyclerLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+        recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(),categories.size(), R.layout.item_g,categories);
+        recyclerAdapter = new RecyclerAdapter_G(getActivity(),categories.size(), R.layout.item_abcg,categories);
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;
