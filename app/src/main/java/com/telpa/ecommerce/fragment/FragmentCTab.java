@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.adapters.RecyclerAdapter_C;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_CSmall;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
@@ -99,23 +99,9 @@ public class FragmentCTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-        recyclerAdapter = new RecyclerAdapter_C(getActivity(), 5 , R.layout.item_abcg, categories);
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(), 5 , R.layout.item_abcg, categories,"c");
         recyclerView.setAdapter(recyclerAdapter);
 
-//**********************************************************
-//TODO
-        View rootView2 = inflater.inflate(R.layout.item_abcg,container,false);
-
-        recyclerView2 = (RecyclerView) rootView2.findViewById(R.id.recyclerViewABCGitem);
-
-        recyclerView2.setHasFixedSize(true);
-
-        recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView2.setLayoutManager(recyclerLayoutManager2);
-
-        recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(12));
-        recyclerAdapter2 = new RecyclerAdapter_CSmall(2, R.layout.item_i_and_c, products);
-        recyclerView2.setAdapter(recyclerAdapter2);
 
         return rootView;
 

@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.adapters;
 
+import android.app.Activity;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,11 +24,13 @@ public class RecyclerAdapter_KLComment extends RecyclerView.Adapter<RecyclerAdap
     private int amountOfData;
     private int id;
     private ArrayList<Comment> comments;
+    private Activity activity;
 
-    public RecyclerAdapter_KLComment(int amountOfData, int id, ArrayList<Comment> comments) {
+    public RecyclerAdapter_KLComment( Activity activity,int amountOfData, int id, ArrayList<Comment> comments) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.comments=comments;
+        this.activity=activity;
     }
 
     @Override

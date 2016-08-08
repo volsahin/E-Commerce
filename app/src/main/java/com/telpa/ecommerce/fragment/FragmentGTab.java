@@ -76,7 +76,7 @@ public class FragmentGTab extends TabHelper {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(),categories.size(), R.layout.item_g,categories);
+        recyclerAdapter = new RecyclerAdapter_ABCG(getActivity(),categories.size(), R.layout.item_g,categories,"g");
         recyclerView.setAdapter(recyclerAdapter);
 
         return rootView;

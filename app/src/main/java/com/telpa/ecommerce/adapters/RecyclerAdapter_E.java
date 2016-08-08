@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.adapters;
 
+import android.app.Activity;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,11 +24,13 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     private int amountOfData;
     private int id;
     private ArrayList<Category> categories;
+    private Activity activity;
 
-    public RecyclerAdapter_E(int amountOfData, int id, ArrayList<Category> categories) {
+    public RecyclerAdapter_E(Activity activity,int amountOfData, int id, ArrayList<Category> categories) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.categories=categories;
+        this.activity=activity;
     }
 
     @Override

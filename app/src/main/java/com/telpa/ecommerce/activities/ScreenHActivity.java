@@ -71,7 +71,7 @@ public class ScreenHActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter_H(this,10, R.layout.item_h,categories);
+        recyclerAdapter = new RecyclerAdapter_H(this,categories.size(), R.layout.item_h,categories);
         recyclerView.setAdapter(recyclerAdapter);
 
     }

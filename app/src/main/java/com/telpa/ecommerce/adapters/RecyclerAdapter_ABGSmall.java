@@ -29,13 +29,13 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
     private int amountOfData;
     private int id;
     private ArrayList<Product> products;
-    Activity context;
+    Activity activity;
 
-    public RecyclerAdapter_ABGSmall(Activity context,int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_ABGSmall(Activity activity,int amountOfData, int id, ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products = products;
-        this.context=context;
+        this.activity=activity;
 
     }
 
@@ -55,7 +55,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         holder.productName.setText("Name " + position);
         holder.price.setText("$50");
         products.get(0);
-        Picasso.with(context).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
+        Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

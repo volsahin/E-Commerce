@@ -169,10 +169,10 @@ public class ScreenLActivity extends BaseActivity {
         //TODO
         comments=new ArrayList<>();
         Comment comment=new Comment();
-        comment.setComment("");
+        comment.setComment("Yorum");
         comment.setRating(2);
         comment.setTime(new Date());
-        comment.setUserName("");
+        comment.setUserName("User 1");
         comments.add(comment);
 
         fcreateTitle("Product");
@@ -184,7 +184,7 @@ public class ScreenLActivity extends BaseActivity {
         recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_KLComment(3, R.layout.item_l_comment, comments);
+        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenLActivity.this,comments.size(), R.layout.item_l_comment, comments);
         recyclerView.setAdapter(recyclerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -249,7 +249,8 @@ public class ScreenLActivity extends BaseActivity {
                 recyclerViewPopUp.setLayoutManager(recyclerLayoutManagerPopUp);
 
                 recyclerViewPopUp.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-                recyclerAdapter = new RecyclerAdapter_MBasket(4, R.layout.item_l_popup,products);
+                //TODO
+                //recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.class,products.size(), R.layout.item_l_popup,products);
                 recyclerViewPopUp.setAdapter(recyclerAdapter);
 
                 AlertDialog.Builder dialog = new AlertDialog.Builder(ScreenLActivity.this);

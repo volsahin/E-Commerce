@@ -25,14 +25,16 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
     private int amountOfData;
     private int id;
     private ArrayList<Category> categories;
-    Activity context;
+    Activity activity;
+    String type;
 
 
-    public RecyclerAdapter_ABCG(Activity context, int amountOfData, int id, ArrayList<Category> categories) {
+    public RecyclerAdapter_ABCG(Activity activity, int amountOfData, int id, ArrayList<Category> categories, String type) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.categories=categories;
-        this.context=context;
+        this.activity=activity;
+        this.type=type;
     }
 
     @Override
@@ -62,12 +64,12 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
         public RecyclerView.Adapter recyclerAdapter2;
         public RecyclerView.LayoutManager recyclerLayoutManager2;
         public ArrayList<Product> products;
-        public RecyclerAdapter_ABCG adapter_a;
 
         public ViewHolder(View v) {
             super(v);
-            final RecyclerAdapter_ABCG adapter_a=RecyclerAdapter_ABCG.this;
-            Activity context=adapter_a.context;
+            final RecyclerAdapter_ABCG adapter=RecyclerAdapter_ABCG.this;
+            Activity context=adapter.activity;
+            String type=adapter.type;
             subcategory = (TextView) v.findViewById(R.id.subcategories);
 
 
@@ -95,7 +97,19 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
             recyclerView2.setLayoutManager(recyclerLayoutManager2);
 
             recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(12));
-            recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,6, R.layout.item_a_and_b_small, products);
+
+           if(type.equals("a") || type.equals("b")){
+               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_a_and_b_small, products);
+           }
+
+            else if(type.equals("c")){
+               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_i_and_c, products);
+           }
+
+            else if(type.equals("g")){
+               recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,products.size(), R.layout.item_g, products);
+           }
+
             recyclerView2.setAdapter(recyclerAdapter2);
 
         }

@@ -73,7 +73,7 @@ public class ScreenMActivity_Basket extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-        recyclerAdapter = new RecyclerAdapter_MBasket(4, R.layout.item_m_basket, products);
+        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, products.size(), R.layout.item_m_basket, products);
         recyclerView.setAdapter(recyclerAdapter);
 
         Button checkOut=(Button) findViewById(R.id.checkoutButton);

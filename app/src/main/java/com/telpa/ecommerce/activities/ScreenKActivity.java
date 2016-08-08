@@ -121,10 +121,10 @@ public class ScreenKActivity extends BaseActivity {
         //TODO
         comments = new ArrayList<>();
         Comment comment = new Comment();
-        comment.setComment("");
+        comment.setComment("Yorum");
         comment.setRating(2);
         comment.setTime(new Date());
-        comment.setUserName("");
+        comment.setUserName("User1");
         comments.add(comment);
 
         fcreateTitle("");
@@ -147,7 +147,7 @@ public class ScreenKActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_KLComment(3, R.layout.item_l_comment, comments);
+        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenKActivity.this,comments.size(), R.layout.item_l_comment, comments);
         recyclerView.setAdapter(recyclerAdapter);
 
 

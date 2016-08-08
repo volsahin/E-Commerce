@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.adapters;
 
+import android.app.Activity;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,11 +26,13 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
     private int amountOfData;
     private int id;
     private ArrayList<Product> products;
+    private Activity activity;
 
-    public RecyclerAdapter_BBig(int amountOfData, int id,ArrayList<Product> products) {
+    public RecyclerAdapter_BBig(Activity activity, int amountOfData, int id, ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products=products;
+        this.activity=activity;
     }
 
 

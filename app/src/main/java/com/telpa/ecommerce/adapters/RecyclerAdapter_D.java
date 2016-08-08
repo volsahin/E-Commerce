@@ -24,13 +24,14 @@ public class RecyclerAdapter_D extends RecyclerView.Adapter<RecyclerAdapter_D.Vi
 
     private int amountOfData;
     private int id;
-    Activity context;
     private ArrayList<Product> products;
-    public RecyclerAdapter_D(Activity context,int amountOfData, int id,ArrayList<Product> products) {
+    private Activity activity;
+
+    public RecyclerAdapter_D(Activity activity,int amountOfData, int id,ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products=products;
-        this.context=context;
+        this.activity=activity;
 
     }
 
@@ -51,7 +52,7 @@ public class RecyclerAdapter_D extends RecyclerView.Adapter<RecyclerAdapter_D.Vi
         holder.productName.setText("Name " + position);
         holder.price.setText("$50");
         products.get(0);
-        Picasso.with(context).load(products.get(0).getHighResImageUrls().get(0)).into(holder.image);
+        Picasso.with(activity).load(products.get(0).getHighResImageUrls().get(0)).into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
