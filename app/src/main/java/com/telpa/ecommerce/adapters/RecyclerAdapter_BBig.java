@@ -64,7 +64,7 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageButton bigImageButton;
+        public ImageButton bigImage;
         public TextView bigProductName;
         public TextView description;
         public TextView bigPrice;
@@ -73,7 +73,7 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
         public ViewHolder(View v) {
             super(v);
-            bigImageButton = (ImageButton) v.findViewById(R.id.bigImageButton);
+            bigImage = (ImageButton) v.findViewById(R.id.bigImage);
             bigProductName = (TextView) v.findViewById(R.id.bigProductName);
             description = (TextView) v.findViewById(R.id.description);
             bigPrice = (TextView) v.findViewById(R.id.bigPrice);

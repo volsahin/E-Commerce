@@ -15,24 +15,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <ImageButton
             android:id="@+id/bigImage"
             android:layout_width="match_parent"
             android:layout_height="200dp">
 
-            <ImageButton
-                android:layout_width="match_parent"
-                android:id="@+id/bigImageButton"
-                android:layout_height="200dp"
-                android:layout_margin="8dp"
-                android:background="@color/grey" />
 
-            <include
-                layout="@layout/product_photo"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true" />
-        </RelativeLayout>
+
+        </ImageButton>
 
         <TextView
             android:id="@+id/bigProductName"

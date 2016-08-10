@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.models.Category;
 
@@ -48,6 +50,14 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
         holder.category.setText("Category"+position);
         holder.productNumber.setText("Name " + position);
         holder.image.setImageResource(R.drawable.ic_circle_white);
+        categories.get(0);
+        Picasso.with(activity).load(categories.get(0).getHighResImageUrl()).into(holder.image);
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity, "MERT BULUT", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

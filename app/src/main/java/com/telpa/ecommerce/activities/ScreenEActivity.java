@@ -42,7 +42,7 @@ public class ScreenEActivity extends BaseActivity {
         categories = new ArrayList<Category>();
         Category a = new Category();
         a.setName("Category");
-        a.setHighResImageUrl("");
+        a.setHighResImageUrl("http://formatatma.net/wp-content/uploads/2015/07/General-Mobile-Discovery-Air-format-atma.jpg");
         a.setLowResImageUrl("");
         a.setID(1);
         a.setNumOfProduct(2);
@@ -50,6 +50,9 @@ public class ScreenEActivity extends BaseActivity {
         categories.add(a);
         categories.add(a);
         categories.add(a);
+        categories.add(a);
+        categories.add(a);
+
 
         fcreateTitle("My Store" + " E");
         fcreateToolbar(this, false, true, true, R.id.toolbar);
@@ -68,7 +71,7 @@ public class ScreenEActivity extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter_E.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter_E(ScreenEActivity.this,categories.size(), R.layout.item_e, categories);
+        recyclerAdapter = new RecyclerAdapter_E(ScreenEActivity.this, categories.size(), R.layout.item_e, categories);
         recyclerView.setAdapter(recyclerAdapter);
 
     }
