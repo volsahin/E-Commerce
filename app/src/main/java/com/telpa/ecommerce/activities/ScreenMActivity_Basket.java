@@ -3,26 +3,26 @@ package com.telpa.ecommerce.activities;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
+import com.telpa.ecommerce.impl.BasketImpl;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.BasketItem;
-import com.telpa.ecommerce.models.Product;
-import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ScreenMActivity_Basket extends BaseActivity {
@@ -32,6 +32,17 @@ public class ScreenMActivity_Basket extends BaseActivity {
     IProduct product;
     @Inject
     ICategory category;
+
+    @BindView(R.id.searchButton)
+    ImageButton searchButton;
+    @BindView(R.id.basketButton)
+    ImageButton basketButton;
+    @BindView(R.id.totalPrice)
+    TextView totalPrice;
+    @BindView(R.id.checkoutButton)
+    Button checkoutButton;
+    @BindView(R.id.totalItems)
+    TextView totalItems;
 
 
     private RecyclerView recyclerView;
@@ -64,9 +75,9 @@ public class ScreenMActivity_Basket extends BaseActivity {
         a.setRating(3);
         products.add(a);
 */
-
-        basketItems=new ArrayList<>();
-        basketItems=basket.getBasket(1);
+        basket = new BasketImpl();
+        basketItems = new ArrayList<>();
+        basketItems = basket.getBasket(1);
 
 
         fcreateTitle("Your Basket");
@@ -83,15 +94,30 @@ public class ScreenMActivity_Basket extends BaseActivity {
         recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, basketItems.size(), R.layout.item_m_basket, basketItems);
         recyclerView.setAdapter(recyclerAdapter);
 
-        Button checkOut=(Button) findViewById(R.id.checkoutButton);
-        checkOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast.makeText(ScreenMActivity_Basket.this, "Buy them!", Toast.LENGTH_SHORT).show();
-            }
-        });
+      //  totalItems.setText(""+totalItems(basketItems));
+        //totalPrice.setText(""+totalPrice(basketItems));
 
 
     }
+/*
+    public int totalItems( ArrayList<BasketItem> basketItems){
+        int total=0;
+
+        for(BasketItem i:basketItems){
+            total=total+i.getNumber();
+        }
+
+        return total;
+    }
+
+    public int totalPrice( ArrayList<BasketItem> basketItems){
+        int total=0;
+
+        for(BasketItem i:basketItems){
+            total=total+(i.getNumber()*i.getProduct().getPrice());
+        }
+
+        return total;
+    }
+    */
 }
