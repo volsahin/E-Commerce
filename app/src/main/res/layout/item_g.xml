@@ -5,13 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_weight="0.65"
-    android:layout_margin="1dp"
+    android:layout_margin="0.5dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <ImageButton
 
             android:layout_weight="0.5"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="120dp"
             app:srcCompat="@drawable/photo2"
             android:id="@+id/image"

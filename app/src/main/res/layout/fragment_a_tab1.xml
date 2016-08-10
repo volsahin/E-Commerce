@@ -37,8 +37,8 @@
                 android:layout_height="match_parent"
                 android:scrollbars="vertical"
                 android:layout_below="@+id/categoryA"
-                android:layout_alignLeft="@+id/featured"
-                android:layout_alignStart="@+id/featured" />
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 
