@@ -14,6 +14,7 @@ import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
@@ -32,11 +33,12 @@ public class ScreenMActivity_Basket extends BaseActivity {
     @Inject
     ICategory category;
 
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
-    private ArrayList<Product> products;
+    private ArrayList<BasketItem> basketItems;
 
 
     @Override
@@ -44,7 +46,7 @@ public class ScreenMActivity_Basket extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_m_basket);
         ButterKnife.bind(ScreenMActivity_Basket.this);
-
+/*
         //// TODO
         ArrayList<String> url=new ArrayList<String>();
         url.add("url1");
@@ -61,6 +63,11 @@ public class ScreenMActivity_Basket extends BaseActivity {
         a.setRating(2);
         a.setRating(3);
         products.add(a);
+*/
+
+        basketItems=new ArrayList<>();
+        basketItems=basket.getBasket(1);
+
 
         fcreateTitle("Your Basket");
         fcreateToolbar(this, false, true, false, R.id.include);
@@ -73,7 +80,7 @@ public class ScreenMActivity_Basket extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, products.size(), R.layout.item_m_basket, products);
+        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, basketItems.size(), R.layout.item_m_basket, basketItems);
         recyclerView.setAdapter(recyclerAdapter);
 
         Button checkOut=(Button) findViewById(R.id.checkoutButton);

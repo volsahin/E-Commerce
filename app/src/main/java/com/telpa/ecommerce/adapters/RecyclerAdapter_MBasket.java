@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
@@ -23,13 +25,13 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
 
     private int amountOfData;
     private int id;
-    private ArrayList<Product> products;
+    private ArrayList<BasketItem> basketItems;
     private Activity activity;
 
-    public RecyclerAdapter_MBasket(Activity activity,int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_MBasket(Activity activity,int amountOfData, int id, ArrayList<BasketItem> basketItems) {
         this.amountOfData = amountOfData;
         this.id = id;
-        this.products = products;
+        this.basketItems = basketItems;
         this.activity=activity;
     }
 
@@ -46,10 +48,10 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
 
         //TODO
 
-        holder.productName.setText("Name " + position);
-        holder.price.setText("$50");
-        holder.number.setText("" + position);
-        holder.image.setImageResource(R.drawable.ic_circle_white);
+        holder.productName.setText(basketItems.get(position).getProduct().getName());
+        holder.price.setText(basketItems.get(position).getProduct().getPrice());
+        holder.number.setText(basketItems.get(position).getNumber());
+        Picasso.with(activity).load(basketItems.get(position).getProduct().getHighResImageUrls().get(0)).into(holder.image);
         // holder.productName.setText(products.get(position).getName());
         // holder.textView.setText("DATA - DATA "+position);
     }
