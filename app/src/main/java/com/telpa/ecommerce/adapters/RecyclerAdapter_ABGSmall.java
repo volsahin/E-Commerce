@@ -67,7 +67,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.setBackgroundColor(000000);
+                Toast.makeText(activity, "Mert Bulut", Toast.LENGTH_SHORT).show();
             }
         });
 

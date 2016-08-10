@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
@@ -15,6 +16,8 @@ import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
+
+import butterknife.OnClick;
 
 
 /**
@@ -75,6 +78,7 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
             price = (TextView) v.findViewById(R.id.basketPrice);
             number = (TextView) v.findViewById(R.id.basketNumber);
             image = (ImageButton) v.findViewById(R.id.basketImageButton);
+
 
         }
     }

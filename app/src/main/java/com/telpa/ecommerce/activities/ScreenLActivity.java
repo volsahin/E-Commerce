@@ -206,11 +206,11 @@ public class ScreenLActivity extends BaseActivity {
 
         //TODO
 
+        bigImage=(ImageButton) findViewById(R.id.bigImage);
         price = (TextView) findViewById(R.id.bigPrice);
         description = (TextView) findViewById(R.id.description);
         reviewsCount=(TextView) findViewById(R.id.reviews);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-        bigImage=(ImageButton) findViewById(R.id.bigImage);
         variants1=(TextView) findViewById(R.id.variants1);
         variants2=(TextView) findViewById(R.id.variants2);
         //image1=(ImageButton) findViewById(R.id.image1);
@@ -236,6 +236,8 @@ public class ScreenLActivity extends BaseActivity {
     @OnClick({R.id.searchButton, R.id.basketButton, R.id.fab, R.id.bigImage, R.id.image1, R.id.image2, R.id.image3, R.id.image4, R.id.image5, R.id.ratingBar, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4})
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.bigImage:
+                Toast.makeText(ScreenLActivity.this, "mertblt", Toast.LENGTH_SHORT).show();
             case R.id.searchButton:
                 break;
             case R.id.basketButton:
