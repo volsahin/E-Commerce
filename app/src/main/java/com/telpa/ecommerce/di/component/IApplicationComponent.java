@@ -7,6 +7,7 @@ import com.telpa.ecommerce.activities.form.FormPresenter;
 import com.telpa.ecommerce.di.module.ApplicationModule;
 import com.telpa.ecommerce.di.module.NetModule;
 import com.telpa.ecommerce.impl.BasketImpl;
+import com.telpa.ecommerce.impl.FormImpl;
 
 import javax.inject.Singleton;
 
