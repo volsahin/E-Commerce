@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.telpa.ecommerce">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ECommerceApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".ECommerceApp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -30,7 +31,8 @@
         <activity android:name=".activities.ScreenDActivity" />
         <activity android:name=".activities.ScreenKActivity" />
         <activity android:name=".activities.ScreenGActivity" />
-        <activity android:name=".activities.ScreenLActivity"></activity>
+        <activity android:name=".activities.ScreenLActivity" />
+        <activity android:name=".activities.form.FormActivity"></activity>
     </application>
 
 </manifest>

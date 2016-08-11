@@ -36,6 +36,7 @@ import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
 import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenLActivity;
+import com.telpa.ecommerce.activities.form.FormActivity;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
 import java.io.InputStream;
@@ -216,7 +217,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenIActivity.class);
                                 break;
                             case 11:
-                                intentToActivity(activity,ScreenJActivity_Form.class);
+                                intentToActivity(activity,FormActivity.class);
                                 break;
                             case 12:
                                 intentToActivity(activity,ScreenKActivity.class);
