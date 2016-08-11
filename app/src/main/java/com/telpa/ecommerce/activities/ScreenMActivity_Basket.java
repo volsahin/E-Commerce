@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
@@ -75,8 +76,7 @@ public class ScreenMActivity_Basket extends BaseActivity {
         a.setRating(3);
         products.add(a);
 */
-        basket = new BasketImpl();
-        basketItems = new ArrayList<>();
+        ((ECommerceApp)getApplication()).getComponent().inject(this);
         basketItems = basket.getBasket(1);
 
 
@@ -94,31 +94,31 @@ public class ScreenMActivity_Basket extends BaseActivity {
         recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, basketItems.size(), R.layout.item_m_basket, basketItems);
         recyclerView.setAdapter(recyclerAdapter);
 
-      //  totalItems.setText(""+totalItems(basketItems));
-        //totalPrice.setText(""+totalPrice(basketItems));
+        totalItems.setText("" + totalItems(basketItems));
+        totalPrice.setText("" + totalPrice(basketItems));
 
 
     }
-/*
-    public int totalItems( ArrayList<BasketItem> basketItems){
-        int total=0;
 
-        for(BasketItem i:basketItems){
-            total=total+i.getNumber();
+    public int totalItems(ArrayList<BasketItem> basketItems) {
+        int total = 0;
+
+        for (BasketItem i : basketItems) {
+            total = total + i.getNumber();
         }
 
         return total;
     }
 
-    public int totalPrice( ArrayList<BasketItem> basketItems){
-        int total=0;
+    public int totalPrice(ArrayList<BasketItem> basketItems) {
+        int total = 0;
 
-        for(BasketItem i:basketItems){
-            total=total+(i.getNumber()*i.getProduct().getPrice());
+        for (BasketItem i : basketItems) {
+            total = total + (i.getNumber() * i.getProduct().getPrice());
         }
 
         return total;
     }
-    */
+
 
 }

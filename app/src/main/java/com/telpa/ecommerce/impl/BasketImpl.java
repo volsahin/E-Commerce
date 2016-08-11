@@ -52,12 +52,12 @@ public class BasketImpl implements IBasket {
         basketItems.add(item);
 
         BasketItem item2=new BasketItem();
-        item.setNumber(3);
-        item.setVariant1(1);
-        item.setVariant2(3);
+        item2.setNumber(3);
+        item2.setVariant1(1);
+        item2.setVariant2(3);
 
         ArrayList<String> url2 = new ArrayList<String>();
-        url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
+        url2.add("http://www.telefonkilavuzu.com/wp-content/uploads/2016/01/telefon-numaras%C4%B1.jpg");
         Product a = new Product();
         a.setName("BasketÜrünü2");
         a.setID(1);
@@ -68,12 +68,30 @@ public class BasketImpl implements IBasket {
         a.setPrice(50);
         a.setRating(2);
 
-        item.setProduct(a);
+        item2.setProduct(a);
         basketItems.add(item2);
 
 
-        basketItems.add(item);
-        basketItems.add(item);
+        BasketItem item3=new BasketItem();
+        item2.setNumber(2);
+        item2.setVariant1(1);
+        item2.setVariant2(3);
+
+        ArrayList<String> url3 = new ArrayList<String>();
+        url3.add("http://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c04093313.png");
+        Product c = new Product();
+        c.setName("BasketÜrünü3");
+        c.setID(1);
+        c.setCategoryID(1);
+        c.setDescripton("");
+        c.setHighResImageUrls(url3);
+        c.setLowResImageUrls(url3);
+        c.setPrice(100);
+        c.setRating(2);
+
+        item3.setProduct(c);
+        basketItems.add(item3);
+
 
 
         return basketItems;
