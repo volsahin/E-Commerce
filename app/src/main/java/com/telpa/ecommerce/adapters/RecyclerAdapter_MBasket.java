@@ -8,16 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.impl.BasketImpl;
+import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
-import butterknife.OnClick;
+import javax.inject.Inject;
 
 
 /**
@@ -25,17 +26,20 @@ import butterknife.OnClick;
  */
 
 public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapter_MBasket.ViewHolder> {
+    @Inject
+    IBasket basket;
 
     private int amountOfData;
     private int id;
     private ArrayList<BasketItem> basketItems;
     private Activity activity;
 
-    public RecyclerAdapter_MBasket(Activity activity,int amountOfData, int id, ArrayList<BasketItem> basketItems) {
+
+    public RecyclerAdapter_MBasket(Activity activity, int amountOfData, int id, ArrayList<BasketItem> basketItems) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.basketItems = basketItems;
-        this.activity=activity;
+        this.activity = activity;
     }
 
     @Override
@@ -52,8 +56,8 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
         //TODO
 
         holder.productName.setText(basketItems.get(position).getProduct().getName());
-        holder.price.setText(basketItems.get(position).getProduct().getPrice());
-        holder.number.setText(basketItems.get(position).getNumber());
+        holder.price.setText(""+basketItems.get(position).getProduct().getPrice());
+        holder.number.setText(""+basketItems.get(position).getNumber());
         Picasso.with(activity).load(basketItems.get(position).getProduct().getHighResImageUrls().get(0)).into(holder.image);
         // holder.productName.setText(products.get(position).getName());
         // holder.textView.setText("DATA - DATA "+position);
@@ -64,7 +68,7 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
         return amountOfData;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView productName;
         public TextView price;
@@ -73,12 +77,21 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
 
         public ViewHolder(View v) {
             super(v);
+            final RecyclerAdapter_MBasket adapter_mBasket = RecyclerAdapter_MBasket.this;
+            ArrayList<BasketItem> basketItems=adapter_mBasket.basketItems;
+
+            //*********************************************
+            basket = new BasketImpl();
+
+
+            basketItems = new ArrayList<>();
+            basketItems = basket.getBasket(1);
+            adapter_mBasket.basketItems=basketItems;
 
             productName = (TextView) v.findViewById(R.id.basketProductName);
             price = (TextView) v.findViewById(R.id.basketPrice);
             number = (TextView) v.findViewById(R.id.basketNumber);
             image = (ImageButton) v.findViewById(R.id.basketImageButton);
-
 
         }
     }

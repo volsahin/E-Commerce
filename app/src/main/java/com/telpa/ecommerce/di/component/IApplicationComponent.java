@@ -1,8 +1,10 @@
 package com.telpa.ecommerce.di.component;
 
 import com.telpa.ecommerce.activities.ScreenLActivity;
+import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
 import com.telpa.ecommerce.di.module.ApplicationModule;
 import com.telpa.ecommerce.di.module.NetModule;
+import com.telpa.ecommerce.impl.BasketImpl;
 
 import javax.inject.Singleton;
 
@@ -13,7 +15,7 @@ import dagger.Component;
  */
 
 @Singleton
-@Component(modules = {ApplicationModule.class, NetModule.class})
+@Component(modules = {ApplicationModule.class, NetModule.class, BasketImpl.class})
 
 public interface IApplicationComponent {
 
@@ -30,7 +32,7 @@ public interface IApplicationComponent {
     void inject (ScreenKActivity activityK);*/
     void inject(ScreenLActivity activityL);
 
-//    void inject(ScreenMActivity_Basket activityM);
+    void inject(ScreenMActivity_Basket activityM);
 
 
 }
