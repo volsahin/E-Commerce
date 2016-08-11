@@ -6,6 +6,6 @@ import com.telpa.ecommerce.models.Form;
  * Created by Mert on 11.08.2016.
  */
 public interface IFormPresenter {
-    boolean submitForm(String a,String b);
+    void submitForm(String a,String b);
 
 }

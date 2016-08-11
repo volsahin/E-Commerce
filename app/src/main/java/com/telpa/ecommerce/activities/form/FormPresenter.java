@@ -15,12 +15,13 @@ public class FormPresenter implements IFormPresenter {
     }
 
     @Override
-    public boolean submitForm(String a,String b) {
+    public void submitForm(String a,String b) {
         if(a.contains("a")&& b.contains("a"))
-        {
+            view.onSuccess();
+        else
+            view.onFail();
 
-            return true;
-        }
-        return false;
+
+
     }
 }

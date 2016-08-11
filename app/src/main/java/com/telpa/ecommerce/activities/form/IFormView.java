@@ -5,6 +5,7 @@ package com.telpa.ecommerce.activities.form;
  */
 public interface IFormView {
 
-    void onSuccess(boolean a);
+    void onSuccess();
+    void onFail();
 
 }

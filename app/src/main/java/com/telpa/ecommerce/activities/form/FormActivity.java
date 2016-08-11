@@ -60,7 +60,7 @@ public class FormActivity extends AppCompatActivity implements IFormView {
         ButterKnife.bind(this);
 
         formPresenter = new FormPresenter(this);
-        onSuccess(formPresenter.submitForm(placeholderText.getText().toString(),someText.getText().toString()));
+
 
     }
 
@@ -72,6 +72,7 @@ public class FormActivity extends AppCompatActivity implements IFormView {
             case R.id.basketButton:
                 break;
             case R.id.button:
+                formPresenter.submitForm(placeholderText.getText().toString(),someText.getText().toString());
                 break;
             case R.id.button2:
                 break;
@@ -79,14 +80,12 @@ public class FormActivity extends AppCompatActivity implements IFormView {
     }
 
     @Override
-    public void onSuccess(boolean a) {
-        if(a)
-        {
-            Toast.makeText(FormActivity.this, "TELPA", Toast.LENGTH_SHORT).show();
-        }
-        else {
-            Toast.makeText(FormActivity.this, "Fail", Toast.LENGTH_SHORT).show();
+    public void onSuccess() {
+        Toast.makeText(FormActivity.this, "Success", Toast.LENGTH_SHORT).show();
+    }
 
-        }
+    @Override
+    public void onFail() {
+        Toast.makeText(FormActivity.this, "Fail", Toast.LENGTH_SHORT).show();
     }
 }
