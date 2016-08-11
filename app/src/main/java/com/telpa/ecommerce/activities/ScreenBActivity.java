@@ -25,6 +25,7 @@ public class ScreenBActivity extends BaseActivity {
     @Inject
     ICategory category;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
