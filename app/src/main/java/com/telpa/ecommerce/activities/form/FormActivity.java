@@ -1,17 +1,21 @@
 package com.telpa.ecommerce.activities.form;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.models.Form;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -51,7 +55,16 @@ public class FormActivity extends AppCompatActivity implements IFormView {
     Button button;
     @BindView(R.id.button2)
     Button button2;
+    @BindView(R.id.spinner)
+    Spinner spinner;
+    @BindView(R.id.spinner2)
+    Spinner spinner2;
+    @BindView(R.id.spinner3)
+    Spinner spinner3;
     private FormPresenter formPresenter;
+    private Form form;
+
+    private String[] arraySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +72,26 @@ public class FormActivity extends AppCompatActivity implements IFormView {
         setContentView(R.layout.activity_form);
         ButterKnife.bind(this);
 
-        formPresenter = new FormPresenter(this);
+
+        //TODO
+        arraySpinner = new String[]{"option", "option2", "option3"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, arraySpinner);
+        spinner.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
+        spinner3.setAdapter(adapter);
+
+
+        formPresenter = new FormPresenter(this, getApplication());
+        form = new Form();
+        form.setCustomerID(1);
+        form.setInfo1(placeholderText.getText().toString());
+        form.setInfo2(someText.getText().toString());
+        form.setOption1(arraySpinner[spinner.getSelectedItemPosition()]);
+        form.setOption2(arraySpinner[spinner2.getSelectedItemPosition()]);
+        form.setOption3(arraySpinner[spinner3.getSelectedItemPosition()]);
+        form.setOption4(checkBox.isChecked());
+        form.setOption5(checkBox2.isChecked());
+        form.setOption6(radioButton.isChecked());
 
 
     }
@@ -72,7 +104,7 @@ public class FormActivity extends AppCompatActivity implements IFormView {
             case R.id.basketButton:
                 break;
             case R.id.button:
-                formPresenter.submitForm(placeholderText.getText().toString(),someText.getText().toString());
+                formPresenter.submitForm(form);
                 break;
             case R.id.button2:
                 break;
