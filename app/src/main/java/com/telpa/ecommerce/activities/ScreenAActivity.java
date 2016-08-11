@@ -58,7 +58,7 @@ public class ScreenAActivity extends BaseActivity {
         categories.add(a);
         categories.add(a);
 
-//TODO
+        //TODO
         products = new ArrayList<Product>();
         ArrayList<String> url = new ArrayList<String>();
         url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
@@ -78,7 +78,7 @@ public class ScreenAActivity extends BaseActivity {
         for (Category i : categories) {
 
             FragmentATab tab = new FragmentATab();
-            tab=tab.createTab(i.getName());
+            tab = tab.createTab(i.getName());
             tabHelperList.add(tab);
         }
 
