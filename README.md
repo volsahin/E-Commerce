@@ -6,6 +6,9 @@ Layouts for E-Commerce application
 
 #Contributors
 [Volkan Şahin](https://github.com/metalcoder)
+
 [Musa Çıbık](https://github.com/musacibik)
+
 [Mert Bulut](https://github.com/mrtblt)
+
 [Gizem Ilgar](https://github.com/gzmilgar)
