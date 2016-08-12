@@ -61,6 +61,9 @@ public interface APIService {
     @POST("forms")
     Call<Boolean> submitForm(@Body Form form);
 
+    @GET("forms/spinnerValues")
+    Call<ArrayList<String[]>> getSpinnerValues();
+
 
     @GET("checkout")
     Call<Boolean> checkout(@Query("CustomerID") int customerID,
@@ -80,6 +83,7 @@ public interface APIService {
     Call<Example> makeAdd(@Field("name") String option1,
                           @Field("surname") String option2,
                           @Field("mail") String option3);
+
 
 
 }

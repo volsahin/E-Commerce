@@ -1,7 +1,5 @@
 package com.telpa.ecommerce.activities.form;
 
-import android.app.Application;
-
 import com.telpa.ecommerce.models.Form;
 
 /**

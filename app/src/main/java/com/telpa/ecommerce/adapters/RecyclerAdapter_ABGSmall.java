@@ -37,8 +37,8 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         this.amountOfData = amountOfData;
         this.id = id;
         this.products = products;
-        this.activity=activity;
-        this.type=type;
+        this.activity = activity;
+        this.type = type;
 
     }
 
@@ -59,7 +59,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
         holder.price.setText("$50");
         products.get(0);
         Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
-        if(type.equals("c")){
+        if (type.equals("c")) {
             holder.description.setText("Yorum");
             holder.ratingBar.setRating(5);
 
@@ -70,6 +70,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
                 Toast.makeText(activity, "Mert Bulut", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 
@@ -89,16 +90,16 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
 
         public ViewHolder(View v) {
             super(v);
-            final RecyclerAdapter_ABGSmall adapter=RecyclerAdapter_ABGSmall.this;
-            String type=adapter.type;
+            final RecyclerAdapter_ABGSmall adapter = RecyclerAdapter_ABGSmall.this;
+            String type = adapter.type;
 
             productName = (TextView) v.findViewById(R.id.productName);
             price = (TextView) v.findViewById(R.id.price);
             image = (ImageButton) v.findViewById(R.id.image);
 
-            if(type.equals("c")){
+            if (type.equals("c")) {
                 description = (TextView) v.findViewById(R.id.description);
-                ratingBar=(RatingBar) v.findViewById(R.id.ratingBar);
+                ratingBar = (RatingBar) v.findViewById(R.id.ratingBar);
 
             }
         }
