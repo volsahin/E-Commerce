@@ -29,6 +29,9 @@ public interface APIService {
     @GET("categories/get")
     Call<Category> getCategories(int parentCategoryID);
 
+    @GET("categories/getTop")
+    Call<Category> getTopCategory(int parentCategoryID);
+
     @GET("products/get")
     Call<Product> getProducts(int categoryID);
 

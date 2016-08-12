@@ -3,6 +3,7 @@ package com.telpa.ecommerce.activities;
 import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.fragment.FragmentB.FragmentBView;
 import com.telpa.ecommerce.fragment.FragmentBTab;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
@@ -51,8 +52,8 @@ public class ScreenBActivity extends BaseActivity {
 
         for (Category i : categories) {
 
-            FragmentBTab tab = new FragmentBTab();
-            tab.createTab(i.getName());
+            FragmentBView tab = new FragmentBView();
+            tab.createTab(i);
             tabHelperList.add(tab);
         }
   /*      List<TabHelper> tabHelperList = new ArrayList<>();

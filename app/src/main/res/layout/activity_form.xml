@@ -216,7 +216,7 @@
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="@dimen/form_button_height"
             android:layout_weight="0.5"
             android:background="@color/darkGrey"
             android:text="Button"
@@ -226,7 +226,7 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="@dimen/form_button_height"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.5"
             android:background="@color/red"
