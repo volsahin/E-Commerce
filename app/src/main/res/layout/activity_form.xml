@@ -28,24 +28,20 @@
                 style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:padding="@dimen/main_padding"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/labelOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
                     android:text="label" />
 
                 <EditText
                     android:id="@+id/placeholderText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
                     android:hint="placeholder text"
-                    android:paddingLeft="0dp"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -53,17 +49,14 @@
                     android:id="@+id/labelTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:padding="@dimen/top_padding"
                     android:text="label" />
 
                 <EditText
                     android:id="@+id/someText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
                     android:hint="some text"
-                    android:paddingLeft="0dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black" />
 
@@ -71,8 +64,6 @@
                     android:id="@+id/labelThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
                     android:text="label" />
 
                 <Spinner
@@ -85,28 +76,26 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_marginLeft="16dp"
                     android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:padding="@dimen/top_padding"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/firstLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
                         android:layout_weight="1.0"
+                        android:padding="@dimen/top_padding"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/labelFour"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
                             android:text="label" />
 
 
@@ -114,14 +103,12 @@
                             android:id="@+id/spinner2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
                             android:layout_weight="0.5"
                             android:textSize="18sp" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
-                            android:layout_marginLeft="16dp"
                             android:background="@color/white" />
 
                     </LinearLayout>
@@ -132,13 +119,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0"
+                        android:padding="@dimen/top_padding"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/labelFive"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
                             android:text="label" />
 
                         <Spinner
@@ -151,7 +138,6 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
-                            android:layout_marginLeft="8dp"
                             android:background="@color/white" />
 
                     </LinearLayout>
@@ -160,10 +146,9 @@
 
                 <LinearLayout
                     style="@style/AppTheme"
+                    android:padding="@dimen/main_padding"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="24dp">
+                    android:layout_height="wrap_content">
 
                     <CheckBox
                         android:id="@+id/checkBox"
@@ -177,7 +162,6 @@
                         android:id="@+id/checkBox2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="75dp"
                         android:text="option"
                         android:textSize="18sp" />
 
@@ -186,8 +170,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp">
+                    android:padding="@dimen/main_padding">
 
                     <RadioGroup
                         android:layout_width="fill_parent"
@@ -208,7 +191,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginLeft="75dp"
                             android:text="option"
                             android:textSize="18sp" />
 
@@ -228,18 +210,13 @@
         android:layout_alignBottom="@+id/parent"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:layout_marginTop="16dp"
+        android:padding="@dimen/main_padding"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="0.5"
             android:background="@color/darkGrey"
             android:text="Button"
@@ -249,13 +226,8 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="@dimen/button_height"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="8dp"
             android:layout_weight="0.5"
             android:background="@color/red"
             android:text="Button"
