@@ -1,14 +1,12 @@
 package com.telpa.ecommerce.activities;
 
-import android.content.Intent;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -22,13 +20,10 @@ import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Comment;
-import com.telpa.ecommerce.models.Product;
-import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import javax.inject.Inject;
 
@@ -40,7 +35,7 @@ public class ScreenKActivity extends BaseActivity {
     @Inject
     IBasket basket;
     @Inject
-    IProduct productInterface;
+    IProduct product;
     @Inject
     ICategory category;
 
@@ -84,13 +79,11 @@ public class ScreenKActivity extends BaseActivity {
     ViewPager pager;
 
     //TODO
-    private Product product;
-
-    private TextView productName;
-    private TextView price;
-    private TextView description;
-    private RatingBar ratingBar;
-    private TextView reviewsCount;
+    public TextView productName;
+    public TextView price;
+    public TextView description;
+    public RatingBar ratingBar;
+    public TextView reviewsCount;
 
 
     private RecyclerView recyclerView;
@@ -106,9 +99,6 @@ public class ScreenKActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
-        Intent i=getIntent();
-        product=(Product) i.getSerializableExtra("product");
-
 
         ButterKnife.bind(this);
         textViews = new TextView[5];
@@ -130,7 +120,7 @@ public class ScreenKActivity extends BaseActivity {
         Comment comment = new Comment();
         comment.setComment("Yorum");
         comment.setRating(2);
-        comment.setTime(new Date());
+        comment.setTime("17:30");
         comment.setUserName("User1");
         comments.add(comment);
 
@@ -165,11 +155,11 @@ public class ScreenKActivity extends BaseActivity {
         reviewsCount=(TextView) findViewById(R.id.reviews);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
-        productName.setText(product.getName());
-        price.setText("$"+product.getPrice());
-        description.setText(product.getDescripton());
-        reviewsCount.setText(""+product.getReviews()+" reviews");
-        ratingBar.setRating(product.getRating());
+        productName.setText("Name ");
+        price.setText("$50");
+        description.setText("Açıklama");
+        reviewsCount.setText("50 reviews");
+        ratingBar.setRating(5);
 
 
     }
