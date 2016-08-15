@@ -82,11 +82,6 @@ public class FragmentGView extends TabHelper implements IFragmentGView {
     }
 
     @Override
-    public void RatingBar(int ProductID) {
-
-    }
-
-    @Override
     public void onFail() {
         Toast.makeText(getActivity(), "Connection failed!", Toast.LENGTH_SHORT).show();
     }

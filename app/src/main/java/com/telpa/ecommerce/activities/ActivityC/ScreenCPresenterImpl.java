@@ -1,6 +1,5 @@
 package com.telpa.ecommerce.activities.ActivityC;
 
-
 import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;

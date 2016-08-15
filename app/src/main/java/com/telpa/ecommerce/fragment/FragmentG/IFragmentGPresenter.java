@@ -1,7 +1,6 @@
 package com.telpa.ecommerce.fragment.FragmentG;
 
 import android.view.View;
-
 import com.telpa.ecommerce.models.Category;
 
 /**

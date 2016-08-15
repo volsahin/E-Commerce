@@ -1,7 +1,6 @@
 package com.telpa.ecommerce.fragment.FragmentC;
 
 import com.telpa.ecommerce.models.Category;
-
 import java.util.ArrayList;
 
 /**
