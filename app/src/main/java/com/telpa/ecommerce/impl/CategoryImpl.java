@@ -28,7 +28,6 @@ public class CategoryImpl implements ICategory {
         categories.add(a);
         categories.add(a);
         categories.add(a);
-        categories.add(a);
         return categories;
 
     }

@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.utils;
 
+import android.app.Application;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -14,6 +15,15 @@ public class TabHelper extends Fragment {
     private String title;
     private View view;
     private Category category;
+    private Application application;
+
+    public Application getApplication() {
+        return application;
+    }
+
+    public void setApplication(Application application) {
+        this.application = application;
+    }
 
     public Category getCategory() {
         return category;

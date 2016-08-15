@@ -3,15 +3,16 @@ package com.telpa.ecommerce.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Mert on 29.07.2016.
  */
-public class Product{
+public class Product implements Serializable{
     private int ID;
     private int price;
-    private double rating;
+    private float rating;
     private String name;
     private String descripton;
     private ArrayList<String> highResImageUrls;
@@ -35,11 +36,11 @@ public class Product{
         this.price = price;
     }
 
-    public double getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 

@@ -1,10 +1,13 @@
 package com.telpa.ecommerce.fragment.FragmentB;
 
+import android.app.Application;
 import android.view.View;
 import android.widget.Toast;
 
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.impl.CategoryImpl;
 import com.telpa.ecommerce.interfaces.ICategory;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
@@ -25,16 +28,16 @@ public class FragmentBPresenter implements IFragmentBPresenter {
     APIService service;
     @Inject
     ICategory category;
+    @Inject
+    IProduct IProduct;
 
     private IFragmentBView view;
     private int categoryID;
     ArrayList<Product> products;
     ArrayList<Category> subCategories;
 
-    public FragmentBPresenter(FragmentBView fragmentBView) {
-
-        category=new CategoryImpl();
-
+    public FragmentBPresenter(FragmentBView fragmentBView, Application application) {
+        ((ECommerceApp) application).getComponent().inject(this);
         this.view = fragmentBView;
     }
 
@@ -57,12 +60,14 @@ public class FragmentBPresenter implements IFragmentBPresenter {
 
     @Override
     public void getTopProducts(Category category, View view) {
-        products = new ArrayList<>();
+        products = IProduct.getProducts(0);
+        /*
+
         ArrayList<String> url = new ArrayList<String>();
         url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
 
         Product b = new Product();
-        b.setName("");
+        b.setName("TopProduct");
         b.setID(1);
         b.setCategoryID(1);
         b.setDescripton("");
@@ -76,7 +81,7 @@ public class FragmentBPresenter implements IFragmentBPresenter {
         products.add(b);
         products.add(b);
 
-        /*
+
         service.getProducts(category.getID()).enqueue(new Callback<Product>() {
 
             @Override

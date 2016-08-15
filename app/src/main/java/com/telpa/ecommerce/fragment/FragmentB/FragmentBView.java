@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.fragment.FragmentB;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -29,30 +30,34 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     private IFragmentBPresenter fragmentBPresenter;
     private View view;
     private Category category;
+    private Application application;
 
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fragmentBPresenter = new FragmentBPresenter(this);
+        this.application=getApplication();
         this.view = getView();
         this.category = getCategory();
         setTitle("Test");
 
-        fragmentBPresenter.loadView(this.category);
-        fragmentBPresenter.getTopSubCategory(this.view);
-        fragmentBPresenter.getSubCategories(this.view);
+        fragmentBPresenter = new FragmentBPresenter(this,application);
+
+        fragmentBPresenter.loadView(category);
+        fragmentBPresenter.getTopSubCategory(view);
+        fragmentBPresenter.getSubCategories(view);
+
+
     }
 
-/*
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_b_tab1, container, false);
 
         return view;
     }
-*/
+
     @Override
     public void viewAll() {
         view.findViewById(R.id.viewallTop).setOnClickListener(new View.OnClickListener() {
@@ -79,7 +84,13 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
         StaggeredGridLayoutManager recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        RecyclerAdapter_BBig recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products);
+        RecyclerAdapter_BBig recyclerAdapter;
+        if(products.size()>=2) {
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(),2, R.layout.item_b_big, products);
+        }
+        else {
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products);
+        }
         recyclerView.setAdapter(recyclerAdapter);
     }
 
@@ -114,4 +125,6 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     public void onSuccess() {
         Toast.makeText(getActivity(), "Başarılı", Toast.LENGTH_SHORT).show();
     }
+
+
 }

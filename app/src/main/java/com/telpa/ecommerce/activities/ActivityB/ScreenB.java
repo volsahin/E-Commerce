@@ -21,7 +21,7 @@ public class ScreenB extends BaseActivity implements IScreenBView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_b);
-        view = getLayoutInflater().inflate(R.layout.fragment_b_tab1, null);
+
 
         fcreateTitle("My Store" + " B");
         fcreateToolbar(this, false, true, true, R.id.toolbar);
@@ -44,12 +44,14 @@ public class ScreenB extends BaseActivity implements IScreenBView {
     @Override
     public void fillFragments(ArrayList<Category> categories) {
         List<TabHelper> tabHelperList = new ArrayList<>();
-        for (Category i : categories) {
 
+        for (Category i : categories) {
+            view = getLayoutInflater().inflate(R.layout.fragment_b_tab1, null);
             FragmentBView tab = new FragmentBView();
             tab.setView(view);
             tab.setCategory(i);
             tab.setTitle(i.getName());
+            tab.setApplication(getApplication());
             tabHelperList.add(tab);
         }
 

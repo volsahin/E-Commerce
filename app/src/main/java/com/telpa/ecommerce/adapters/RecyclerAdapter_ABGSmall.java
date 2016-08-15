@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.BaseActivity;
 
@@ -52,22 +53,22 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        //TODO
-//      holder.productName.setText(products.get(position).getName());
-        holder.productName.setText("Name " + position);
-        holder.price.setText("$50");
-        products.get(0);
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+
+        holder.productName.setText(products.get(position).getName());
+        holder.price.setText("$"+products.get(position).getPrice());
         Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
         if (type.equals("c")) {
-            holder.description.setText("Yorum");
-            holder.ratingBar.setRating(5);
+            holder.description.setText(products.get(position).getDescripton());
+            holder.ratingBar.setRating(products.get(position).getRating());
 
         }
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(activity, "Mert Bulut", Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(activity, ScreenKActivity.class);
+                i.putExtra("product",products.get(position));
+                activity.startActivity(i);
             }
         });
 

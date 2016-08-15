@@ -14,7 +14,25 @@ public class ProductImpl implements IProduct {
 
     @Override
     public ArrayList<Product> getProducts(int categoryID) {
-        return null;
+
+        ArrayList<String> url = new ArrayList<String>();
+        url.add("http://images.hepsiburada.net/assets/Bilgisayar/200/Bilgisayar_4076599.jpg");
+        ArrayList<Product> products = new ArrayList<>();
+        Product a = new Product();
+        a.setName("Ürün");
+        a.setID(1);
+        a.setCategoryID(1);
+        a.setDescripton("Bu bir üründür.");
+        a.setHighResImageUrls(url);
+        a.setLowResImageUrls(url);
+        a.setPrice(30);
+        a.setRating(2);
+        a.setRating(3);
+        products.add(a);
+        products.add(a);
+        products.add(a);
+        products.add(a);
+        return products;
     }
 
     @Override
