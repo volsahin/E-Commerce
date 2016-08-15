@@ -36,10 +36,7 @@ public class ScreenBPresenterImpl implements IScreenBPresenter {
 
     @Override
     public void getCategories() {
-        ArrayList<Category> categories = new ArrayList<>();
-
-        categories = category.getCategories(0);
-
+        ArrayList<Category> categories = category.getCategories(0);
         view.fillFragments(categories);
     }
 }

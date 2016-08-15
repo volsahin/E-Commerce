@@ -49,6 +49,7 @@ public class ScreenB extends BaseActivity implements IScreenBView {
             FragmentBView tab = new FragmentBView();
             tab.setView(view);
             tab.setCategory(i);
+            tab.setTitle(i.getName());
             tabHelperList.add(tab);
         }
 
