@@ -64,10 +64,11 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
         Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.bigImage);
 
         // holder.bigBasketButton.setImageResource();
+        /*
         if (IProduct.getFavorites(0).contains(products.get(position))) {
             holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
         }
-
+        */
     }
 
     @Override
