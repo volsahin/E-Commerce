@@ -56,7 +56,8 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        final int pos = position;
         //holder.bigImageButton.setImageResource();
         holder.bigProductName.setText(products.get(position).getName());
         holder.bigPrice.setText("$" + products.get(position).getPrice());
@@ -65,9 +66,25 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
         // holder.bigBasketButton.setImageResource();
 
-        if (IProduct.getFavorites(0).contains(products.get(position))) {
+
+        if (IProduct.getFavorites(0).contains(products.get(position).getID())) {
             holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
         }
+
+        holder.likeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (IProduct.getFavorites(0).contains(products.get(pos).getID())) {
+                    holder.likeButton.setImageResource(R.drawable.ic_favorite_darkgrey_24dp);
+                    IProduct.removeFavorites(0,products.get(pos).getID());
+                }
+                else{
+                    holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+                    IProduct.addFavorites(0,products.get(pos).getID());
+                }
+            }
+        });
 
     }
 

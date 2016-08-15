@@ -3,10 +3,9 @@ package com.telpa.ecommerce.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
@@ -23,25 +22,21 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ActivityB.ScreenB;
-import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
-import com.telpa.ecommerce.activities.ScreenDActivity;
-import com.telpa.ecommerce.activities.ScreenFActivity;
-import com.telpa.ecommerce.activities.ScreenGActivity;
-import com.telpa.ecommerce.activities.ScreenJActivity_Form;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.activities.ScreenBActivity;
 import com.telpa.ecommerce.activities.ScreenCActivity;
+import com.telpa.ecommerce.activities.ScreenDActivity;
 import com.telpa.ecommerce.activities.ScreenEActivity;
+import com.telpa.ecommerce.activities.ScreenFActivity;
+import com.telpa.ecommerce.activities.ScreenGActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
+import com.telpa.ecommerce.activities.ScreenJActivity_Form;
 import com.telpa.ecommerce.activities.ScreenKActivity;
-import com.telpa.ecommerce.activities.ScreenLActivity;
-import com.telpa.ecommerce.activities.form.FormActivity;
+import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activities.activityL.ScreenLActivity;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
-import java.io.InputStream;
-import java.net.URL;
 import java.util.List;
 
 public class BaseActivity extends AppCompatActivity {
@@ -194,7 +189,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenAActivity.class);
                                 break;
                             case 2:
-                                intentToActivity(activity,ScreenB.class);
+                                intentToActivity(activity,ScreenBActivity.class);
                                 break;
                             case 3:
                                 intentToActivity(activity,ScreenCActivity.class);
@@ -218,7 +213,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenIActivity.class);
                                 break;
                             case 11:
-                                intentToActivity(activity,FormActivity.class);
+                                intentToActivity(activity,ScreenJActivity_Form.class);
                                 break;
                             case 12:
                                 intentToActivity(activity,ScreenKActivity.class);

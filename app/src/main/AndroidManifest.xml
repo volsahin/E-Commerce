@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ScreenBActivity" />
+        <activity android:name=".activities.ScreenAActivity" />
         <activity android:name=".activities.ScreenHActivity" />
         <activity android:name=".activities.ScreenCActivity" />
         <activity android:name=".activities.ScreenIActivity" />

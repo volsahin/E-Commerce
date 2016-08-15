@@ -16,7 +16,9 @@ public interface IProduct {
 
     Product getFeatured(int categoryID);
 
-    boolean addFavorites(int customerID, Product product);
+    boolean addFavorites(int customerID, int productID);
+
+    boolean removeFavorites(int customerID, int productID);
 
     ArrayList<Integer> getFavorites(int customerID);
 

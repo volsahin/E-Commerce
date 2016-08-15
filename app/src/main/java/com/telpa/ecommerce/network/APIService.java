@@ -52,6 +52,12 @@ public interface APIService {
 
     );
 
+    @GET("favorites/remove")
+    Call<Boolean> removeFavorites(@Query("CustomerID") int customerID,
+                                  @Query("ProductID") int productID
+
+    );
+
     @GET("basket/get")
     Call<BasketItem> getBasket(int customerID);
 
@@ -80,13 +86,12 @@ public interface APIService {
                             @Query("UserRating") Float userRating
     );
 
-//TODO bu fonkisyon test içindir. Silinecek!
+    //TODO bu fonkisyon test içindir. Silinecek!
     @FormUrlEncoded
     @POST("add.php")
     Call<Example> makeAdd(@Field("name") String option1,
                           @Field("surname") String option2,
                           @Field("mail") String option3);
-
 
 
 }
