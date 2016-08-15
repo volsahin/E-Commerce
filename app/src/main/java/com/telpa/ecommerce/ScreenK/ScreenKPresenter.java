@@ -4,10 +4,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.BasketItem;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 /**
  * Created by root on 15.08.2016.
@@ -16,6 +20,8 @@ public class ScreenKPresenter implements IScreenKPresenter{
 
 
     IScreenKView view;
+    @Inject
+    IProduct product;
 
     public ScreenKPresenter(IScreenKView view) {
         this.view = view;
