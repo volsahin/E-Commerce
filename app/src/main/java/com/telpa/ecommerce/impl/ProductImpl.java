@@ -52,7 +52,11 @@ public class ProductImpl implements IProduct {
 
     @Override
     public ArrayList<Integer> getFavorites(int customerID) {
-        return null;
+        ArrayList<Integer> arrayList=new ArrayList<>();
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        return arrayList;
     }
 
     @Override
