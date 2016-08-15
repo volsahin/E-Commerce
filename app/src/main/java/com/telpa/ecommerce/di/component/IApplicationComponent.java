@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.di.component;
 
+import com.telpa.ecommerce.activities.ActivityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.ScreenLActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
 import com.telpa.ecommerce.activities.form.FormActivity;
@@ -34,6 +35,8 @@ public interface IApplicationComponent {
     void inject (ScreenJActivity_Form activityJ);
     void inject (ScreenKActivity activityK);*/
     void inject(FormPresenter formPresenter);
+    void inject(FormImpl form);
+    void inject(ScreenBPresenterImpl screenBPresenter);
     void inject(ScreenLActivity activityL);
 
     void inject(ScreenMActivity_Basket activityM);

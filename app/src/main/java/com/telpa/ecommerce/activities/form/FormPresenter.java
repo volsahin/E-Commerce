@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.impl.FormImpl;
 import com.telpa.ecommerce.interfaces.IForm;
 import com.telpa.ecommerce.models.Form;
 import com.telpa.ecommerce.network.APIService;
@@ -25,8 +26,6 @@ import retrofit2.Response;
 public class FormPresenter implements IFormPresenter {
     @Inject
     IForm form;
-    @Inject
-    APIService service;
 
     private Application application;
     private IFormView view;
@@ -34,27 +33,18 @@ public class FormPresenter implements IFormPresenter {
 
 
     public FormPresenter(IFormView view, Application application) {
+        ((ECommerceApp) application).getComponent().inject(this);
         this.view = view;
         this.application = application;
+        form=new FormImpl(this.application, this.view);
 
     }
 
     @Override
     public void submitForm(Form form) {
-        ((ECommerceApp) application).getComponent().inject(this);
-        service.makeAdd(form.getOption1(), form.getOption2(), form.getOption3())
-                .enqueue(new Callback<Example>() {
-                    @Override
-                    public void onResponse(Call<Example> call, Response<Example> response) {
-                        view.onSuccess();
-                    }
+        this.form.submitForm(form);
 
-                    @Override
-                    public void onFailure(Call<Example> call, Throwable t) {
 
-                        view.onFail();
-                    }
-                });
 
     }
 

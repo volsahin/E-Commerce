@@ -53,7 +53,7 @@ public class ScreenBActivity extends BaseActivity {
         for (Category i : categories) {
 
             FragmentBView tab = new FragmentBView();
-            tab.createTab(i);
+            //tab.createTab(i);
             tabHelperList.add(tab);
         }
   /*      List<TabHelper> tabHelperList = new ArrayList<>();

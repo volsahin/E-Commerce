@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.models.Form;
+import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FormActivity extends AppCompatActivity implements IFormView {
+public class FormActivity extends BaseActivity implements IFormView {
 
     @BindView(R.id.searchButton)
     ImageButton searchButton;
@@ -62,6 +63,7 @@ public class FormActivity extends AppCompatActivity implements IFormView {
     Spinner spinner2;
     @BindView(R.id.spinner3)
     Spinner spinner3;
+
     private FormPresenter formPresenter;
 
     @Override

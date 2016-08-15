@@ -35,7 +35,7 @@
         <activity android:name=".activities.form.FormActivity" />
         <activity android:name=".activities.basket.BasketActivity" />
         <activity android:name=".activities.ScreenA.ScreenAActivity1" />
-        <activity android:name=".activities.ActivityB.ScreeenB"></activity>
+        <activity android:name=".activities.ActivityB.ScreenB"></activity>
     </application>
 
 </manifest>
