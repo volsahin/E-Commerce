@@ -11,6 +11,14 @@ import java.util.ArrayList;
  */
 
 public class ProductImpl implements IProduct {
+    ArrayList<Integer> favorites;
+
+    public ProductImpl() {
+        favorites=new ArrayList<>();
+        favorites.add(1);
+        favorites.add(2);
+        favorites.add(3);
+    }
 
     @Override
     public ArrayList<Product> getProducts(int categoryID) {
@@ -29,8 +37,24 @@ public class ProductImpl implements IProduct {
         a.setRating(2);
         a.setRating(3);
         products.add(a);
+
+        Product b = new Product();
+        b.setName("BaşkaÜrün");
+        b.setID(4);
+        b.setCategoryID(1);
+        b.setDescripton("Bu başka bir üründür.");
+        b.setHighResImageUrls(url);
+        b.setLowResImageUrls(url);
+        b.setPrice(50);
+        b.setRating(2);
+        b.setRating(3);
+        products.add(b);
+
+
+
+
         products.add(a);
-        products.add(a);
+        products.add(b);
         products.add(a);
         return products;
     }
@@ -56,13 +80,21 @@ public class ProductImpl implements IProduct {
     }
 
     @Override
-    public boolean addFavorites(int customerID, Product product) {
-        return false;
+    public boolean addFavorites(int customerID, int productID) {
+        favorites.add(productID);
+        return true;
+    }
+
+    @Override
+    public boolean removeFavorites(int customerID, int productID) {
+        favorites.remove(favorites.indexOf(productID));
+
+        return true;
     }
 
     @Override
     public ArrayList<Integer> getFavorites(int customerID) {
-        return null;
+        return favorites;
     }
 
     @Override
