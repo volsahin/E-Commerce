@@ -65,7 +65,7 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
         // holder.bigBasketButton.setImageResource();
 
-        if (IProduct.getFavorites(0).contains(products.get(position))) {
+        if (IProduct.getFavorites(0).contains(products.get(position).getID())) {
             holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
         }
 

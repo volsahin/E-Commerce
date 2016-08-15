@@ -18,7 +18,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class ScreenAActivity1 extends BaseActivity implements IScreenAView{
+public class ScreenA extends BaseActivity implements IScreenAView{
         @Inject
         IBasket basket;
         @Inject
