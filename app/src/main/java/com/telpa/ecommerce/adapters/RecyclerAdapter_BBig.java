@@ -1,6 +1,7 @@
 package com.telpa.ecommerce.adapters;
 
 import android.app.Activity;
+import android.app.Application;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,12 +10,17 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 
 /**
@@ -22,19 +28,22 @@ import java.util.ArrayList;
  */
 
 public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_BBig.ViewHolder> {
-
+    @Inject
+    IProduct IProduct;
     private int amountOfData;
     private int id;
     private ArrayList<Product> products;
     private Activity activity;
+    private Application application;
 
-    public RecyclerAdapter_BBig(Activity activity, int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_BBig(Activity activity, int amountOfData, int id, ArrayList<Product> products, Application application) {
         this.amountOfData = amountOfData;
         this.id = id;
-        this.products=products;
-        this.activity=activity;
+        this.products = products;
+        this.activity = activity;
+        this.application = application;
+        ((ECommerceApp) application).getComponent().inject(this);
     }
-
 
 
     @Override
@@ -49,13 +58,16 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         //holder.bigImageButton.setImageResource();
-        holder.bigProductName.setText("Name "+position);
-        holder.description.setText("Açıklama");
-        holder.bigPrice.setText("$30");
-       // holder.bigBasketButton.setImageResource();
-        holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+        holder.bigProductName.setText(products.get(position).getName());
+        holder.bigPrice.setText("$" + products.get(position).getPrice());
+        holder.description.setText(products.get(position).getDescripton());
+        Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.bigImage);
 
-        // holder.textView.setText("DATA - DATA "+position);
+        // holder.bigBasketButton.setImageResource();
+        if (IProduct.getFavorites(0).contains(products.get(position))) {
+            holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+        }
+
     }
 
     @Override

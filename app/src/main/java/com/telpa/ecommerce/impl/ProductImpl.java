@@ -41,8 +41,18 @@ public class ProductImpl implements IProduct {
     }
 
     @Override
+    public Product getFeatured(int categoryID) {
+        return null;
+    }
+
+    @Override
     public boolean addFavorites(int customerID, Product product) {
         return false;
+    }
+
+    @Override
+    public ArrayList<Integer> getFavorites(int customerID) {
+        return null;
     }
 
     @Override

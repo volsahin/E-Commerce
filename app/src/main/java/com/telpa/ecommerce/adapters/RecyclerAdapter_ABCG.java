@@ -1,6 +1,7 @@
 package com.telpa.ecommerce.adapters;
 
 import android.app.Activity;
+import android.app.Application;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -9,14 +10,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.ScreenAActivity;
 import com.telpa.ecommerce.fragment.FragmentFTab;
 import com.telpa.ecommerce.fragment.FragmentGTab;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 
 /**
@@ -24,20 +29,25 @@ import java.util.ArrayList;
  */
 
 public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_ABCG.ViewHolder> {
+    @Inject
+    IProduct IProduct;
 
     private int amountOfData;
     private int id;
     private ArrayList<Category> categories;
-    Activity activity;
-    String type;
+    private Activity activity;
+    private String type;
+    private Application application;
 
 
-    public RecyclerAdapter_ABCG(Activity activity, int amountOfData, int id, ArrayList<Category> categories, String type) {
+    public RecyclerAdapter_ABCG(Activity activity, int amountOfData, int id, ArrayList<Category> categories, String type, Application application) {
+        this.application=application;
         this.amountOfData = amountOfData;
         this.id = id;
         this.categories = categories;
         this.activity = activity;
         this.type = type;
+        ((ECommerceApp) application).getComponent().inject(this);
     }
 
     @Override
@@ -51,6 +61,7 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+
         holder.subcategory.setText("Alt kategori " + position);
 
     }
@@ -77,26 +88,9 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
             subcategory = (TextView) v.findViewById(R.id.subcategories);
 
 
-            ArrayList<String> url = new ArrayList<String>();
-            url.add("url1");
-            url.add("urls2");
-            products = new ArrayList<Product>();
-            Product b = new Product();
-            b.setName("");
-            b.setID(1);
-            b.setCategoryID(1);
-            b.setDescripton("");
-            b.setHighResImageUrls(url);
-            b.setLowResImageUrls(url);
-            b.setPrice(30);
-            b.setRating(2);
-            b.setRating(3);
-            products.add(b);
-            products.add(b);
-            products.add(b);
-            products.add(b);
-            products.add(b);
-            products.add(b);
+
+            products = IProduct.getProducts(0);
+
 
             recyclerView2 = (RecyclerView) v.findViewById(R.id.recyclerViewABCGitem);
 
@@ -114,10 +108,10 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
                 recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
                 recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
                 recyclerView2.setLayoutManager(recyclerLayoutManager2);
-                if(products.size()>=2)
+                if (products.size() >= 2)
                     recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, 2, R.layout.item_i_and_c, products, "c");
                 else
-                recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, products.size(), R.layout.item_i_and_c, products, "c");
+                    recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, products.size(), R.layout.item_i_and_c, products, "c");
             } else if (type.equals("g")) {
                 recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
                 recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, products.size(), R.layout.item_g, products, "g");

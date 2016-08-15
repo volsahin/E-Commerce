@@ -5,6 +5,8 @@ import com.telpa.ecommerce.activities.ScreenLActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
 import com.telpa.ecommerce.activities.form.FormActivity;
 import com.telpa.ecommerce.activities.form.FormPresenter;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_BBig;
 import com.telpa.ecommerce.di.module.ApplicationModule;
 import com.telpa.ecommerce.di.module.NetModule;
 import com.telpa.ecommerce.fragment.FragmentB.FragmentBPresenter;
@@ -39,6 +41,8 @@ public interface IApplicationComponent {
     void inject(FormImpl form);
     void inject(ScreenBPresenterImpl screenBPresenter);
     void inject(FragmentBPresenter fragmentBPresenter);
+    void inject(RecyclerAdapter_ABCG recyclerAdapter_abcg);
+    void inject(RecyclerAdapter_BBig recyclerAdapter_bBig);
     void inject(ScreenLActivity activityL);
 
     void inject(ScreenMActivity_Basket activityM);

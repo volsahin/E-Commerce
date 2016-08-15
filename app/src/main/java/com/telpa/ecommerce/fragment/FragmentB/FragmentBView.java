@@ -36,17 +36,15 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.application=getApplication();
+        this.application = getApplication();
         this.view = getView();
         this.category = getCategory();
         setTitle("Test");
 
-        fragmentBPresenter = new FragmentBPresenter(this,application);
-
+        fragmentBPresenter = new FragmentBPresenter(this, application);
         fragmentBPresenter.loadView(category);
         fragmentBPresenter.getTopSubCategory(view);
         fragmentBPresenter.getSubCategories(view);
-
 
     }
 
@@ -54,7 +52,6 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         return view;
     }
 
@@ -78,17 +75,15 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     @Override
     public void setTopCategoryProducts(ArrayList<Product> products) {
 
-
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView1);
         recyclerView.setHasFixedSize(true);
         StaggeredGridLayoutManager recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
         RecyclerAdapter_BBig recyclerAdapter;
-        if(products.size()>=2) {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(),2, R.layout.item_b_big, products);
-        }
-        else {
+        if (products.size() >= 2) {
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products);
+        } else {
             recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products);
         }
         recyclerView.setAdapter(recyclerAdapter);
@@ -96,12 +91,13 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
 
     @Override
     public void setOtherSubCategories(ArrayList<Category> subCategories) {
+
         RecyclerView recyclerView2 = (RecyclerView) view.findViewById(R.id.recyclerView2);
         recyclerView2.setHasFixedSize(true);
         StaggeredGridLayoutManager recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView2.setLayoutManager(recyclerLayoutManager2);
         recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        RecyclerAdapter_ABCG recyclerAdapter2 = new RecyclerAdapter_ABCG(getActivity(), subCategories.size(), R.layout.item_abcg, subCategories, "b");
+        RecyclerAdapter_ABCG recyclerAdapter2 = new RecyclerAdapter_ABCG(getActivity(), subCategories.size(), R.layout.item_abcg, subCategories, "b",getApplication());
         recyclerView2.setAdapter(recyclerAdapter2);
     }
 
@@ -120,7 +116,7 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
         Toast.makeText(getActivity(), "Connection failed!", Toast.LENGTH_SHORT).show();
     }
 
-
+    //TODO bu methodu sil
     @Override
     public void onSuccess() {
         Toast.makeText(getActivity(), "Başarılı", Toast.LENGTH_SHORT).show();

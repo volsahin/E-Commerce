@@ -2,23 +2,15 @@ package com.telpa.ecommerce.fragment.FragmentB;
 
 import android.app.Application;
 import android.view.View;
-import android.widget.Toast;
-
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.impl.CategoryImpl;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
-
 import java.util.ArrayList;
-
 import javax.inject.Inject;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by SAMSUNGNB on 12.08.2016.
@@ -49,54 +41,15 @@ public class FragmentBPresenter implements IFragmentBPresenter {
 
     @Override
     public void getTopSubCategory(View view) {
-        Category topSubCategory=category.getTopSubCategory(categoryID);
+        Category topSubCategory = category.getTopSubCategory(categoryID);
         this.view.setTopCategoryTitle(topSubCategory.getName());
-
         category.getCategories(0);
-
-
-        getTopProducts(topSubCategory,view);
+        getTopProducts(topSubCategory, view);
     }
 
     @Override
     public void getTopProducts(Category category, View view) {
         products = IProduct.getProducts(0);
-        /*
-
-        ArrayList<String> url = new ArrayList<String>();
-        url.add("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
-
-        Product b = new Product();
-        b.setName("TopProduct");
-        b.setID(1);
-        b.setCategoryID(1);
-        b.setDescripton("");
-        b.setHighResImageUrls(url);
-        b.setLowResImageUrls(url);
-        b.setPrice(30);
-        b.setRating(2);
-        b.setRating(3);
-        products.add(b);
-        products.add(b);
-        products.add(b);
-        products.add(b);
-
-
-        service.getProducts(category.getID()).enqueue(new Callback<Product>() {
-
-            @Override
-            public void onResponse(Call<Product> call, Response<Product> response) {
-                products.add(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<Product> call, Throwable t) {
-                view.onFail();
-            }
-
-        });
-
-        */
         this.view.setTopCategoryProducts(products);
         this.view.onSuccess();
     }
@@ -104,23 +57,7 @@ public class FragmentBPresenter implements IFragmentBPresenter {
     @Override
     public void getSubCategories(View view) {
         subCategories = new ArrayList<>();
-        subCategories=category.getCategories(0);
-
-        /*
-        service.getCategories(categoryID).enqueue(new Callback<Category>() {
-            @Override
-            public void onResponse(Call<Category> call, Response<Category> response) {
-                subCategories.add(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<Category> call, Throwable t) {
-
-            }
-        });
-
-        */
-
+        subCategories = category.getCategories(0);
         this.view.setOtherSubCategories(subCategories);
     }
 
