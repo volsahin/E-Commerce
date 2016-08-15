@@ -100,7 +100,12 @@ public class BasketImpl implements IBasket {
     }
 
     @Override
-    public boolean addBasket(int customerID, BasketItem basketItem) {
+    public boolean addBasket(int customerID, ArrayList<BasketItem> basketItems) {
+        return false;
+    }
+
+    @Override
+    public boolean addFavorites(int customerID, ArrayList<BasketItem> basketItems) {
         return false;
     }
 

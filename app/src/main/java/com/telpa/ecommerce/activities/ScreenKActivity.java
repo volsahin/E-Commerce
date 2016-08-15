@@ -1,19 +1,24 @@
 package com.telpa.ecommerce.activities;
 
-import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.ScreenK.IScreenKPresenter;
+import com.telpa.ecommerce.ScreenK.IScreenKView;
+import com.telpa.ecommerce.ScreenK.ScreenKPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
@@ -22,7 +27,6 @@ import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Comment;
-import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -36,14 +40,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ScreenKActivity extends BaseActivity {
+public class ScreenKActivity extends BaseActivity implements IScreenKView {
     @Inject
     IBasket basket;
     @Inject
-    IProduct productInterface;
+    IProduct product;
     @Inject
     ICategory category;
-
+    @Inject
+    APIService service;
+    private IScreenKPresenter screenKPresenter;
     @BindView(R.id.searchButton)
     ImageButton searchButton;
     @BindView(R.id.basketButton)
@@ -52,6 +58,11 @@ public class ScreenKActivity extends BaseActivity {
     TextView title;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+   // @BindView(R.id.group1)
+    //RadioGroup radiogroup1;
+   // @BindView(R.id.group2)
+   // RadioGroup radiogroup2;
+
     @BindView(R.id.Radio1)
     RadioButton Ia;
     @BindView(R.id.a)
@@ -80,17 +91,18 @@ public class ScreenKActivity extends BaseActivity {
     RadioButton check3;
     @BindView(R.id.productRadio4)
     RadioButton check4;
-
+    @BindView(R.id.button2)
+    Button addbasket;
+    @BindView(R.id.button)
+    Button addfavorite;
     ViewPager pager;
 
     //TODO
-    private Product product;
-
-    private TextView productName;
-    private TextView price;
-    private TextView description;
-    private RatingBar ratingBar;
-    private TextView reviewsCount;
+    public TextView productName;
+    public TextView price;
+    public TextView description;
+    public RatingBar ratingBar;
+    public TextView reviewsCount;
 
 
     private RecyclerView recyclerView;
@@ -106,11 +118,10 @@ public class ScreenKActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
-        Intent i=getIntent();
-        product=(Product) i.getSerializableExtra("product");
-
 
         ButterKnife.bind(this);
+        ((ECommerceApp) getApplication()).getComponent().inject(this);
+        screenKPresenter=new ScreenKPresenter(this);
         textViews = new TextView[5];
         textViews[0] = a;
         textViews[1] = b;
@@ -165,17 +176,17 @@ public class ScreenKActivity extends BaseActivity {
         reviewsCount=(TextView) findViewById(R.id.reviews);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
-        productName.setText(product.getName());
-        price.setText("$"+product.getPrice());
-        description.setText(product.getDescripton());
-        reviewsCount.setText(""+product.getReviews()+" reviews");
-        ratingBar.setRating(product.getRating());
-
+        productName.setText("Name ");
+        price.setText("$50");
+        description.setText("Açıklama");
+        reviewsCount.setText("50 reviews");
+        ratingBar.setRating(5);
+        //screenKPresenter.RadioGroup(radiogroup1,radiogroup2);
 
     }
 
 
-    @OnClick({R.id.searchButton, R.id.basketButton, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4})
+    @OnClick({R.id.searchButton, R.id.basketButton, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4,R.id.button2,R.id.button})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.searchButton:
@@ -205,6 +216,23 @@ public class ScreenKActivity extends BaseActivity {
                 break;
             case R.id.productRadio4:
                 break;
+            case R.id.button2:
+                ShowAddBasket();
+                break;
+            case R.id.button:
+                ShowAddFavorite();
+                break;
         }
+    }
+
+    @Override
+    public void ShowAddBasket() {
+       basket.addBasket(10,screenKPresenter.basketitem());
+
+    }
+
+    @Override
+    public void ShowAddFavorite() {
+        basket.addFavorites(5,screenKPresenter.favoritem());
     }
 }
