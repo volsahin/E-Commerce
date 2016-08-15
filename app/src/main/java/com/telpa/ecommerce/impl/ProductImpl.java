@@ -37,7 +37,17 @@ public class ProductImpl implements IProduct {
 
     @Override
     public ArrayList<Comment> getComments(int productID) {
-        return null;
+        ArrayList<Comment> comments=new ArrayList<>();
+        Comment comment=new Comment();
+        comment.setComment("Yorum");
+        comment.setRating(2);
+        comment.setTime("16:30");
+        comment.setUserName("User 1");
+        comments.add(comment);
+        comments.add(comment);
+        comments.add(comment);
+        comments.add(comment);
+        return comments;
     }
 
     @Override

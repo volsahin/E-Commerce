@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
-import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_BBig;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
@@ -19,10 +19,8 @@ import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
-import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -96,7 +94,7 @@ public class FragmentBTab extends TabHelper {
         recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
-        recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products);
+        recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products,getApplication());
         recyclerView.setAdapter(recyclerAdapter);
 
         recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recyclerView2);

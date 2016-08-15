@@ -198,7 +198,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioAndroid"
+                    android:id="@+id/radio_l_1_1"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:textStyle="bold"
@@ -212,7 +212,7 @@
                     android:textColor="@drawable/rbtn_textcolor_selector" />
 
                 <RadioButton
-                    android:id="@+id/radioiPhone"
+                    android:id="@+id/radio_l_1_2"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:textStyle="bold"
@@ -224,7 +224,7 @@
                     android:text="B"
                     android:textColor="@drawable/rbtn_textcolor_selector" />
                 <RadioButton
-                    android:id="@+id/radioiPhone1"
+                    android:id="@+id/radio_l_1_3"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="16dp"
@@ -236,7 +236,7 @@
                     android:text="C"
                     android:textColor="@drawable/rbtn_textcolor_selector" />
                 <RadioButton
-                    android:id="@+id/radioiPhone2"
+                    android:id="@+id/radio_l_1_4"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="@drawable/rbtn_selector"
@@ -249,7 +249,7 @@
                     android:textColor="@drawable/rbtn_textcolor_selector" />
 
                 <RadioButton
-                    android:id="@+id/radioWindows"
+                    android:id="@+id/radio_l_1_5"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="16dp"
@@ -300,7 +300,7 @@ android:layout_marginTop="16dp"
                     android:layout_centerVertical="true">
 
                     <RadioButton
-                        android:id="@+id/radioAndroid2"
+                        android:id="@+id/radio_l_2_1"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:background="@drawable/item_icon_light_1"
@@ -312,7 +312,7 @@ android:layout_marginTop="16dp"
                         android:padding="5dp"/>
 
                     <RadioButton
-                        android:id="@+id/radioiPhone5"
+                        android:id="@+id/radio_l_2_2"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginLeft="8dp"
@@ -322,7 +322,7 @@ android:layout_marginTop="16dp"
                         android:gravity="center"
                         android:padding="5dp"/>
                     <RadioButton
-                        android:id="@+id/radioiPhone4"
+                        android:id="@+id/radio_l_2_3"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginLeft="8dp"
@@ -332,7 +332,7 @@ android:layout_marginTop="16dp"
                         android:gravity="center"
                         android:padding="5dp" />
                     <RadioButton
-                        android:id="@+id/radioiPhone3"
+                        android:id="@+id/radio_l_2_4"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:background="@drawable/item_icon_dark_1"

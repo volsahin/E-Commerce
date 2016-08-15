@@ -82,9 +82,9 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
         RecyclerAdapter_BBig recyclerAdapter;
         if (products.size() >= 2) {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products);
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products,getApplication());
         } else {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products);
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products,getApplication());
         }
         recyclerView.setAdapter(recyclerAdapter);
     }
