@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class ProductImpl implements IProduct {
     ArrayList<Integer> favorites;
 
-    public ProductImpl(ArrayList<Integer> favorites) {
-        this.favorites = new ArrayList<>();
+    public ProductImpl() {
+        favorites=new ArrayList<>();
         favorites.add(1);
         favorites.add(2);
         favorites.add(3);
@@ -71,12 +71,15 @@ public class ProductImpl implements IProduct {
 
     @Override
     public boolean addFavorites(int customerID, int productID) {
-        return false;
+        favorites.add(productID);
+        return true;
     }
 
     @Override
     public boolean removeFavorites(int customerID, int productID) {
-        return false;
+        favorites.remove(favorites.indexOf(productID));
+
+        return true;
     }
 
     @Override
