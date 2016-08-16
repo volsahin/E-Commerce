@@ -48,7 +48,7 @@ public interface APIService {
 
     @GET("favorites/add")
     Call<Boolean> addFavorites(@Query("CustomerID") int customerID,
-                               @Query("BasketItem") ArrayList<BasketItem> basketItems
+                               @Query("ProductID") int productID
 
     );
 

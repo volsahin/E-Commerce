@@ -15,4 +15,5 @@ public interface IScreenKPresenter {
     //void RadioGroup(RadioGroup radioButton, RadioGroup radioButton1);
     ArrayList<BasketItem> basketitem();
     ArrayList<BasketItem>favoritem();
+
 }

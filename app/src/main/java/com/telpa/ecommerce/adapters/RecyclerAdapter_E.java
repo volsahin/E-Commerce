@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.ScreenE.IscreenEPresenter;
 import com.telpa.ecommerce.models.Category;
 
 import java.util.ArrayList;
@@ -21,14 +22,14 @@ import java.util.ArrayList;
  * Created by volkan on 14.07.2016.
  */
 
-public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.ViewHolder> {
+public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.ViewHolder>{
 
     private int amountOfData;
     private int id;
     private ArrayList<Category> categories;
     private Activity activity;
-
-    public RecyclerAdapter_E(Activity activity,int amountOfData, int id, ArrayList<Category> categories) {
+    private IscreenEPresenter screenEPresenter;
+    public RecyclerAdapter_E(Activity activity, int amountOfData, int id, ArrayList<Category> categories) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.categories=categories;
@@ -65,6 +66,7 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     public int getItemCount() {
         return amountOfData;
     }
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 

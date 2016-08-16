@@ -16,6 +16,7 @@ import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.ScreenK.IScreenKPresenter;
 import com.telpa.ecommerce.ScreenK.IScreenKView;
+import com.telpa.ecommerce.ScreenK.ScreenKPresenter;
 import com.telpa.ecommerce.activities.activityL.IScreenLPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
@@ -111,7 +112,7 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
-
+        screenKPresenter=new ScreenKPresenter(this);
         ((ECommerceApp) getApplication()).getComponent().inject(this);
         ButterKnife.bind(this);
         textViews = new TextView[5];
@@ -227,6 +228,6 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
     @Override
     public void ShowAddFavorite() {
 
-        service.addFavorites(15,screenKPresenter.favoritem());
+        //service.addFavorites(15,screenKPresenter.favoritem());
     }
 }
