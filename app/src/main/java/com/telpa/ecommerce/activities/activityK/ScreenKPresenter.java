@@ -1,15 +1,14 @@
-package com.telpa.ecommerce.ScreenK;
+package com.telpa.ecommerce.activities.activityK;
 
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Comment;
-import com.telpa.ecommerce.models.Product;
+import com.telpa.ecommerce.network.APIService;
 
 import java.util.ArrayList;
 
@@ -22,10 +21,17 @@ public class ScreenKPresenter implements IScreenKPresenter{
 
     IScreenKView view;
     @Inject
+    IBasket basket;
+    @Inject
+    APIService service;
+    @Inject
     IProduct product;
+    @Inject
+    ICategory category;
 
-    public ScreenKPresenter(IScreenKView view) {
+    public ScreenKPresenter(IScreenKView view,Application application) {
         this.view = view;
+        ((ECommerceApp) application).getComponent().inject(this);
     }
 
     @Override

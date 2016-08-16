@@ -1,11 +1,7 @@
-package com.telpa.ecommerce.ScreenK;
-
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+package com.telpa.ecommerce.activities.activityK;
 
 import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Comment;
-import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 

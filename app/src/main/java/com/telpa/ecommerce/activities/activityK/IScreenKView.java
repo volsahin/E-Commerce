@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.ScreenK;
+package com.telpa.ecommerce.activities.activityK;
 
 /**
  * Created by root on 15.08.2016.

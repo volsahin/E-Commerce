@@ -6,19 +6,14 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.ScreenE.IscreenEPresenter;
-import com.telpa.ecommerce.ScreenE.IscreenEView;
-import com.telpa.ecommerce.ScreenE.ScreenEPresenter;
-import com.telpa.ecommerce.ScreenK.ScreenKPresenter;
-import com.telpa.ecommerce.adapters.RecyclerAdapter;
+import com.telpa.ecommerce.activities.activityE.IscreenEPresenter;
+import com.telpa.ecommerce.activities.activityE.IscreenEView;
+import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_E;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
-import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
-
-import java.util.ArrayList;
 
 import javax.inject.Inject;
 
@@ -40,8 +35,7 @@ public class ScreenEActivity extends BaseActivity implements IscreenEView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_e);
         ((ECommerceApp) getApplication()).getComponent().inject(this);
-
-        screenEPresenter=new ScreenEPresenter(this);
+        screenEPresenter=new ScreenEPresenter(this,getApplication());
 
         fcreateTitle("My Store" + " E");
         fcreateToolbar(this, false, true, true, R.id.toolbar);

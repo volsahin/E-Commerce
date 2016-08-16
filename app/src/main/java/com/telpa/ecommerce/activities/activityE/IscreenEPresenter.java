@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.ScreenE;
+package com.telpa.ecommerce.activities.activityE;
 
 import com.telpa.ecommerce.models.Category;
 

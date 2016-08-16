@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.ScreenE.IscreenEPresenter;
+import com.telpa.ecommerce.activities.activityE.IscreenEPresenter;
 import com.telpa.ecommerce.models.Category;
 
 import java.util.ArrayList;
