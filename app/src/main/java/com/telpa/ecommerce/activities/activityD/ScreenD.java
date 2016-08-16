@@ -6,7 +6,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityD.fragmentD.FragmentDView;
 import com.telpa.ecommerce.fragment.FragmentDTab;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
