@@ -20,22 +20,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.activityH.ScreenHActivity" />
-        <activity android:name=".activities.ScreenIActivity" />
+        <activity android:name=".activities.ScreenHActivity" />
         <activity android:name=".activities.ScreenJActivity_Form" />
-        <activity android:name=".activities.activityE.ScreenEActivity" />
+        <activity android:name=".activities.ScreenEActivity" />
         <activity android:name=".activities.ScreenFActivity" />
         <activity android:name=".activities.ScreenMActivity_Basket" />
         <activity android:name=".activities.ScreenDActivity" />
-        <activity android:name=".activities.activityK.ScreenKActivity" />
-
-        <activity android:name=".activities.activityA.ScreenA"/>
+        <activity android:name=".activities.ScreenKActivity" />
+        <activity android:name=".activities.activityA.ScreenA" />
         <activity android:name=".activities.activityL.ScreenL" />
         <activity android:name=".activities.activityJ_Form.ScreenJ" />
         <activity android:name=".activities.activityB.ScreenB" />
         <activity android:name=".activities.activityC.ScreenC" />
-
-
+        <activity android:name=".activities.activityI.ScreenI"></activity>
     </application>
 
 </manifest>
