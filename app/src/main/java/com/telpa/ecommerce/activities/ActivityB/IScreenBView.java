@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.ActivityB;
+package com.telpa.ecommerce.activities.activityB;
 
 import com.telpa.ecommerce.models.Category;
 
