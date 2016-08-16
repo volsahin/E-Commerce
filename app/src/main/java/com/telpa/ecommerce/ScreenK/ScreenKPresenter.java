@@ -8,6 +8,8 @@ import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.BasketItem;
+import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,18 @@ public class ScreenKPresenter implements IScreenKPresenter{
         this.view = view;
     }
 
+    @Override
+    public ArrayList<Comment> fillList() {
+        ArrayList<Comment>comments=new ArrayList<>();
+        Comment comment = new Comment();
+        comment.setComment("Yorum");
+        comment.setRating(2);
+        comment.setTime("17:30");
+        comment.setUserName("User1");
+        comments.add(comment);
+
+        return comments;
+    }
     @Override
     public ArrayList<BasketItem> basketitem() {
         ArrayList<BasketItem>basketitem=new ArrayList<>();

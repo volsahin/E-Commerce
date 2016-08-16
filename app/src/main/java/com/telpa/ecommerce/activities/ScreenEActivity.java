@@ -33,7 +33,6 @@ public class ScreenEActivity extends BaseActivity implements IscreenEView {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
-    private ArrayList<Category> categories;
     private IscreenEPresenter screenEPresenter;
 
     @Override
