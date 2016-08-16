@@ -8,6 +8,8 @@ import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.BasketItem;
+import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -18,7 +20,6 @@ import javax.inject.Inject;
  */
 public class ScreenKPresenter implements IScreenKPresenter{
 
-
     IScreenKView view;
     @Inject
     IProduct product;
@@ -27,6 +28,18 @@ public class ScreenKPresenter implements IScreenKPresenter{
         this.view = view;
     }
 
+    @Override
+    public ArrayList<Comment> fillList() {
+        ArrayList<Comment>comments=new ArrayList<>();
+        Comment comment = new Comment();
+        comment.setComment("Yorum");
+        comment.setRating(2);
+        comment.setTime("17:30");
+        comment.setUserName("User1");
+        comments.add(comment);
+
+        return comments;
+    }
     @Override
     public ArrayList<BasketItem> basketitem() {
         ArrayList<BasketItem>basketitem=new ArrayList<>();
@@ -37,58 +50,8 @@ public class ScreenKPresenter implements IScreenKPresenter{
         basketitem.add(b);
         return basketitem;
     }
-
     @Override
-    public ArrayList<BasketItem> favoritem() {
-        ArrayList<BasketItem>favoritem=new ArrayList<>();
-        BasketItem b=new BasketItem();
-        b.setNumber(15);
-        b.setVariant1(3);
-        b.setVariant2(2);
-        favoritem.add(b);
+    public int favoritem() {
+       int favoritem=5;
         return favoritem;
-
-    }
-
-
-
-
- /* @Override
-    public void RadioGroup(RadioGroup radioButton, RadioGroup radioButton1) {
-
-        switch (radioButton.getCheckedRadioButtonId())
-        {
-            case R.id.Radio1:
-                Toast.makeText(radioButton.getContext(), "A", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.Radio2:
-                Toast.makeText(radioButton.getContext(), "B", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.Radio3:
-                Toast.makeText(radioButton.getContext(), "C", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.Radio4:
-                Toast.makeText(radioButton.getContext(), "D", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.Radio5:
-                Toast.makeText(radioButton.getContext(), "E", Toast.LENGTH_SHORT).show();
-                break;
-        }
-
-        switch (radioButton1.getCheckedRadioButtonId())
-        {
-            case R.id.productRadio1:
-                break;
-            case R.id.productRadio2:
-                break;
-            case R.id.productRadio3:
-                break;
-            case R.id.productRadio4:
-                break;
-        }
-
-
-    }
-*/
-
-}
+    }}

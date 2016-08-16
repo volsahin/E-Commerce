@@ -129,14 +129,6 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
         radioButtonHelper = new RadioButtonHelper();
 
         //TODO
-        comments = new ArrayList<>();
-        Comment comment = new Comment();
-        comment.setComment("Yorum");
-        comment.setRating(2);
-        comment.setTime("17:30");
-        comment.setUserName("User1");
-        comments.add(comment);
-
         fcreateTitle("");
         fcreateToolbar(this, true, true, false, R.id.toolbar);
         fcreateMenu(this, true);
@@ -157,7 +149,7 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenKActivity.this,comments.size(), R.layout.item_l_comment, comments);
+        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenKActivity.this,screenKPresenter.fillList().size(), R.layout.item_l_comment, screenKPresenter.fillList());
         recyclerView.setAdapter(recyclerAdapter);
 
 
@@ -226,7 +218,6 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
 
     @Override
     public void ShowAddFavorite() {
-
-        //service.addFavorites(15,screenKPresenter.favoritem());
+        service.addFavorites(10,screenKPresenter.favoritem());
     }
 }
