@@ -35,7 +35,6 @@ public class FragmentBPresenter implements IFragmentBPresenter {
 
     @Override
     public void loadView(Category category) {
-
         this.categoryID = category.getID();
     }
 
@@ -53,6 +52,7 @@ public class FragmentBPresenter implements IFragmentBPresenter {
         this.view.setTopCategoryProducts(products);
         this.view.onSuccess();
     }
+
 
     @Override
     public void getSubCategories(View view) {
