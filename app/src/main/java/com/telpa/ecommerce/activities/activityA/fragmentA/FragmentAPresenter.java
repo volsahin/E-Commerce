@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.ActivityA.fragmentA;
+package com.telpa.ecommerce.activities.activityA.fragmentA;
 
 import android.app.Application;
 import android.view.View;

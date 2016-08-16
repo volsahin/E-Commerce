@@ -1,12 +1,11 @@
 package com.telpa.ecommerce.di.component;
 
 import com.telpa.ecommerce.activities.ScreenFActivity;
-import com.telpa.ecommerce.activities.ActivityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
 import com.telpa.ecommerce.activities.activityF.ScreenFPresenterImpl;
 import com.telpa.ecommerce.activities.activityF.fragmentF.FragmentFPresenter;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityD.ScreenDPresenterImpl;
-import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
 import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
@@ -29,7 +28,7 @@ import com.telpa.ecommerce.activities.activityB.fragmentB.FragmentBPresenter;
 import com.telpa.ecommerce.activities.activityC.fragmentC.FragmentCPresenter;
 import com.telpa.ecommerce.activities.activityG.fragmentG.FragmentGPresenter;
 
-import com.telpa.ecommerce.activities.ActivityA.fragmentA.FragmentAPresenter;
+import com.telpa.ecommerce.activities.activityA.fragmentA.FragmentAPresenter;
 import com.telpa.ecommerce.impl.BasketImpl;
 import com.telpa.ecommerce.impl.FormImpl;
 
