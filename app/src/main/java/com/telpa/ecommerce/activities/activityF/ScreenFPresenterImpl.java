@@ -34,5 +34,6 @@ public class ScreenFPresenterImpl implements IScreenFPresenter {
     public void getCategories() {
         ArrayList<Category> categories = category.getCategories(0);
         view.fillFragments(categories);
+
     }
 }

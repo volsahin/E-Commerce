@@ -35,6 +35,7 @@ public class FragmentFPresenter implements IFragmentFPresenter {
     public FragmentFPresenter(FragmentFView fragmentFView, Application application) {
         ((ECommerceApp) application).getComponent().inject(this);
         this.view = fragmentFView;
+
     }
 
     @Override
