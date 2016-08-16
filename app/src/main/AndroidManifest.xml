@@ -35,7 +35,8 @@
         <activity android:name=".activities.form.FormActivity" />
         <activity android:name=".activities.ScreenA.ScreenA" />
         <activity android:name=".activities.ActivityB.ScreenB" />
-        <activity android:name=".activities.ActivityC.ScreenC"></activity>
+        <activity android:name=".activities.ActivityC.ScreenG" />
+        <activity android:name=".activities.ActivityA.ScreenA"></activity>
     </application>
 
 </manifest>

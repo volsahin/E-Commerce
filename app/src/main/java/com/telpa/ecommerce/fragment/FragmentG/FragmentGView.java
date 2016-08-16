@@ -23,6 +23,7 @@ import java.util.ArrayList;
 /**
  * Created by Gizem İlgar on 15.8.2016.
  */
+
 public class FragmentGView extends TabHelper implements IFragmentGView {
     private IFragmentGPresenter fragmentGPresenter;
     private View view;

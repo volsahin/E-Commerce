@@ -16,6 +16,7 @@ import javax.inject.Inject;
 /**
  * Created by Gizem İlgar on 15.8.2016.
  */
+
 public class FragmentCPresenter implements IFragmentCPresenter {
     @Inject
     APIService service;
