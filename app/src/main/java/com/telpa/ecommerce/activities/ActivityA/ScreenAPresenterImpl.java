@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.activityA;
+package com.telpa.ecommerce.activities.ActivityA;
 
 import android.app.Application;
 
@@ -14,7 +14,7 @@ import javax.inject.Inject;
  * Created by Gizem İlgar on 12.8.2016.
  */
 
-public class ScreenAPresenterImpl implements com.telpa.ecommerce.activities.activityA.IScreenAPresenter {
+public class ScreenAPresenterImpl implements com.telpa.ecommerce.activities.ActivityA.IScreenAPresenter {
     @Inject
     APIService service;
     @Inject

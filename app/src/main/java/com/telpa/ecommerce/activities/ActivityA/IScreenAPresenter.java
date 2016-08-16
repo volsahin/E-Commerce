@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.activityA;
+package com.telpa.ecommerce.activities.ActivityA;
 
 /**
  * Created by Gizem İlgar on 12.8.2016.

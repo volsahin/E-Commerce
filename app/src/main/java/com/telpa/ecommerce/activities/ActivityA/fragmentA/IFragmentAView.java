@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.activityA.fragmentA;
+package com.telpa.ecommerce.activities.ActivityA.fragmentA;
 
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;

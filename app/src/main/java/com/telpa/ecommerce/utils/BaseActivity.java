@@ -29,7 +29,6 @@ import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.activities.activityG.ScreenG;
 import com.telpa.ecommerce.activities.ScreenDActivity;
 import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
-import com.telpa.ecommerce.activities.ScreenFActivity;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
