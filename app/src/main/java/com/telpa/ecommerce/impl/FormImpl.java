@@ -3,7 +3,7 @@ package com.telpa.ecommerce.impl;
 import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.activities.activityJ_Form.IFormView;
+import com.telpa.ecommerce.activities.activityJ_Form.IScreenJView;
 import com.telpa.ecommerce.interfaces.IForm;
 import com.telpa.ecommerce.models.Form;
 import com.telpa.ecommerce.network.APIService;
@@ -23,12 +23,12 @@ public class FormImpl implements IForm {
     @Inject
     APIService service;
 
-    private IFormView view;
+    private IScreenJView view;
 
     public FormImpl() {
     }
 
-    public FormImpl(Application application, IFormView view) {
+    public FormImpl(Application application, IScreenJView view) {
         ((ECommerceApp) application).getComponent().inject(this);
         this.view=view;
 

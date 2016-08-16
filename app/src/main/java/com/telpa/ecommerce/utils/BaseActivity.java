@@ -31,9 +31,9 @@ import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenFActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
-import com.telpa.ecommerce.activities.ScreenJActivity_Form;
 import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activities.activityJ_Form.ScreenJ;
 import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
@@ -213,7 +213,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenIActivity.class);
                                 break;
                             case 11:
-                                intentToActivity(activity,ScreenJActivity_Form.class);
+                                intentToActivity(activity,ScreenJ.class);
                                 break;
                             case 12:
                                 intentToActivity(activity,ScreenKActivity.class);
