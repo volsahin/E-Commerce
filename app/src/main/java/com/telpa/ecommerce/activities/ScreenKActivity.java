@@ -227,7 +227,6 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
 
     @Override
     public void ShowAddFavorite() {
-
-        //service.addFavorites(15,screenKPresenter.favoritem());
+        service.addFavorites(10,screenKPresenter.favoritem());
     }
 }

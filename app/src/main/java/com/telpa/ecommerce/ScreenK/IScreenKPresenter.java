@@ -11,9 +11,5 @@ import java.util.ArrayList;
  * Created by root on 15.08.2016.
  */
 public interface IScreenKPresenter {
-
-    //void RadioGroup(RadioGroup radioButton, RadioGroup radioButton1);
     ArrayList<BasketItem> basketitem();
-    ArrayList<BasketItem>favoritem();
-
-}
+    int favoritem();}
