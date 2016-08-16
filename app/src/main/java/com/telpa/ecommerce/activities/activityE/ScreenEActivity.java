@@ -42,6 +42,10 @@ public class ScreenEActivity extends BaseActivity implements IscreenEView {
 
         recyclerView.setHasFixedSize(true);
 
+
+
+
+
         /*
         recyclerLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(recyclerLayoutManager);

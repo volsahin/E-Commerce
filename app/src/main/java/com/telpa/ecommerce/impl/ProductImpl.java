@@ -69,8 +69,14 @@ public class ProductImpl implements IProduct {
         comment.setUserName("User 1");
         comments.add(comment);
         comments.add(comment);
-        comments.add(comment);
-        comments.add(comment);
+        Comment comment1=new Comment();
+        comment1.setComment("Yorum");
+        comment1.setRating(4);
+        comment1.setTime("18:30");
+        comment1.setUserName("User 2");
+        comments.add(comment1);
+        comments.add(comment1);
+
         return comments;
     }
 

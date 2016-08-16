@@ -18,8 +18,9 @@ public class CategoryImpl implements ICategory {
         //TODO service methodu yaz
         ArrayList<Category> categories = new ArrayList<>();
         Category a = new Category();
+
         a.setName("Category");
-        a.setHighResImageUrl("");
+        a.setHighResImageUrl("http://formatatma.net/wp-content/uploads/2015/07/General-Mobile-Discovery-Air-format-atma.jpg");
         a.setLowResImageUrl("");
         a.setID(1);
         a.setNumOfProduct(2);
@@ -29,9 +30,24 @@ public class CategoryImpl implements ICategory {
         categories.add(a);
         categories.add(a);
         return categories;
-
     }
+    @Override
+    public ArrayList<Category> getCategories1(int parentCategoryID) {
 
+        //TODO service methodu yaz
+        ArrayList<Category> categories1 = new ArrayList<>();
+        Category a = new Category();
+        a.setName("Category");
+        a.setHighResImageUrl("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
+        a.setLowResImageUrl("");
+        a.setID(1);
+        a.setNumOfProduct(2);
+        a.setParentID(0);
+        categories1.add(a);
+        categories1.add(a);
+        categories1.add(a);
+        return categories1;
+    }
     @Override
     public Category getTopSubCategory(int categoryID) {
         Category a = new Category();

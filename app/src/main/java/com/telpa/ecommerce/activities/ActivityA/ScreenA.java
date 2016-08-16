@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ActivityA.IScreenAPresenter;
-import com.telpa.ecommerce.activities.ActivityA.IScreenAView;
 import com.telpa.ecommerce.activities.activityA.fragmentA.FragmentAView;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;

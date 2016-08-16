@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public interface ICategory {
     ArrayList<Category> getCategories(int parentCategoryID);
-
+    ArrayList<Category> getCategories1(int parentCategoryID);
 
     Category getTopSubCategory(int categoryID);
 }

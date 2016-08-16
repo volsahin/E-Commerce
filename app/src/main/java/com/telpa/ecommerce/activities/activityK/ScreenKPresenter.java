@@ -37,19 +37,7 @@ public class ScreenKPresenter implements IScreenKPresenter{
     @Override
     public ArrayList<Comment> fillList() {
         ArrayList<Comment>comments=new ArrayList<>();
-        Comment comment = new Comment();
-        comment.setComment("Yorum");
-        comment.setRating(2);
-        comment.setTime("17:30");
-        comment.setUserName("User1");
-        Comment comment1 = new Comment();
-        comment1.setComment("Yorum");
-        comment1.setRating(4);
-        comment1.setTime("12:30");
-        comment1.setUserName("User2");
-        comments.add(comment);
-        comments.add(comment1);
-
+        comments=product.getComments(1);
         return comments;
     }
     @Override

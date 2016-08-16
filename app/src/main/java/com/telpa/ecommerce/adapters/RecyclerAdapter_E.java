@@ -39,7 +39,6 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     @Override
     public RecyclerAdapter_E.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(id, parent, false);
-
         RecyclerAdapter_E.ViewHolder viewHolder = new RecyclerAdapter_E.ViewHolder(v);
         new SpaceItemDecoration(300);
         return viewHolder;
@@ -48,11 +47,11 @@ public class RecyclerAdapter_E extends RecyclerView.Adapter<RecyclerAdapter_E.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.category.setText("Category"+position);
-        holder.productNumber.setText("Name " + position);
+        holder.category.setText(categories.get(0).getName());
+        holder.productNumber.setText("Name " + categories.get(position).getNumOfProduct());
         holder.image.setImageResource(R.drawable.ic_circle_white);
         categories.get(0);
-        Picasso.with(activity).load(categories.get(0).getHighResImageUrl()).into(holder.image);
+        Picasso.with(activity).load(categories.get(position).getHighResImageUrl()).into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
