@@ -22,7 +22,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityA.ScreenA;
+import com.telpa.ecommerce.activities.ActivityA.ScreenA;
 import com.telpa.ecommerce.activities.activityB.ScreenB;
 import com.telpa.ecommerce.activities.activityC.ScreenC;
 import com.telpa.ecommerce.activities.activityF.ScreenF;
