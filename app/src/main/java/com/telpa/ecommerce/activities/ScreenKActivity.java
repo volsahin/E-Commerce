@@ -6,12 +6,17 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.ScreenK.IScreenKPresenter;
+import com.telpa.ecommerce.ScreenK.IScreenKView;
+import com.telpa.ecommerce.activities.activityL.IScreenLPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
@@ -20,6 +25,7 @@ import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -31,9 +37,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ScreenKActivity extends BaseActivity {
+public class ScreenKActivity extends BaseActivity implements IScreenKView {
     @Inject
     IBasket basket;
+    @Inject
+    APIService service;
     @Inject
     IProduct product;
     @Inject
@@ -75,6 +83,10 @@ public class ScreenKActivity extends BaseActivity {
     RadioButton check3;
     @BindView(R.id.productRadio4)
     RadioButton check4;
+    @BindView(R.id.button2)
+    Button addbasket;
+    @BindView(R.id.button)
+    Button addfavorite;
 
     ViewPager pager;
 
@@ -84,7 +96,7 @@ public class ScreenKActivity extends BaseActivity {
     public TextView description;
     public RatingBar ratingBar;
     public TextView reviewsCount;
-
+    private IScreenKPresenter screenKPresenter;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
@@ -100,6 +112,7 @@ public class ScreenKActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
 
+        ((ECommerceApp) getApplication()).getComponent().inject(this);
         ButterKnife.bind(this);
         textViews = new TextView[5];
         textViews[0] = a;
@@ -165,7 +178,7 @@ public class ScreenKActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.searchButton, R.id.basketButton, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4})
+    @OnClick({R.id.searchButton, R.id.basketButton, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4,R.id.button2,R.id.button})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.searchButton:
@@ -195,6 +208,25 @@ public class ScreenKActivity extends BaseActivity {
                 break;
             case R.id.productRadio4:
                 break;
+            case R.id.button2:
+                ShowAddBasket();
+                break;
+            case R.id.button:
+                ShowAddFavorite();
+                break;
+
         }
+    }
+
+    @Override
+    public void ShowAddBasket() {
+
+        service.addBasket(10,screenKPresenter.basketitem());
+    }
+
+    @Override
+    public void ShowAddFavorite() {
+
+        service.addFavorites(15,screenKPresenter.favoritem());
     }
 }

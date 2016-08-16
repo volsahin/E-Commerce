@@ -12,7 +12,7 @@ import java.util.HashMap;
 public interface IBasket {
     ArrayList<BasketItem> getBasket(int customerID);
 
-    boolean addBasket(int customerID, BasketItem basketItem);
-
+    boolean addBasket(int customerID, ArrayList<BasketItem> basketItems);
+    boolean addFavorites(int customerID, ArrayList<BasketItem> basketItems);
     boolean checkOut(int customerID,   ArrayList<BasketItem> basketItems);
 }
