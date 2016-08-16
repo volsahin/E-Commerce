@@ -1,14 +1,18 @@
 package com.telpa.ecommerce.di.component;
 
-import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.ActivityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
+import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
 import com.telpa.ecommerce.activities.activityG.ScreenGPresenterImpl;
 import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activities.activityH.ScreenHPresenter;
 import com.telpa.ecommerce.activities.activityI.ScreenIPresenterImpl;
 import com.telpa.ecommerce.activities.activityJ_Form.ScreenJPresenter;
+import com.telpa.ecommerce.activities.activityK.ScreenKPresenter;
 import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.activities.activityL.ScreenLPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
@@ -43,7 +47,7 @@ public interface IApplicationComponent {
 
     void inject (ScreenFActivity activityF);
     void inject (ScreenGActivity activityG);
-    void inject (ScreenHActivity activityH);
+
     void inject (ScreenIActivity activityI);
     void inject (ScreenJActivity_Form activityJ);
     */
@@ -52,7 +56,7 @@ public interface IApplicationComponent {
     void inject(ScreenJPresenter screenJFormPresenter);
 
     void inject (ScreenKActivity activityK);
-
+    void inject(ScreenKPresenter screenKPresenter);
     void inject(ScreenBPresenterImpl screenBPresenter);
     void inject(FragmentBPresenter fragmentBPresenter);
 
@@ -70,9 +74,11 @@ public interface IApplicationComponent {
     void inject(FragmentGPresenter fragmentgPresenter);
 
     void inject (ScreenEActivity activityE);
-
+    void inject(ScreenEPresenter screenEPresenter);
     void inject(ScreenMActivity_Basket activityM);
 
+    void inject (ScreenHActivity activityH);
+    void inject(ScreenHPresenter screenHresenter);
     void inject(ScreenAPresenterImpl screenAPresenter);
     void inject(FragmentAPresenter fragmentAPresenter);
 

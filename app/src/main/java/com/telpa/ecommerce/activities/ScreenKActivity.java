@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.ScreenK.IScreenKPresenter;
-import com.telpa.ecommerce.ScreenK.IScreenKView;
-import com.telpa.ecommerce.ScreenK.ScreenKPresenter;
+import com.telpa.ecommerce.activities.activityK.IScreenKPresenter;
+import com.telpa.ecommerce.activities.activityK.IScreenKView;
+import com.telpa.ecommerce.activities.activityK.ScreenKPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
@@ -112,7 +112,7 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_k);
-        screenKPresenter=new ScreenKPresenter(this);
+        screenKPresenter=new ScreenKPresenter(this,getApplication());
         ((ECommerceApp) getApplication()).getComponent().inject(this);
         ButterKnife.bind(this);
         textViews = new TextView[5];
