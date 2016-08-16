@@ -60,7 +60,7 @@ public class ScreenLPresenter implements IScreenLPresenter {
     @Override
     public ArrayList<Comment> fillList() {
         ArrayList<Comment> comments;
-        comments=product.getComments(0);
+        comments=product.getComments(1);
 
 return comments;
     }

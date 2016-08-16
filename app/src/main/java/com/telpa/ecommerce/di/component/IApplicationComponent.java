@@ -4,6 +4,8 @@ import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
 import com.telpa.ecommerce.activities.activityF.ScreenFPresenterImpl;
 import com.telpa.ecommerce.activities.activityF.fragmentF.FragmentFPresenter;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
+import com.telpa.ecommerce.activities.activityD.ScreenDPresenterImpl;
+import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
 import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
@@ -90,4 +92,6 @@ public interface IApplicationComponent {
     void inject(FragmentAPresenter fragmentAPresenter);
 
     void inject (ScreenIPresenterImpl screenIPresenter);
+
+    void inject (ScreenDPresenterImpl screenDPresenter);
 }
