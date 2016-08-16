@@ -19,6 +19,7 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.ScreenFActivity;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_F;
+import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -102,6 +103,8 @@ public class FragmentFView extends TabHelper implements IFragmentFView {
         //basketButton.setImageResource();
         likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
         ratingBar.setRating(product.getRating());
+
+        fragmentFPresenter.isFavorite(0,product);
     }
 
     @Override
@@ -112,7 +115,7 @@ public class FragmentFView extends TabHelper implements IFragmentFView {
         StaggeredGridLayoutManager recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        RecyclerAdapter_F recyclerAdapter = new RecyclerAdapter_F(getActivity(), products.size(), R.layout.item_f, products);
+        RecyclerAdapter_F recyclerAdapter = new RecyclerAdapter_F(getActivity(), products.size(), R.layout.item_f, products,getApplication());
         recyclerView.setAdapter(recyclerAdapter);
     }
 
@@ -126,6 +129,15 @@ public class FragmentFView extends TabHelper implements IFragmentFView {
     public void addFavorites(int ProductID) {
 
     }
+
+    @Override
+    public void setFavorite(boolean favorite) {
+        if (favorite) {
+            likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+        }
+
+    }
+
 
 
     @OnClick({R.id.imageViewHeader, R.id.basketHeader, R.id.likeHeader, R.id.actionHeader})

@@ -27,10 +27,11 @@
         <activity android:name=".activities.ScreenMActivity_Basket" />
         <activity android:name=".activities.ScreenDActivity" />
         <activity android:name=".activities.activityK.ScreenKActivity" />
-        <activity android:name=".activities.ActivityA.ScreenA" />
+        <activity android:name=".activities.activityA.ScreenA" />
         <activity android:name=".activities.activityL.ScreenL" />
         <activity android:name=".activities.activityJ_Form.ScreenJ" />
         <activity android:name=".activities.activityB.ScreenB" />
+        <activity android:name=".activities.activityF.ScreenF" />
         <activity android:name=".activities.activityC.ScreenC" />
         <activity android:name=".activities.activityI.ScreenI"></activity>
     </application>
