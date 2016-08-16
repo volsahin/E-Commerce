@@ -8,7 +8,6 @@ import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.network.APIService;
 
 import java.util.ArrayList;
-
 import javax.inject.Inject;
 
 /**

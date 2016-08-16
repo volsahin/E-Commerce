@@ -1,6 +1,5 @@
 package com.telpa.ecommerce.activities.ActivityG;
 
-
 import com.telpa.ecommerce.models.Category;
 
 import java.util.ArrayList;

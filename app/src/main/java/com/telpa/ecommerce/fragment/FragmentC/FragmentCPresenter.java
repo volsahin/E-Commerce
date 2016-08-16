@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-
 /**
  * Created by Gizem İlgar on 15.8.2016.
  */
