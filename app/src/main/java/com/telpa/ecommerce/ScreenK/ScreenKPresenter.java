@@ -36,7 +36,13 @@ public class ScreenKPresenter implements IScreenKPresenter{
         comment.setRating(2);
         comment.setTime("17:30");
         comment.setUserName("User1");
+        Comment comment1 = new Comment();
+        comment1.setComment("Yorum");
+        comment1.setRating(4);
+        comment1.setTime("12:30");
+        comment1.setUserName("User2");
         comments.add(comment);
+        comments.add(comment1);
 
         return comments;
     }
