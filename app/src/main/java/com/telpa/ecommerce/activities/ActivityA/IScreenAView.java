@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.activityA;
+package com.telpa.ecommerce.activities.ActivityA;
 import com.telpa.ecommerce.models.Category;
 
 import java.util.ArrayList;

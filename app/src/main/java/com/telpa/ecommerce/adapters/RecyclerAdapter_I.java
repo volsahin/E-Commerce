@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.RatingBar;
 
+import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.models.Product;
 
@@ -47,11 +48,11 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.productName.setText("Name " + position);
-        holder.price.setText("$50");
-        holder.image.setImageResource(R.drawable.ic_circle_white);
-        holder.ratingBar.setRating(3);
-        holder.description.setText("description");
+        holder.productName.setText(products.get(position).getName());
+        holder.price.setText("$"+products.get(position).getPrice());
+        holder.ratingBar.setRating(products.get(position).getRating());
+        holder.description.setText(products.get(position).getDescripton());
+        Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.image);
 
     }
 
@@ -67,7 +68,6 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
         public TextView description;
         public ImageButton image;
         public RatingBar ratingBar;
-
 
         public ViewHolder(View v) {
             super(v);

@@ -22,18 +22,18 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityA.ScreenA;
+import com.telpa.ecommerce.activities.ActivityA.ScreenA;
 import com.telpa.ecommerce.activities.activityB.ScreenB;
 import com.telpa.ecommerce.activities.activityC.ScreenC;
 import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.activities.activityG.ScreenG;
 import com.telpa.ecommerce.activities.ScreenDActivity;
-import com.telpa.ecommerce.activities.ScreenEActivity;
+import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenFActivity;
-import com.telpa.ecommerce.activities.ScreenHActivity;
-import com.telpa.ecommerce.activities.ScreenIActivity;
-import com.telpa.ecommerce.activities.ScreenKActivity;
+import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
+import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activities.activityI.ScreenI;
 import com.telpa.ecommerce.activities.activityJ_Form.ScreenJ;
 import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
@@ -211,7 +211,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenHActivity.class);
                                 break;
                             case 10:
-                                intentToActivity(activity,ScreenIActivity.class);
+                                intentToActivity(activity,ScreenI.class);
                                 break;
                             case 11:
                                 intentToActivity(activity,ScreenJ.class);
