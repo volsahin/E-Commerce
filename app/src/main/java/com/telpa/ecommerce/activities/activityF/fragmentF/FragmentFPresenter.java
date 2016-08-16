@@ -4,6 +4,7 @@ import android.app.Application;
 import android.view.View;
 
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
@@ -52,11 +53,20 @@ public class FragmentFPresenter implements IFragmentFPresenter {
     @Override
     public void getProduct(Category category) {
         ArrayList<Product> products;
-        products=IProduct.getProducts(0);
+        products = IProduct.getProducts(0);
         view.setProducts(products);
     }
 
+    @Override
+    public void isFavorite(int customerID, Product product) {
+        ArrayList<Integer> favorites = IProduct.getFavorites(customerID);
+        if (favorites.contains(product))
+            view.setFavorite(true);
+        else
+            view.setFavorite(false);
 
+
+    }
 
 
 }

@@ -15,4 +15,5 @@ public interface IFragmentFView {
     void goToProduct(int ProductID);
     void addFavorites(int ProductID);
 
+    void setFavorite(boolean favorite);
 }
