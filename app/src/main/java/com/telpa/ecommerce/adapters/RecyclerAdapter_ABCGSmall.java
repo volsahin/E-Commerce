@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenKActivity;
+import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;

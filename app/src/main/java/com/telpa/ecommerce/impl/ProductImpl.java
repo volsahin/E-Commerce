@@ -76,7 +76,19 @@ public class ProductImpl implements IProduct {
 
     @Override
     public Product getFeatured(int categoryID) {
-        return null;
+        ArrayList<String> url = new ArrayList<String>();
+        url.add("http://images.hepsiburada.net/assets/Bilgisayar/200/Bilgisayar_4076599.jpg");
+        Product b = new Product();
+        b.setName("TopÜrün");
+        b.setID(4);
+        b.setCategoryID(1);
+        b.setDescripton("Bu başka bir üründür.");
+        b.setHighResImageUrls(url);
+        b.setLowResImageUrls(url);
+        b.setPrice(50);
+        b.setRating(2);
+        b.setRating(3);
+        return b;
     }
 
     @Override

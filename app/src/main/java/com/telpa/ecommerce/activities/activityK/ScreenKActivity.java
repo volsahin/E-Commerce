@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities;
+package com.telpa.ecommerce.activities.activityK;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -14,9 +14,6 @@ import android.widget.TextView;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityK.IScreenKPresenter;
-import com.telpa.ecommerce.activities.activityK.IScreenKView;
-import com.telpa.ecommerce.activities.activityK.ScreenKPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
