@@ -10,5 +10,6 @@ import java.util.ArrayList;
 
 public interface IScreenAPresenter {
 
-    void ScreenA(ArrayList<Category> categories);
+    void getCategories ();
+
 }

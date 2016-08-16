@@ -31,11 +31,14 @@
         <activity android:name=".activities.ScreenDActivity" />
         <activity android:name=".activities.ScreenKActivity" />
         <activity android:name=".activities.ScreenGActivity" />
+
+        <activity android:name=".activities.activityA.ScreenA"/>
         <activity android:name=".activities.activityL.ScreenL" />
         <activity android:name=".activities.activityJ_Form.FormActivity" />
-        <activity android:name=".activities.activityA.ScreenA" />
         <activity android:name=".activities.activityB.ScreenB" />
         <activity android:name=".activities.activityC.ScreenC" />
+
+
     </application>
 
 </manifest>

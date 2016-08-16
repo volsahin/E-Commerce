@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,8 +54,10 @@ public class ScreenL extends BaseActivity implements IScreenLView {
     RatingBar ratingBar;
     @BindView(R.id.reviews)
     TextView reviews;
-    @BindView(R.id.lin_2_l)RadioGroup radioGroup1;
-    @BindView(R.id.lin_3_l)RadioGroup radioGroup2;
+    @BindView(R.id.lin_2_l)
+    RadioGroup radioGroup1;
+    @BindView(R.id.lin_3_l)
+    RadioGroup radioGroup2;
 
 
     private RecyclerView recyclerView;
@@ -66,25 +69,30 @@ public class ScreenL extends BaseActivity implements IScreenLView {
     private TextView[] textViews;
     private RadioButton[] radioButtons;
     private ArrayList<Product> products;
-private IScreenLPresenter screenLPresenter;
+    private IScreenLPresenter screenLPresenter;
     //TODO
     public TextView price;
     public TextView description;
-    public TextView variants1,variants2;
+    public TextView variants1, variants2;
     //public RatingBar ratingBar;
     public TextView reviewsCount;
-    public ImageButton bigImage, image1,image2, image3,image4,image5;
+    public ImageButton bigImage, image1, image2, image3, image4, image5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
+
         screenLPresenter=new ScreenLPresenter(this,getApplication());
        // ButterKnife.bind(this);
 
+        screenLPresenter = new ScreenLPresenter(this, getApplication());
+        ButterKnife.bind(this);
+
+
 
 //TODO
-        ArrayList<String> url=new ArrayList<String>();
+        ArrayList<String> url = new ArrayList<String>();
         url.add("url1");
         url.add("urls2");
 
@@ -105,6 +113,8 @@ private IScreenLPresenter screenLPresenter;
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
         recyclerAdapter = new RecyclerAdapter_KLComment(ScreenL.this,screenLPresenter.fillList().size(), R.layout.item_l_comment, screenLPresenter.fillList());
+
+        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenL.this, screenLPresenter.fillList().size(), R.layout.item_l_comment, screenLPresenter.fillList());
         recyclerView.setAdapter(recyclerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -125,13 +135,13 @@ private IScreenLPresenter screenLPresenter;
 
         //TODO
 
-        bigImage=(ImageButton) findViewById(R.id.bigImage);
+        bigImage = (ImageButton) findViewById(R.id.bigImage);
         price = (TextView) findViewById(R.id.bigPrice);
         description = (TextView) findViewById(R.id.description);
-        reviewsCount=(TextView) findViewById(R.id.reviews);
+        reviewsCount = (TextView) findViewById(R.id.reviews);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-        variants1=(TextView) findViewById(R.id.variants1);
-        variants2=(TextView) findViewById(R.id.variants2);
+        variants1 = (TextView) findViewById(R.id.variants1);
+        variants2 = (TextView) findViewById(R.id.variants2);
 
         setTitle("Product15");
         price.setText("$50");
@@ -143,7 +153,7 @@ private IScreenLPresenter screenLPresenter;
     }
 
 
-   @OnClick({R.id.searchButton, R.id.basketButton, R.id.fab, R.id.bigImage, R.id.image1, R.id.image2, R.id.image3, R.id.image4, R.id.image5, R.id.ratingBar})
+    @OnClick({R.id.searchButton, R.id.basketButton, R.id.fab, R.id.bigImage, R.id.image1, R.id.image2, R.id.image3, R.id.image4, R.id.image5, R.id.ratingBar})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bigImage:
@@ -153,7 +163,7 @@ private IScreenLPresenter screenLPresenter;
             case R.id.basketButton:
                 break;
             case R.id.fab:
-               screenLPresenter.onButtonClick(radioGroup1,radioGroup2);
+                screenLPresenter.onButtonClick(radioGroup1, radioGroup2);
                 break;
             case R.id.image1:
                 break;

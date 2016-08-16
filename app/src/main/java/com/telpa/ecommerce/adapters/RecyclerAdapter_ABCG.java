@@ -3,6 +3,7 @@ package com.telpa.ecommerce.adapters;
 import android.app.Activity;
 import android.app.Application;
 import android.graphics.Rect;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -46,6 +47,7 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
         this.type = type;
         ((ECommerceApp) application).getComponent().inject(this);
     }
+
 
     @Override
     public RecyclerAdapter_ABCG.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
