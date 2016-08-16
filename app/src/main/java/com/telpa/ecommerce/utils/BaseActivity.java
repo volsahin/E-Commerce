@@ -22,19 +22,19 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenAActivity;
-import com.telpa.ecommerce.activities.ScreenBActivity;
-import com.telpa.ecommerce.activities.ScreenCActivity;
+import com.telpa.ecommerce.activities.activityA.ScreenA;
+import com.telpa.ecommerce.activities.activityB.ScreenB;
+import com.telpa.ecommerce.activities.activityC.ScreenC;
+import com.telpa.ecommerce.activities.activityG.ScreenG;
 import com.telpa.ecommerce.activities.ScreenDActivity;
 import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenFActivity;
-import com.telpa.ecommerce.activities.ScreenGActivity;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.ScreenIActivity;
 import com.telpa.ecommerce.activities.ScreenJActivity_Form;
 import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
-import com.telpa.ecommerce.activities.activityL.ScreenLActivity;
+import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
 
 import java.util.List;
@@ -186,13 +186,13 @@ public class BaseActivity extends AppCompatActivity {
 
                         switch (position) {
                             case 1:
-                                intentToActivity(activity,ScreenAActivity.class);
+                                intentToActivity(activity,ScreenA.class);
                                 break;
                             case 2:
-                                intentToActivity(activity,ScreenBActivity.class);
+                                intentToActivity(activity,ScreenB.class);
                                 break;
                             case 3:
-                                intentToActivity(activity,ScreenCActivity.class);
+                                intentToActivity(activity,ScreenC.class);
                                 break;
                             case 5:
                                 intentToActivity(activity,ScreenDActivity.class);
@@ -204,7 +204,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenFActivity.class);
                                 break;
                             case 8:
-                                intentToActivity(activity,ScreenGActivity.class);
+                                intentToActivity(activity,ScreenG.class);
                                 break;
                             case 9:
                                 intentToActivity(activity,ScreenHActivity.class);
@@ -219,7 +219,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenKActivity.class);
                                 break;
                             case 13:
-                                intentToActivity(activity, ScreenLActivity.class);
+                                intentToActivity(activity, ScreenL.class);
                                 break;
 
                             case 14:

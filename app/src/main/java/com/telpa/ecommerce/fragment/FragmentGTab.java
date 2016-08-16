@@ -11,12 +11,10 @@ import android.view.ViewGroup;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
-import com.telpa.ecommerce.adapters.RecyclerAdapter_ABGSmall;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
-import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
 
 import java.util.ArrayList;

@@ -1,24 +1,15 @@
-package com.telpa.ecommerce.activities.form;
+package com.telpa.ecommerce.activities.activityJ_Form;
 
 import android.app.Application;
-import android.widget.ArrayAdapter;
 
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.impl.FormImpl;
 import com.telpa.ecommerce.interfaces.IForm;
 import com.telpa.ecommerce.models.Form;
-import com.telpa.ecommerce.network.APIService;
-import com.telpa.ecommerce.network.Example;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 import javax.inject.Inject;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by Mert on 11.08.2016.

@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.form;
+package com.telpa.ecommerce.activities.activityJ_Form;
 
 import com.telpa.ecommerce.models.Form;
 

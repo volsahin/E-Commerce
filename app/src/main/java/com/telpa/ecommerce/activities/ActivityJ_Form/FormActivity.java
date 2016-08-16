@@ -1,7 +1,6 @@
-package com.telpa.ecommerce.activities.form;
+package com.telpa.ecommerce.activities.activityJ_Form;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,7 +19,6 @@ import com.telpa.ecommerce.utils.BaseActivity;
 import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class FormActivity extends BaseActivity implements IFormView {
@@ -70,7 +68,7 @@ public class FormActivity extends BaseActivity implements IFormView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
-        ButterKnife.bind(this);
+        //ButterKnife.bind(this);
 
 
         formPresenter = new FormPresenter(this, getApplication());

@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                tools:context=".activities.activityL.ScreenLActivity">
+                tools:context=".activities.activityL.ScreenL">
 
                 <RelativeLayout
                     android:id="@+id/layout_frame"

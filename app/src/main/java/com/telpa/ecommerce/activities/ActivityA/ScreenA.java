@@ -1,9 +1,8 @@
-package com.telpa.ecommerce.activities.ActivityA;
+package com.telpa.ecommerce.activities.activityA;
 
 import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ActivityA.ScreenA;
 import com.telpa.ecommerce.fragment.FragmentATab;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;

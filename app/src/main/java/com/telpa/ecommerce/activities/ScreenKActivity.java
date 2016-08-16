@@ -17,7 +17,6 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.ScreenK.IScreenKPresenter;
 import com.telpa.ecommerce.ScreenK.IScreenKView;
 import com.telpa.ecommerce.ScreenK.ScreenKPresenter;
-import com.telpa.ecommerce.activities.activityL.IScreenLPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;

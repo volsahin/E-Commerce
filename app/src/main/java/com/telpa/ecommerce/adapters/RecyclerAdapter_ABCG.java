@@ -12,9 +12,6 @@ import android.widget.TextView;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenAActivity;
-import com.telpa.ecommerce.fragment.FragmentFTab;
-import com.telpa.ecommerce.fragment.FragmentGTab;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
@@ -102,19 +99,19 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
 
             if (type.equals("a") || type.equals("b")) {
                 recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-                recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, products.size(), R.layout.item_a_and_b_small, products, "a");
+                recyclerAdapter2 = new RecyclerAdapter_ABCGSmall(context, products.size(), R.layout.item_a_and_b_small, products, "a");
 
             } else if (type.equals("c")) {
                 recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
                 recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
                 recyclerView2.setLayoutManager(recyclerLayoutManager2);
                 if (products.size() >= 2)
-                    recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, 2, R.layout.item_i_and_c, products, "c");
+                    recyclerAdapter2 = new RecyclerAdapter_ABCGSmall(context, 2, R.layout.item_i_and_c, products, "c");
                 else
-                    recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, products.size(), R.layout.item_i_and_c, products, "c");
+                    recyclerAdapter2 = new RecyclerAdapter_ABCGSmall(context, products.size(), R.layout.item_i_and_c, products, "c");
             } else if (type.equals("g")) {
                 recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(4));
-                recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context, products.size(), R.layout.item_g, products, "g");
+                recyclerAdapter2 = new RecyclerAdapter_ABCGSmall(context, products.size(), R.layout.item_g, products, "g");
             }
 
             recyclerView2.setAdapter(recyclerAdapter2);

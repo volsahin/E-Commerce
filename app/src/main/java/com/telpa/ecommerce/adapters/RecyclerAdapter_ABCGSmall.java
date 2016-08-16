@@ -1,7 +1,6 @@
 package com.telpa.ecommerce.adapters;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
@@ -11,13 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.models.Product;
-import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
 
@@ -26,7 +23,7 @@ import java.util.ArrayList;
  * Created by volkan on 14.07.2016.
  */
 
-public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapter_ABGSmall.ViewHolder> {
+public class RecyclerAdapter_ABCGSmall extends RecyclerView.Adapter<RecyclerAdapter_ABCGSmall.ViewHolder> {
 
     private int amountOfData;
     private int id;
@@ -34,7 +31,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
     Activity activity;
     String type;
 
-    public RecyclerAdapter_ABGSmall(Activity activity, int amountOfData, int id, ArrayList<Product> products, String type) {
+    public RecyclerAdapter_ABCGSmall(Activity activity, int amountOfData, int id, ArrayList<Product> products, String type) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.products = products;
@@ -44,10 +41,10 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
     }
 
     @Override
-    public RecyclerAdapter_ABGSmall.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerAdapter_ABCGSmall.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(id, parent, false);
 
-        RecyclerAdapter_ABGSmall.ViewHolder viewHolder = new RecyclerAdapter_ABGSmall.ViewHolder(v);
+        RecyclerAdapter_ABCGSmall.ViewHolder viewHolder = new RecyclerAdapter_ABCGSmall.ViewHolder(v);
         new SpaceItemDecoration(300);
         return viewHolder;
     }
@@ -91,7 +88,7 @@ public class RecyclerAdapter_ABGSmall extends RecyclerView.Adapter<RecyclerAdapt
 
         public ViewHolder(View v) {
             super(v);
-            final RecyclerAdapter_ABGSmall adapter = RecyclerAdapter_ABGSmall.this;
+            final RecyclerAdapter_ABCGSmall adapter = RecyclerAdapter_ABCGSmall.this;
             String type = adapter.type;
 
             productName = (TextView) v.findViewById(R.id.productName);

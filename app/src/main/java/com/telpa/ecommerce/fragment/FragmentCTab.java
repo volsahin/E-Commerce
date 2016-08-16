@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
-import com.telpa.ecommerce.adapters.RecyclerAdapter_CSmall;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
@@ -20,7 +19,6 @@ import com.telpa.ecommerce.utils.TabHelper;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 

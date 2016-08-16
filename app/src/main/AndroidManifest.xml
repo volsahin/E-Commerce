@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.ActivityG.ScreenG"
+            android:name=".activities.activityG.ScreenG"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,12 +31,11 @@
         <activity android:name=".activities.ScreenDActivity" />
         <activity android:name=".activities.ScreenKActivity" />
         <activity android:name=".activities.ScreenGActivity" />
-        <activity android:name=".activities.activityL.ScreenLActivity" />
-        <activity android:name=".activities.form.FormActivity" />
-        <activity android:name=".activities.ScreenA.ScreenA" />
-        <activity android:name=".activities.ActivityB.ScreenB" />
-        <activity android:name=".activities.ActivityC.ScreenG" />
-        <activity android:name=".activities.ActivityA.ScreenA"></activity>
+        <activity android:name=".activities.activityL.ScreenL" />
+        <activity android:name=".activities.activityJ_Form.FormActivity" />
+        <activity android:name=".activities.activityA.ScreenA" />
+        <activity android:name=".activities.activityB.ScreenB" />
+        <activity android:name=".activities.activityC.ScreenC" />
     </application>
 
 </manifest>

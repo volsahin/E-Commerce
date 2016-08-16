@@ -30,14 +30,13 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class ScreenLActivity extends BaseActivity implements IScreenLView {
+public class ScreenL extends BaseActivity implements IScreenLView {
     @Inject
     APIService service;
     @Inject
@@ -81,7 +80,7 @@ private IScreenLPresenter screenLPresenter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_l);
         screenLPresenter=new ScreenLPresenter(this,getApplication());
-        ButterKnife.bind(this);
+       // ButterKnife.bind(this);
 
 
 //TODO
@@ -105,7 +104,7 @@ private IScreenLPresenter screenLPresenter;
         recyclerLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerLayoutManager);
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenLActivity.this,screenLPresenter.fillList().size(), R.layout.item_l_comment, screenLPresenter.fillList());
+        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenL.this,screenLPresenter.fillList().size(), R.layout.item_l_comment, screenLPresenter.fillList());
         recyclerView.setAdapter(recyclerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -113,13 +112,13 @@ private IScreenLPresenter screenLPresenter;
         service.getPeople().enqueue(new Callback<People>() {
             @Override
             public void onResponse(Call<People> call, Response<People> response) {
-                Toast.makeText(ScreenLActivity.this, response.body().getMusteri().get(4).getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScreenL.this, response.body().getMusteri().get(4).getName(), Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onFailure(Call<People> call, Throwable t) {
-                Toast.makeText(ScreenLActivity.this, "Connection failed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScreenL.this, "Connection failed!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -148,7 +147,7 @@ private IScreenLPresenter screenLPresenter;
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bigImage:
-                Toast.makeText(ScreenLActivity.this, "mertblt", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScreenL.this, "mertblt", Toast.LENGTH_SHORT).show();
             case R.id.searchButton:
                 break;
             case R.id.basketButton:
@@ -176,6 +175,6 @@ private IScreenLPresenter screenLPresenter;
 
     @Override
     public void onButtonClick(String cumle) {
-        Toast.makeText(ScreenLActivity.this, cumle, Toast.LENGTH_SHORT).show();
+        Toast.makeText(ScreenL.this, cumle, Toast.LENGTH_SHORT).show();
     }
 }

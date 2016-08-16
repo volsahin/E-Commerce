@@ -3,7 +3,7 @@ package com.telpa.ecommerce.impl;
 import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.activities.form.IFormView;
+import com.telpa.ecommerce.activities.activityJ_Form.IFormView;
 import com.telpa.ecommerce.interfaces.IForm;
 import com.telpa.ecommerce.models.Form;
 import com.telpa.ecommerce.network.APIService;
