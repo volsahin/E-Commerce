@@ -19,9 +19,10 @@ import com.telpa.ecommerce.utils.BaseActivity;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FormActivity extends BaseActivity implements IFormView {
+public class ScreenJ extends BaseActivity implements IScreenJView {
 
     @BindView(R.id.searchButton)
     ImageButton searchButton;
@@ -62,17 +63,17 @@ public class FormActivity extends BaseActivity implements IFormView {
     @BindView(R.id.spinner3)
     Spinner spinner3;
 
-    private FormPresenter formPresenter;
+    private ScreenJPresenter screenJPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
-        //ButterKnife.bind(this);
+        ButterKnife.bind(this);
 
 
-        formPresenter = new FormPresenter(this, getApplication());
-        formPresenter.setSpinnerValues();
+        screenJPresenter = new ScreenJPresenter(this, getApplication());
+        screenJPresenter.setSpinnerValues();
 
 
     }
@@ -87,20 +88,20 @@ public class FormActivity extends BaseActivity implements IFormView {
             case R.id.button:
                 break;
             case R.id.button2:
-                formPresenter.submitForm(createForm());
+                screenJPresenter.submitForm(createForm());
                 break;
         }
     }
 
     @Override
     public void onSuccess() {
-        Toast.makeText(FormActivity.this, "Success", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ScreenJ.this, "Success", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onFail() {
 
-        Toast.makeText(FormActivity.this, "Fail", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ScreenJ.this, "Fail", Toast.LENGTH_SHORT).show();
     }
 
     @Override

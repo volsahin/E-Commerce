@@ -14,16 +14,16 @@ import javax.inject.Inject;
 /**
  * Created by Mert on 11.08.2016.
  */
-public class FormPresenter implements IFormPresenter {
+public class ScreenJPresenter implements IScreenJPresenter {
     @Inject
     IForm form;
 
     private Application application;
-    private IFormView view;
+    private IScreenJView view;
     private ArrayList<String[]> spinnerValues;
 
 
-    public FormPresenter(IFormView view, Application application) {
+    public ScreenJPresenter(IScreenJView view, Application application) {
         ((ECommerceApp) application).getComponent().inject(this);
         this.view = view;
         this.application = application;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * Created by Mert on 11.08.2016.
  */
-public interface IFormView {
+public interface IScreenJView {
 
     void onSuccess();
     void onFail();
