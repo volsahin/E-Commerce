@@ -3,6 +3,8 @@ package com.telpa.ecommerce.di.component;
 import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
+import com.telpa.ecommerce.activities.activityF.ScreenFPresenterImpl;
+import com.telpa.ecommerce.activities.activityF.fragmentF.FragmentFPresenter;
 import com.telpa.ecommerce.activities.activityG.ScreenGPresenterImpl;
 import com.telpa.ecommerce.activities.ScreenEActivity;
 import com.telpa.ecommerce.activities.ScreenKActivity;
@@ -12,6 +14,7 @@ import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.activities.activityL.ScreenLPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_BBig;
+import com.telpa.ecommerce.adapters.RecyclerAdapter_F;
 import com.telpa.ecommerce.di.module.ApplicationModule;
 import com.telpa.ecommerce.di.module.NetModule;
 import com.telpa.ecommerce.activities.activityB.fragmentB.FragmentBPresenter;
@@ -57,6 +60,8 @@ public interface IApplicationComponent {
 
     void inject(RecyclerAdapter_BBig recyclerAdapter_bBig);
 
+    void inject(RecyclerAdapter_F recyclerAdapter_f);
+
     void inject(ScreenL activityL);
     void inject(ScreenLPresenter screenLPresenter);
 
@@ -65,6 +70,9 @@ public interface IApplicationComponent {
 
     void inject(ScreenGPresenterImpl screenGPresenter);
     void inject(FragmentGPresenter fragmentgPresenter);
+
+    void inject(ScreenFPresenterImpl screenFPresenter);
+    void inject(FragmentFPresenter fragmentFPresenter);
 
     void inject (ScreenEActivity activityE);
 
