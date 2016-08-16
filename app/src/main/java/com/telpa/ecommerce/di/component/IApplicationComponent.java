@@ -1,6 +1,10 @@
 package com.telpa.ecommerce.di.component;
 
 import com.telpa.ecommerce.activities.ActivityB.ScreenBPresenterImpl;
+import com.telpa.ecommerce.activities.ActivityC.ScreenCPresenterImpl;
+import com.telpa.ecommerce.activities.ActivityG.ScreenGPresenterImpl;
+import com.telpa.ecommerce.activities.ScreenEActivity;
+import com.telpa.ecommerce.activities.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
 import com.telpa.ecommerce.activities.activityL.ScreenLActivity;
 import com.telpa.ecommerce.activities.activityL.ScreenLPresenter;
@@ -32,7 +36,7 @@ public interface IApplicationComponent {
     void inject (ScreenBActivity activityB);
     void inject (ScreenCActivity activityC);
     void inject (ScreenDActivity activityD);
-    void inject (ScreenEActivity activityE);
+
     void inject (ScreenFActivity activityF);
     void inject (ScreenGActivity activityG);
     void inject (ScreenHActivity activityH);
@@ -52,7 +56,7 @@ public interface IApplicationComponent {
     void inject(FragmentCPresenter fragmentCPresenter);
     void inject(ScreenGPresenterImpl screenGPresenter);
     void inject(FragmentGPresenter fragmentgPresenter);
-
+    void inject (ScreenEActivity activityE);
     void inject(ScreenMActivity_Basket activityM);
 
 
