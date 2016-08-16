@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities;
+package com.telpa.ecommerce.activities.activityE;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -6,9 +6,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityE.IscreenEPresenter;
-import com.telpa.ecommerce.activities.activityE.IscreenEView;
-import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_E;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;

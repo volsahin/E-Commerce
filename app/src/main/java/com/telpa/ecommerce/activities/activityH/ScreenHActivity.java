@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities;
+package com.telpa.ecommerce.activities.activityH;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;

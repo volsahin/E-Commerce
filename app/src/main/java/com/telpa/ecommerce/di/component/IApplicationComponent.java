@@ -1,13 +1,13 @@
 package com.telpa.ecommerce.di.component;
 
 import com.telpa.ecommerce.activities.ActivityA.ScreenAPresenterImpl;
-import com.telpa.ecommerce.activities.ScreenHActivity;
+import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
 import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
 import com.telpa.ecommerce.activities.activityG.ScreenGPresenterImpl;
-import com.telpa.ecommerce.activities.ScreenEActivity;
-import com.telpa.ecommerce.activities.ScreenKActivity;
+import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
+import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
 import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
 import com.telpa.ecommerce.activities.activityH.ScreenHPresenter;
 import com.telpa.ecommerce.activities.activityJ_Form.ScreenJPresenter;
