@@ -1,10 +1,8 @@
-package com.telpa.ecommerce.activities.ActivityA;
+package com.telpa.ecommerce.activities.activityA;
 
 import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;
-import com.telpa.ecommerce.activities.ActivityA.IScreenAPresenter;
-import com.telpa.ecommerce.activities.ActivityA.ScreenA;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.network.APIService;
@@ -16,7 +14,7 @@ import javax.inject.Inject;
  * Created by Gizem İlgar on 12.8.2016.
  */
 
-public class ScreenAPresenterImpl implements IScreenAPresenter {
+public class ScreenAPresenterImpl implements com.telpa.ecommerce.activities.activityA.IScreenAPresenter {
     @Inject
     APIService service;
     @Inject

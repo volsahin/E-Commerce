@@ -1,6 +1,6 @@
 package com.telpa.ecommerce.di.component;
 
-import com.telpa.ecommerce.activities.ActivityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
 import com.telpa.ecommerce.activities.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
