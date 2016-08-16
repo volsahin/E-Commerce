@@ -1,6 +1,7 @@
 package com.telpa.ecommerce.di.component;
 
-import com.telpa.ecommerce.activities.ActivityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.activityD.ScreenDPresenterImpl;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityB.ScreenBPresenterImpl;
 import com.telpa.ecommerce.activities.activityC.ScreenCPresenterImpl;
@@ -83,4 +84,6 @@ public interface IApplicationComponent {
     void inject(FragmentAPresenter fragmentAPresenter);
 
     void inject (ScreenIPresenterImpl screenIPresenter);
+
+    void inject (ScreenDPresenterImpl screenDPresenter);
 }

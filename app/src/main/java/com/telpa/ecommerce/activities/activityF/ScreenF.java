@@ -1,10 +1,10 @@
-package com.telpa.ecommerce.activities.activityA;
+package com.telpa.ecommerce.activities.activityF;
 
 import android.os.Bundle;
 import android.view.View;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityA.fragmentA.FragmentAView;
+import com.telpa.ecommerce.activities.activityF.fragmentF.FragmentFView;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -12,22 +12,22 @@ import com.telpa.ecommerce.utils.TabHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScreenA extends BaseActivity implements IScreenAView {
-    IScreenAPresenter screenAPresenter;
+public class ScreenF extends BaseActivity implements IScreenFView {
+    IScreenFPresenter screenFPresenter;
     View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen_a);
+        setContentView(R.layout.activity_screen_f);
 
 
-        fcreateTitle("My Store" + " A");
+        fcreateTitle("My Store" + " F");
         fcreateToolbar(this, false, true, true, R.id.toolbar);
         fcreateMenu(this, true);
 
-        screenAPresenter = new ScreenAPresenterImpl(this, getApplication());
-        screenAPresenter.getCategories();
+        screenFPresenter = new ScreenFPresenterImpl(this, getApplication());
+        screenFPresenter.getCategories();
     }
 
     @Override
@@ -45,8 +45,8 @@ public class ScreenA extends BaseActivity implements IScreenAView {
         List<TabHelper> tabHelperList = new ArrayList<>();
 
         for (Category i : categories) {
-            view = getLayoutInflater().inflate(R.layout.fragment_a_tab1, null);
-            FragmentAView tab = new FragmentAView();
+            view = getLayoutInflater().inflate(R.layout.fragment_f_tab1, null);
+            FragmentFView tab = new FragmentFView();
             tab.setView(view);
             tab.setCategory(i);
             tab.setTitle(i.getName());

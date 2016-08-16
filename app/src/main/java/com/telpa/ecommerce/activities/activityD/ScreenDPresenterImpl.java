@@ -1,34 +1,37 @@
-package com.telpa.ecommerce.activities.activityA;
+package com.telpa.ecommerce.activities.activityD;
 
 import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.activities.activityB.ScreenB;
+import com.telpa.ecommerce.activities.activityC.ScreenC;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.network.APIService;
+
 import java.util.ArrayList;
+
 import javax.inject.Inject;
 
-
 /**
- * Created by Gizem İlgar on 12.8.2016.
+ * Created by Mert on 16.08.2016.
  */
 
-public class ScreenAPresenterImpl implements com.telpa.ecommerce.activities.activityA.IScreenAPresenter {
+public class ScreenDPresenterImpl implements IScreenDPresenter {
+
     @Inject
     APIService service;
     @Inject
     ICategory category;
 
+    ScreenD view;
 
-    ScreenA view;
-
-    public ScreenAPresenterImpl(ScreenA view, Application application) {
+    public ScreenDPresenterImpl(APIService service, ScreenD view, Application application) {
+        this.service = service;
         this.view = view;
         ((ECommerceApp) application).getComponent().inject(this);
+
     }
-
-
 
     @Override
     public void getCategories() {

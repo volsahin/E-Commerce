@@ -1,13 +1,11 @@
-package com.telpa.ecommerce.activities;
-
+package com.telpa.ecommerce.activities.activityD;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityB.IScreenBView;
-import com.telpa.ecommerce.activities.activityD.IScreenDView;
 import com.telpa.ecommerce.fragment.FragmentDTab;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
@@ -21,7 +19,10 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class ScreenDActivity extends BaseActivity  {
+/**
+ * Created by Mert on 16.08.2016.
+ */
+public class ScreenD extends BaseActivity implements IScreenDView{
     @Inject
     IBasket basket;
     @Inject
@@ -29,6 +30,8 @@ public class ScreenDActivity extends BaseActivity  {
     @Inject
     ICategory category;
     private String[] arraySpinner;
+
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,4 +80,19 @@ public class ScreenDActivity extends BaseActivity  {
     }
 
 
+    @Override
+    public void search() {
+
+    }
+
+    @Override
+    public void goBasket() {
+
+    }
+
+    @Override
+    public void fillFragments(ArrayList<Category> categories) {
+    //    List<TabHelper> tabHelperList = new ArrayList<>();
+
+    }
 }

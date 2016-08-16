@@ -1,16 +1,14 @@
-package com.telpa.ecommerce.activities.activityA;
+package com.telpa.ecommerce.activities.activityD;
+
 import com.telpa.ecommerce.models.Category;
 
 import java.util.ArrayList;
 
-
 /**
- * Created by Gizem İlgar on 12.8.2016.
+ * Created by Mert on 16.08.2016.
  */
-
-public interface IScreenAView {
+public interface IScreenDView {
     void search();
     void goBasket();
     void fillFragments(ArrayList<Category> categories);
-
 }
