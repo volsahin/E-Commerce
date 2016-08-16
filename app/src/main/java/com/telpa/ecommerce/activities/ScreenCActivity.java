@@ -3,7 +3,6 @@ package com.telpa.ecommerce.activities;
 import android.os.Bundle;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.fragment.FragmentBTab;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;

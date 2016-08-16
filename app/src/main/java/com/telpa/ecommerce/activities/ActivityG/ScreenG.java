@@ -1,10 +1,10 @@
-package com.telpa.ecommerce.activities.ActivityG;
+package com.telpa.ecommerce.activities.activityG;
 
 import android.os.Bundle;
 import android.view.View;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.fragment.FragmentG.FragmentGView;
+import com.telpa.ecommerce.activities.activityG.fragmentG.FragmentGView;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;

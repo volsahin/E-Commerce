@@ -25,6 +25,7 @@ import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Comment;
+import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -160,11 +161,13 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
         reviewsCount=(TextView) findViewById(R.id.reviews);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
-        productName.setText("Name ");
-        price.setText("$50");
-        description.setText("Açıklama");
-        reviewsCount.setText("50 reviews");
-        ratingBar.setRating(5);
+        Product product=(Product) getIntent().getSerializableExtra("product");
+
+        productName.setText(product.getName());
+        price.setText("$"+product.getPrice());
+        description.setText(product.getDescripton());
+        reviewsCount.setText(""+product.getReviews());
+        ratingBar.setRating(product.getRating());
 
 
     }

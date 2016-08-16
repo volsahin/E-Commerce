@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activities.ActivityB;
+package com.telpa.ecommerce.activities.activityB;
 
 
 import android.app.Application;
@@ -11,10 +11,6 @@ import com.telpa.ecommerce.network.APIService;
 import java.util.ArrayList;
 
 import javax.inject.Inject;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by SAMSUNGNB on 12.08.2016.
