@@ -24,8 +24,6 @@ public class ScreenAPresenterImpl implements IScreenAPresenter {
     ScreenA view;
 
     public ScreenAPresenterImpl(ScreenA view, Application application) {
-
-
         this.view = view;
         ((ECommerceApp) application).getComponent().inject(this);
     }
