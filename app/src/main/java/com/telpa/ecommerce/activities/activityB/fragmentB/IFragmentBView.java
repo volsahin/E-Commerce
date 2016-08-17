@@ -20,7 +20,5 @@ public interface IFragmentBView {
     void addFavorites(int ProductID);
 
     void onFail();
-
-
     void onSuccess();
 }

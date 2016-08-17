@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenFActivity;
+import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.models.Category;
@@ -58,7 +58,7 @@ public class FragmentGView extends TabHelper implements IFragmentGView {
         view.findViewById(R.id.viewallTop).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), ScreenFActivity.class);
+                Intent i = new Intent(getActivity(), ScreenF.class);
                 startActivity(i);
             }
         });

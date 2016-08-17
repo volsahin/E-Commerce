@@ -25,9 +25,9 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.activityA.ScreenA;
 import com.telpa.ecommerce.activities.activityB.ScreenB;
 import com.telpa.ecommerce.activities.activityC.ScreenC;
+import com.telpa.ecommerce.activities.activityD.ScreenD;
 import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.activities.activityG.ScreenG;
-import com.telpa.ecommerce.activities.ScreenDActivity;
 import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityI.ScreenI;
@@ -195,7 +195,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenC.class);
                                 break;
                             case 5:
-                                intentToActivity(activity,ScreenDActivity.class);
+                                intentToActivity(activity,ScreenD.class);
                                 break;
                             case 6:
                                 intentToActivity(activity,ScreenEActivity.class);

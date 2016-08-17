@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenFActivity;
+import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.models.Category;
@@ -34,7 +34,7 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
 
 
     @Override
-    public void onCreate(@org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.application = getApplication();
         this.view = getView();
@@ -59,7 +59,7 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
         view.findViewById(R.id.viewallTop).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), ScreenFActivity.class);
+                Intent i = new Intent(getActivity(), ScreenF.class);
                 startActivity(i);
             }
         });

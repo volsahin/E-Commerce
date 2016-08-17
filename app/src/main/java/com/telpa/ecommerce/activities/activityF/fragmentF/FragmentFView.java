@@ -16,10 +16,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.ScreenFActivity;
+import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_F;
-import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -78,7 +77,7 @@ public class FragmentFView extends TabHelper implements IFragmentFView {
         view.findViewById(R.id.viewallTop).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), ScreenFActivity.class);
+                Intent i = new Intent(getActivity(), ScreenF.class);
                 startActivity(i);
             }
         });

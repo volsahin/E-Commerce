@@ -1,7 +1,7 @@
 package com.telpa.ecommerce.di.component;
 
-import com.telpa.ecommerce.activities.ScreenFActivity;
 import com.telpa.ecommerce.activities.activityA.ScreenAPresenterImpl;
+import com.telpa.ecommerce.activities.activityD.fragmentD.FragmentDPresenter;
 import com.telpa.ecommerce.activities.activityF.ScreenFPresenterImpl;
 import com.telpa.ecommerce.activities.activityF.fragmentF.FragmentFPresenter;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
@@ -45,17 +45,6 @@ import dagger.Component;
 
 public interface IApplicationComponent {
 
-    /*void inject (ScreenAActivity activityA);
-    void inject (ScreenBActivity activityB);
-    void inject (ScreenCActivity activityC);
-    void inject (ScreenDActivity activityD);
-
-    void inject (ScreenFActivity activityF);
-    void inject (ScreenGActivity activityG);
-
-    void inject (ScreenIActivity activityI);
-    void inject (ScreenJActivity_Form activityJ);
-    */
     void inject(FormImpl form);
 
     void inject(ScreenJPresenter screenJFormPresenter);
@@ -94,8 +83,9 @@ public interface IApplicationComponent {
     void inject (ScreenIPresenterImpl screenIPresenter);
 
     void inject (ScreenDPresenterImpl screenDPresenter);
+    void inject (FragmentDPresenter fragmentDPresenter);
 
-    void inject (ScreenFActivity activityF);
+
 
 
 }
