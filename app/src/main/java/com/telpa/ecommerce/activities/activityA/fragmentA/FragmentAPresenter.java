@@ -4,8 +4,10 @@ import android.app.Application;
 import android.view.View;
 
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
@@ -24,44 +26,68 @@ public class FragmentAPresenter implements IFragmentAPresenter {
     ICategory category;
     @Inject
     IProduct IProduct;
+    @Inject
+    IBasket basket;
+
 
 
     private IFragmentAView view;
     private int categoryID;
-    ArrayList<Product> products;
+    Product featured;
     ArrayList<Category> subCategories;
+    int customerID;
 
     public FragmentAPresenter(FragmentAView fragmentAView, Application application) {
         ((ECommerceApp) application).getComponent().inject(this);
+        customerID=0;
         this.view = fragmentAView;
     }
 
-    @Override
-    public void loadView(Category category) {
-
-        this.categoryID = category.getID();
-    }
 
     @Override
-    public void getTopSubCategory(View view) {
-        Category topSubCategory = category.getTopSubCategory(categoryID);
-        this.view.setTopCategoryTitle(topSubCategory.getName());
-
-        getTopProducts(topSubCategory, view);
-    }
-
-    @Override
-    public void getTopProducts(Category category, View view) {
-        products = IProduct.getProducts(0);
-        this.view.setTopCategoryProducts(products);
-        this.view.onSuccess();
+    public void getTopProduct(Category category, View view) {
+        featured = IProduct.getFeatured(category.getID());
+        categoryID=category.getID();
+        this.view.setTopCategoryProduct(featured);
     }
 
     @Override
     public void getSubCategories(View view) {
         subCategories = new ArrayList<>();
-        subCategories = category.getCategories(0);
+        subCategories = category.getCategories(categoryID);
         this.view.setOtherSubCategories(subCategories);
+    }
+
+    @Override
+    public ArrayList<Integer> getFavorites(int customerID) {
+        return IProduct.getFavorites(customerID);
+    }
+
+    @Override
+    public void removeFavorites(int customerID, int productID) {
+        IProduct.removeFavorites(customerID,productID);
+    }
+
+    @Override
+    public void addFavorites(int customerID, int productID) {
+        IProduct.addFavorites(customerID,productID);
+    }
+
+    @Override
+    public boolean isInBasket(Product product) {
+        ArrayList<BasketItem> basketItems = basket.getBasket(customerID);
+        ArrayList<Product> products = new ArrayList<>();
+        for (BasketItem i : basketItems)
+            products.add(i.getProduct());
+        if (products.contains(product))
+            return true;
+        else
+            return false;
+    }
+
+    @Override
+    public void addBasket(int customerID, BasketItem basketItem) {
+        basket.addBasket(customerID,basketItem);
     }
 
 

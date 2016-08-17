@@ -1,9 +1,11 @@
 package com.telpa.ecommerce.models;
 
+import java.io.Serializable;
+
 /**
  * Created by SAMSUNGNB on 4.08.2016.
  */
-public class BasketItem {
+public class BasketItem implements Serializable {
     private Product product;
     private int variant1;
     private int variant2;

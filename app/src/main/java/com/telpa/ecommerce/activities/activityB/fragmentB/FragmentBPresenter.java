@@ -50,7 +50,7 @@ public class FragmentBPresenter implements IFragmentBPresenter {
     public void getTopProducts(Category category, View view) {
         products = IProduct.getProducts(0);
         this.view.setTopCategoryProducts(products);
-        this.view.onSuccess();
+
     }
 
 

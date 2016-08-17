@@ -58,7 +58,7 @@ public interface APIService {
 
     @GET("basket/add")
     Call<Boolean> addBasket(@Query("CustomerID") int customerID,
-                            @Query("BasketItem") ArrayList<BasketItem> basketItems
+                            @Query("BasketItem") BasketItem basketItem
 
     );
 

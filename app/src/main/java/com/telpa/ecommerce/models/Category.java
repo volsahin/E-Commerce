@@ -1,10 +1,12 @@
 package com.telpa.ecommerce.models;
 
 
+import java.io.Serializable;
+
 /**
  * Created by Mert on 29.07.2016.
  */
-public class Category {
+public class Category implements Serializable {
     private int ID;
     private String name;
     private int parentID;

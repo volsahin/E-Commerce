@@ -60,6 +60,7 @@ public class RecyclerAdapter_ABCGSmall extends RecyclerView.Adapter<RecyclerAdap
             holder.ratingBar.setRating(products.get(position).getRating());
 
         }
+
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -13,6 +13,6 @@ import java.util.ArrayList;
 public interface IScreenKPresenter {
     void RadioGroup(RadioGroup radioGroup1, RadioGroup radioGroup2);
     ArrayList<Comment> fillList();
-    ArrayList<BasketItem> basketitem();
+    BasketItem basketitem();
     int favoritem();
 }

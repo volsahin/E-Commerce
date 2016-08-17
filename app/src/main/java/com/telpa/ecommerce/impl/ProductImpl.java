@@ -48,11 +48,10 @@ public class ProductImpl implements IProduct {
         b.setPrice(50);
         b.setRating(2);
         b.setRating(3);
+
         products.add(b);
-
-
-
-
+        products.add(a);
+        products.add(b);
         products.add(a);
         products.add(b);
         products.add(a);

@@ -26,13 +26,14 @@ public class BasketImpl implements IBasket {
     @Inject
     APIService service;
 
-    @Override
-    public ArrayList<BasketItem> getBasket(int customerID) {
+    ArrayList<BasketItem> basketItems;
+
+    public BasketImpl() {
 
 
-        //TODO serviceden gelecek şekilde yaz.
-        ArrayList<BasketItem> basketItems=new ArrayList<>();
+        basketItems=new ArrayList<>();
 
+        //TODO buradakileri sil;
         BasketItem item=new BasketItem();
         item.setNumber(5);
         item.setVariant1(2);
@@ -93,14 +94,17 @@ public class BasketImpl implements IBasket {
 
         item3.setProduct(c);
         basketItems.add(item3);
+    }
 
-
-
+    @Override
+    public ArrayList<BasketItem> getBasket(int customerID) {
+        //TODO serviceden gelecek şekilde yaz.
         return basketItems;
     }
 
     @Override
-    public boolean addBasket(int customerID, ArrayList<BasketItem> basketItems) {
+    public boolean addBasket(int customerID, BasketItem basketItem) {
+        basketItems.add(basketItem);
         return false;
     }
 

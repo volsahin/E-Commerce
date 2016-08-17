@@ -82,9 +82,9 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
         RecyclerAdapter_BBig recyclerAdapter;
         if (products.size() >= 2) {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products,getApplication());
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products,getApplication(),this);
         } else {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products,getApplication());
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products,getApplication(),this);
         }
         recyclerView.setAdapter(recyclerAdapter);
     }
@@ -109,6 +109,16 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     @Override
     public void addFavorites(int ProductID) {
 
+    }
+
+    @Override
+    public void addBasketSuccess(int ProductID) {
+        Toast.makeText(getActivity(), "Ürün sepetinize eklendi!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void addBasketFail(int ProductID) {
+        Toast.makeText(getActivity(), "Ürün zaten sepetinizde bulunmaktadır!", Toast.LENGTH_SHORT).show();
     }
 
 }

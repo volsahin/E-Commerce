@@ -70,13 +70,13 @@ public class ScreenKPresenter implements IScreenKPresenter{
         return comments;
     }
     @Override
-    public ArrayList<BasketItem> basketitem() {
-        ArrayList<BasketItem>basketitem=new ArrayList<>();
-        BasketItem b=new BasketItem();
-        b.setNumber(10);
-        b.setVariant1(5);
-        b.setVariant2(4);
-        basketitem.add(b);
+    public BasketItem basketitem() {
+
+        BasketItem basketitem=new BasketItem();
+        basketitem.setNumber(10);
+        basketitem.setVariant1(5);
+        basketitem.setVariant2(4);
+
         return basketitem;
     }
     @Override

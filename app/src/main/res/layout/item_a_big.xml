@@ -64,8 +64,8 @@
             android:layout_height="wrap_content"
             android:stepSize="1.0"
             android:layout_below="@+id/description"
-            android:layout_alignLeft="@+id/description"
-            android:layout_alignStart="@+id/description"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             style="?android:attr/ratingBarStyleSmall"
             android:isIndicator="false"
             android:progressBackgroundTint="@color/lightGrey"
@@ -74,9 +74,9 @@
         <RelativeLayout
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/ratingBar"
-            android:layout_alignRight="@+id/description"
-            android:layout_alignEnd="@+id/description">
+            android:layout_below="@+id/description"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
 
             <ImageButton
                 android:id="@+id/bigActionButton"
