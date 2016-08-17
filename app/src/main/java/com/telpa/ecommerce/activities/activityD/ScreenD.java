@@ -6,10 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.fragment.FragmentDTab;
-import com.telpa.ecommerce.interfaces.IBasket;
-import com.telpa.ecommerce.interfaces.ICategory;
-import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.activities.activityD.fragmentD.FragmentDView;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
@@ -17,21 +14,17 @@ import com.telpa.ecommerce.utils.TabHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-
 /**
  * Created by Mert on 16.08.2016.
  */
-public class ScreenD extends BaseActivity implements IScreenDView{
-    @Inject
-    IBasket basket;
-    @Inject
-    IProduct product;
-    @Inject
-    ICategory category;
-    private String[] arraySpinner;
+public class ScreenD extends BaseActivity implements IScreenDView {
+
+
+    IScreenDPresenter screenDPresenter;
+
 
     View view;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,31 +35,16 @@ public class ScreenD extends BaseActivity implements IScreenDView{
         fcreateToolbar(this, false, true, true, R.id.toolbar);
         fcreateMenu(this, true);
 
+        screenDPresenter = new ScreenDPresenterImpl(this, getApplication());
+        screenDPresenter.getCategories();
 
-        // This list holds current tabs in ScreenA
-        List<TabHelper> tabHelperList = new ArrayList<>();
-        List<Category> categories = new ArrayList<>();
-        Category a = new Category();
-        a.setName("Category");
-        a.setHighResImageUrl("");
-        a.setLowResImageUrl("");
-        a.setID(1);
-        a.setNumOfProduct(2);
-        a.setParentID(0);
-        categories.add(a);
-        categories.add(a);
-        categories.add(a);
+        setSpinner();
 
-        for (Category i : categories) {
+    }
 
-            FragmentDTab tab = new FragmentDTab();
-            tab.createTab(i.getName());
-            tabHelperList.add(tab);
-        }
+    public void setSpinner() {
 
-        fcreateTabMenu(tabHelperList);
-
-        arraySpinner = new String[]{"Sort by", "Sort by"};
+        String[] arraySpinner = new String[]{"Sort by", "Sort by"};
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner1);
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
@@ -92,7 +70,18 @@ public class ScreenD extends BaseActivity implements IScreenDView{
 
     @Override
     public void fillFragments(ArrayList<Category> categories) {
-    //    List<TabHelper> tabHelperList = new ArrayList<>();
+        List<TabHelper> tabHelperList = new ArrayList<>();
 
+        for (Category i : categories) {
+            view = getLayoutInflater().inflate(R.layout.fragment_d_tab1, null);
+            FragmentDView tab = new FragmentDView();
+            tab.setView(view);
+            tab.setCategory(i);
+            tab.setTitle(i.getName());
+            tab.setApplication(getApplication());
+            tabHelperList.add(tab);
+        }
+
+        fcreateTabMenu(tabHelperList);
     }
 }

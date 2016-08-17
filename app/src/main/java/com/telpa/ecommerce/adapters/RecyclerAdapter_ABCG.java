@@ -85,11 +85,7 @@ public class RecyclerAdapter_ABCG extends RecyclerView.Adapter<RecyclerAdapter_A
             String type = adapter.type;
 
             subcategory = (TextView) v.findViewById(R.id.subcategories);
-
-
-
             products = IProduct.getProducts(0);
-
 
             recyclerView2 = (RecyclerView) v.findViewById(R.id.recyclerViewABCGitem);
 

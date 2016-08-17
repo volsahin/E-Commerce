@@ -68,9 +68,12 @@ public class ScreenJ extends BaseActivity implements IScreenJView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form);
+        setContentView(R.layout.activity_screen_j_form);
         ButterKnife.bind(this);
 
+        fcreateTitle("Form");
+        fcreateToolbar(this, false, true, false, R.id.toolbar);
+        fcreateMenu(this, false);
 
         screenJPresenter = new ScreenJPresenter(this, getApplication());
         screenJPresenter.setSpinnerValues();

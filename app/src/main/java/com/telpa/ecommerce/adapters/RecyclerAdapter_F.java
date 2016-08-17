@@ -18,8 +18,8 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
-import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activities.activityK.ScreenK;
+import com.telpa.ecommerce.activities.activityM.ScreenM;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
 
@@ -113,12 +113,12 @@ public class RecyclerAdapter_F extends RecyclerView.Adapter<RecyclerAdapter_F.Vi
                                 return true;
                             case R.id.item_AddBasket:
                                 Intent intent2=new Intent();
-                                intent2.setClass(activity, ScreenMActivity_Basket.class);
+                                intent2.setClass(activity, ScreenM.class);
                                 activity.startActivity(intent2);
                                 return true;
                             case R.id.item_Detail:
                                 Intent intent3=new Intent();
-                                intent3.setClass(activity,ScreenKActivity.class);
+                                intent3.setClass(activity,ScreenK.class);
                                 activity.startActivity(intent3);
                                 return true;
                         }

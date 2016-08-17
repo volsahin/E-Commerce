@@ -4,11 +4,9 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -18,7 +16,6 @@ import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
 import com.telpa.ecommerce.adapters.ViewPagerAdapterK;
-import com.telpa.ecommerce.helper.RadioButtonHelper;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
@@ -36,7 +33,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ScreenKActivity extends BaseActivity implements IScreenKView {
+public class ScreenK extends BaseActivity implements IScreenKView {
     @Inject
     IBasket basket;
     @Inject
@@ -103,7 +100,7 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(10));
-        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenKActivity.this,screenKPresenter.fillList().size(), R.layout.item_l_comment, screenKPresenter.fillList());
+        recyclerAdapter = new RecyclerAdapter_KLComment(ScreenK.this,screenKPresenter.fillList().size(), R.layout.item_l_comment, screenKPresenter.fillList());
         recyclerView.setAdapter(recyclerAdapter);
 
 

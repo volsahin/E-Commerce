@@ -11,10 +11,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.impl.BasketImpl;
+import com.telpa.ecommerce.activities.activityM.IScreenMView;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.models.BasketItem;
-import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -28,18 +27,19 @@ import javax.inject.Inject;
 public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapter_MBasket.ViewHolder> {
     @Inject
     IBasket basket;
-
+IScreenMView screenMView;
     private int amountOfData;
     private int id;
     private ArrayList<BasketItem> basketItems;
     private Activity activity;
 
 
-    public RecyclerAdapter_MBasket(Activity activity, int amountOfData, int id, ArrayList<BasketItem> basketItems) {
+    public RecyclerAdapter_MBasket(Activity activity, int amountOfData, int id, ArrayList<BasketItem> basketItems,IScreenMView v) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.basketItems = basketItems;
         this.activity = activity;
+        screenMView=v;
     }
 
     @Override
@@ -65,6 +65,7 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
             public void onClick(View v) {
                 viewHolder.number.setText("" + (basketItems.get(position).getNumber()+1));
                 basketItems.get(position).setNumber(basketItems.get(position).getNumber()+1);
+                screenMView.itemUp(basketItems.get(position).getProduct().getPrice());
             }
         });
 
@@ -72,8 +73,9 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
             @Override
             public void onClick(View v) {
                 if(basketItems.get(position).getNumber()>0) {
-                    viewHolder.number.setText("" + (basketItems.get(position).getNumber() - 1));
+                    viewHolder.number.setText("" + (basketItems.get(position).getNumber()-1));
                     basketItems.get(position).setNumber(basketItems.get(position).getNumber() - 1);
+                    screenMView.itemDown(basketItems.get(position).getProduct().getPrice());
                 }
             }
         });
@@ -93,6 +95,7 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
         public ImageButton image;
         public ImageButton up;
         public ImageButton down;
+
 
         public ViewHolder(View v) {
             super(v);

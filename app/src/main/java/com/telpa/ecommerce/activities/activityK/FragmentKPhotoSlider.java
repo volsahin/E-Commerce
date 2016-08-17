@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.fragment;
+package com.telpa.ecommerce.activities.activityK;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

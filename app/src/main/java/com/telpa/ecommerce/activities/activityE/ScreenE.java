@@ -14,7 +14,7 @@ import com.telpa.ecommerce.utils.BaseActivity;
 
 import javax.inject.Inject;
 
-public class ScreenEActivity extends BaseActivity implements IscreenEView {
+public class ScreenE extends BaseActivity implements IscreenEView {
     @Inject
     IBasket basket;
     @Inject
@@ -55,7 +55,7 @@ public class ScreenEActivity extends BaseActivity implements IscreenEView {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter_E.SpaceItemDecoration(0));
-        recyclerAdapter = new RecyclerAdapter_E(ScreenEActivity.this, screenEPresenter.categories().size(), R.layout.item_e, screenEPresenter.categories());
+        recyclerAdapter = new RecyclerAdapter_E(ScreenE.this, screenEPresenter.categories().size(), R.layout.item_e, screenEPresenter.categories());
         recyclerView.setAdapter(recyclerAdapter);
 
     }

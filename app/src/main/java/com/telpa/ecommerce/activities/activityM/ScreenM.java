@@ -1,32 +1,31 @@
-package com.telpa.ecommerce.activities;
+package com.telpa.ecommerce.activities.activityM;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_MBasket;
-import com.telpa.ecommerce.impl.BasketImpl;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
-import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.utils.BaseActivity;
-
-import java.util.ArrayList;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ScreenMActivity_Basket extends BaseActivity {
+public class ScreenM extends BaseActivity implements IScreenMView
+{
     @Inject
     IBasket basket;
     @Inject
@@ -45,42 +44,23 @@ public class ScreenMActivity_Basket extends BaseActivity {
     @BindView(R.id.totalItems)
     TextView totalItems;
 
-
+    IScreenMPresenter screenMPresenter;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
-    private ArrayList<BasketItem> basketItems;
+    int totalPriceInt,totalItemInt;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_m_basket);
-        ButterKnife.bind(ScreenMActivity_Basket.this);
-/*
-        //// TODO
-        ArrayList<String> url=new ArrayList<String>();
-        url.add("url1");
-        url.add("urls2");
-        products=new ArrayList<Product>();
-        Product a=new Product();
-        a.setName("");
-        a.setID(1);
-        a.setCategoryID(1);
-        a.setDescripton("");
-        a.setHighResImageUrls(url);
-        a.setLowResImageUrls(url);
-        a.setPrice(30);
-        a.setRating(2);
-        a.setRating(3);
-        products.add(a);
-*/
+        ButterKnife.bind(ScreenM.this);
         ((ECommerceApp)getApplication()).getComponent().inject(this);
-        basketItems = basket.getBasket(1);
 
-
-        fcreateTitle("Your Basket");
+        screenMPresenter=new ScreenMPresenter(getApplication(),this);
+        fcreateTitle(screenMPresenter.setTitle());
         fcreateToolbar(this, false, true, false, R.id.include);
         fcreateMenu(this, false);
 
@@ -91,34 +71,43 @@ public class ScreenMActivity_Basket extends BaseActivity {
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, basketItems.size(), R.layout.item_m_basket, basketItems);
+        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenM.this, screenMPresenter.fillList().size(), R.layout.item_m_basket, screenMPresenter.fillList(),this);
         recyclerView.setAdapter(recyclerAdapter);
 
-        totalItems.setText("" + totalItems(basketItems));
-        totalPrice.setText("" + totalPrice(basketItems));
+        totalItems.setText("" + screenMPresenter.totalItem(screenMPresenter.fillList()));
+        totalPrice.setText("" + screenMPresenter.totalPrice(screenMPresenter.fillList()));
+        totalPriceInt=screenMPresenter.totalPrice(screenMPresenter.fillList());
+        totalItemInt=screenMPresenter.totalItem(screenMPresenter.fillList());
+        checkoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                screenMPresenter.proceedClick();
+            }
+        });
 
+    }
+    @Override
+    public void proceedClick() {
+        Toast.makeText(ScreenM.this, "proceed, basıldı", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void itemUp(int price) {
+        screenMPresenter.itemUp(price);
+    }
+
+    @Override
+    public void itemDown(int price) {
+        screenMPresenter.itemDown(price);
 
     }
 
-    public int totalItems(ArrayList<BasketItem> basketItems) {
-        int total = 0;
+    @Override
+    public void setTexts(int price, int number) {
+        totalPriceInt= totalPriceInt+price;
+        totalPrice.setText(String.valueOf(totalPriceInt));
+        totalItemInt= totalItemInt+number;
+        totalItems.setText(String.valueOf(totalItemInt));
 
-        for (BasketItem i : basketItems) {
-            total = total + i.getNumber();
-        }
-
-        return total;
     }
-
-    public int totalPrice(ArrayList<BasketItem> basketItems) {
-        int total = 0;
-
-        for (BasketItem i : basketItems) {
-            total = total + (i.getNumber() * i.getProduct().getPrice());
-        }
-
-        return total;
-    }
-
-
 }

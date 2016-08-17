@@ -16,13 +16,11 @@ import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_KLComment;
-import com.telpa.ecommerce.helper.RadioButtonHelper;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
 import com.telpa.ecommerce.network.APIService;
-import com.telpa.ecommerce.network.People;
 import com.telpa.ecommerce.utils.BaseActivity;
 
 import java.util.ArrayList;
@@ -32,9 +30,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class ScreenL extends BaseActivity implements IScreenLView {
@@ -65,7 +60,6 @@ public class ScreenL extends BaseActivity implements IScreenLView {
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
     private RecyclerView.LayoutManager recyclerLayoutManagerPopUp;
-    private RadioButtonHelper radioButtonHelper;
     private TextView[] textViews;
     private RadioButton[] radioButtons;
     private ArrayList<Product> products;
@@ -118,20 +112,6 @@ public class ScreenL extends BaseActivity implements IScreenLView {
         recyclerView.setAdapter(recyclerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        service.getPeople().enqueue(new Callback<People>() {
-            @Override
-            public void onResponse(Call<People> call, Response<People> response) {
-                Toast.makeText(ScreenL.this, response.body().getMusteri().get(4).getName(), Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onFailure(Call<People> call, Throwable t) {
-                Toast.makeText(ScreenL.this, "Connection failed!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
         //TODO
 
