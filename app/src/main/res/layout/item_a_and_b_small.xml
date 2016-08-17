@@ -5,21 +5,19 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardBackgroundColor="@android:color/white"
-    android:layout_margin="4dp">
+    card_view:cardBackgroundColor="@android:color/white">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
         android:orientation="vertical"
         android:weightSum="1"
-        android:layout_margin="8dp">
+        android:layout_margin="@dimen/item_padding">
 
         <ImageButton
             android:id="@+id/image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="@dimen/small_photo_item"
+            android:layout_height="@dimen/small_photo_item"
             android:background="@color/grey">
 
 
@@ -32,12 +30,9 @@
             android:layout_alignLeft="@+id/productName"
             android:layout_alignStart="@+id/productName"
             android:layout_below="@+id/productName"
-            android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp"
             android:text="$100"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/red"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_size_12"
             android:textStyle="bold"/>
 
         <TextView
@@ -47,12 +42,9 @@
             android:layout_alignLeft="@+id/image"
             android:layout_alignStart="@+id/image"
             android:layout_below="@+id/image"
-            android:layout_gravity=""
-            android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp"
             android:text="Product"
             android:textColor="@color/lightBlack"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_size_14"
             android:textStyle="bold" />
 
         <ImageButton
@@ -62,8 +54,6 @@
             android:layout_alignEnd="@+id/image"
             android:layout_alignRight="@+id/image"
             android:layout_below="@+id/image"
-            android:layout_column="4"
-            android:layout_weight="0.07"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_more_vert_black_24dp" />
 
