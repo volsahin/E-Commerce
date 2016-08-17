@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activityM;
+package com.telpa.ecommerce.activities.activityM;
 
 /**
  * Created by musta on 17.08.2016.

@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activityM;
+package com.telpa.ecommerce.activities.activityM;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -24,7 +24,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ScreenMActivity_Basket extends BaseActivity implements IScreenMView
+public class ScreenM extends BaseActivity implements IScreenMView
 {
     @Inject
     IBasket basket;
@@ -56,7 +56,7 @@ public class ScreenMActivity_Basket extends BaseActivity implements IScreenMView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_m_basket);
-        ButterKnife.bind(ScreenMActivity_Basket.this);
+        ButterKnife.bind(ScreenM.this);
         ((ECommerceApp)getApplication()).getComponent().inject(this);
 
         screenMPresenter=new ScreenMPresenter(getApplication(),this);
@@ -71,7 +71,7 @@ public class ScreenMActivity_Basket extends BaseActivity implements IScreenMView
         recyclerView.setLayoutManager(recyclerLayoutManager);
 
         recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(3));
-        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenMActivity_Basket.this, screenMPresenter.fillList().size(), R.layout.item_m_basket, screenMPresenter.fillList(),this);
+        recyclerAdapter = new RecyclerAdapter_MBasket(ScreenM.this, screenMPresenter.fillList().size(), R.layout.item_m_basket, screenMPresenter.fillList(),this);
         recyclerView.setAdapter(recyclerAdapter);
 
         totalItems.setText("" + screenMPresenter.totalItem(screenMPresenter.fillList()));
@@ -88,7 +88,7 @@ public class ScreenMActivity_Basket extends BaseActivity implements IScreenMView
     }
     @Override
     public void proceedClick() {
-        Toast.makeText(ScreenMActivity_Basket.this, "proceed, basıldı", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ScreenM.this, "proceed, basıldı", Toast.LENGTH_SHORT).show();
     }
 
     @Override

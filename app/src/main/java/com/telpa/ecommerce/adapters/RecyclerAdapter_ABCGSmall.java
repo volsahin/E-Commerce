@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
+import com.telpa.ecommerce.activities.activityK.ScreenK;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
@@ -63,7 +63,7 @@ public class RecyclerAdapter_ABCGSmall extends RecyclerView.Adapter<RecyclerAdap
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(activity, ScreenKActivity.class);
+                Intent i=new Intent(activity, ScreenK.class);
                 i.putExtra("product",products.get(position));
                 activity.startActivity(i);
             }

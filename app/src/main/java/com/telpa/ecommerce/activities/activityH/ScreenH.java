@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-public class ScreenHActivity extends BaseActivity implements IScreenHView{
+public class ScreenH extends BaseActivity implements IScreenHView{
     @Inject
     IBasket basket;
     @Inject

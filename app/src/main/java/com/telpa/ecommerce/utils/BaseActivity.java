@@ -28,11 +28,11 @@ import com.telpa.ecommerce.activities.activityC.ScreenC;
 import com.telpa.ecommerce.activities.activityD.ScreenD;
 import com.telpa.ecommerce.activities.activityF.ScreenF;
 import com.telpa.ecommerce.activities.activityG.ScreenG;
-import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
-import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
+import com.telpa.ecommerce.activities.activityE.ScreenE;
+import com.telpa.ecommerce.activities.activityH.ScreenH;
 import com.telpa.ecommerce.activities.activityI.ScreenI;
-import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
-import com.telpa.ecommerce.activityM.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activities.activityK.ScreenK;
+import com.telpa.ecommerce.activities.activityM.ScreenM;
 import com.telpa.ecommerce.activities.activityJ_Form.ScreenJ;
 import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;
@@ -198,7 +198,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenD.class);
                                 break;
                             case 6:
-                                intentToActivity(activity,ScreenEActivity.class);
+                                intentToActivity(activity,ScreenE.class);
                                 break;
                             case 7:
                                 intentToActivity(activity,ScreenF.class);
@@ -207,7 +207,7 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenG.class);
                                 break;
                             case 9:
-                                intentToActivity(activity,ScreenHActivity.class);
+                                intentToActivity(activity,ScreenH.class);
                                 break;
                             case 10:
                                 intentToActivity(activity,ScreenI.class);
@@ -216,15 +216,14 @@ public class BaseActivity extends AppCompatActivity {
                                 intentToActivity(activity,ScreenJ.class);
                                 break;
                             case 12:
-                                intentToActivity(activity,ScreenKActivity.class);
+                                intentToActivity(activity,ScreenK.class);
                                 break;
                             case 13:
                                 intentToActivity(activity, ScreenL.class);
                                 break;
 
                             case 14:
-                                intentToActivity(activity,ScreenMActivity_Basket.class);
-                                // Activity M
+                                intentToActivity(activity,ScreenM.class);
                                 break;
 
                         }

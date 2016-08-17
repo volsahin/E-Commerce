@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activityM;
+package com.telpa.ecommerce.activities.activityM;
 
 import com.telpa.ecommerce.models.BasketItem;
 

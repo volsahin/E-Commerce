@@ -1,4 +1,4 @@
-package com.telpa.ecommerce.activityM;
+package com.telpa.ecommerce.activities.activityM;
 
 import android.app.Application;
 

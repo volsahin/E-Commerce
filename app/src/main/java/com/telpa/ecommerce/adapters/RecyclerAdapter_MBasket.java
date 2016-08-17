@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activityM.IScreenMView;
+import com.telpa.ecommerce.activities.activityM.IScreenMView;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.models.BasketItem;
 
