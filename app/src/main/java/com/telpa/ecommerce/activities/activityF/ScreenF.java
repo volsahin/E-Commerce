@@ -28,6 +28,7 @@ public class ScreenF extends BaseActivity implements IScreenFView {
 
         screenFPresenter = new ScreenFPresenterImpl(this, getApplication());
         screenFPresenter.getCategories();
+
     }
 
     @Override

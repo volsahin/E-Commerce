@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -51,41 +52,14 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
     ImageButton basketButtonMenu;
     @BindView(R.id.title)
     TextView title;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.Radio1)
-    RadioButton Ia;
-    @BindView(R.id.a)
-    TextView a;
-    @BindView(R.id.Radio2)
-    RadioButton Ib;
-    @BindView(R.id.b)
-    TextView b;
-    @BindView(R.id.Radio3)
-    RadioButton Ic;
-    @BindView(R.id.c)
-    TextView c;
-    @BindView(R.id.Radio4)
-    RadioButton Id;
-    @BindView(R.id.d)
-    TextView d;
-    @BindView(R.id.Radio5)
-    RadioButton Ie;
-    @BindView(R.id.e)
-    TextView e;
-    @BindView(R.id.productRadio1)
-    RadioButton check1;
-    @BindView(R.id.productRadio2)
-    RadioButton check2;
-    @BindView(R.id.productRadio3)
-    RadioButton check3;
-    @BindView(R.id.productRadio4)
-    RadioButton check4;
+    @BindView(R.id.lin_2_l)
+    RadioGroup group;
+    @BindView(R.id.lin_3_l)
+    RadioGroup group2;
     @BindView(R.id.button2)
     Button addbasket;
     @BindView(R.id.button)
     Button addfavorite;
-
     ViewPager pager;
 
     //TODO
@@ -95,14 +69,9 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
     public RatingBar ratingBar;
     public TextView reviewsCount;
     private IScreenKPresenter screenKPresenter;
-
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
     private RecyclerView.LayoutManager recyclerLayoutManager;
-
-    private RadioButtonHelper radioButtonHelper;
-    private TextView[] textViews;
-    private RadioButton[] radioButtons;
     private ArrayList<Comment> comments;
 
     @Override
@@ -112,20 +81,7 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
         screenKPresenter=new ScreenKPresenter(this,getApplication());
         ((ECommerceApp) getApplication()).getComponent().inject(this);
         ButterKnife.bind(this);
-        textViews = new TextView[5];
-        textViews[0] = a;
-        textViews[1] = b;
-        textViews[2] = c;
-        textViews[3] = d;
-        textViews[4] = e;
-        radioButtons = new RadioButton[5];
-        radioButtons[0] = Ia;
-        radioButtons[1] = Ib;
-        radioButtons[2] = Ic;
-        radioButtons[3] = Id;
-        radioButtons[4] = Ie;
-        radioButtonHelper = new RadioButtonHelper();
-
+        screenKPresenter.RadioGroup(group,group2);
         //TODO
         fcreateTitle("");
         fcreateToolbar(this, true, true, false, R.id.toolbar);
@@ -170,35 +126,12 @@ public class ScreenKActivity extends BaseActivity implements IScreenKView {
     }
 
 
-    @OnClick({R.id.searchButton, R.id.basketButton, R.id.Radio1, R.id.Radio2, R.id.Radio3, R.id.Radio4, R.id.Radio5, R.id.productRadio1, R.id.productRadio2, R.id.productRadio3, R.id.productRadio4,R.id.button2,R.id.button})
+    @OnClick({R.id.searchButton, R.id.basketButton,R.id.button2,R.id.button})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.searchButton:
                 break;
             case R.id.basketButton:
-                break;
-            case R.id.Radio1:
-                radioButtonHelper.click("a", textViews, radioButtons, ScreenKActivity.this);
-                break;
-            case R.id.Radio2:
-                radioButtonHelper.click("b", textViews, radioButtons, ScreenKActivity.this);
-                break;
-            case R.id.Radio3:
-                radioButtonHelper.click("c", textViews, radioButtons, ScreenKActivity.this);
-                break;
-            case R.id.Radio4:
-                radioButtonHelper.click("d", textViews, radioButtons, ScreenKActivity.this);
-                break;
-            case R.id.Radio5:
-                radioButtonHelper.click("e", textViews, radioButtons, ScreenKActivity.this);
-                break;
-            case R.id.productRadio1:
-                break;
-            case R.id.productRadio2:
-                break;
-            case R.id.productRadio3:
-                break;
-            case R.id.productRadio4:
                 break;
             case R.id.button2:
                 ShowAddBasket();
