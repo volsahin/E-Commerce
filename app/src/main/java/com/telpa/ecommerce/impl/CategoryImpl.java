@@ -31,23 +31,7 @@ public class CategoryImpl implements ICategory {
         categories.add(a);
         return categories;
     }
-    @Override
-    public ArrayList<Category> getCategories1(int parentCategoryID) {
 
-        //TODO service methodu yaz
-        ArrayList<Category> categories1 = new ArrayList<>();
-        Category a = new Category();
-        a.setName("Category");
-        a.setHighResImageUrl("http://www.batmanda.com/rsm.batmanda/1970335733.jpg");
-        a.setLowResImageUrl("");
-        a.setID(1);
-        a.setNumOfProduct(2);
-        a.setParentID(0);
-        categories1.add(a);
-        categories1.add(a);
-        categories1.add(a);
-        return categories1;
-    }
     @Override
     public Category getTopSubCategory(int categoryID) {
         Category a = new Category();

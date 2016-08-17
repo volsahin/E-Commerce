@@ -9,4 +9,5 @@ import java.util.ArrayList;
  */
 public interface IScreenHPresenter {
     ArrayList<Category> categories();
+    void ScreenHCategories(ArrayList<Category> screenhcategories);
 }
