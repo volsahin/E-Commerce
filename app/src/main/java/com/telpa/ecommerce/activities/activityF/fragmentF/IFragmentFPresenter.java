@@ -15,4 +15,5 @@ public interface IFragmentFPresenter {
 
 
     void isFavorite(int customerID, Product product);
+
 }
