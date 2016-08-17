@@ -119,20 +119,6 @@ public class ScreenL extends BaseActivity implements IScreenLView {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        service.getPeople().enqueue(new Callback<People>() {
-            @Override
-            public void onResponse(Call<People> call, Response<People> response) {
-                Toast.makeText(ScreenL.this, response.body().getMusteri().get(4).getName(), Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onFailure(Call<People> call, Throwable t) {
-                Toast.makeText(ScreenL.this, "Connection failed!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
         //TODO
 
         bigImage = (ImageButton) findViewById(R.id.bigImage);

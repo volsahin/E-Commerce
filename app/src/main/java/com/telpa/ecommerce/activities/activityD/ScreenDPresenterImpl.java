@@ -26,12 +26,12 @@ public class ScreenDPresenterImpl implements IScreenDPresenter {
 
     ScreenD view;
 
-    public ScreenDPresenterImpl(APIService service, ScreenD view, Application application) {
-        this.service = service;
+    public ScreenDPresenterImpl( ScreenD view, Application application) {
         this.view = view;
         ((ECommerceApp) application).getComponent().inject(this);
 
     }
+
 
     @Override
     public void getCategories() {

@@ -1,8 +1,10 @@
 package com.telpa.ecommerce.activities.activityK;
 
 import android.app.Application;
+import android.widget.RadioGroup;
 
 import com.telpa.ecommerce.ECommerceApp;
+import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.interfaces.ICategory;
 import com.telpa.ecommerce.interfaces.IProduct;
@@ -32,6 +34,33 @@ public class ScreenKPresenter implements IScreenKPresenter{
     public ScreenKPresenter(IScreenKView view,Application application) {
         this.view = view;
         ((ECommerceApp) application).getComponent().inject(this);
+    }
+
+    @Override
+    public void RadioGroup(RadioGroup radioGroup1, RadioGroup radioGroup2) {
+        String variants1 = null,variants2 = null;
+        switch (radioGroup1.getCheckedRadioButtonId()) {
+            case R.id.radio_l_1_1:variants1="A";
+                break;
+            case R.id.radio_l_1_2:variants1="B";
+                break;
+            case R.id.radio_l_1_3:variants1="C";
+                break;
+            case R.id.radio_l_1_4:variants1="D";
+                break;
+            case R.id.radio_l_1_5:variants1="E";
+                break;
+        }
+        switch (radioGroup2.getCheckedRadioButtonId()) {
+            case R.id.radio_l_2_1:variants2="1";
+                break;
+            case R.id.radio_l_2_2:variants2="2";
+                break;
+            case R.id.radio_l_2_3:variants2="3";
+                break;
+            case R.id.radio_l_2_4:variants2="4";
+                break;
+        }
     }
 
     @Override

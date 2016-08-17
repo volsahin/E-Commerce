@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:padding="@dimen/main_padding"
         android:focusableInTouchMode="true">
 
         <TextView
@@ -14,9 +15,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginLeft="@dimen/item_padding"
+            android:layout_marginStart="@dimen/item_padding"
+            android:paddingTop="@dimen/top_padding"
             android:text="Featured"
             android:textColor="@color/darkGrey"
             android:textSize="16sp"
@@ -27,8 +28,7 @@
             layout="@layout/item_a_big"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/featured"
-            android:layout_margin="8dp" />
+            android:layout_below="@+id/featured" />
 
 
             <android.support.v7.widget.RecyclerView

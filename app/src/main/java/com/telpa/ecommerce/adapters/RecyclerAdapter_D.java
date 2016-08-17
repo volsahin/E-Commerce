@@ -1,6 +1,8 @@
 package com.telpa.ecommerce.adapters;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
 import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
@@ -27,11 +30,12 @@ public class RecyclerAdapter_D extends RecyclerView.Adapter<RecyclerAdapter_D.Vi
     private ArrayList<Product> products;
     private Activity activity;
 
-    public RecyclerAdapter_D(Activity activity,int amountOfData, int id,ArrayList<Product> products) {
+
+    public RecyclerAdapter_D(Activity activity, int amountOfData, int id, ArrayList<Product> products) {
         this.amountOfData = amountOfData;
         this.id = id;
-        this.products=products;
-        this.activity=activity;
+        this.products = products;
+        this.activity = activity;
 
     }
 
@@ -45,20 +49,22 @@ public class RecyclerAdapter_D extends RecyclerView.Adapter<RecyclerAdapter_D.Vi
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        //TODO
-//      holder.productName.setText(products.get(position).getName());
-        holder.productName.setText("Name " + position);
+        holder.productName.setText(products.get(position).getName());
         holder.price.setText("$50");
         products.get(0);
         Picasso.with(activity).load(products.get(0).getHighResImageUrls().get(0)).into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.setBackgroundColor(000000);
+                Intent i = new Intent(activity, ScreenKActivity.class);
+                i.putExtra("product", products.get(position));
+                activity.startActivity(i);
+
             }
         });
+
 
     }
 

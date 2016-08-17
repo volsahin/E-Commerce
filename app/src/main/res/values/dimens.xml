@@ -1,9 +1,16 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="main_padding">16dp</dimen>
-    <dimen name="top_padding">8dp</dimen>
+    <dimen name="main_padding">8dp</dimen>
+    <dimen name="top_padding">16dp</dimen>
+    <dimen name="item_padding">8dp</dimen>
+    <dimen name="recycler_item_main_padding">4dp</dimen>
+    <dimen name="small_photo_item">128dp</dimen>
+    <dimen name="cardCornerRadius">1dp</dimen>
+
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+
     <dimen name="image_top_padding">24dp</dimen>
     <dimen name="form_button_height">36dp</dimen>
     <dimen name="form_view_height">2dp</dimen>
