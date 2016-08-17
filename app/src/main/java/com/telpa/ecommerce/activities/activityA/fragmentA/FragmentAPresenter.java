@@ -74,12 +74,12 @@ public class FragmentAPresenter implements IFragmentAPresenter {
     }
 
     @Override
-    public boolean isInBasket(Product product) {
+    public boolean isInBasket(int productID) {
         ArrayList<BasketItem> basketItems = basket.getBasket(customerID);
-        ArrayList<Product> products = new ArrayList<>();
+        ArrayList<Integer> products = new ArrayList<>();
         for (BasketItem i : basketItems)
-            products.add(i.getProduct());
-        if (products.contains(product))
+            products.add(i.getProduct().getID());
+        if (products.contains(productID))
             return true;
         else
             return false;

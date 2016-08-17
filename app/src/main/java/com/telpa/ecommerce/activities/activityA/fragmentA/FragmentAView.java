@@ -153,7 +153,7 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
                 }
                 break;
             case R.id.bigBasketButton:
-                if (!fragmentAPresenter.isInBasket(featuredProduct)) {
+                if (!fragmentAPresenter.isInBasket(featuredProduct.getID())) {
                     BasketItem basketItem = new BasketItem();
                     basketItem.setProduct(featuredProduct);
                     basketItem.setNumber(1);

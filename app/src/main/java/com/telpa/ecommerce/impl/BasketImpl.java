@@ -63,7 +63,7 @@ public class BasketImpl implements IBasket {
         url2.add("http://www.telefonkilavuzu.com/wp-content/uploads/2016/01/telefon-numaras%C4%B1.jpg");
         Product a = new Product();
         a.setName("BasketÜrünü2");
-        a.setID(1);
+        a.setID(2);
         a.setCategoryID(1);
         a.setDescripton("");
         a.setHighResImageUrls(url2);
@@ -84,7 +84,7 @@ public class BasketImpl implements IBasket {
         url3.add("http://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c04093313.png");
         Product c = new Product();
         c.setName("BasketÜrünü3");
-        c.setID(1);
+        c.setID(3);
         c.setCategoryID(1);
         c.setDescripton("");
         c.setHighResImageUrls(url3);

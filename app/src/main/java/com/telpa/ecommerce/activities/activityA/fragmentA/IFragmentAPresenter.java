@@ -18,6 +18,6 @@ public interface IFragmentAPresenter {
     ArrayList<Integer> getFavorites(int customerID);
     void removeFavorites(int customerID,int productID);
     void addFavorites(int customerID,int productID);
-    boolean isInBasket(Product product);
+    boolean isInBasket(int productID);
     void addBasket(int customerID, BasketItem basketItem);
 }
