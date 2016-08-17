@@ -5,8 +5,8 @@
     android:background="@android:color/white"
     android:orientation="vertical"
     android:paddingBottom="10dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingLeft="@dimen/top_padding"
+    android:paddingRight="@dimen/top_padding">
 
     <RelativeLayout
         android:id="@+id/basketImage"
@@ -40,7 +40,7 @@
         android:layout_toRightOf="@+id/basketImage"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/top_padding">
 
         <TextView
             android:id="@+id/basketProductName"
@@ -73,7 +73,7 @@
             android:id="@+id/basketArrowDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="4dp"
+            android:paddingLeft="@dimen/recycler_item_main_padding"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_keyboard_arrow_down_grey_24dp" />
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_vertical|center_horizontal"
-            android:padding="16dp"
+            android:padding="@dimen/top_padding"
             android:text="1"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -94,7 +94,7 @@
             android:id="@+id/basketArrowUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="4dp"
+            android:paddingRight="@dimen/recycler_item_main_padding"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_keyboard_arrow_up_darkgrey_24dp" />
