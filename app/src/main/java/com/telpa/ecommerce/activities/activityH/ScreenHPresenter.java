@@ -32,7 +32,12 @@ public class ScreenHPresenter implements IScreenHPresenter{
     public ArrayList<Category> categories() {
 
         ArrayList<Category> categories=new ArrayList<>();
-        categories=category.getCategories1(0);
+        categories=category.getCategories(0);
         return categories;
+    }
+
+    @Override
+    public void ScreenHCategories(ArrayList<Category> screenhcategories) {
+
     }
 }
