@@ -7,7 +7,6 @@ import com.telpa.ecommerce.activities.activityJ_Form.IScreenJView;
 import com.telpa.ecommerce.interfaces.IForm;
 import com.telpa.ecommerce.models.Form;
 import com.telpa.ecommerce.network.APIService;
-import com.telpa.ecommerce.network.Example;
 
 import javax.inject.Inject;
 
@@ -36,21 +35,6 @@ public class FormImpl implements IForm {
 
     @Override
     public boolean submitForm(Form form) {
-
-        //TODO kendi service methoduna bağla
-        service.makeAdd(form.getOption1(), form.getOption2(), form.getOption3())
-                .enqueue(new Callback<Example>() {
-                    @Override
-                    public void onResponse(Call<Example> call, Response<Example> response) {
-                        view.onSuccess();
-                    }
-
-                    @Override
-                    public void onFailure(Call<Example> call, Throwable t) {
-
-                        view.onFail();
-                    }
-                });
 
         return true;
     }

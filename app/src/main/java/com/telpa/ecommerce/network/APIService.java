@@ -20,11 +20,6 @@ import retrofit2.http.Query;
  * Created by SAMSUNGNB on 29.07.2016.
  */
 public interface APIService {
-    @GET("list.php")
-    Call<People> getPeople();
-
-    @GET("list.php")
-    Call<Musterus> getMusteri();
 
     @GET("categories/get")
     Call<Category> getCategories(int parentCategoryID);
@@ -86,12 +81,6 @@ public interface APIService {
                             @Query("UserRating") Float userRating
     );
 
-    //TODO bu fonkisyon test içindir. Silinecek!
-    @FormUrlEncoded
-    @POST("add.php")
-    Call<Example> makeAdd(@Field("name") String option1,
-                          @Field("surname") String option2,
-                          @Field("mail") String option3);
 
 
 }
