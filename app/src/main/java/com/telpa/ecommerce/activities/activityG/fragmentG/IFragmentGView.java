@@ -13,6 +13,4 @@ public interface IFragmentGView {
     void viewAll();
     void setOtherSubCategories(ArrayList<Category> subCategories);
     void goToProduct(int ProductID);
-    void onFail();
-    void onSuccess();
 }

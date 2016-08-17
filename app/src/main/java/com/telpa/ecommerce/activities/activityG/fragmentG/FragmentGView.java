@@ -83,16 +83,4 @@ public class FragmentGView extends TabHelper implements IFragmentGView {
 
     }
 
-    @Override
-    public void onFail() {
-        Toast.makeText(getActivity(), "Connection failed!", Toast.LENGTH_SHORT).show();
-    }
-
-    //TODO bu methodu sil
-    @Override
-    public void onSuccess() {
-        Toast.makeText(getActivity(), "Başarılı", Toast.LENGTH_SHORT).show();
-    }
-
-
 }

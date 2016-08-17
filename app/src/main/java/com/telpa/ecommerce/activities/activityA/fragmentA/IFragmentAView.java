@@ -16,6 +16,4 @@ public interface IFragmentAView {
     void setOtherSubCategories(ArrayList<Category> subCategories);
     void goToProduct(int ProductID);
     void addFavorites(int ProductID);
-    void onFail();
-    void onSuccess();
 }

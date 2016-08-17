@@ -19,6 +19,4 @@ public interface IFragmentBView {
     void goToProduct(int ProductID);
     void addFavorites(int ProductID);
 
-    void onFail();
-    void onSuccess();
 }

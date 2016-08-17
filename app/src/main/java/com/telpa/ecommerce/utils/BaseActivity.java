@@ -105,11 +105,11 @@ public class BaseActivity extends AppCompatActivity {
         tabLayout.setViewPager(viewPager);
     }
 
-    public void fcreateToolbar(Context context, boolean isTransparent,boolean hasDrawer, boolean hasHamburgerNav, int id) {
+    public void fcreateToolbar(Context context, boolean isTransparent, boolean hasDrawer, boolean hasHamburgerNav, int id) {
 
         mToolbar = (Toolbar) findViewById(id);
 
-        if(isTransparent)
+        if (isTransparent)
             mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarTransparent));
 
 
@@ -144,33 +144,34 @@ public class BaseActivity extends AppCompatActivity {
     public Drawer drawerBuilder(final Activity activity, AccountHeader headerResult) {
 
 
-        PrimaryDrawerItem item1 =  itemPlacer(1,"ScreenA",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item1 = itemPlacer(1, "ScreenA", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item2 =  itemPlacer(1,"ScreenB",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item2 = itemPlacer(1, "ScreenB", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item3 =  itemPlacer(1,"ScreenC",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item3 = itemPlacer(1, "ScreenC", R.drawable.material_drawer_circle_mask);
 
         SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name2);
 
-        PrimaryDrawerItem item5 =  itemPlacer(1,"ScreenD",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item5 = itemPlacer(1, "ScreenD", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item6 =  itemPlacer(1,"ScreenE",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item6 = itemPlacer(1, "ScreenE", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item7 =  itemPlacer(1,"ScreenF",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item7 = itemPlacer(1, "ScreenF", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item8 =  itemPlacer(1,"ScreenG",R.drawable.material_drawer_circle_mask);;
+        PrimaryDrawerItem item8 = itemPlacer(1, "ScreenG", R.drawable.material_drawer_circle_mask);
+        ;
 
-        PrimaryDrawerItem item9 =  itemPlacer(1,"ScreenH",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item9 = itemPlacer(1, "ScreenH", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item10 = itemPlacer(1,"ScreenI",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item10 = itemPlacer(1, "ScreenI", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item11 = itemPlacer(1,"ScreenJ",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item11 = itemPlacer(1, "ScreenJ", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item12 = itemPlacer(1,"ScreenK",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item12 = itemPlacer(1, "ScreenK", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item13 = itemPlacer(1,"ScreenL",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item13 = itemPlacer(1, "ScreenL", R.drawable.material_drawer_circle_mask);
 
-        PrimaryDrawerItem item14 = itemPlacer(1,"ScreenM",R.drawable.material_drawer_circle_mask);
+        PrimaryDrawerItem item14 = itemPlacer(1, "ScreenM", R.drawable.material_drawer_circle_mask);
 
 
         //create the drawer and remember the `Drawer` result object
@@ -186,44 +187,44 @@ public class BaseActivity extends AppCompatActivity {
 
                         switch (position) {
                             case 1:
-                                intentToActivity(activity,ScreenA.class);
+                                intentToActivity(activity, ScreenA.class);
                                 break;
                             case 2:
-                                intentToActivity(activity,ScreenB.class);
+                                intentToActivity(activity, ScreenB.class);
                                 break;
                             case 3:
-                                intentToActivity(activity,ScreenC.class);
+                                intentToActivity(activity, ScreenC.class);
                                 break;
                             case 5:
-                                intentToActivity(activity,ScreenD.class);
+                                intentToActivity(activity, ScreenD.class);
                                 break;
                             case 6:
-                                intentToActivity(activity,ScreenE.class);
+                                intentToActivity(activity, ScreenE.class);
                                 break;
                             case 7:
-                                intentToActivity(activity,ScreenF.class);
+                                intentToActivity(activity, ScreenF.class);
                                 break;
                             case 8:
-                                intentToActivity(activity,ScreenG.class);
+                                intentToActivity(activity, ScreenG.class);
                                 break;
                             case 9:
-                                intentToActivity(activity,ScreenH.class);
+                                intentToActivity(activity, ScreenH.class);
                                 break;
                             case 10:
-                                intentToActivity(activity,ScreenI.class);
+                                intentToActivity(activity, ScreenI.class);
                                 break;
                             case 11:
-                                intentToActivity(activity,ScreenJ.class);
+                                intentToActivity(activity, ScreenJ.class);
                                 break;
                             case 12:
-                                intentToActivity(activity,ScreenK.class);
+                                intentToActivity(activity, ScreenK.class);
                                 break;
                             case 13:
                                 intentToActivity(activity, ScreenL.class);
                                 break;
 
                             case 14:
-                                intentToActivity(activity,ScreenM.class);
+                                intentToActivity(activity, ScreenM.class);
                                 break;
 
                         }
@@ -256,7 +257,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-    public PrimaryDrawerItem itemPlacer(int identifier,String name , int drawable){
+    public PrimaryDrawerItem itemPlacer(int identifier, String name, int drawable) {
 
         PrimaryDrawerItem item = new PrimaryDrawerItem()
                 .withIdentifier(identifier)
@@ -266,10 +267,11 @@ public class BaseActivity extends AppCompatActivity {
         return item;
     }
 
-    public void intentToActivity(Activity activity,Class cls){
+    public void intentToActivity(Activity activity, Class cls) {
 
         Intent intent = new Intent(activity, cls);
         activity.startActivity(intent);
+        finish();
     }
 
 

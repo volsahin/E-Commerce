@@ -55,16 +55,6 @@ public class FragmentDView extends TabHelper implements IFragmentDView {
     }
 
     @Override
-    public void onFail() {
-
-    }
-
-    @Override
-    public void onSuccess() {
-
-    }
-
-    @Override
     public void goToProduct(int ProductID) {
 
     }
