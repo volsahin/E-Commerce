@@ -12,13 +12,14 @@ import com.telpa.ecommerce.activities.activityE.ScreenEPresenter;
 import com.telpa.ecommerce.activities.activityG.ScreenGPresenterImpl;
 import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
 import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
-import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activityM.ScreenMActivity_Basket;
 import com.telpa.ecommerce.activities.activityH.ScreenHPresenter;
 import com.telpa.ecommerce.activities.activityI.ScreenIPresenterImpl;
 import com.telpa.ecommerce.activities.activityJ_Form.ScreenJPresenter;
 import com.telpa.ecommerce.activities.activityK.ScreenKPresenter;
 import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.activities.activityL.ScreenLPresenter;
+import com.telpa.ecommerce.activityM.ScreenMPresenter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_BBig;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_F;
@@ -96,6 +97,7 @@ public interface IApplicationComponent {
     void inject (ScreenDPresenterImpl screenDPresenter);
 
     void inject (ScreenFActivity activityF);
+    void inject (ScreenMPresenter presenterM);
 
 
 }

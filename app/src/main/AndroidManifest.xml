@@ -24,7 +24,7 @@
         <activity android:name=".activities.ScreenJActivity_Form" />
         <activity android:name=".activities.activityE.ScreenEActivity" />
         <activity android:name=".activities.ScreenFActivity" />
-        <activity android:name=".activities.ScreenMActivity_Basket" />
+        <activity android:name=".activityM.ScreenMActivity_Basket" />
         <activity android:name=".activities.ScreenDActivity" />
         <activity android:name=".activities.activityK.ScreenKActivity" />
         <activity android:name=".activities.activityA.ScreenA" />

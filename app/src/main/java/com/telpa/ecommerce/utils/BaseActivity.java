@@ -32,7 +32,7 @@ import com.telpa.ecommerce.activities.activityE.ScreenEActivity;
 import com.telpa.ecommerce.activities.activityH.ScreenHActivity;
 import com.telpa.ecommerce.activities.activityI.ScreenI;
 import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
-import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activityM.ScreenMActivity_Basket;
 import com.telpa.ecommerce.activities.activityJ_Form.ScreenJ;
 import com.telpa.ecommerce.activities.activityL.ScreenL;
 import com.telpa.ecommerce.adapters.ViewPagerAdapter;

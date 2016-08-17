@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.activityK.ScreenKActivity;
-import com.telpa.ecommerce.activities.ScreenMActivity_Basket;
+import com.telpa.ecommerce.activityM.ScreenMActivity_Basket;
 import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.Product;
 

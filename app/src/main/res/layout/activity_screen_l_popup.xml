@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-    tools:context=".activities.ScreenMActivity_Basket">
+    tools:context=".activityM.ScreenMActivity_Basket">
 
 
     <android.support.v7.widget.RecyclerView
