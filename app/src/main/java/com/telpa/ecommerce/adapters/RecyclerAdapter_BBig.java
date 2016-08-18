@@ -87,9 +87,11 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
                 if (IProduct.getFavorites(customerID).contains(products.get(pos).getID())) {
                     holder.likeButton.setImageResource(R.drawable.ic_favorite_darkgrey_24dp);
                     IProduct.removeFavorites(customerID, products.get(pos).getID());
+                    view.removeFavorites();
                 } else {
                     holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
                     IProduct.addFavorites(customerID, products.get(pos).getID());
+                    view.addFavorites();
                 }
             }
         });

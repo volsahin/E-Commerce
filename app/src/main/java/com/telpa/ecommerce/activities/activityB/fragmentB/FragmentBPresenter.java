@@ -39,15 +39,16 @@ public class FragmentBPresenter implements IFragmentBPresenter {
     }
 
     @Override
-    public void getTopSubCategory(View view) {
+    public void getTopSubCategory() {
         Category topSubCategory = category.getTopSubCategory(categoryID);
         this.view.setTopCategoryTitle(topSubCategory.getName());
         category.getCategories(0);
-        getTopProducts(topSubCategory, view);
+        getTopProducts(topSubCategory);
+        this.view.viewAll(topSubCategory);
     }
 
     @Override
-    public void getTopProducts(Category category, View view) {
+    public void getTopProducts(Category category) {
         products = IProduct.getProducts(0);
         this.view.setTopCategoryProducts(products);
 
@@ -55,7 +56,7 @@ public class FragmentBPresenter implements IFragmentBPresenter {
 
 
     @Override
-    public void getSubCategories(View view) {
+    public void getSubCategories() {
         subCategories = new ArrayList<>();
         subCategories = category.getCategories(0);
         this.view.setOtherSubCategories(subCategories);

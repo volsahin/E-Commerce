@@ -16,8 +16,9 @@ public interface IFragmentBView {
 
     void setOtherSubCategories(ArrayList<Category> subCategories);
 
-    void goToProduct(int ProductID);
-    void addFavorites(int ProductID);
+    void viewAll(Category category);
+    void addFavorites();
+    void removeFavorites();
     void addBasketSuccess(int ProductID);
     void addBasketFail(int ProductID);
 

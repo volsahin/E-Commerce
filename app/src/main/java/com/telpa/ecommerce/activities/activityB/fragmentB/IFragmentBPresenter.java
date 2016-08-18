@@ -9,9 +9,9 @@ import com.telpa.ecommerce.models.Category;
  */
 public interface IFragmentBPresenter{
     void loadView(Category category);
-    void getTopSubCategory(View view);
-    void getTopProducts(Category category,View view);
-    void getSubCategories(View view);
+    void getTopSubCategory();
+    void getTopProducts(Category category);
+    void getSubCategories();
 
 
 }

@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.telpa.ecommerce.R;
 import com.telpa.ecommerce.activities.activityF.ScreenF;
+import com.telpa.ecommerce.activities.activityI.ScreenI;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_BBig;
@@ -23,10 +24,22 @@ import com.telpa.ecommerce.utils.TabHelper;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by SAMSUNGNB on 12.08.2016.
  */
 public class FragmentBView extends TabHelper implements IFragmentBView {
+    @BindView(R.id.subcategories)
+    TextView subcategories;
+    @BindView(R.id.viewallTop)
+    TextView viewallTop;
+    @BindView(R.id.recyclerView1)
+    RecyclerView recyclerView1;
+    @BindView(R.id.recyclerView2)
+    RecyclerView recyclerView2;
     private IFragmentBPresenter fragmentBPresenter;
     private View view;
     private Category category;
@@ -41,10 +54,16 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
         this.category = getCategory();
         setTitle("Test");
 
+
+        subcategories = (TextView) view.findViewById(R.id.subcategories);
+        viewallTop = (TextView) view.findViewById(R.id.viewallTop);
+        recyclerView1 = (RecyclerView) view.findViewById(R.id.recyclerView1);
+        recyclerView2 = (RecyclerView) view.findViewById(R.id.recyclerView2);
+
         fragmentBPresenter = new FragmentBPresenter(this, application);
         fragmentBPresenter.loadView(category);
-        fragmentBPresenter.getTopSubCategory(view);
-        fragmentBPresenter.getSubCategories(view);
+        fragmentBPresenter.getTopSubCategory();
+        fragmentBPresenter.getSubCategories();
 
     }
 
@@ -75,40 +94,52 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     @Override
     public void setTopCategoryProducts(ArrayList<Product> products) {
 
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView1);
-        recyclerView.setHasFixedSize(true);
+
+        recyclerView1.setHasFixedSize(true);
         StaggeredGridLayoutManager recyclerLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(recyclerLayoutManager);
-        recyclerView.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
+        recyclerView1.setLayoutManager(recyclerLayoutManager);
+        recyclerView1.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(2));
         RecyclerAdapter_BBig recyclerAdapter;
         if (products.size() >= 2) {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products,getApplication(),this);
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), 2, R.layout.item_b_big, products, getApplication(), this);
         } else {
-            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products,getApplication(),this);
+            recyclerAdapter = new RecyclerAdapter_BBig(getActivity(), products.size(), R.layout.item_b_big, products, getApplication(), this);
         }
-        recyclerView.setAdapter(recyclerAdapter);
+        recyclerView1.setAdapter(recyclerAdapter);
     }
 
     @Override
     public void setOtherSubCategories(ArrayList<Category> subCategories) {
 
-        RecyclerView recyclerView2 = (RecyclerView) view.findViewById(R.id.recyclerView2);
+
         recyclerView2.setHasFixedSize(true);
         StaggeredGridLayoutManager recyclerLayoutManager2 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView2.setLayoutManager(recyclerLayoutManager2);
         recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(0));
-        RecyclerAdapter_ABCG recyclerAdapter2 = new RecyclerAdapter_ABCG(getActivity(), subCategories.size(), R.layout.item_abcg, subCategories, "b",getApplication());
+        RecyclerAdapter_ABCG recyclerAdapter2 = new RecyclerAdapter_ABCG(getActivity(), subCategories.size(), R.layout.item_abcg, subCategories, "b", getApplication());
         recyclerView2.setAdapter(recyclerAdapter2);
     }
 
     @Override
-    public void goToProduct(int ProductID) {
-
+    public void viewAll(final Category category) {
+        viewallTop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ScreenI.class);
+                i.putExtra("category", category);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
-    public void addFavorites(int ProductID) {
+    public void addFavorites() {
+        Toast.makeText(getActivity(), "Ürün favorilerinize eklendi!", Toast.LENGTH_SHORT).show();
+    }
 
+    @Override
+    public void removeFavorites() {
+        Toast.makeText(getActivity(), "Ürün favorilerinizden çıkarıldı!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -120,5 +151,6 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     public void addBasketFail(int ProductID) {
         Toast.makeText(getActivity(), "Ürün zaten sepetinizde bulunmaktadır!", Toast.LENGTH_SHORT).show();
     }
+
 
 }
