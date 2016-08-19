@@ -5,4 +5,5 @@ package com.telpa.ecommerce.activities.activityB;
  */
 public interface IScreenBPresenter {
     void getCategories();
+    void setTitle();
 }

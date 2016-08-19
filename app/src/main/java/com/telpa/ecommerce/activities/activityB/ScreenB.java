@@ -20,12 +20,8 @@ public class ScreenB extends BaseActivity implements IScreenBView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_b);
-
-
-        fcreateTitle("My Store" + " B");
-        fcreateToolbar(this, false, true, true, R.id.toolbar);
-        fcreateMenu(this, true);
-
+        screenBPresenter.setTitle();
+        setBaseItems();
         screenBPresenter = new ScreenBPresenterImpl(this, getApplication());
         screenBPresenter.getCategories();
     }
@@ -56,5 +52,16 @@ public class ScreenB extends BaseActivity implements IScreenBView {
 
         fcreateTabMenu(tabHelperList);
 
+    }
+
+    @Override
+    public void setTitle(String title) {
+        fcreateTitle(title);
+    }
+
+    @Override
+    public void setBaseItems() {
+        fcreateToolbar(this, false, true, true, R.id.toolbar);
+        fcreateMenu(this, true);
     }
 }

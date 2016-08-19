@@ -1,10 +1,10 @@
 package com.telpa.ecommerce.activities.activityA.fragmentA;
 
+import android.app.Activity;
 import android.view.View;
 
 import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Category;
-import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -20,4 +20,9 @@ public interface IFragmentAPresenter {
     void addFavorites(int customerID,int productID);
     boolean isInBasket(int productID);
     void addBasket(int customerID, BasketItem basketItem);
+    void clickBigBasketButton(Activity activity);
+    void clickLikeButton();
+    void clickBigActionButton();
+    void clickBigImage(Activity activity);
+    void setTopCategoryProduct();
 }

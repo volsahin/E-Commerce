@@ -1,5 +1,6 @@
 package com.telpa.ecommerce.activities.activityA.fragmentA;
 
+import android.app.Activity;
 import android.app.Application;
 import android.view.View;
 
@@ -48,7 +49,7 @@ public class FragmentAPresenter implements IFragmentAPresenter {
     public void getTopProduct(Category category, View view) {
         featured = IProduct.getFeatured(category.getID());
         categoryID=category.getID();
-        this.view.setTopCategoryProduct(featured);
+        setTopCategoryProduct();
     }
 
     @Override
@@ -90,5 +91,31 @@ public class FragmentAPresenter implements IFragmentAPresenter {
         basket.addBasket(customerID,basketItem);
     }
 
+    @Override
+    public void clickBigBasketButton(Activity activity) {
+
+    }
+
+    @Override
+    public void clickLikeButton() {
+
+    }
+
+    @Override
+    public void clickBigActionButton() {
+
+    }
+
+    @Override
+    public void clickBigImage(Activity activity) {
+
+
+
+    }
+    @Override
+    public void setTopCategoryProduct() {
+
+        view.setTopCategoryProduct(featured.getName(),featured.getPrice(),featured.getDescripton(),featured.getRating(),featured.getHighResImageUrls().get(0),featured);
+    }
 
 }

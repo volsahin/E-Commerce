@@ -9,7 +9,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -22,7 +21,6 @@ import com.telpa.ecommerce.activities.activityK.ScreenK;
 import com.telpa.ecommerce.activities.activityM.ScreenM;
 import com.telpa.ecommerce.adapters.RecyclerAdapter;
 import com.telpa.ecommerce.adapters.RecyclerAdapter_ABCG;
-import com.telpa.ecommerce.interfaces.IProduct;
 import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.models.Product;
@@ -30,7 +28,6 @@ import com.telpa.ecommerce.utils.TabHelper;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -65,20 +62,9 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
         this.view = getView();
         this.category = getCategory();
         customerID=0;
-
-        bigImage=(ImageButton) view.findViewById(R.id.bigImage);
-        bigPrice=(TextView) view.findViewById(R.id.bigPrice);
-        bigDescription= (TextView) view.findViewById(R.id.description);
-        bigRatingBar= (RatingBar) view.findViewById(R.id.ratingBar);
-        bigActionButton= (ImageButton) view.findViewById(R.id.bigActionButton);
-        bigLikeButton= (ImageButton) view.findViewById(R.id.likeButton);
-        bigBasketButton= (ImageButton) view.findViewById(R.id.bigBasketButton);
-        bigProductName= (TextView) view.findViewById(R.id.bigProductName);
-
-        fragmentAPresenter = new FragmentAPresenter(this, application);
+        viewInitializer();
         fragmentAPresenter.getTopProduct(category,view);
         fragmentAPresenter.getSubCategories(view);
-
     }
 
     @Nullable
@@ -100,15 +86,13 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
     }
 
     @Override
-    public void setTopCategoryProduct(Product product) {
+    public void setTopCategoryProduct(String name, int price, String description, float rating, String url,Product product) {
         featuredProduct=product;
-
-        bigProductName.setText(product.getName());
-        bigPrice.setText("$"+ product.getPrice());
-        bigDescription.setText(product.getDescripton());
-        bigRatingBar.setRating(product.getRating());
-        Picasso.with(getActivity()).load(product.getHighResImageUrls().get(0)).into(bigImage);
-
+        bigProductName.setText(name);
+        bigPrice.setText(Integer.toString(price));
+        bigDescription.setText(description);
+        bigRatingBar.setRating(rating);
+        Picasso.with(getActivity()).load(url).into(bigImage);
     }
 
     @Override
@@ -132,6 +116,8 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
     public void addFavorites(int ProductID) {
 
     }
+
+
 
     @OnClick({R.id.bigImage, R.id.bigActionButton, R.id.likeButton, R.id.bigBasketButton})
     public void onClick(View view) {
@@ -169,6 +155,18 @@ public class FragmentAView extends TabHelper implements IFragmentAView {
                 break;
         }
     }
+    @Override
+    public void viewInitializer() {
+        bigImage=(ImageButton) view.findViewById(R.id.bigImage);
+        bigPrice=(TextView) view.findViewById(R.id.bigPrice);
+        bigDescription= (TextView) view.findViewById(R.id.description);
+        bigRatingBar= (RatingBar) view.findViewById(R.id.ratingBar);
+        bigActionButton= (ImageButton) view.findViewById(R.id.bigActionButton);
+        bigLikeButton= (ImageButton) view.findViewById(R.id.likeButton);
+        bigBasketButton= (ImageButton) view.findViewById(R.id.bigBasketButton);
+        bigProductName= (TextView) view.findViewById(R.id.bigProductName);
 
+        fragmentAPresenter = new FragmentAPresenter(this, application);
+    }
 
 }

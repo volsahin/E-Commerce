@@ -5,10 +5,7 @@ import android.app.Application;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.interfaces.ICategory;
-import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.network.APIService;
-
-import java.util.ArrayList;
 
 import javax.inject.Inject;
 
@@ -32,7 +29,12 @@ public class ScreenBPresenterImpl implements IScreenBPresenter {
 
     @Override
     public void getCategories() {
-        ArrayList<Category> categories = category.getCategories(0);
-        view.fillFragments(categories);
+
+        view.fillFragments(category.getCategories(0));
+    }
+
+    @Override
+    public void setTitle() {
+        view.setTitle("My Store B");
     }
 }

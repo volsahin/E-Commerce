@@ -1,7 +1,7 @@
 package com.telpa.ecommerce.activities.activityA;
-import com.telpa.ecommerce.models.Category;
+import com.telpa.ecommerce.utils.TabHelper;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -11,6 +11,8 @@ import java.util.ArrayList;
 public interface IScreenAView {
     void search();
     void goBasket();
-    void fillFragments(ArrayList<Category> categories);
+    void setBaseItems();
+    void fCreateTabMenu(List<TabHelper> tabHelperList);
+    void setTitle(String title);
 
 }

@@ -11,8 +11,9 @@ import java.util.ArrayList;
 public interface IFragmentAView {
 
     void viewAll();
-    void setTopCategoryProduct(Product product);
+    void setTopCategoryProduct(String name,int price,String description, float rating,String url,Product product);
     void setOtherSubCategories(ArrayList<Category> subCategories);
     void goToProduct(int ProductID);
     void addFavorites(int ProductID);
+    void viewInitializer();
 }

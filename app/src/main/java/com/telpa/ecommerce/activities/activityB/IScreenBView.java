@@ -11,4 +11,6 @@ public interface IScreenBView {
     void search();
     void goBasket();
     void fillFragments(ArrayList<Category> categories);
+    void setTitle(String title);
+    void setBaseItems();
 }

@@ -4,12 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityA.fragmentA.FragmentAView;
-import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ScreenA extends BaseActivity implements IScreenAView {
@@ -20,14 +17,10 @@ public class ScreenA extends BaseActivity implements IScreenAView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_a);
-
-
-        fcreateTitle("My Store" + " A");
-        fcreateToolbar(this, false, true, true, R.id.toolbar);
-        fcreateMenu(this, true);
-
         screenAPresenter = new ScreenAPresenterImpl(this, getApplication());
-        screenAPresenter.getCategories();
+        screenAPresenter.getCategories(getLayoutInflater());
+        screenAPresenter.setBaseItems();
+        screenAPresenter.setTitle();
     }
 
     @Override
@@ -40,21 +33,21 @@ public class ScreenA extends BaseActivity implements IScreenAView {
 
     }
 
+
     @Override
-    public void fillFragments(ArrayList<Category> categories) {
-        List<TabHelper> tabHelperList = new ArrayList<>();
+    public void setBaseItems() {
 
-        for (Category i : categories) {
-            view = getLayoutInflater().inflate(R.layout.fragment_a_tab1, null);
-            FragmentAView tab = new FragmentAView();
-            tab.setView(view);
-            tab.setCategory(i);
-            tab.setTitle(i.getName());
-            tab.setApplication(getApplication());
-            tabHelperList.add(tab);
-        }
+        fcreateToolbar(this, false, true, true, R.id.toolbar);
+        fcreateMenu(this, true);
+    }
 
+    @Override
+    public void fCreateTabMenu(List<TabHelper> tabHelperList) {
         fcreateTabMenu(tabHelperList);
+    }
 
+    @Override
+    public void setTitle(String title) {
+        fcreateTitle(title);
     }
 }

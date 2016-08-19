@@ -17,4 +17,5 @@ public interface IFragmentFView {
 
     void setFavorite(boolean favorite);
 
+
 }
