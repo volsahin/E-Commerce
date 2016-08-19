@@ -12,3 +12,7 @@ Layouts for E-Commerce application
 [Mert Bulut](https://github.com/mrtblt)
 
 [Gizem Ilgar](https://github.com/gzmilgar)
+
+[Mustafa Kuloğlu] (https://github.com/mustafakuloglu)
+
+[Cömert Baldemir] (https://github.com/Cbaldemir)

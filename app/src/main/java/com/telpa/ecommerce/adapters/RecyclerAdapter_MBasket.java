@@ -11,10 +11,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.impl.BasketImpl;
+import com.telpa.ecommerce.activities.activityM.IScreenMView;
 import com.telpa.ecommerce.interfaces.IBasket;
 import com.telpa.ecommerce.models.BasketItem;
-import com.telpa.ecommerce.models.Product;
 
 import java.util.ArrayList;
 
@@ -28,18 +27,19 @@ import javax.inject.Inject;
 public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapter_MBasket.ViewHolder> {
     @Inject
     IBasket basket;
-
+IScreenMView screenMView;
     private int amountOfData;
     private int id;
     private ArrayList<BasketItem> basketItems;
     private Activity activity;
 
 
-    public RecyclerAdapter_MBasket(Activity activity, int amountOfData, int id, ArrayList<BasketItem> basketItems) {
+    public RecyclerAdapter_MBasket(Activity activity, int amountOfData, int id, ArrayList<BasketItem> basketItems,IScreenMView v) {
         this.amountOfData = amountOfData;
         this.id = id;
         this.basketItems = basketItems;
         this.activity = activity;
+        screenMView=v;
     }
 
     @Override
@@ -51,16 +51,35 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
 
         //TODO
-
+        final ViewHolder viewHolder=holder;
         holder.productName.setText(basketItems.get(position).getProduct().getName());
-        holder.price.setText(""+basketItems.get(position).getProduct().getPrice());
-        holder.number.setText(""+basketItems.get(position).getNumber());
+        holder.price.setText("" + basketItems.get(position).getProduct().getPrice());
+        holder.number.setText("" + basketItems.get(position).getNumber());
         Picasso.with(activity).load(basketItems.get(position).getProduct().getHighResImageUrls().get(0)).into(holder.image);
-        // holder.productName.setText(products.get(position).getName());
-        // holder.textView.setText("DATA - DATA "+position);
+        holder.up.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                viewHolder.number.setText("" + (basketItems.get(position).getNumber()+1));
+                basketItems.get(position).setNumber(basketItems.get(position).getNumber()+1);
+                screenMView.itemUp(basketItems.get(position).getProduct().getPrice());
+            }
+        });
+
+        holder.down.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(basketItems.get(position).getNumber()>0) {
+                    viewHolder.number.setText("" + (basketItems.get(position).getNumber()-1));
+                    basketItems.get(position).setNumber(basketItems.get(position).getNumber() - 1);
+                    screenMView.itemDown(basketItems.get(position).getProduct().getPrice());
+                }
+            }
+        });
+
     }
 
     @Override
@@ -74,25 +93,19 @@ public class RecyclerAdapter_MBasket extends RecyclerView.Adapter<RecyclerAdapte
         public TextView price;
         public TextView number;
         public ImageButton image;
+        public ImageButton up;
+        public ImageButton down;
+
 
         public ViewHolder(View v) {
             super(v);
-            final RecyclerAdapter_MBasket adapter_mBasket = RecyclerAdapter_MBasket.this;
-            ArrayList<BasketItem> basketItems=adapter_mBasket.basketItems;
-
-            //*********************************************
-            basket = new BasketImpl();
-
-
-            basketItems = new ArrayList<>();
-            basketItems = basket.getBasket(1);
-            adapter_mBasket.basketItems=basketItems;
 
             productName = (TextView) v.findViewById(R.id.basketProductName);
             price = (TextView) v.findViewById(R.id.basketPrice);
             number = (TextView) v.findViewById(R.id.basketNumber);
             image = (ImageButton) v.findViewById(R.id.basketImageButton);
-
+            up = (ImageButton) v.findViewById(R.id.basketArrowUp);
+            down = (ImageButton) v.findViewById(R.id.basketArrowDown);
         }
     }
 

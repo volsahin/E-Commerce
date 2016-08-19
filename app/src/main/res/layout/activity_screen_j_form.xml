@@ -12,8 +12,7 @@
         android:background="@android:color/white"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:orientation="vertical"
-        tools:context=".activities.ScreenJActivity_Form">
+        android:orientation="vertical">
 
         <include
             layout="@layout/toolbar"

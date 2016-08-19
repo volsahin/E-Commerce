@@ -14,7 +14,13 @@ public interface IProduct {
 
     ArrayList<Comment> getComments(int productID);
 
-    boolean addFavorites(int customerID, Product product);
+    Product getFeatured(int categoryID);
+
+    boolean addFavorites(int customerID, int productID);
+
+    boolean removeFavorites(int customerID, int productID);
+
+    ArrayList<Integer> getFavorites(int customerID);
 
     boolean setRating(int customerID,Product product, double newRating);
 

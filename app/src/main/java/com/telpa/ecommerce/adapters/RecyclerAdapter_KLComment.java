@@ -47,10 +47,10 @@ public class RecyclerAdapter_KLComment extends RecyclerView.Adapter<RecyclerAdap
 
         //TODO
 
-        holder.username.setText("User " + position);
-        holder.description.setText("Lorem ipsum....");
-        holder.time.setText("" + position+" hours ago");
-        holder.ratingBar.setRating(2);
+        holder.username.setText(comments.get(position).getUserName());
+        holder.description.setText(comments.get(position).getComment());
+        holder.time.setText("" + comments.get(position).getTime()+" hours ago");
+        holder.ratingBar.setRating(comments.get(position).getRating());
         // holder.textView.setText("DATA - DATA "+position);
     }
 

@@ -1,6 +1,8 @@
 package com.telpa.ecommerce.adapters;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,12 +11,21 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.R;
+import com.telpa.ecommerce.activities.activityB.fragmentB.FragmentBView;
+import com.telpa.ecommerce.activities.activityM.ScreenM;
+import com.telpa.ecommerce.interfaces.IBasket;
+import com.telpa.ecommerce.interfaces.IProduct;
+import com.telpa.ecommerce.models.BasketItem;
 import com.telpa.ecommerce.models.Product;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 
 /**
@@ -22,19 +33,28 @@ import java.util.ArrayList;
  */
 
 public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_BBig.ViewHolder> {
-
+    @Inject
+    IProduct IProduct;
+    @Inject
+    IBasket basket;
     private int amountOfData;
     private int id;
     private ArrayList<Product> products;
     private Activity activity;
+    private int customerID;
+    private Application application;
+    private FragmentBView view;
 
-    public RecyclerAdapter_BBig(Activity activity, int amountOfData, int id, ArrayList<Product> products) {
+    public RecyclerAdapter_BBig(Activity activity, int amountOfData, int id, ArrayList<Product> products, Application application, FragmentBView fragmentBView) {
         this.amountOfData = amountOfData;
         this.id = id;
-        this.products=products;
-        this.activity=activity;
+        this.products = products;
+        this.activity = activity;
+        this.application = application;
+        customerID = 0;
+        view=fragmentBView;
+        ((ECommerceApp) application).getComponent().inject(this);
     }
-
 
 
     @Override
@@ -47,15 +67,54 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        //holder.bigImageButton.setImageResource();
-        holder.bigProductName.setText("Name "+position);
-        holder.description.setText("Açıklama");
-        holder.bigPrice.setText("$30");
-       // holder.bigBasketButton.setImageResource();
-        holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        final int pos = position;
 
-        // holder.textView.setText("DATA - DATA "+position);
+        holder.bigProductName.setText(products.get(position).getName());
+        holder.bigPrice.setText("$" + products.get(position).getPrice());
+        holder.description.setText(products.get(position).getDescripton());
+        Picasso.with(activity).load(products.get(position).getHighResImageUrls().get(0)).into(holder.bigImage);
+
+
+        if (IProduct.getFavorites(customerID).contains(products.get(position).getID())) {
+            holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+        }
+
+        holder.likeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (IProduct.getFavorites(customerID).contains(products.get(pos).getID())) {
+                    holder.likeButton.setImageResource(R.drawable.ic_favorite_darkgrey_24dp);
+                    IProduct.removeFavorites(customerID, products.get(pos).getID());
+                    view.removeFavorites();
+                } else {
+                    holder.likeButton.setImageResource(R.drawable.ic_favorite_red_24dp);
+                    IProduct.addFavorites(customerID, products.get(pos).getID());
+                    view.addFavorites();
+                }
+            }
+        });
+
+        holder.bigBasketButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isInBasket(products.get(pos))) {
+                    BasketItem basketItem = new BasketItem();
+                    basketItem.setProduct(products.get(pos));
+                    basketItem.setNumber(1);
+                    basketItem.setVariant1(1);
+                    basketItem.setVariant2(1);
+                    basket.addBasket(customerID, basketItem);
+                    view.addBasketSuccess(products.get(pos).getID());
+                    Intent i=new Intent(activity, ScreenM.class);
+                    activity.startActivity(i);
+                }
+                else
+                    view.addBasketFail(products.get(pos).getID());
+            }
+        });
+
     }
 
     @Override
@@ -99,6 +158,17 @@ public class RecyclerAdapter_BBig extends RecyclerView.Adapter<RecyclerAdapter_B
 
 
         }
+    }
+
+    public boolean isInBasket(Product product) {
+        ArrayList<BasketItem> basketItems = basket.getBasket(customerID);
+        ArrayList<Product> products = new ArrayList<>();
+        for (BasketItem i : basketItems)
+            products.add(i.getProduct());
+        if (products.contains(product))
+            return true;
+        else
+            return false;
     }
 
 }

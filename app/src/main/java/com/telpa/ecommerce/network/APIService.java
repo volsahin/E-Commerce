@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -19,14 +20,12 @@ import retrofit2.http.Query;
  * Created by SAMSUNGNB on 29.07.2016.
  */
 public interface APIService {
-    @GET("list.php")
-    Call<People> getPeople();
-
-    @GET("list.php")
-    Call<Musterus> getMusteri();
 
     @GET("categories/get")
     Call<Category> getCategories(int parentCategoryID);
+
+    @GET("categories/getTop")
+    Call<Category> getTopCategory(int parentCategoryID);
 
     @GET("products/get")
     Call<Product> getProducts(int categoryID);
@@ -48,6 +47,12 @@ public interface APIService {
 
     );
 
+    @GET("favorites/remove")
+    Call<Boolean> removeFavorites(@Query("CustomerID") int customerID,
+                                  @Query("ProductID") int productID
+
+    );
+
     @GET("basket/get")
     Call<BasketItem> getBasket(int customerID);
 
@@ -59,6 +64,9 @@ public interface APIService {
 
     @POST("forms")
     Call<Boolean> submitForm(@Body Form form);
+
+    @GET("forms/spinnerValues")
+    Call<ArrayList<String[]>> getSpinnerValues();
 
 
     @GET("checkout")
@@ -72,6 +80,7 @@ public interface APIService {
                             @Query("ProductID") int productID,
                             @Query("UserRating") Float userRating
     );
+
 
 
 }

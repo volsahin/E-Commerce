@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.telpa.ecommerce">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ECommerceApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".ECommerceApp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.ScreenAActivity"
+            android:name=".activities.activityA.ScreenA"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,18 +20,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ScreenBActivity" />
-        <activity android:name=".activities.ScreenHActivity" />
-        <activity android:name=".activities.ScreenCActivity" />
-        <activity android:name=".activities.ScreenIActivity" />
-        <activity android:name=".activities.ScreenJActivity_Form" />
-        <activity android:name=".activities.ScreenEActivity" />
-        <activity android:name=".activities.ScreenFActivity" />
-        <activity android:name=".activities.ScreenMActivity_Basket" />
-        <activity android:name=".activities.ScreenDActivity" />
-        <activity android:name=".activities.ScreenKActivity" />
-        <activity android:name=".activities.ScreenGActivity" />
-        <activity android:name=".activities.ScreenLActivity"></activity>
+        <activity android:name=".activities.activityB.ScreenB" />
+        <activity android:name=".activities.activityC.ScreenC" />
+        <activity android:name=".activities.activityD.ScreenD" />
+        <activity android:name=".activities.activityE.ScreenE" />
+        <activity android:name=".activities.activityF.ScreenF" />
+        <activity android:name=".activities.activityG.ScreenG" />
+        <activity android:name=".activities.activityH.ScreenH" />
+        <activity android:name=".activities.activityI.ScreenI" />
+        <activity android:name=".activities.activityJ_Form.ScreenJ" />
+        <activity android:name=".activities.activityK.ScreenK" />
+        <activity android:name=".activities.activityL.ScreenL" />
+        <activity android:name=".activities.activityM.ScreenM" />
+
+
     </application>
 
 </manifest>

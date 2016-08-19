@@ -48,8 +48,8 @@ public class RecyclerAdapter_H extends RecyclerView.Adapter<RecyclerAdapter_H.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.productName.setText("Name " + position);
-        holder.category.setText("Category"+position);
+        holder.productName.setText("Name"+ position);
+        holder.category.setText(categories.get(position).getName());
         categories.get(0);
         Picasso.with(activity).load(categories.get(0).getHighResImageUrl()).into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {

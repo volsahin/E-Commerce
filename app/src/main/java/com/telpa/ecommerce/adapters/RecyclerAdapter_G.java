@@ -95,7 +95,7 @@ public class RecyclerAdapter_G extends RecyclerView.Adapter<RecyclerAdapter_G.Vi
             recyclerView2.setLayoutManager(recyclerLayoutManager2);
 
             recyclerView2.addItemDecoration(new RecyclerAdapter.SpaceItemDecoration(12));
-            recyclerAdapter2 = new RecyclerAdapter_ABGSmall(context,6, R.layout.item_g, products, "g");
+            recyclerAdapter2 = new RecyclerAdapter_ABCGSmall(context,6, R.layout.item_g, products, "g");
             recyclerView2.setAdapter(recyclerAdapter2);
 
         }

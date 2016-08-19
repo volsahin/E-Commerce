@@ -4,8 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.telpa.ecommerce.fragment.FragmentATab;
-import com.telpa.ecommerce.fragment.FragmentKPhotoSlider;
+import com.telpa.ecommerce.activities.activityK.FragmentKPhotoSlider;
 
 /**
  * Created by volkan on 22.07.2016.

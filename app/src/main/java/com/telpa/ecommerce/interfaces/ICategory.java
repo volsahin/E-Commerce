@@ -10,6 +10,5 @@ import java.util.ArrayList;
 
 public interface ICategory {
     ArrayList<Category> getCategories(int parentCategoryID);
-
-
+    Category getTopSubCategory(int categoryID);
 }

@@ -13,6 +13,5 @@ public interface IBasket {
     ArrayList<BasketItem> getBasket(int customerID);
 
     boolean addBasket(int customerID, BasketItem basketItem);
-
     boolean checkOut(int customerID,   ArrayList<BasketItem> basketItems);
 }
