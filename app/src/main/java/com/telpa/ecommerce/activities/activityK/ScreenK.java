@@ -34,6 +34,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ScreenK extends BaseActivity implements IScreenKView {
+    //TODO
+    public TextView productName;
+    public TextView price;
+    public TextView description;
+    public RatingBar ratingBar;
+    public TextView reviewsCount;
     @Inject
     IBasket basket;
     @Inject
@@ -42,29 +48,21 @@ public class ScreenK extends BaseActivity implements IScreenKView {
     IProduct product;
     @Inject
     ICategory category;
-
     @BindView(R.id.searchButton)
     ImageButton searchButton;
     @BindView(R.id.basketButton)
     ImageButton basketButtonMenu;
     @BindView(R.id.title)
     TextView title;
-    @BindView(R.id.lin_2_l)
+    @BindView(R.id.radio_text)
     RadioGroup group;
-    @BindView(R.id.lin_3_l)
+    @BindView(R.id.radio_l_2)
     RadioGroup group2;
     @BindView(R.id.button2)
     Button addbasket;
     @BindView(R.id.button)
     Button addfavorite;
     ViewPager pager;
-
-    //TODO
-    public TextView productName;
-    public TextView price;
-    public TextView description;
-    public RatingBar ratingBar;
-    public TextView reviewsCount;
     private IScreenKPresenter screenKPresenter;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;

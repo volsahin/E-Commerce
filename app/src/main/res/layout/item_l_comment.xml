@@ -2,73 +2,74 @@
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
     <!--
         style="?android:attr/ratingBarStyleSmall"
     -->
     <RatingBar
         android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/description"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/description"
+        android:layout_marginTop="@dimen/l_comment_margin_top"
         android:focusable="false"
+        android:isIndicator="false"
         android:progressBackgroundTint="@color/lightGrey"
         android:progressTint="@color/darkGrey"
-        android:stepSize="1.0"
-        style="?android:attr/ratingBarStyleSmall"
-        android:isIndicator="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/description"
-        android:layout_alignStart="@+id/description"
-        android:layout_marginTop="22dp" />
+        android:stepSize="1.0" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="by username"
         android:id="@+id/username"
-        android:layout_gravity="center_horizontal"
-        android:textSize="12dp"
-        android:textColor="@color/button_material_dark"
-        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ratingBar"
+        android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@+id/ratingBar"
         android:layout_toRightOf="@+id/ratingBar"
-        android:layout_toEndOf="@+id/ratingBar" />
+        android:paddingBottom="@dimen/l_comment_username_padding_bottom"
+        android:paddingLeft="@dimen/l_comment_username_padding_left"
+        android:text="by username"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/button_material_dark"
+        android:textSize="@dimen/l_comment_username_text_size" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="12dp"
-        android:textColor="@color/grey"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="2 hours ago"
         android:id="@+id/time"
-        android:textSize="12dp"
-        android:layout_alignTop="@+id/username"
-        android:layout_alignRight="@+id/description"
-        android:layout_alignEnd="@+id/description" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="4dp"
-        android:textColor="@color/darkGrey"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/lorem_medium"
+        android:layout_alignEnd="@+id/description"
+        android:layout_alignRight="@+id/description"
+        android:layout_alignTop="@+id/username"
+        android:paddingBottom="@dimen/l_comment_time_padding_bottom"
+        android:text="2 hours ago"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/l_comment_time_text_size" />
+
+    <TextView
         android:id="@+id/description"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:textSize="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/ratingBar" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginBottom="@dimen/l_comment_description_margin"
+        android:layout_marginLeft="@dimen/l_comment_description_margin"
+        android:layout_marginRight="@dimen/l_comment_description_margin"
+        android:paddingTop="@dimen/l_comment_description_padding_top"
+        android:text="@string/lorem_medium"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/l_comment_description_text_size" />
 
 
 </RelativeLayout>

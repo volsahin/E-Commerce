@@ -52,6 +52,105 @@
     <dimen name="f_layout_margin_left">3dp</dimen>
     <dimen name="f_layout_margin_bottom">3dp</dimen>
 
+    <dimen name="m_linear_padding">16dp</dimen>
+    <dimen name="m_total_text_size">18dp</dimen>
+    <dimen name="m_total_price_margin_left">16dp</dimen>
+    <dimen name="m_total_price_margin_start">16dp</dimen>
+    <dimen name="m_total_price_text_size">22dp</dimen>
+    <dimen name="m_button_checkout_layout_margin">16dp</dimen>
+    <dimen name="m_button_checkout_text_size">16sp</dimen>
+    <dimen name="m_total_items_padding">16dp</dimen>
+    <dimen name="m_total_items_text_size">18sp</dimen>
+
+    <dimen name="m_basket_relative_padding_left">16dp</dimen>
+    <dimen name="m_basket_relative_padding_right">16dp</dimen>
+    <dimen name="m_basket_relative_padding_bottom">10dp</dimen>
+    <dimen name="m_basket_image_button_layout_width">40dp</dimen>
+    <dimen name="m_basket_image_button_layout_height">40dp</dimen>
+    <dimen name="m_basket_linear2_padding">16dp</dimen>
+    <dimen name="m_basket_product_name_text_size">18sp</dimen>
+    <dimen name="m_basket_price_text_size">16sp</dimen>
+    <dimen name="m_basket_number_padding">16dp</dimen>
+    <dimen name="m_basket_number_text_size">22sp</dimen>
+
+    <dimen name="l_floating_margin_bottom">21dp</dimen>
+    <dimen name="l_floating_margin_right">16dp</dimen>
+    <dimen name="l_layout_frame_height">256dp</dimen>
+    <dimen name="l_layout_frame_margin_bottom">2dp</dimen>
+    <dimen name="l_layout_frame_margin_left">4dp</dimen>
+    <dimen name="l_layout_frame_margin_right">4dp</dimen>
+    <dimen name="l_layout_frame_margin_top">4dp</dimen>
+    <dimen name="l_product_photo_width">96dp</dimen>
+    <dimen name="l_linear_layout_margin_left">2dp</dimen>
+    <dimen name="l_rating_padding_bottom">8dp</dimen>
+    <dimen name="l_rating_padding_top">4dp</dimen>
+    <dimen name="l_linear_layout_margin_right">2dp</dimen>
+    <dimen name="l_reviews_padding_bottom">64dp</dimen>
+    <dimen name="l_reviews_padding_top">4dp</dimen>
+    <dimen name="l_reviews_text_size">12sp</dimen>
+    <dimen name="l_reviews_margin_left">5dp</dimen>
+    <dimen name="l_big_price_margin_top">61dp</dimen>
+    <dimen name="l_big_price_padding_top">16dp</dimen>
+    <dimen name="l_big_price_padding_right">12dp</dimen>
+    <dimen name="l_big_price_text_size">15sp</dimen>
+    <dimen name="l_description_margin_top">-5dp</dimen>
+    <dimen name="l_description_margin_bottom">4dp</dimen>
+    <dimen name="l_description_margin_left">4dp</dimen>
+    <dimen name="l_description_margin_right">4dp</dimen>
+    <dimen name="l_description_text_size">14sp</dimen>
+    <dimen name="l_line1_margin_top">16dp</dimen>
+    <dimen name="l_variant_1_padding_bottom">4dp</dimen>
+    <dimen name="l_variant_1_padding_top">16dp</dimen>
+    <dimen name="l_variant_1_text_size">16sp</dimen>
+    <dimen name="l_radio_text_margin_bottom">2dp</dimen>
+    <dimen name="l_radio_text_margin_top">8dp</dimen>
+    <dimen name="l_radio_1_1_margin_left">8dp</dimen>
+    <dimen name="l_radio_1_margin_left">16dp</dimen>
+    <dimen name="l_radio_1_padding">5dp</dimen>
+    <dimen name="l_view_margin_top">10dp</dimen>
+    <dimen name="l_variant_2_padding_top">20dp</dimen>
+    <dimen name="l_variant_2_text_size">16sp</dimen>
+    <dimen name="l_radio_l_2_margin_top">16sp</dimen>
+    <dimen name="l_radio_l_2_margin_bottom">16sp</dimen>
+    <dimen name="l_radio_l_2_margin">64sp</dimen>
+    <dimen name="l_radio_l_2_margin_left">8sp</dimen>
+    <dimen name="l_radio_l_2_padding">5sp</dimen>
+    <dimen name="l_linear_4_height">8dp</dimen>
+
+    <dimen name="l_comment_margin_top">22dp</dimen>
+    <dimen name="l_comment_username_padding_left">10dp</dimen>
+    <dimen name="l_comment_username_padding_bottom">5dp</dimen>
+    <dimen name="l_comment_username_text_size">12dp</dimen>
+    <dimen name="l_comment_time_text_size">12dp</dimen>
+    <dimen name="l_comment_time_padding_bottom">12dp</dimen>
+    <dimen name="l_comment_description_padding_top">4dp</dimen>
+    <dimen name="l_comment_description_margin">10dp</dimen>
+    <dimen name="l_comment_description_text_size">15dp</dimen>
+
+    <dimen name="l_popup_margin_bottom">10dp</dimen>
+    <dimen name="l_popup_margin_left">16dp</dimen>
+    <dimen name="l_popup_margin_right">16dp</dimen>
+    <dimen name="l_popup_basket_image_button_size">40dp</dimen>
+    <dimen name="l_popup_product_photo_size">20dp</dimen>
+    <dimen name="l_popup_linear_2_padding">16dp</dimen>
+    <dimen name="l_popup_basket_product_name_text_size">18sp</dimen>
+    <dimen name="l_popup_basket_price_text_size">16sp</dimen>
+    <dimen name="l_popup_basket_arrow_down_padding_left">4dp</dimen>
+    <dimen name="l_popup_basket_number_padding">16dp</dimen>
+    <dimen name="l_popup_basket_number_text_size">22sp</dimen>
+    <dimen name="l_popup_basket_arrow_up_padding_right">4dp</dimen>
+
+    <dimen name="l_screen_popup_linear">16dp</dimen>
+    <dimen name="l_screen_popup_total_text_size">18ds</dimen>
+    <dimen name="l_screen_popup_price_margin_left">16dp</dimen>
+    <dimen name="l_screen_popup_price_margin_start">16dp</dimen>
+    <dimen name="l_screen_popup_price_text_size">22dp</dimen>
+    <dimen name="l_screen_popup_checkout">16dp</dimen>
+    <dimen name="l_screen_popup_total_items_padding">16dp</dimen>
+    <dimen name="l_screen_popup_total_items_text_size">18sp</dimen>
+
+    <dimen name="radio_size">36dp</dimen>
+
 
     <dimen name="product_name_padding_left">5dp</dimen>
     <dimen name="price_text_size">14dp</dimen>

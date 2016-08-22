@@ -4,9 +4,9 @@
     android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:paddingBottom="10dp"
-    android:paddingLeft="@dimen/top_padding"
-    android:paddingRight="@dimen/top_padding">
+    android:paddingBottom="@dimen/l_popup_margin_bottom"
+    android:paddingLeft="@dimen/l_popup_margin_left"
+    android:paddingRight="@dimen/l_popup_margin_right">
 
     <RelativeLayout
         android:id="@+id/basketImage"
@@ -18,15 +18,15 @@
 
         <ImageButton
             android:id="@+id/basketImageButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/l_popup_basket_image_button_size"
+            android:layout_height="@dimen/l_popup_basket_image_button_size"
             android:layout_centerVertical="true"
             android:background="@color/grey"
             />
 
         <include layout="@layout/product_photo"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/l_popup_product_photo_size"
+            android:layout_height="@dimen/l_popup_product_photo_size"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
 
@@ -40,7 +40,7 @@
         android:layout_toRightOf="@+id/basketImage"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="@dimen/top_padding">
+        android:padding="@dimen/l_popup_linear_2_padding">
 
         <TextView
             android:id="@+id/basketProductName"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:text="Product"
             android:textColor="@color/lightBlack"
-            android:textSize="18sp"
+            android:textSize="@dimen/l_popup_basket_product_name_text_size"
             android:textStyle="bold" />
 
         <TextView
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text="$100"
             android:textColor="@color/red"
-            android:textSize="16sp"
+            android:textSize="@dimen/l_popup_basket_price_text_size"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -73,9 +73,9 @@
             android:id="@+id/basketArrowDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/recycler_item_main_padding"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/l_popup_basket_arrow_down_padding_left"
             android:src="@drawable/ic_keyboard_arrow_down_grey_24dp" />
 
         <TextView
@@ -84,19 +84,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_vertical|center_horizontal"
-            android:padding="@dimen/top_padding"
+            android:padding="@dimen/l_popup_basket_number_padding"
             android:text="1"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="@dimen/l_popup_basket_number_text_size"
             android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/basketArrowUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="@dimen/recycler_item_main_padding"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
+            android:paddingRight="@dimen/l_popup_basket_arrow_up_padding_right"
             android:src="@drawable/ic_keyboard_arrow_up_darkgrey_24dp" />
 
 

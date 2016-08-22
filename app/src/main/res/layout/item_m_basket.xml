@@ -4,9 +4,9 @@
     android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:paddingBottom="10dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingBottom="@dimen/m_basket_relative_padding_bottom"
+    android:paddingLeft="@dimen/m_basket_relative_padding_left"
+    android:paddingRight="@dimen/m_basket_relative_padding_right">
 
     <RelativeLayout
         android:id="@+id/basketImage"
@@ -18,8 +18,8 @@
 
         <ImageButton
             android:id="@+id/basketImageButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/m_basket_image_button_layout_width"
+            android:layout_height="@dimen/m_basket_image_button_layout_height"
             android:layout_centerVertical="true"
             android:background="@color/grey"
             />
@@ -37,7 +37,7 @@
         android:layout_toRightOf="@+id/basketImage"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/m_basket_linear2_padding">
 
         <TextView
             android:id="@+id/basketProductName"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="Product"
             android:textColor="@color/lightBlack"
-            android:textSize="18sp"
+            android:textSize="@dimen/m_basket_product_name_text_size"
             android:textStyle="bold" />
 
         <TextView
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:text="$100"
             android:textColor="@color/red"
-            android:textSize="16sp"
+            android:textSize="@dimen/m_basket_price_text_size"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -80,10 +80,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_vertical|center_horizontal"
-            android:padding="16dp"
+            android:padding="@dimen/m_basket_number_padding"
             android:text="1"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="@dimen/m_basket_number_text_size"
             android:textStyle="bold" />
 
         <ImageButton

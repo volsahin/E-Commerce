@@ -33,6 +33,13 @@ import butterknife.OnClick;
 
 
 public class ScreenL extends BaseActivity implements IScreenLView {
+    //TODO
+    public TextView price;
+    public TextView description;
+    public TextView variants1, variants2;
+    //public RatingBar ratingBar;
+    public TextView reviewsCount;
+    public ImageButton bigImage, image1, image2, image3, image4, image5;
     @Inject
     APIService service;
     @Inject
@@ -41,20 +48,16 @@ public class ScreenL extends BaseActivity implements IScreenLView {
     IProduct product;
     @Inject
     ICategory category;
-
-
     @BindView(R.id.fab)
     FloatingActionButton fab;
     @BindView(R.id.ratingBar)
     RatingBar ratingBar;
     @BindView(R.id.reviews)
     TextView reviews;
-    @BindView(R.id.lin_2_l)
+    @BindView(R.id.radio_text)
     RadioGroup radioGroup1;
-    @BindView(R.id.lin_3_l)
+    @BindView(R.id.radio_l_2)
     RadioGroup radioGroup2;
-
-
     private RecyclerView recyclerView;
     private RecyclerView recyclerViewPopUp;
     private RecyclerView.Adapter recyclerAdapter;
@@ -64,13 +67,6 @@ public class ScreenL extends BaseActivity implements IScreenLView {
     private RadioButton[] radioButtons;
     private ArrayList<Product> products;
     private IScreenLPresenter screenLPresenter;
-    //TODO
-    public TextView price;
-    public TextView description;
-    public TextView variants1, variants2;
-    //public RatingBar ratingBar;
-    public TextView reviewsCount;
-    public ImageButton bigImage, image1, image2, image3, image4, image5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

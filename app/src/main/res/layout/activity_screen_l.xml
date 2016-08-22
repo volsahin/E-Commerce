@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:layout_marginBottom="21dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="@dimen/l_floating_margin_bottom"
+            android:layout_marginRight="@dimen/l_floating_margin_right"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_pop_up"
             app:fab_colorNormal="@android:color/white"
@@ -45,13 +45,13 @@
                 <RelativeLayout
                     android:id="@+id/layout_frame"
                     android:layout_width="match_parent"
-                    android:layout_height="256dp"
+                    android:layout_height="@dimen/l_layout_frame_height"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="@dimen/recycler_item_main_padding"
-                    android:layout_marginRight="@dimen/recycler_item_main_padding"
-                    android:layout_marginTop="@dimen/recycler_item_main_padding"
+                    android:layout_marginBottom="@dimen/l_layout_frame_margin_bottom"
+                    android:layout_marginLeft="@dimen/l_layout_frame_margin_left"
+                    android:layout_marginRight="@dimen/l_layout_frame_margin_right"
+                    android:layout_marginTop="@dimen/l_layout_frame_margin_top"
                     android:background="@color/grey">
 
                     <ImageButton
@@ -62,7 +62,7 @@
 
                     <include
                         layout="@layout/product_photo"
-                        android:layout_width="96dp"
+                        android:layout_width="@dimen/l_product_photo_width"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true" />
                 </RelativeLayout>
@@ -73,8 +73,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/layout_frame"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="@dimen/l_linear_layout_margin_left"
+                    android:layout_marginRight="@dimen/l_linear_layout_margin_right"
                     android:orientation="horizontal">
 
                     <include
@@ -103,65 +103,65 @@
 
                 <RatingBar
                     android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="false"
                     android:layout_below="@+id/linearLayout3"
-                    android:paddingBottom="@dimen/main_padding"
-                    android:paddingTop="@dimen/recycler_item_main_padding"
-                    android:stepSize="1.0"
-                    style="?android:attr/ratingBarStyleSmall"
                     android:isIndicator="false"
+                    android:paddingBottom="@dimen/l_rating_padding_bottom"
+                    android:paddingTop="@dimen/l_rating_padding_top"
                     android:progressBackgroundTint="@color/lightGrey"
-                    android:progressTint="@color/darkGrey" />
+                    android:progressTint="@color/darkGrey"
+                    android:stepSize="1.0" />
 
                 <TextView
                     android:id="@+id/reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/main_padding"
-                    android:paddingTop="@dimen/recycler_item_main_padding"
+                    android:layout_alignBottom="@+id/ratingBar"
+                    android:layout_marginLeft="@dimen/l_reviews_margin_left"
+                    android:layout_toEndOf="@+id/ratingBar"
+                    android:layout_toRightOf="@+id/ratingBar"
+                    android:paddingBottom="@dimen/l_reviews_padding_bottom"
+                    android:paddingTop="@dimen/l_reviews_padding_top"
                     android:text="46 Reviews"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/grey"
-                    android:textSize="12sp"
-                    android:layout_alignBottom="@+id/ratingBar"
-                    android:layout_toRightOf="@+id/ratingBar"
-                    android:layout_toEndOf="@+id/ratingBar"
-                    android:layout_marginLeft="5dp" />
+                    android:textSize="@dimen/l_reviews_text_size" />
 
                 <TextView
                     android:id="@+id/bigPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/reviews"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="3dp"
-                    android:paddingBottom="@dimen/top_padding"
-                    android:paddingRight="12dp"
+                    android:layout_alignTop="@+id/reviews"
+                    android:layout_marginTop="@dimen/l_big_price_margin_top"
+                    android:paddingBottom="@dimen/l_big_price_padding_top"
+                    android:paddingRight="@dimen/l_big_price_padding_right"
                     android:text="$100"
                     android:textColor="@color/red"
                     android:textIsSelectable="false"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/l_big_price_text_size"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/bigPrice"
-                    android:layout_marginTop="-5dp"
-                    android:paddingBottom="@dimen/recycler_item_main_padding"
-                    android:paddingLeft="@dimen/recycler_item_main_padding"
-                    android:paddingRight="@dimen/recycler_item_main_padding"
+                    android:layout_marginTop="@dimen/l_description_margin_top"
+                    android:paddingBottom="@dimen/l_description_margin_bottom"
+                    android:paddingLeft="@dimen/l_description_margin_left"
+                    android:paddingRight="@dimen/l_description_margin_right"
                     android:text="@string/lorem_long"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/darkGrey"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/l_description_text_size"
                     android:textStyle="bold" />
 
                 <View
@@ -169,7 +169,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_below="@+id/description"
-                    android:layout_marginTop="@dimen/top_padding"
+                    android:layout_marginTop="@dimen/l_line1_margin_top"
                     android:background="@color/white" />
 
                 <TextView
@@ -178,88 +178,88 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/line1"
                     android:gravity="center"
-                    android:paddingBottom="@dimen/recycler_item_main_padding"
-                    android:paddingTop="@dimen/top_padding"
+                    android:paddingBottom="@dimen/l_variant_1_padding_bottom"
+                    android:paddingTop="@dimen/l_variant_1_padding_top"
                     android:text="Variants"
                     android:textColor="@color/lightBlack"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/l_variant_1_text_size"
                     android:textStyle="bold" />
 
                 <RadioGroup
-                android:layout_below="@id/variants1"
+                    android:id="@+id/radio_text"
                 android:layout_width="wrap_content"
-                android:id="@+id/lin_2_l"
-                android:weightSum="1"
-                android:layout_marginBottom="2dp"
-
-                android:layout_marginTop="@dimen/item_padding"
-                    android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    android:layout_below="@id/variants1"
+                    android:layout_centerHorizontal="true"
 
-                <RadioButton
+                    android:layout_marginBottom="@dimen/l_radio_text_margin_bottom"
+                    android:layout_marginTop="@dimen/l_radio_text_margin_top"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
                     android:id="@+id/radio_l_1_1"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:textStyle="bold"
+                        android:layout_width="@dimen/radio_size"
+                        android:layout_height="@dimen/radio_size"
+                        android:layout_marginLeft="@dimen/l_radio_1_1_margin_left"
                     android:background="@drawable/rbtn_selector"
-                    android:layout_marginLeft="@dimen/item_padding"
                     android:button="@null"
                     android:checked="true"
                     android:gravity="center"
-                    android:padding="5dp"
+                        android:padding="@dimen/l_radio_1_padding"
                     android:text="A"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                        android:textColor="@drawable/rbtn_textcolor_selector"
+                        android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radio_l_1_2"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="@dimen/top_padding"
+                    android:layout_width="@dimen/radio_size"
+                    android:layout_height="@dimen/radio_size"
+                    android:layout_marginLeft="@dimen/l_radio_1_margin_left"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:gravity="center"
-                    android:padding="5dp"
+                    android:padding="@dimen/l_radio_1_padding"
                     android:text="B"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
                 <RadioButton
                     android:id="@+id/radio_l_1_3"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="@dimen/top_padding"
+                    android:layout_width="@dimen/radio_size"
+                    android:layout_height="@dimen/radio_size"
+                    android:layout_marginLeft="@dimen/l_radio_1_margin_left"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:gravity="center"
-                    android:textStyle="bold"
-                    android:padding="5dp"
+                    android:padding="@dimen/l_radio_1_padding"
                     android:text="C"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
                 <RadioButton
                     android:id="@+id/radio_l_1_4"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="@dimen/radio_size"
+                    android:layout_height="@dimen/radio_size"
+                    android:layout_marginLeft="@dimen/l_radio_1_margin_left"
                     android:background="@drawable/rbtn_selector"
-                    android:layout_marginLeft="@dimen/top_padding"
                     android:button="@null"
-                    android:textStyle="bold"
                     android:gravity="center"
-                    android:padding="5dp"
+                    android:padding="@dimen/l_radio_1_padding"
                     android:text="D"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radio_l_1_5"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="@dimen/top_padding"
+                    android:layout_width="@dimen/radio_size"
+                    android:layout_height="@dimen/radio_size"
+                    android:layout_marginLeft="@dimen/l_radio_1_margin_left"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:gravity="center"
-                    android:padding="5dp"
+                    android:padding="@dimen/l_radio_1_padding"
                     android:text="E"
-                    android:textStyle="bold"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
 
             </RadioGroup>
 
@@ -267,8 +267,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/lin_2_l"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/radio_text"
+                    android:layout_marginTop="@dimen/l_view_margin_top"
                     android:background="@color/white" />
 
 
@@ -276,37 +276,37 @@
                     android:id="@+id/variants2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/lin_2_l"
+                    android:layout_below="@+id/radio_text"
                     android:gravity="center"
-                    android:paddingTop="20dp"
+                    android:paddingTop="@dimen/l_variant_2_padding_top"
                     android:text="Variants"
                     android:textColor="@color/lightBlack"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/l_variant_2_text_size"
                     android:textStyle="bold" />
 <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_below="@id/variants2"
-    android:layout_height="wrap_content"
     android:id="@+id/rel_3_l"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/variants2"
     >
                 <RadioGroup
-android:layout_marginTop="16dp"
-                    android:layout_marginBottom="@dimen/top_padding"
-                    android:layout_centerInParent="true"
+                    android:id="@+id/radio_l_2"
                     android:layout_width="wrap_content"
-                    android:id="@+id/lin_3_l"
-                    android:weightSum="1"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/l_radio_l_2_margin_bottom"
+                    android:layout_marginTop="@dimen/l_radio_l_2_margin_top"
                     android:orientation="horizontal"
-                    android:layout_centerVertical="true">
+                    android:weightSum="1">
 
                     <RadioButton
                         android:id="@+id/radio_l_2_1"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="@dimen/radio_size"
+                        android:layout_height="@dimen/radio_size"
+                        android:layout_marginLeft="@dimen/l_radio_l_2_margin_left"
+                        android:layout_marginRight="@dimen/l_radio_l_2_margin_left"
                         android:background="@drawable/item_icon_light_1"
-                        android:layout_marginLeft="@dimen/main_padding"
-                        android:layout_marginRight="@dimen/main_padding"
                         android:button="@drawable/rbtn_selector_2"
                         android:checked="true"
                         android:gravity="center"
@@ -314,18 +314,18 @@ android:layout_marginTop="16dp"
 
                     <RadioButton
                         android:id="@+id/radio_l_2_2"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_marginLeft="@dimen/main_padding"
-                        android:layout_marginRight="@dimen/main_padding"
+                        android:layout_width="@dimen/radio_size"
+                        android:layout_height="@dimen/radio_size"
+                        android:layout_marginLeft="@dimen/l_radio_l_2_margin_left"
+                        android:layout_marginRight="@dimen/l_radio_l_2_margin_left"
                         android:background="@drawable/item_icon"
                         android:button="@drawable/rbtn_selector_2"
                         android:gravity="center"
                         android:padding="5dp"/>
                     <RadioButton
                         android:id="@+id/radio_l_2_3"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="@dimen/radio_size"
+                        android:layout_height="@dimen/radio_size"
                         android:layout_marginLeft="@dimen/main_padding"
                         android:layout_marginRight="@dimen/main_padding"
                         android:background="@drawable/item_icon_dark"
@@ -334,11 +334,11 @@ android:layout_marginTop="16dp"
                         android:padding="5dp" />
                     <RadioButton
                         android:id="@+id/radio_l_2_4"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/item_icon_dark_1"
+                        android:layout_width="@dimen/radio_size"
+                        android:layout_height="@dimen/radio_size"
                         android:layout_marginLeft="@dimen/main_padding"
                         android:layout_marginRight="@dimen/main_padding"
+                        android:background="@drawable/item_icon_dark_1"
                         android:button="@drawable/rbtn_selector_2"
                         android:gravity="center"
                         android:padding="5dp" />

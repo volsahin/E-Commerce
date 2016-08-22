@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 <LinearLayout
-    android:orientation="vertical"
     android:id="@+id/activity_screen_k"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".activities.activityK.ScreenK"
+    android:orientation="vertical"
     android:padding="0dp"
+    tools:context=".activities.activityK.ScreenK"
     >
 
 
@@ -23,17 +23,17 @@
 
         <LinearLayout
             android:id="@+id/headerLayout"
-            android:layout_gravity="top|left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
             android:padding="0dp">
             <include layout="@layout/item_k_header" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_gravity="top|center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center">
             <include layout="@layout/toolbar" />
         </LinearLayout>
     </FrameLayout>
@@ -51,54 +51,54 @@
 
             <TextView
                 android:id="@+id/variants1"
-                android:textSize="16sp"
-                android:paddingTop="16dp"
-                android:paddingBottom="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/line1"
                 android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingTop="16dp"
                 android:text="Variants"
                 android:textColor="@color/lightBlack"
+                android:textSize="16sp"
                 android:textStyle="bold" />
             <RadioGroup
-                android:layout_below="@id/variants1"
+                android:id="@+id/radio_text"
                 android:layout_width="wrap_content"
-                android:id="@+id/lin_2_l"
-                android:weightSum="1"
-                android:layout_marginBottom="2dp"
-
-                android:layout_marginTop="8dp"
-                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_below="@id/variants1"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <RadioButton
                     android:id="@+id/radio_l_1_1"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/rbtn_selector"
                     android:layout_marginLeft="16dp"
+                    android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:checked="true"
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="A"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radio_l_1_2"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:textStyle="bold"
                     android:layout_marginLeft="16dp"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="B"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
                 <RadioButton
                     android:id="@+id/radio_l_1_3"
                     android:layout_width="36dp"
@@ -107,22 +107,22 @@
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:gravity="center"
-                    android:textStyle="bold"
                     android:padding="5dp"
                     android:text="C"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
                 <RadioButton
                     android:id="@+id/radio_l_1_4"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:background="@drawable/rbtn_selector"
                     android:layout_marginLeft="16dp"
+                    android:background="@drawable/rbtn_selector"
                     android:button="@null"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="D"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radio_l_1_5"
@@ -134,8 +134,8 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="E"
-                    android:textStyle="bold"
-                    android:textColor="@drawable/rbtn_textcolor_selector" />
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textStyle="bold" />
 
             </RadioGroup>
 
@@ -143,7 +143,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@+id/lin_2_l"
+                android:layout_below="@+id/radio_text"
                 android:layout_marginTop="10dp"
                 android:background="@color/white" />
 
@@ -152,7 +152,7 @@
                 android:id="@+id/variants2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/lin_2_l"
+                android:layout_below="@+id/radio_text"
                 android:gravity="center"
                 android:paddingTop="20dp"
                 android:text="Variants"
@@ -160,29 +160,29 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_below="@id/variants2"
-                android:layout_height="wrap_content"
                 android:id="@+id/rel_3_l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/variants2"
                 >
                 <RadioGroup
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_centerInParent="true"
+                    android:id="@+id/radio_l_2"
                     android:layout_width="wrap_content"
-                    android:id="@+id/lin_3_l"
-                    android:weightSum="1"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="horizontal"
-                    android:layout_centerVertical="true">
+                    android:weightSum="1">
 
                     <RadioButton
                         android:id="@+id/radio_l_2_1"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:background="@drawable/item_icon_light_1"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
+                        android:background="@drawable/item_icon_light_1"
                         android:button="@drawable/rbtn_selector_2"
                         android:checked="true"
                         android:gravity="center"
@@ -212,9 +212,9 @@
                         android:id="@+id/radio_l_2_4"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:background="@drawable/item_icon_dark_1"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
+                        android:background="@drawable/item_icon_dark_1"
                         android:button="@drawable/rbtn_selector_2"
                         android:gravity="center"
                         android:padding="5dp" />
@@ -224,9 +224,9 @@
                 android:id="@+id/buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_3_l"
                 android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:layout_below="@+id/rel_3_l">
+                android:orientation="horizontal">
 
                 <Button
 
@@ -240,8 +240,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0.5"
                     android:background="@color/darkGrey"
-                    android:text="ADD TO FAVORITES"
                     android:clickable="true"
+                    android:text="ADD TO FAVORITES"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
 
@@ -256,19 +256,19 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_weight="0.5"
-                    android:clickable="true"
                     android:background="@color/red"
+                    android:clickable="true"
                     android:text="ADD TO BASKET"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="8dp"
                 android:layout_below="@+id/buttons"
                 android:background="@color/white"
-                android:id="@+id/linearLayout4"
                 android:orientation="vertical"/>
 
             <android.support.v7.widget.RecyclerView
@@ -278,8 +278,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:scrollbars="vertical"
-                android:layout_below="@+id/linearLayout4" />
+                android:layout_below="@+id/linearLayout4"
+                android:scrollbars="vertical" />
         </RelativeLayout>
 
 
