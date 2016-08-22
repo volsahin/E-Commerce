@@ -22,9 +22,7 @@ public class ScreenI extends BaseActivity implements IScreenIView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_i);
 
-        Category category=(Category) getIntent().getSerializableExtra("category");
-        categoryID = category.getID();
-        fcreateTitle(category.getName());
+
         fcreateToolbar(this, false, true, false, R.id.toolbar);
         fcreateMenu(this, true);
 

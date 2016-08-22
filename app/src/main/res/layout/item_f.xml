@@ -12,13 +12,13 @@
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="0dp"
-    android:layout_marginRight="0dp">
+    android:layout_marginBottom="@dimen/f_item_framelayout_margin_bottom"
+    android:layout_marginRight="@dimen/f_item_framelayout_margin_right">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="@dimen/f_item_image_height"
         android:layout_weight="0.5"
         android:background="@color/grey"
         app:srcCompat="@drawable/ic_product_photo" />
@@ -38,7 +38,7 @@
             android:id="@+id/textViewLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
+            android:layout_marginBottom="@dimen/f_item_lineer_layout_margin_bottom"
             android:background="@color/darkGrey"
             android:orientation="horizontal">
 
@@ -48,12 +48,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:paddingBottom="0dp"
-                android:paddingLeft="12dp"
-                android:paddingTop="10dp"
+                android:paddingBottom="@dimen/f_item_product_textview_padding_bottom"
+                android:paddingLeft="@dimen/f_item_product_textview_padding_left"
+                android:paddingTop="@dimen/f_item_product_textview_padding_top"
                 android:text="Product"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
+                android:textSize="@dimen/f_item_product_textview_text_size"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -67,24 +67,24 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textViewLayout"
-            android:paddingBottom="8dp"
-            android:paddingLeft="12dp"
+            android:paddingBottom="@dimen/f_item_price_textview_padding_bottom"
+            android:paddingLeft="@dimen/f_item_price_textview_padding_left"
             android:text="$100"
             android:textColor="@android:color/white"
-            android:textSize="14sp" />
+            android:textSize="@dimen/f_item_price_textview_text_size" />
 
         <ImageButton
             android:id="@+id/basketButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/f_item_basketbutton_margin_bottom"
+            android:layout_marginLeft="@dimen/f_item_basketbutton_margin_left"
+            android:layout_marginRight="@dimen/f_item_basketbutton_margin_right"
+            android:layout_marginTop="@dimen/f_item_basketbutton_margin_top"
             android:layout_toLeftOf="@+id/likeButton"
             android:layout_toStartOf="@+id/likeButton"
             android:background="@null"
-            android:padding="0dp"
+            android:padding="@dimen/f_item_basketbutton_padding"
             android:scaleX="0.8"
             android:scaleY="0.8"
             android:src="@drawable/ic_shopping_basket_white_24dp" />
@@ -93,14 +93,14 @@
             android:id="@+id/likeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/f_item_likebutton_margin_bottom"
+            android:layout_marginLeft="@dimen/f_item_likebutton_margin_left"
+            android:layout_marginRight="@dimen/f_item_likebutton_margin_right"
+            android:layout_marginTop="@dimen/f_item_likebutton_margin_top"
             android:layout_toLeftOf="@+id/actionButton"
             android:layout_toStartOf="@+id/actionButton"
             android:background="@null"
-            android:paddingLeft="5dp"
+            android:paddingLeft="@dimen/f_item_likebutton_padding_left"
             android:scaleX="0.8"
             android:scaleY="0.8"
             android:src="@drawable/ic_favorite_white_24dp" />
@@ -110,12 +110,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/f_item_actionbutton_margin_bottom"
+            android:layout_marginLeft="@dimen/f_item_actionbutton_margin_left"
+            android:layout_marginRight="@dimen/f_item_actionbutton_margin_right"
+            android:layout_marginTop="@dimen/f_item_actionbutton_margin_top"
             android:background="@null"
-            android:padding="0dp"
+            android:padding="@dimen/f_item_actionbutton_padding"
             android:scaleX="0.8"
             android:scaleY="0.8"
             android:src="@drawable/ic_more_vert_white_24dp" />

@@ -15,10 +15,10 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="3dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginBottom="@dimen/f_item_header_framelayout_margin_bottom"
+            android:layout_marginLeft="@dimen/f_item_header_framelayout_margin_left"
+            android:layout_marginRight="@dimen/f_item_header_framelayout_margin_right"
+            android:layout_marginTop="@dimen/f_item_header_framelayout_margin_top"
             android:layout_weight="0.5"
             android:background="@color/grey">
 
@@ -35,13 +35,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="3dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginBottom="@dimen/f_item_header_relative_layout_margin_bottom"
+            android:layout_marginLeft="@dimen/f_item_header_relative_layout_margin_left"
+            android:layout_marginRight="@dimen/f_item_header_relative_layout_margin_right"
+            android:layout_marginTop="@dimen/f_item_header_relative_layout_margin_top"
             android:layout_weight="0.5"
             android:background="@color/darkGrey"
-            android:paddingLeft="6dp">
+            android:paddingLeft="@dimen/f_item_header_relative_layout_padding_left">
 
             <TextView
                 android:id="@+id/productNameHeader"
@@ -50,12 +50,12 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="5dp"
+                android:layout_marginTop="@dimen/f_item_header_textview_productnameheader_margin_top"
+                android:paddingLeft="@dimen/f_item_header_textview_productnameheader_padding_left"
                 android:text="Product"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/f_item_header_textview_productnameheader_text_size" />
 
             <TextView
                 android:id="@+id/descriptionHeader"
@@ -64,12 +64,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/productNameHeader"
-                android:padding="5dp"
+                android:padding="@dimen/f_item_header_textview_description_padding"
                 android:text="@string/lorem_short"
                 android:textColor="@color/lightGrey"
-                android:textSize="15sp" />
-
-
+                android:textSize="@dimen/f_item_header_textview_description_text_size" />
 
             <RatingBar
                 android:id="@+id/ratingBarHeader"
@@ -91,7 +89,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/ratingBarHeader"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="@dimen/f_item_header_relative_layout2_margin_top">
 
                 <TextView
                     android:id="@+id/priceHeader"
@@ -99,8 +97,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:paddingLeft="5dp"
-                    android:textSize="14sp"
+                    android:paddingLeft="@dimen/f_item_header_textview_priceholder_padding_left"
+                    android:textSize="@dimen/f_item_header_textview_priceholder_text_size"
                     android:textStyle="bold"
                     android:text="$100"
                     android:textColor="@color/white" />
@@ -109,11 +107,11 @@
                     android:id="@+id/basketHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/f_item_header_image_button_basketheader_margin_bottom"
                     android:layout_toLeftOf="@+id/likeHeader"
                     android:layout_toStartOf="@+id/likeHeader"
                     android:background="@null"
-                    android:padding="0dp"
+                    android:padding="@dimen/f_item_header_image_button_basketheader_padding"
                     android:scaleX="0.8"
                     android:scaleY="0.8"
                     android:src="@drawable/ic_shopping_basket_white_24dp" />
@@ -122,11 +120,11 @@
                     android:id="@+id/likeHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/f_item_header_image_button_likeheader_margin_bottom"
                     android:layout_toLeftOf="@+id/actionHeader"
                     android:layout_toStartOf="@+id/actionHeader"
                     android:background="@null"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="@dimen/f_item_header_image_button_likeheader_padding_left"
                     android:src="@drawable/ic_favorite_white_24dp"
                     android:scaleX="0.8"
                     android:scaleY="0.8"/>
@@ -136,9 +134,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/f_item_header_image_button_actionheader_margin_bottom"
                     android:background="@null"
-                    android:padding="0dp"
+                    android:padding="@dimen/f_item_header_image_button_actionheader_padding"
                     android:src="@drawable/ic_more_vert_white_24dp"
                     android:scaleX="0.8"
                     android:scaleY="0.8"    />

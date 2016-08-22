@@ -27,33 +27,33 @@
                 style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="@dimen/j_form_linear_layout_layout_margin_right"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/labelOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/j_form_textview_labelone_layout_margin_left"
+                    android:layout_marginTop="@dimen/j_form_textview_labelone_layout_margin_top"
                     android:text="label" />
 
                 <EditText
                     android:id="@+id/placeholderText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="@dimen/j_form_edittext_placeholdertext_layout_margin_left"
                     android:hint="placeholder text"
-                    android:paddingLeft="0dp"
+                    android:paddingLeft="@dimen/j_form_edittext_placeholdertext_layout_padding_left"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/j_form_edittext_placeholdertext_textsize" />
 
                 <TextView
                     android:id="@+id/labelTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/j_form_textview_labeltwo_margin_left"
+                    android:layout_marginTop="@dimen/j_form_textview_labeltwo_margin_top"
                     android:text="label" />
 
                 <EditText
@@ -70,34 +70,34 @@
                     android:id="@+id/labelThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/j_form_edittext_placeholdertext_labelThree_layout_margin_left"
+                    android:layout_marginTop="@dimen/j_form_edittext_placeholdertext_labelThree_layout_margin_top"
                     android:text="label" />
 
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textSize="18sp" />
+                    android:layout_marginLeft="@dimen/j_form_spinner_layout_margin_left"
+                    android:textSize="@dimen/j_form_spinner_textsize" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginLeft="16dp"
+                    android:layout_height="@dimen/j_form_view_layout_height"
+                    android:layout_marginLeft="@dimen/j_form_view_layout_margin_left"
                     android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/j_form_view_linear_layout_margin_top"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/firstLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
+                        android:layout_marginRight="@dimen/j_form_view_linear_layout_margin_right"
                         android:layout_weight="1.0"
                         android:orientation="vertical">
 
@@ -105,7 +105,7 @@
                             android:id="@+id/labelFour"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginLeft="@dimen/j_form_view_linear_layout_margin_right"
                             android:text="label" />
 
 
@@ -113,14 +113,14 @@
                             android:id="@+id/spinner2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginLeft="@dimen/j_form_spinner_layout_margin_left"
                             android:layout_weight="0.5"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/j_form_spinner_textsize" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:layout_marginLeft="16dp"
+                            android:layout_height="@dimen/j_form_view_layout_height"
+                            android:layout_marginLeft="@dimen/j_form_view_layout_margin_left"
                             android:background="@color/white" />
 
                     </LinearLayout>
@@ -137,7 +137,7 @@
                             android:id="@+id/labelFive"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginLeft="@dimen/j_form_textview_labelfive_margin_left"
                             android:text="label" />
 
                         <Spinner
@@ -145,12 +145,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/j_form_spinner_textsize" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_height="@dimen/j_form_view_layout_height"
+                            android:layout_marginLeft="@dimen/j_form_textview_labelfive_margin_left"
                             android:background="@color/white" />
 
                     </LinearLayout>
@@ -161,8 +161,8 @@
                     style="@style/AppTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="24dp">
+                    android:layout_marginLeft="@dimen/j_form_linear_layout2_margin_left"
+                    android:layout_marginTop="@dimen/j_form_linear_layout2_margin_top">
 
                     <CheckBox
                         android:id="@+id/checkBox"
@@ -170,23 +170,23 @@
                         android:layout_height="wrap_content"
                         android:checked="true"
                         android:text="option"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/j_form_spinner_textsize" />
 
                     <CheckBox
                         android:id="@+id/checkBox2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="75dp"
+                        android:layout_marginLeft="@dimen/j_form_checkbox_margin_left"
                         android:text="option"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/j_form_spinner_textsize" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginLeft="@dimen/j_form_linear_layout2_margin_left"
+                    android:layout_marginTop="@dimen/j_form_view_linear_layout_margin_top">
 
                     <RadioGroup
                         android:layout_width="fill_parent"
@@ -199,7 +199,7 @@
                             android:layout_height="wrap_content"
                             android:checked="true"
                             android:text="option"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/j_form_spinner_textsize" />
 
 
                         <RadioButton
@@ -207,9 +207,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginLeft="75dp"
+                            android:layout_marginLeft="@dimen/j_form_checkbox_margin_left"
                             android:text="option"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/j_form_spinner_textsize" />
 
                     </RadioGroup>
 
@@ -227,39 +227,39 @@
         android:layout_alignBottom="@+id/parent"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/j_form_view_linear_layout_margin_top"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="@dimen/j_form_button_layout_height"
+            android:layout_marginBottom="@dimen/j_form_button_layout_margin_bottom"
+            android:layout_marginEnd="@dimen/j_form_button_layout_margin_bottom"
+            android:layout_marginLeft="@dimen/j_form_button_layout_margin_left"
+            android:layout_marginRight="@dimen/j_form_button_layout_margin_right"
+            android:layout_marginStart="@dimen/j_form_button_layout_margin_bottom"
             android:layout_weight="0.5"
             android:background="@color/darkGrey"
             android:text="Button"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="@dimen/j_form_button_textsize" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="@dimen/j_form_button_layout_height"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginBottom="@dimen/j_form_button_layout_margin_bottom"
+            android:layout_marginEnd="@dimen/j_form_button_layout_margin_bottom"
+            android:layout_marginLeft="@dimen/j_form_button_layout_margin_right"
+            android:layout_marginRight="@dimen/j_form_button_layout_margin_left"
+            android:layout_marginStart="@dimen/j_form_button_layout_margin_end"
             android:layout_weight="0.5"
             android:background="@color/red"
             android:text="Button"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="@dimen/j_form_button_textsize" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -5,20 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_weight="0.65"
-    android:layout_margin="0.5dp"
+    android:layout_margin="@dimen/g_item_relative_layout_margin"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <ImageButton
 
             android:layout_weight="0.5"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="@dimen/g_item_image_button_layout_height"
             app:srcCompat="@drawable/photo2"
             android:id="@+id/image"
             android:background="@color/grey" />
 
         <RelativeLayout
-            android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="0.5"
+            android:layout_width="match_parent" android:layout_height="@dimen/g_item_relative_layout_height" android:layout_weight="0.5"
             android:background="@color/darkGrey"
             android:layout_below="@+id/image"
             android:layout_alignRight="@+id/image"
@@ -32,9 +32,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="5dp"
-                android:paddingLeft="5dp"
-                android:textSize="16sp"
+                android:layout_marginTop="@dimen/g_item_textview_product_margin_top"
+                android:paddingLeft="@dimen/g_item_textview_product_padding_left"
+                android:textSize="@dimen/g_item_textview_product_textsize"
                 android:id="@+id/productName" />
 
             <ImageButton
@@ -47,15 +47,15 @@
                 android:layout_alignTop="@+id/productName"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="3dp"
-                android:padding="3dp" />
+                android:layout_marginTop="@dimen/g_item_image_button_menudugmesi_margin_top"
+                android:padding="@dimen/g_item_image_button_menudugmesi_padding" />
 
             <TextView
                 android:text="$100"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
+                android:paddingLeft="@dimen/g_item_textview_product_padding_left"
                 android:id="@+id/price"
                 android:layout_below="@+id/productName"
                 android:layout_alignParentLeft="true"

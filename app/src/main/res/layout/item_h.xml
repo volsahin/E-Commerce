@@ -9,13 +9,13 @@
 
     <ImageButton
         android:id="@+id/image1"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/h_item_image_button_layout_width"
+        android:layout_height="@dimen/h_item_image_button_layout_height"
         android:layout_alignBottom="@+id/linear"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/linear"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/h_item_image_button_layout_margin"
         android:background="@color/grey">
 
     </ImageButton>
@@ -30,10 +30,10 @@
             android:layout_gravity="right|center"
             android:text="Product"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="12dp"
+            android:textSize="@dimen/h_item_textview_productname_textsize"
             android:textStyle="normal"
             android:textColor="#000000"
-            android:layout_margin="16dp" />
+            android:layout_margin="@dimen/h_item_textview_productname_layout_margin" />
 
         <TextView
             android:id="@+id/category"
@@ -46,12 +46,12 @@
             android:layout_toRightOf="@+id/image1"
             android:text="Category"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="18dp"
+            android:textSize="@dimen/h_item_textview_category_textsize"
             android:textStyle="bold"
             android:textColor="#000000" />
     <View
         android:layout_width="fill_parent"
-        android:layout_height="0.5dp"
+        android:layout_height="@dimen/h_item_view_layout_height"
         android:background="#bfbfbf"/>
 
     </RelativeLayout>
