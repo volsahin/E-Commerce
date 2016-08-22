@@ -1,6 +1,7 @@
 package com.telpa.ecommerce.activities.activityC;
 
 import android.app.Application;
+import android.view.LayoutInflater;
 
 import com.telpa.ecommerce.ECommerceApp;
 import com.telpa.ecommerce.interfaces.ICategory;
@@ -33,5 +34,15 @@ public class ScreenCPresenterImpl implements IScreenCPresenter {
     public void getCategories() {
         ArrayList<Category> categories = category.getCategories(0);
         view.fillFragments(categories);
+    }
+
+    @Override
+    public void setTitle() {
+        view.setTitle("My Store C");
+    }
+
+    @Override
+    public void filFrahments(LayoutInflater layoutInflater) {
+
     }
 }

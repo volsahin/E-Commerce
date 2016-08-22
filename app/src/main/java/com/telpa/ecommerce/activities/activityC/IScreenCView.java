@@ -12,4 +12,6 @@ public interface IScreenCView {
     void search();
     void goBasket();
     void fillFragments(ArrayList<Category> categories);
+
+    void setTitle(String title);
 }

@@ -5,9 +5,9 @@
         android:id="@+id/activity_screen_f"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+            android:background="@color/lightGrey"
         android:orientation="vertical"
-        tools:context="com.telpa.ecommerce.activities.ScreenFActivity"
-        android:background="@color/lightGrey">
+            tools:context="com.telpa.ecommerce.activities.activityF.ScreenF">
 
         <include layout="@layout/toolbar"/>
 
@@ -25,35 +25,35 @@
         android:layout_height="wrap_content">
 
         <Spinner
+            android:id="@+id/spinner1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner1"
-            android:layout_gravity="center_horizontal"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner3"
             android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/d_spinner_margin_left"
+            android:layout_marginRight="@dimen/d_spinner_margin_right" />
 
         <Spinner
+            android:id="@+id/spinner3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/d_spinner_margin_left"
+            android:layout_marginRight="@dimen/d_spinner_margin_right" />
+
+        <Spinner
             android:id="@+id/spinner2"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/d_spinner_margin_left"
+            android:layout_marginRight="@dimen/d_spinner_margin_right" />
     </RelativeLayout>
 
     <android.support.v4.view.ViewPager

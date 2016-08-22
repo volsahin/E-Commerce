@@ -22,4 +22,6 @@ public interface IFragmentBView {
     void addBasketSuccess(int ProductID);
     void addBasketFail(int ProductID);
 
+    void viewInitializer();
+
 }

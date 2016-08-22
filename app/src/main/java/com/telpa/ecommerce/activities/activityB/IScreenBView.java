@@ -1,8 +1,8 @@
 package com.telpa.ecommerce.activities.activityB;
 
-import com.telpa.ecommerce.models.Category;
+import com.telpa.ecommerce.utils.TabHelper;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by SAMSUNGNB on 12.08.2016.
@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public interface IScreenBView {
     void search();
     void goBasket();
-    void fillFragments(ArrayList<Category> categories);
+
+    void fillFragments(List<TabHelper> tabHelperList);
     void setTitle(String title);
     void setBaseItems();
 }

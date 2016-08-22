@@ -25,8 +25,6 @@ import com.telpa.ecommerce.utils.TabHelper;
 import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by SAMSUNGNB on 12.08.2016.
@@ -49,17 +47,8 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.application = getApplication();
-        this.view = getView();
-        this.category = getCategory();
-        setTitle("Test");
 
-
-        subcategories = (TextView) view.findViewById(R.id.subcategories);
-        viewallTop = (TextView) view.findViewById(R.id.viewallTop);
-        recyclerView1 = (RecyclerView) view.findViewById(R.id.recyclerView1);
-        recyclerView2 = (RecyclerView) view.findViewById(R.id.recyclerView2);
-
+        viewInitializer();
         fragmentBPresenter = new FragmentBPresenter(this, application);
         fragmentBPresenter.loadView(category);
         fragmentBPresenter.getTopSubCategory();
@@ -152,5 +141,14 @@ public class FragmentBView extends TabHelper implements IFragmentBView {
         Toast.makeText(getActivity(), "Ürün zaten sepetinizde bulunmaktadır!", Toast.LENGTH_SHORT).show();
     }
 
-
+    @Override
+    public void viewInitializer() {
+        this.application = getApplication();
+        this.view = getView();
+        this.category = getCategory();
+        subcategories = (TextView) view.findViewById(R.id.subcategories);
+        viewallTop = (TextView) view.findViewById(R.id.viewallTop);
+        recyclerView1 = (RecyclerView) view.findViewById(R.id.recyclerView1);
+        recyclerView2 = (RecyclerView) view.findViewById(R.id.recyclerView2);
+    }
 }

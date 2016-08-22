@@ -22,11 +22,11 @@ public class ScreenC extends BaseActivity implements IScreenCView {
         setContentView(R.layout.activity_screen_c);
 
 
-        fcreateTitle("My Store" + " C");
+
         fcreateToolbar(this, false, true, true, R.id.toolbar);
         fcreateMenu(this, true);
-
         screenCPresenter = new ScreenCPresenterImpl(this, getApplication());
+        screenCPresenter.setTitle();
         screenCPresenter.getCategories();
     }
 
@@ -56,5 +56,10 @@ public class ScreenC extends BaseActivity implements IScreenCView {
 
         fcreateTabMenu(tabHelperList);
 
+    }
+
+    @Override
+    public void setTitle(String title) {
+        fcreateTitle(title);
     }
 }

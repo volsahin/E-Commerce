@@ -4,12 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.telpa.ecommerce.R;
-import com.telpa.ecommerce.activities.activityB.fragmentB.FragmentBView;
-import com.telpa.ecommerce.models.Category;
 import com.telpa.ecommerce.utils.BaseActivity;
 import com.telpa.ecommerce.utils.TabHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ScreenB extends BaseActivity implements IScreenBView {
@@ -20,10 +17,10 @@ public class ScreenB extends BaseActivity implements IScreenBView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_b);
-        screenBPresenter.setTitle();
         setBaseItems();
         screenBPresenter = new ScreenBPresenterImpl(this, getApplication());
-        screenBPresenter.getCategories();
+        screenBPresenter.setTitle();
+        screenBPresenter.getCategories(getLayoutInflater());
     }
 
     @Override
@@ -37,21 +34,8 @@ public class ScreenB extends BaseActivity implements IScreenBView {
     }
 
     @Override
-    public void fillFragments(ArrayList<Category> categories) {
-        List<TabHelper> tabHelperList = new ArrayList<>();
-
-        for (Category i : categories) {
-            view = getLayoutInflater().inflate(R.layout.fragment_b_tab1, null);
-            FragmentBView tab = new FragmentBView();
-            tab.setView(view);
-            tab.setCategory(i);
-            tab.setTitle(i.getName());
-            tab.setApplication(getApplication());
-            tabHelperList.add(tab);
-        }
-
+    public void fillFragments(List<TabHelper> tabHelperList) {
         fcreateTabMenu(tabHelperList);
-
     }
 
     @Override

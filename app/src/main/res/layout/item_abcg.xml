@@ -22,7 +22,7 @@
             android:layout_alignParentTop="true"
             android:text="Subcategory"
             android:textColor="@color/darkGrey"
-            android:textSize="16sp"
+            android:textSize="@dimen/Subcategory"
             android:textStyle="bold" />
 
         <TextView
@@ -31,10 +31,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:text="VIEW ALL"
             android:layout_centerHorizontal="true"
+            android:text="VIEW ALL"
             android:textColor="@color/darkGrey"
-            android:textSize="14sp"
+            android:textSize="@dimen/VIEW_ALL"
             android:textStyle="bold" />
     </RelativeLayout>
 
@@ -42,8 +42,8 @@
         android:id="@+id/recyclerViewABCGitem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
         android:layout_margin="2dp"
+        android:scrollbars="vertical"
         />
 
 
