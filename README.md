@@ -5,7 +5,7 @@ Layouts for E-Commerce application
 [![Build Status](https://travis-ci.org/metalcoder/E-Commerce.svg?branch=master)](https://travis-ci.org/metalcoder/E-Commerce)
 
 #Contributors
-[Volkan Şahin](https://github.com/metalcoder)
+[Volkan Şahin](https://github.com/volsahin)
 
 [Musa Çıbık](https://github.com/musacibik)
 
